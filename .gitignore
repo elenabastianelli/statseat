@@ -1,0 +1,50 @@
+# --- Local assistant settings ---
+CLAUDE.local.md
+
+# --- Reference PDFs (copyrighted / third-party): keep local, link them in Materials/RESOURCES.md ---
+Materials/*.pdf
+
+# --- Raw / derived real data: NEVER commit (DFL open data is used locally only) ---
+data/*
+!data/README.md
+*.xml
+*.parquet
+# ...except the synthetic match tracking (S-4), which is ours and committed (read by app/engine, format in its README)
+!synthetic/*/positions.parquet
+# Synthetic replicas are only used for the realism report (reports/realism/): regenerate them, don't commit them
+synthetic/replicas/
+*.duckdb*
+*.sqlite*
+*.feather
+*.arrow
+*.zip
+.local/
+reports/qc/frames
+
+# --- Secrets & local config ---
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.key
+.azure/
+
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / frontend ---
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# --- OS / editors ---
+.DS_Store
+.idea/
+*.swp
