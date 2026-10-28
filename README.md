@@ -3,7 +3,7 @@
 > **60,000 fans in the stadium. Zero stats. We fix that.**
 > *A multi-agent match-intelligence app on Microsoft Foundry: deterministic statistics, grounded AI explanations, one experience per seat.*
 
-**Try it:** **[live demo](https://ca-statseat-ewwubzrkf5dus.happyriver-a61de2d4.switzerlandnorth.azurecontainerapps.io/)** · DEMO ticket code **`GNT-SYN001-D-WHQF-W1S6`** (works on several devices, with the phase panel and the Inspector) · [2-minute video](https://VIDEO-ADDRESS/) · [demo guide](docs/DEMO.md)
+**Try it:** **[live demo](https://ca-statseat-ewwubzrkf5dus.happyriver-a61de2d4.switzerlandnorth.azurecontainerapps.io/)** · DEMO ticket code **`GNT-SYN001-D-WHQF-W1S6`** (works on several devices, with the phase panel and the Inspector) · [2-minute video](https://youtu.be/EYYiDv0j48o) · [demo guide](docs/DEMO.md)
 
 Everything you see is **synthetic**: the country of Meridia, its 44 clubs, the players, the stadium and the match. No real person, club or brand appears anywhere.
 
