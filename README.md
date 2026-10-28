@@ -1,4 +1,4 @@
-# InsideTheGame
+# statseat
 
 > **60,000 fans in the stadium. Zero stats. We fix that.**
 > *A multi-agent match-intelligence app on Microsoft Foundry: deterministic statistics, grounded AI explanations, one experience per seat.*
