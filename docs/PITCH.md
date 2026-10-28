@@ -1,6 +1,6 @@
 # Pitch
 
-**TV viewers get every stat. The 60,000 people actually in the stadium get none. InsideTheGame brings explainable, personalized match intelligence to every seat, powered by a multi-agent system on Microsoft Foundry.**
+**TV viewers get every stat. The 60,000 people actually in the stadium get none. statseat brings explainable, personalized match intelligence to every seat, powered by a multi-agent system on Microsoft Foundry.**
 
 ## What it does
 
