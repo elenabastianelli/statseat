@@ -1,0 +1,2986 @@
+{
+  "$defs": {
+    "AttributeProfile": {
+      "additionalProperties": false,
+      "description": "Latent inputs that `attributes.py` turns into 1-99 attributes (with the strengths and the age).",
+      "properties": {
+        "tier": {
+          "enum": [
+            "starter",
+            "rotation",
+            "prospect"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "quality": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Quality",
+          "type": "number"
+        },
+        "style": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Style",
+          "type": "array"
+        }
+      },
+      "required": [
+        "tier",
+        "quality",
+        "style"
+      ],
+      "title": "AttributeProfile",
+      "type": "object"
+    },
+    "Attributes": {
+      "additionalProperties": false,
+      "description": "Our own 1-99 scale: attribute k is the k-th DFL percentile of the quantity below among players of the\nsame position group (`calibration/attribute_scales.json`; mapping and fallbacks in `attributes.py`).",
+      "properties": {
+        "pace": {
+          "description": "top speed per match (km/h)",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Pace",
+          "type": "integer"
+        },
+        "acceleration": {
+          "description": "peak positive acceleration per match (m/s2)",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Acceleration",
+          "type": "integer"
+        },
+        "stamina": {
+          "description": "distance per 90 minutes (m)",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Stamina",
+          "type": "integer"
+        },
+        "work_rate": {
+          "description": "distance above 20 km/h per 90 minutes (m)",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Work Rate",
+          "type": "integer"
+        },
+        "passing": {
+          "description": "share of passes whose next touch is a team-mate's",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Passing",
+          "type": "integer"
+        },
+        "shot_power": {
+          "description": "ball speed of an open-play shot (m/s), one scale for all groups",
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Shot Power",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pace",
+        "acceleration",
+        "stamina",
+        "work_rate",
+        "passing",
+        "shot_power"
+      ],
+      "title": "Attributes",
+      "type": "object"
+    },
+    "Availability": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "available",
+            "injured",
+            "suspended",
+            "ill"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "detail": {
+          "minLength": 1,
+          "title": "Detail",
+          "type": "string"
+        },
+        "expected_return": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Only when not available.",
+          "title": "Expected Return"
+        }
+      },
+      "required": [
+        "status",
+        "detail"
+      ],
+      "title": "Availability",
+      "type": "object"
+    },
+    "Birthplace": {
+      "additionalProperties": false,
+      "properties": {
+        "town": {
+          "minLength": 1,
+          "title": "Town",
+          "type": "string"
+        },
+        "country": {
+          "minLength": 1,
+          "title": "Country",
+          "type": "string"
+        }
+      },
+      "required": [
+        "town",
+        "country"
+      ],
+      "title": "Birthplace",
+      "type": "object"
+    },
+    "CareerSpell": {
+      "additionalProperties": false,
+      "properties": {
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "from_season": {
+          "pattern": "^\\d{4}/\\d{2}$",
+          "title": "From Season",
+          "type": "string"
+        },
+        "to_season": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}/\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "None = still at the club.",
+          "title": "To Season"
+        },
+        "move": {
+          "description": "How the player arrived: academy promotion, transfer, free transfer (end of contract), loan or return from loan.",
+          "enum": [
+            "academy",
+            "transfer",
+            "free_transfer",
+            "loan",
+            "loan_return"
+          ],
+          "title": "Move",
+          "type": "string"
+        },
+        "parent_club_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Club that owns the player during a loan.",
+          "title": "Parent Club Id"
+        },
+        "fee_eur": {
+          "description": "Transfer fee in euros; 0 for academy, loan, loan return and free transfer.",
+          "minimum": 0,
+          "title": "Fee Eur",
+          "type": "integer"
+        },
+        "appearances": {
+          "description": "Sum of the seasons.",
+          "minimum": 0,
+          "title": "Appearances",
+          "type": "integer"
+        },
+        "goals": {
+          "description": "Sum of the seasons.",
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        },
+        "seasons": {
+          "description": "League numbers season by season.",
+          "items": {
+            "$ref": "#/$defs/SpellSeason"
+          },
+          "minItems": 1,
+          "title": "Seasons",
+          "type": "array"
+        },
+        "head_coach_ids": {
+          "description": "Head coaches of the club during the spell.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Head Coach Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "club_id",
+        "from_season",
+        "move",
+        "fee_eur",
+        "appearances",
+        "goals",
+        "seasons",
+        "head_coach_ids"
+      ],
+      "title": "CareerSpell",
+      "type": "object"
+    },
+    "Chairman": {
+      "additionalProperties": false,
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "since": {
+          "title": "Since",
+          "type": "integer"
+        },
+        "bio": {
+          "minLength": 1,
+          "title": "Bio",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "since",
+        "bio"
+      ],
+      "title": "Chairman",
+      "type": "object"
+    },
+    "Club": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Z]{3}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "short_name": {
+          "title": "Short Name",
+          "type": "string"
+        },
+        "town": {
+          "title": "Town",
+          "type": "string"
+        },
+        "founded": {
+          "title": "Founded",
+          "type": "integer"
+        },
+        "nickname": {
+          "title": "Nickname",
+          "type": "string"
+        },
+        "colours": {
+          "$ref": "#/$defs/Colours"
+        },
+        "stadium": {
+          "$ref": "#/$defs/ClubStadium"
+        },
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "strength": {
+          "description": "Latent team strength used only to simulate results.",
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Strength",
+          "type": "number"
+        },
+        "rival_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rival Id"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "crest": {
+          "description": "Description of the club crest, enough to draw it.",
+          "minLength": 1,
+          "title": "Crest",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "short_name",
+        "town",
+        "founded",
+        "nickname",
+        "colours",
+        "stadium",
+        "competition_id",
+        "strength",
+        "summary",
+        "crest"
+      ],
+      "title": "Club",
+      "type": "object"
+    },
+    "ClubDetails": {
+      "additionalProperties": false,
+      "description": "Rich details, only for the two clubs of the match.",
+      "properties": {
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "formation": {
+          "title": "Formation",
+          "type": "string"
+        },
+        "playing_style": {
+          "title": "Playing Style",
+          "type": "string"
+        },
+        "colour_names": {
+          "minLength": 1,
+          "title": "Colour Names",
+          "type": "string"
+        },
+        "crest": {
+          "minLength": 1,
+          "title": "Crest",
+          "type": "string"
+        },
+        "kits": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Kit"
+          },
+          "propertyNames": {
+            "enum": [
+              "home",
+              "away"
+            ]
+          },
+          "title": "Kits",
+          "type": "object"
+        },
+        "chairman": {
+          "$ref": "#/$defs/Chairman"
+        },
+        "history": {
+          "items": {
+            "type": "string"
+          },
+          "title": "History",
+          "type": "array"
+        },
+        "honours": {
+          "items": {
+            "$ref": "#/$defs/Honour"
+          },
+          "title": "Honours",
+          "type": "array"
+        },
+        "records": {
+          "$ref": "#/$defs/ClubRecords"
+        },
+        "last_season": {
+          "$ref": "#/$defs/LastSeason"
+        },
+        "legends": {
+          "items": {
+            "$ref": "#/$defs/Legend"
+          },
+          "title": "Legends",
+          "type": "array"
+        },
+        "traditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Traditions",
+          "type": "array"
+        },
+        "head_coach": {
+          "$ref": "#/$defs/HeadCoachProfile"
+        },
+        "set_pieces": {
+          "$ref": "#/$defs/SetPieces"
+        },
+        "season_matches": {
+          "items": {
+            "$ref": "#/$defs/ClubMatch"
+          },
+          "title": "Season Matches",
+          "type": "array"
+        }
+      },
+      "required": [
+        "club_id",
+        "formation",
+        "playing_style",
+        "colour_names",
+        "crest",
+        "kits",
+        "chairman",
+        "history",
+        "honours",
+        "records",
+        "last_season",
+        "legends",
+        "traditions",
+        "head_coach",
+        "set_pieces",
+        "season_matches"
+      ],
+      "title": "ClubDetails",
+      "type": "object"
+    },
+    "ClubMatch": {
+      "additionalProperties": false,
+      "description": "One league game of this season from the club's point of view, with its scorers.",
+      "properties": {
+        "round": {
+          "title": "Round",
+          "type": "integer"
+        },
+        "opponent_id": {
+          "title": "Opponent Id",
+          "type": "string"
+        },
+        "venue": {
+          "enum": [
+            "home",
+            "away"
+          ],
+          "title": "Venue",
+          "type": "string"
+        },
+        "goals_for": {
+          "minimum": 0,
+          "title": "Goals For",
+          "type": "integer"
+        },
+        "goals_against": {
+          "minimum": 0,
+          "title": "Goals Against",
+          "type": "integer"
+        },
+        "scorers": {
+          "items": {
+            "$ref": "#/$defs/GoalRecord"
+          },
+          "title": "Scorers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "round",
+        "opponent_id",
+        "venue",
+        "goals_for",
+        "goals_against",
+        "scorers"
+      ],
+      "title": "ClubMatch",
+      "type": "object"
+    },
+    "ClubRecords": {
+      "additionalProperties": false,
+      "properties": {
+        "biggest_win": {
+          "minLength": 1,
+          "title": "Biggest Win",
+          "type": "string"
+        },
+        "top_scorer": {
+          "minLength": 1,
+          "title": "Top Scorer",
+          "type": "string"
+        },
+        "most_appearances": {
+          "minLength": 1,
+          "title": "Most Appearances",
+          "type": "string"
+        }
+      },
+      "required": [
+        "biggest_win",
+        "top_scorer",
+        "most_appearances"
+      ],
+      "title": "ClubRecords",
+      "type": "object"
+    },
+    "ClubStadium": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "capacity": {
+          "exclusiveMinimum": 0,
+          "title": "Capacity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "capacity"
+      ],
+      "title": "ClubStadium",
+      "type": "object"
+    },
+    "Coach": {
+      "additionalProperties": false,
+      "description": "A head coach of the coaching history who is not on the staff of the two match clubs.",
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "nationality": {
+          "title": "Nationality",
+          "type": "string"
+        },
+        "born": {
+          "title": "Born",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "id",
+        "nationality",
+        "born"
+      ],
+      "title": "Coach",
+      "type": "object"
+    },
+    "CoachingSpell": {
+      "additionalProperties": false,
+      "properties": {
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "coach_id": {
+          "description": "A Coach id (COA-...) or a StaffMember id of a match club.",
+          "title": "Coach Id",
+          "type": "string"
+        },
+        "from_season": {
+          "pattern": "^\\d{4}/\\d{2}$",
+          "title": "From Season",
+          "type": "string"
+        },
+        "to_season": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}/\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "To Season"
+        }
+      },
+      "required": [
+        "club_id",
+        "coach_id",
+        "from_season"
+      ],
+      "title": "CoachingSpell",
+      "type": "object"
+    },
+    "Colours": {
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "title": "Primary",
+          "type": "string"
+        },
+        "secondary": {
+          "title": "Secondary",
+          "type": "string"
+        },
+        "number": {
+          "title": "Number",
+          "type": "string"
+        }
+      },
+      "required": [
+        "primary",
+        "secondary",
+        "number"
+      ],
+      "title": "Colours",
+      "type": "object"
+    },
+    "Competition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "tier": {
+          "title": "Tier",
+          "type": "integer"
+        },
+        "clubs": {
+          "title": "Clubs",
+          "type": "integer"
+        },
+        "rounds": {
+          "title": "Rounds",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "tier",
+        "clubs",
+        "rounds"
+      ],
+      "title": "Competition",
+      "type": "object"
+    },
+    "Fixture": {
+      "additionalProperties": false,
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "round": {
+          "title": "Round",
+          "type": "integer"
+        },
+        "home_id": {
+          "title": "Home Id",
+          "type": "string"
+        },
+        "away_id": {
+          "title": "Away Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "competition_id",
+        "round",
+        "home_id",
+        "away_id"
+      ],
+      "title": "Fixture",
+      "type": "object"
+    },
+    "FormEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "round": {
+          "title": "Round",
+          "type": "integer"
+        },
+        "opponent_id": {
+          "title": "Opponent Id",
+          "type": "string"
+        },
+        "started": {
+          "title": "Started",
+          "type": "boolean"
+        },
+        "minutes": {
+          "maximum": 90,
+          "minimum": 0,
+          "title": "Minutes",
+          "type": "integer"
+        },
+        "goals": {
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        },
+        "assists": {
+          "minimum": 0,
+          "title": "Assists",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "round",
+        "opponent_id",
+        "started",
+        "minutes",
+        "goals",
+        "assists"
+      ],
+      "title": "FormEntry",
+      "type": "object"
+    },
+    "Gate": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "stand_id": {
+          "title": "Stand Id",
+          "type": "string"
+        },
+        "serves": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Serves",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "id",
+        "stand_id",
+        "serves"
+      ],
+      "title": "Gate",
+      "type": "object"
+    },
+    "GoalRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "minute": {
+          "maximum": 90,
+          "minimum": 1,
+          "title": "Minute",
+          "type": "integer"
+        },
+        "penalty": {
+          "default": false,
+          "title": "Penalty",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "player_id",
+        "minute"
+      ],
+      "title": "GoalRecord",
+      "type": "object"
+    },
+    "HeadCoachProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "staff_id": {
+          "title": "Staff Id",
+          "type": "string"
+        },
+        "tactical_style": {
+          "minLength": 1,
+          "title": "Tactical Style",
+          "type": "string"
+        },
+        "career": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Career",
+          "type": "array"
+        },
+        "job_security": {
+          "$ref": "#/$defs/JobSecurity"
+        }
+      },
+      "required": [
+        "staff_id",
+        "tactical_style",
+        "career",
+        "job_security"
+      ],
+      "title": "HeadCoachProfile",
+      "type": "object"
+    },
+    "HeadToHead": {
+      "additionalProperties": false,
+      "properties": {
+        "club_a": {
+          "title": "Club A",
+          "type": "string"
+        },
+        "club_b": {
+          "title": "Club B",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "story": {
+          "title": "Story",
+          "type": "string"
+        },
+        "all_time": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "description": "played, <club_a>_wins, <club_b>_wins, draws",
+          "title": "All Time",
+          "type": "object"
+        },
+        "last_meetings": {
+          "items": {
+            "$ref": "#/$defs/Meeting"
+          },
+          "title": "Last Meetings",
+          "type": "array"
+        },
+        "last_meeting": {
+          "$ref": "#/$defs/LastMeeting"
+        }
+      },
+      "required": [
+        "club_a",
+        "club_b",
+        "name",
+        "story",
+        "all_time",
+        "last_meetings",
+        "last_meeting"
+      ],
+      "title": "HeadToHead",
+      "type": "object"
+    },
+    "Honour": {
+      "additionalProperties": false,
+      "properties": {
+        "competition": {
+          "title": "Competition",
+          "type": "string"
+        },
+        "seasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Seasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "competition",
+        "seasons"
+      ],
+      "title": "Honour",
+      "type": "object"
+    },
+    "Injury": {
+      "additionalProperties": false,
+      "properties": {
+        "season": {
+          "pattern": "^\\d{4}/\\d{2}$",
+          "title": "Season",
+          "type": "string"
+        },
+        "injury": {
+          "minLength": 1,
+          "title": "Injury",
+          "type": "string"
+        },
+        "matches_missed": {
+          "minimum": 0,
+          "title": "Matches Missed",
+          "type": "integer"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "season",
+        "injury",
+        "matches_missed",
+        "note"
+      ],
+      "title": "Injury",
+      "type": "object"
+    },
+    "International": {
+      "additionalProperties": false,
+      "properties": {
+        "team": {
+          "title": "Team",
+          "type": "string"
+        },
+        "caps": {
+          "minimum": 0,
+          "title": "Caps",
+          "type": "integer"
+        },
+        "goals": {
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "team",
+        "caps",
+        "goals"
+      ],
+      "title": "International",
+      "type": "object"
+    },
+    "JobSecurity": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "enum": [
+            "secure",
+            "stable",
+            "under_pressure"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "summary"
+      ],
+      "title": "JobSecurity",
+      "type": "object"
+    },
+    "KeyDuel": {
+      "additionalProperties": false,
+      "properties": {
+        "home_player_id": {
+          "title": "Home Player Id",
+          "type": "string"
+        },
+        "guest_player_id": {
+          "title": "Guest Player Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "home_player_id",
+        "guest_player_id",
+        "title",
+        "note"
+      ],
+      "title": "KeyDuel",
+      "type": "object"
+    },
+    "Kit": {
+      "additionalProperties": false,
+      "properties": {
+        "shirt": {
+          "title": "Shirt",
+          "type": "string"
+        },
+        "shorts": {
+          "title": "Shorts",
+          "type": "string"
+        },
+        "socks": {
+          "title": "Socks",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shirt",
+        "shorts",
+        "socks",
+        "description"
+      ],
+      "title": "Kit",
+      "type": "object"
+    },
+    "LastMeeting": {
+      "additionalProperties": false,
+      "properties": {
+        "season": {
+          "title": "Season",
+          "type": "string"
+        },
+        "competition": {
+          "title": "Competition",
+          "type": "string"
+        },
+        "home_id": {
+          "title": "Home Id",
+          "type": "string"
+        },
+        "away_id": {
+          "title": "Away Id",
+          "type": "string"
+        },
+        "home_goals": {
+          "title": "Home Goals",
+          "type": "integer"
+        },
+        "away_goals": {
+          "title": "Away Goals",
+          "type": "integer"
+        },
+        "scorers": {
+          "items": {
+            "$ref": "#/$defs/GoalRecord"
+          },
+          "title": "Scorers",
+          "type": "array"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "season",
+        "competition",
+        "home_id",
+        "away_id",
+        "home_goals",
+        "away_goals",
+        "scorers",
+        "summary"
+      ],
+      "title": "LastMeeting",
+      "type": "object"
+    },
+    "LastSeason": {
+      "additionalProperties": false,
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "position": {
+          "title": "Position",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "competition_id",
+        "position"
+      ],
+      "title": "LastSeason",
+      "type": "object"
+    },
+    "LeaguePlayer": {
+      "additionalProperties": false,
+      "description": "A player of another club, named only because he is in the top-scorer table.",
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "nationality": {
+          "title": "Nationality",
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "GK",
+            "LCB",
+            "RCB",
+            "CB",
+            "LB",
+            "RB",
+            "LWB",
+            "RWB",
+            "CDM",
+            "LDM",
+            "RDM",
+            "LCM",
+            "RCM",
+            "LM",
+            "RM",
+            "CAM",
+            "LW",
+            "RW",
+            "ST",
+            "LS",
+            "RS"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "goals": {
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "id",
+        "club_id",
+        "nationality",
+        "position",
+        "goals"
+      ],
+      "title": "LeaguePlayer",
+      "type": "object"
+    },
+    "Legend": {
+      "additionalProperties": false,
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "fact": {
+          "title": "Fact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "role",
+        "fact"
+      ],
+      "title": "Legend",
+      "type": "object"
+    },
+    "MatchPreview": {
+      "additionalProperties": false,
+      "properties": {
+        "match_id": {
+          "title": "Match Id",
+          "type": "string"
+        },
+        "programme": {
+          "items": {
+            "$ref": "#/$defs/ProgrammeItem"
+          },
+          "minItems": 1,
+          "title": "Programme",
+          "type": "array"
+        },
+        "team_news": {
+          "items": {
+            "$ref": "#/$defs/TeamNews"
+          },
+          "minItems": 2,
+          "title": "Team News",
+          "type": "array"
+        },
+        "key_duels": {
+          "items": {
+            "$ref": "#/$defs/KeyDuel"
+          },
+          "minItems": 2,
+          "title": "Key Duels",
+          "type": "array"
+        },
+        "sponsor": {
+          "$ref": "#/$defs/MatchSponsor",
+          "description": "Match sponsor (invented), with the prize for the winner of the games."
+        }
+      },
+      "required": [
+        "match_id",
+        "programme",
+        "team_news",
+        "key_duels",
+        "sponsor"
+      ],
+      "title": "MatchPreview",
+      "type": "object"
+    },
+    "MatchSponsor": {
+      "additionalProperties": false,
+      "description": "The invented sponsor of the match. Never alcohol, betting or tobacco (check 6).",
+      "properties": {
+        "id": {
+          "pattern": "^SPO-[A-Z]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "sector": {
+          "minLength": 1,
+          "title": "Sector",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "prize": {
+          "$ref": "#/$defs/SponsorPrize"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "sector",
+        "description",
+        "prize"
+      ],
+      "title": "MatchSponsor",
+      "type": "object"
+    },
+    "Meeting": {
+      "additionalProperties": false,
+      "properties": {
+        "season": {
+          "title": "Season",
+          "type": "string"
+        },
+        "competition": {
+          "title": "Competition",
+          "type": "string"
+        },
+        "home_id": {
+          "title": "Home Id",
+          "type": "string"
+        },
+        "away_id": {
+          "title": "Away Id",
+          "type": "string"
+        },
+        "home_goals": {
+          "title": "Home Goals",
+          "type": "integer"
+        },
+        "away_goals": {
+          "title": "Away Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "season",
+        "competition",
+        "home_id",
+        "away_id",
+        "home_goals",
+        "away_goals"
+      ],
+      "title": "Meeting",
+      "type": "object"
+    },
+    "Official": {
+      "additionalProperties": false,
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "nationality": {
+          "title": "Nationality",
+          "type": "string"
+        },
+        "born": {
+          "title": "Born",
+          "type": "integer"
+        },
+        "birthplace": {
+          "$ref": "#/$defs/Birthplace"
+        },
+        "specialism": {
+          "enum": [
+            "referee",
+            "assistant_referee"
+          ],
+          "title": "Specialism",
+          "type": "string"
+        },
+        "panel_since": {
+          "title": "Panel Since",
+          "type": "integer"
+        },
+        "top_flight_matches": {
+          "minimum": 0,
+          "title": "Top Flight Matches",
+          "type": "integer"
+        },
+        "experience": {
+          "minLength": 1,
+          "title": "Experience",
+          "type": "string"
+        },
+        "career_cards": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefereeCards"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Top-division games as referee; referees only."
+        },
+        "season_cards": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefereeCards"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "This season as referee; referees only."
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "id",
+        "nationality",
+        "born",
+        "birthplace",
+        "specialism",
+        "panel_since",
+        "top_flight_matches",
+        "experience"
+      ],
+      "title": "Official",
+      "type": "object"
+    },
+    "Pitch": {
+      "additionalProperties": false,
+      "properties": {
+        "length_m": {
+          "title": "Length M",
+          "type": "number"
+        },
+        "width_m": {
+          "title": "Width M",
+          "type": "number"
+        },
+        "surface": {
+          "title": "Surface",
+          "type": "string"
+        },
+        "undersoil_heating": {
+          "title": "Undersoil Heating",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "length_m",
+        "width_m",
+        "surface",
+        "undersoil_heating"
+      ],
+      "title": "Pitch",
+      "type": "object"
+    },
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "minLength": 1,
+          "title": "Nickname",
+          "type": "string"
+        },
+        "nickname_origin": {
+          "minLength": 1,
+          "title": "Nickname Origin",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "short_name": {
+          "title": "Short Name",
+          "type": "string"
+        },
+        "date_of_birth": {
+          "format": "date",
+          "title": "Date Of Birth",
+          "type": "string"
+        },
+        "birthplace": {
+          "$ref": "#/$defs/Birthplace"
+        },
+        "nationality": {
+          "title": "Nationality",
+          "type": "string"
+        },
+        "international": {
+          "$ref": "#/$defs/International"
+        },
+        "height_cm": {
+          "title": "Height Cm",
+          "type": "integer"
+        },
+        "preferred_foot": {
+          "enum": [
+            "left",
+            "right",
+            "both"
+          ],
+          "title": "Preferred Foot",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "shirt_number": {
+          "maximum": 99,
+          "minimum": 1,
+          "title": "Shirt Number",
+          "type": "integer"
+        },
+        "position": {
+          "description": "Natural position, English code (guidelines section 12).",
+          "enum": [
+            "GK",
+            "LCB",
+            "RCB",
+            "CB",
+            "LB",
+            "RB",
+            "LWB",
+            "RWB",
+            "CDM",
+            "LDM",
+            "RDM",
+            "LCM",
+            "RCM",
+            "LM",
+            "RM",
+            "CAM",
+            "LW",
+            "RW",
+            "ST",
+            "LS",
+            "RS"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "position_group": {
+          "enum": [
+            "GK",
+            "CB",
+            "FB",
+            "DM",
+            "CM",
+            "AM",
+            "W",
+            "ST"
+          ],
+          "title": "Position Group",
+          "type": "string"
+        },
+        "captaincy": {
+          "enum": [
+            "captain",
+            "vice_captain",
+            "none"
+          ],
+          "title": "Captaincy",
+          "type": "string"
+        },
+        "academy_graduate": {
+          "title": "Academy Graduate",
+          "type": "boolean"
+        },
+        "playing_style": {
+          "minLength": 1,
+          "title": "Playing Style",
+          "type": "string"
+        },
+        "strengths": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Strengths",
+          "type": "array"
+        },
+        "curiosities": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Curiosities",
+          "type": "array"
+        },
+        "career": {
+          "items": {
+            "$ref": "#/$defs/CareerSpell"
+          },
+          "title": "Career",
+          "type": "array"
+        },
+        "honours": {
+          "items": {
+            "$ref": "#/$defs/PlayerHonour"
+          },
+          "title": "Honours",
+          "type": "array"
+        },
+        "this_season": {
+          "$ref": "#/$defs/SeasonStats"
+        },
+        "form": {
+          "description": "The club's last five league games, oldest first.",
+          "items": {
+            "$ref": "#/$defs/FormEntry"
+          },
+          "title": "Form",
+          "type": "array"
+        },
+        "availability": {
+          "$ref": "#/$defs/Availability"
+        },
+        "injury_history": {
+          "items": {
+            "$ref": "#/$defs/Injury"
+          },
+          "title": "Injury History",
+          "type": "array"
+        },
+        "match_status": {
+          "description": "Status for the match of this universe (SYN-001).",
+          "enum": [
+            "starting",
+            "substitute",
+            "not_selected"
+          ],
+          "title": "Match Status",
+          "type": "string"
+        },
+        "not_selected_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "injury",
+                "suspension",
+                "illness",
+                "coach_decision"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Only when not selected.",
+          "title": "Not Selected Reason"
+        },
+        "attribute_profile": {
+          "$ref": "#/$defs/AttributeProfile"
+        },
+        "attributes": {
+          "$ref": "#/$defs/Attributes"
+        },
+        "attributes_status": {
+          "default": "pending_calibration",
+          "enum": [
+            "pending_calibration",
+            "calibrated"
+          ],
+          "title": "Attributes Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "nickname",
+        "nickname_origin",
+        "id",
+        "short_name",
+        "date_of_birth",
+        "birthplace",
+        "nationality",
+        "international",
+        "height_cm",
+        "preferred_foot",
+        "club_id",
+        "shirt_number",
+        "position",
+        "position_group",
+        "captaincy",
+        "academy_graduate",
+        "playing_style",
+        "strengths",
+        "curiosities",
+        "career",
+        "honours",
+        "this_season",
+        "form",
+        "availability",
+        "injury_history",
+        "match_status",
+        "attribute_profile",
+        "attributes"
+      ],
+      "title": "Player",
+      "type": "object"
+    },
+    "PlayerHonour": {
+      "additionalProperties": false,
+      "properties": {
+        "competition": {
+          "title": "Competition",
+          "type": "string"
+        },
+        "season": {
+          "title": "Season",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "competition",
+        "season",
+        "club_id"
+      ],
+      "title": "PlayerHonour",
+      "type": "object"
+    },
+    "ProgrammeItem": {
+      "additionalProperties": false,
+      "properties": {
+        "time": {
+          "pattern": "^\\d{2}:\\d{2}$",
+          "title": "Time",
+          "type": "string"
+        },
+        "item": {
+          "minLength": 1,
+          "title": "Item",
+          "type": "string"
+        }
+      },
+      "required": [
+        "time",
+        "item"
+      ],
+      "title": "ProgrammeItem",
+      "type": "object"
+    },
+    "RecordAttendance": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "title": "Value",
+          "type": "integer"
+        },
+        "match": {
+          "title": "Match",
+          "type": "string"
+        },
+        "season": {
+          "title": "Season",
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "match",
+        "season"
+      ],
+      "title": "RecordAttendance",
+      "type": "object"
+    },
+    "RefereeCards": {
+      "additionalProperties": false,
+      "properties": {
+        "matches": {
+          "minimum": 0,
+          "title": "Matches",
+          "type": "integer"
+        },
+        "yellow_cards": {
+          "minimum": 0,
+          "title": "Yellow Cards",
+          "type": "integer"
+        },
+        "red_cards": {
+          "minimum": 0,
+          "title": "Red Cards",
+          "type": "integer"
+        },
+        "penalties_awarded": {
+          "minimum": 0,
+          "title": "Penalties Awarded",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "matches",
+        "yellow_cards",
+        "red_cards",
+        "penalties_awarded"
+      ],
+      "title": "RefereeCards",
+      "type": "object"
+    },
+    "Result": {
+      "additionalProperties": false,
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "round": {
+          "title": "Round",
+          "type": "integer"
+        },
+        "home_id": {
+          "title": "Home Id",
+          "type": "string"
+        },
+        "away_id": {
+          "title": "Away Id",
+          "type": "string"
+        },
+        "home_goals": {
+          "minimum": 0,
+          "title": "Home Goals",
+          "type": "integer"
+        },
+        "away_goals": {
+          "minimum": 0,
+          "title": "Away Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "competition_id",
+        "round",
+        "home_id",
+        "away_id",
+        "home_goals",
+        "away_goals"
+      ],
+      "title": "Result",
+      "type": "object"
+    },
+    "RollOfHonourSeason": {
+      "additionalProperties": false,
+      "description": "Winners of each national competition in one season (club ids).",
+      "properties": {
+        "season": {
+          "pattern": "^\\d{4}/\\d{2}$",
+          "title": "Season",
+          "type": "string"
+        },
+        "league": {
+          "title": "League",
+          "type": "string"
+        },
+        "cup": {
+          "title": "Cup",
+          "type": "string"
+        },
+        "championship": {
+          "description": "Winner of the second division (Meridian Championship).",
+          "title": "Championship",
+          "type": "string"
+        },
+        "super_shield": {
+          "description": "Played in August at the start of this season: league champions v cup winners of the season before. Labelled by year, e.g. '2018'.",
+          "title": "Super Shield",
+          "type": "string"
+        }
+      },
+      "required": [
+        "season",
+        "league",
+        "cup",
+        "championship",
+        "super_shield"
+      ],
+      "title": "RollOfHonourSeason",
+      "type": "object"
+    },
+    "SeasonStats": {
+      "additionalProperties": false,
+      "description": "Current-season league numbers, consistent with the simulated results.",
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "appearances": {
+          "minimum": 0,
+          "title": "Appearances",
+          "type": "integer"
+        },
+        "starts": {
+          "minimum": 0,
+          "title": "Starts",
+          "type": "integer"
+        },
+        "minutes": {
+          "minimum": 0,
+          "title": "Minutes",
+          "type": "integer"
+        },
+        "goals": {
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        },
+        "assists": {
+          "minimum": 0,
+          "title": "Assists",
+          "type": "integer"
+        },
+        "yellow_cards": {
+          "minimum": 0,
+          "title": "Yellow Cards",
+          "type": "integer"
+        },
+        "red_cards": {
+          "minimum": 0,
+          "title": "Red Cards",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "competition_id",
+        "appearances",
+        "starts",
+        "minutes",
+        "goals",
+        "assists",
+        "yellow_cards",
+        "red_cards"
+      ],
+      "title": "SeasonStats",
+      "type": "object"
+    },
+    "Sector": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "capacity": {
+          "exclusiveMinimum": 0,
+          "title": "Capacity",
+          "type": "integer"
+        },
+        "type": {
+          "enum": [
+            "home",
+            "away",
+            "family",
+            "accessible",
+            "club_level"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "capacity",
+        "type"
+      ],
+      "title": "Sector",
+      "type": "object"
+    },
+    "Service": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "near": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Near",
+          "type": "array"
+        },
+        "offer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Offer"
+        }
+      },
+      "required": [
+        "type",
+        "name",
+        "near"
+      ],
+      "title": "Service",
+      "type": "object"
+    },
+    "SetPieces": {
+      "additionalProperties": false,
+      "description": "Order of preference (player ids). The first player on the pitch takes it.",
+      "properties": {
+        "penalties": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Penalties",
+          "type": "array"
+        },
+        "free_kicks": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Free Kicks",
+          "type": "array"
+        },
+        "corners": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "title": "Corners",
+          "type": "array"
+        }
+      },
+      "required": [
+        "penalties",
+        "free_kicks",
+        "corners"
+      ],
+      "title": "SetPieces",
+      "type": "object"
+    },
+    "SpellSeason": {
+      "additionalProperties": false,
+      "description": "League numbers of one season of a career spell.",
+      "properties": {
+        "season": {
+          "pattern": "^\\d{4}/\\d{2}$",
+          "title": "Season",
+          "type": "string"
+        },
+        "appearances": {
+          "minimum": 0,
+          "title": "Appearances",
+          "type": "integer"
+        },
+        "goals": {
+          "minimum": 0,
+          "title": "Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "season",
+        "appearances",
+        "goals"
+      ],
+      "title": "SpellSeason",
+      "type": "object"
+    },
+    "SponsorPrize": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "value_eur": {
+          "description": "Face value in euros.",
+          "minimum": 0,
+          "title": "Value Eur",
+          "type": "integer"
+        },
+        "awarded_to": {
+          "description": "Who wins it (the winner of the half-time games).",
+          "minLength": 1,
+          "title": "Awarded To",
+          "type": "string"
+        },
+        "how_to_claim": {
+          "minLength": 1,
+          "title": "How To Claim",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "value_eur",
+        "awarded_to",
+        "how_to_claim"
+      ],
+      "title": "SponsorPrize",
+      "type": "object"
+    },
+    "Stadium": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "town": {
+          "title": "Town",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "opened": {
+          "title": "Opened",
+          "type": "integer"
+        },
+        "capacity": {
+          "title": "Capacity",
+          "type": "integer"
+        },
+        "record_attendance": {
+          "$ref": "#/$defs/RecordAttendance"
+        },
+        "pitch": {
+          "$ref": "#/$defs/Pitch"
+        },
+        "roof": {
+          "title": "Roof",
+          "type": "string"
+        },
+        "floodlights": {
+          "title": "Floodlights",
+          "type": "string"
+        },
+        "big_screens": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Big Screens",
+          "type": "array"
+        },
+        "history": {
+          "title": "History",
+          "type": "string"
+        },
+        "notable_matches": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Notable Matches",
+          "type": "array"
+        },
+        "stands": {
+          "items": {
+            "$ref": "#/$defs/Stand"
+          },
+          "title": "Stands",
+          "type": "array"
+        },
+        "gates": {
+          "items": {
+            "$ref": "#/$defs/Gate"
+          },
+          "title": "Gates",
+          "type": "array"
+        },
+        "services": {
+          "items": {
+            "$ref": "#/$defs/Service"
+          },
+          "title": "Services",
+          "type": "array"
+        },
+        "transport": {
+          "items": {
+            "$ref": "#/$defs/Transport"
+          },
+          "title": "Transport",
+          "type": "array"
+        },
+        "policies": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Policies",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "club_id",
+        "town",
+        "address",
+        "opened",
+        "capacity",
+        "record_attendance",
+        "pitch",
+        "roof",
+        "floodlights",
+        "big_screens",
+        "history",
+        "notable_matches",
+        "stands",
+        "gates",
+        "services",
+        "transport",
+        "policies"
+      ],
+      "title": "Stadium",
+      "type": "object"
+    },
+    "StaffMember": {
+      "additionalProperties": false,
+      "properties": {
+        "first_name": {
+          "minLength": 1,
+          "title": "First Name",
+          "type": "string"
+        },
+        "last_name": {
+          "minLength": 1,
+          "title": "Last Name",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Honorific such as \"Dr.\"; never part of the first name.",
+          "title": "Title"
+        },
+        "nickname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Never part of the first or last name.",
+          "title": "Nickname"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "head_coach",
+            "assistant_coach",
+            "goalkeeper_coach",
+            "fitness_coach",
+            "head_physio",
+            "club_doctor",
+            "kit_manager"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "nationality": {
+          "title": "Nationality",
+          "type": "string"
+        },
+        "born": {
+          "title": "Born",
+          "type": "integer"
+        },
+        "since": {
+          "title": "Since",
+          "type": "integer"
+        },
+        "bio": {
+          "title": "Bio",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "id",
+        "club_id",
+        "role",
+        "nationality",
+        "born",
+        "since",
+        "bio"
+      ],
+      "title": "StaffMember",
+      "type": "object"
+    },
+    "Stand": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "side": {
+          "enum": [
+            "north",
+            "south",
+            "east",
+            "west"
+          ],
+          "title": "Side",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "sectors": {
+          "items": {
+            "$ref": "#/$defs/Sector"
+          },
+          "title": "Sectors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "side",
+        "description",
+        "sectors"
+      ],
+      "title": "Stand",
+      "type": "object"
+    },
+    "StandingRow": {
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "title": "Position",
+          "type": "integer"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "played": {
+          "title": "Played",
+          "type": "integer"
+        },
+        "won": {
+          "title": "Won",
+          "type": "integer"
+        },
+        "drawn": {
+          "title": "Drawn",
+          "type": "integer"
+        },
+        "lost": {
+          "title": "Lost",
+          "type": "integer"
+        },
+        "goals_for": {
+          "title": "Goals For",
+          "type": "integer"
+        },
+        "goals_against": {
+          "title": "Goals Against",
+          "type": "integer"
+        },
+        "goal_difference": {
+          "title": "Goal Difference",
+          "type": "integer"
+        },
+        "points": {
+          "title": "Points",
+          "type": "integer"
+        },
+        "form": {
+          "description": "Last five results, oldest first: W, D or L.",
+          "title": "Form",
+          "type": "string"
+        }
+      },
+      "required": [
+        "position",
+        "club_id",
+        "played",
+        "won",
+        "drawn",
+        "lost",
+        "goals_for",
+        "goals_against",
+        "goal_difference",
+        "points",
+        "form"
+      ],
+      "title": "StandingRow",
+      "type": "object"
+    },
+    "Standings": {
+      "additionalProperties": false,
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "after_round": {
+          "title": "After Round",
+          "type": "integer"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/StandingRow"
+          },
+          "title": "Rows",
+          "type": "array"
+        }
+      },
+      "required": [
+        "competition_id",
+        "after_round",
+        "rows"
+      ],
+      "title": "Standings",
+      "type": "object"
+    },
+    "TeamNews": {
+      "additionalProperties": false,
+      "properties": {
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "club_id",
+        "items"
+      ],
+      "title": "TeamNews",
+      "type": "object"
+    },
+    "TopScorerRow": {
+      "additionalProperties": false,
+      "properties": {
+        "rank": {
+          "title": "Rank",
+          "type": "integer"
+        },
+        "player_id": {
+          "description": "A Player id (match squads) or a LeaguePlayer id.",
+          "title": "Player Id",
+          "type": "string"
+        },
+        "club_id": {
+          "title": "Club Id",
+          "type": "string"
+        },
+        "goals": {
+          "title": "Goals",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "rank",
+        "player_id",
+        "club_id",
+        "goals"
+      ],
+      "title": "TopScorerRow",
+      "type": "object"
+    },
+    "TopScorers": {
+      "additionalProperties": false,
+      "properties": {
+        "competition_id": {
+          "title": "Competition Id",
+          "type": "string"
+        },
+        "after_round": {
+          "title": "After Round",
+          "type": "integer"
+        },
+        "rows": {
+          "items": {
+            "$ref": "#/$defs/TopScorerRow"
+          },
+          "title": "Rows",
+          "type": "array"
+        }
+      },
+      "required": [
+        "competition_id",
+        "after_round",
+        "rows"
+      ],
+      "title": "TopScorers",
+      "type": "object"
+    },
+    "Transport": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "title": "Mode",
+          "type": "string"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mode",
+        "detail"
+      ],
+      "title": "Transport",
+      "type": "object"
+    },
+    "UniverseMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "universe_id": {
+          "title": "Universe Id",
+          "type": "string"
+        },
+        "generator": {
+          "title": "Generator",
+          "type": "string"
+        },
+        "generator_version": {
+          "title": "Generator Version",
+          "type": "string"
+        },
+        "seed": {
+          "title": "Seed",
+          "type": "integer"
+        },
+        "country": {
+          "title": "Country",
+          "type": "string"
+        },
+        "country_note": {
+          "title": "Country Note",
+          "type": "string"
+        },
+        "season": {
+          "title": "Season",
+          "type": "string"
+        },
+        "currency": {
+          "const": "EUR",
+          "default": "EUR",
+          "title": "Currency",
+          "type": "string"
+        },
+        "disclaimer": {
+          "title": "Disclaimer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "universe_id",
+        "generator",
+        "generator_version",
+        "seed",
+        "country",
+        "country_note",
+        "season",
+        "disclaimer"
+      ],
+      "title": "UniverseMeta",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "$ref": "#/$defs/UniverseMeta"
+    },
+    "competitions": {
+      "items": {
+        "$ref": "#/$defs/Competition"
+      },
+      "title": "Competitions",
+      "type": "array"
+    },
+    "clubs": {
+      "items": {
+        "$ref": "#/$defs/Club"
+      },
+      "title": "Clubs",
+      "type": "array"
+    },
+    "club_details": {
+      "items": {
+        "$ref": "#/$defs/ClubDetails"
+      },
+      "title": "Club Details",
+      "type": "array"
+    },
+    "roll_of_honour": {
+      "items": {
+        "$ref": "#/$defs/RollOfHonourSeason"
+      },
+      "title": "Roll Of Honour",
+      "type": "array"
+    },
+    "players": {
+      "items": {
+        "$ref": "#/$defs/Player"
+      },
+      "title": "Players",
+      "type": "array"
+    },
+    "league_players": {
+      "items": {
+        "$ref": "#/$defs/LeaguePlayer"
+      },
+      "title": "League Players",
+      "type": "array"
+    },
+    "staff": {
+      "items": {
+        "$ref": "#/$defs/StaffMember"
+      },
+      "title": "Staff",
+      "type": "array"
+    },
+    "coaches": {
+      "items": {
+        "$ref": "#/$defs/Coach"
+      },
+      "title": "Coaches",
+      "type": "array"
+    },
+    "coaching_history": {
+      "items": {
+        "$ref": "#/$defs/CoachingSpell"
+      },
+      "title": "Coaching History",
+      "type": "array"
+    },
+    "officials": {
+      "items": {
+        "$ref": "#/$defs/Official"
+      },
+      "title": "Officials",
+      "type": "array"
+    },
+    "stadiums": {
+      "items": {
+        "$ref": "#/$defs/Stadium"
+      },
+      "title": "Stadiums",
+      "type": "array"
+    },
+    "results": {
+      "items": {
+        "$ref": "#/$defs/Result"
+      },
+      "title": "Results",
+      "type": "array"
+    },
+    "fixtures": {
+      "description": "The next round after the match (no concurrent fixtures).",
+      "items": {
+        "$ref": "#/$defs/Fixture"
+      },
+      "title": "Fixtures",
+      "type": "array"
+    },
+    "standings": {
+      "items": {
+        "$ref": "#/$defs/Standings"
+      },
+      "title": "Standings",
+      "type": "array"
+    },
+    "top_scorers": {
+      "items": {
+        "$ref": "#/$defs/TopScorers"
+      },
+      "title": "Top Scorers",
+      "type": "array"
+    },
+    "head_to_head": {
+      "items": {
+        "$ref": "#/$defs/HeadToHead"
+      },
+      "title": "Head To Head",
+      "type": "array"
+    },
+    "match_preview": {
+      "$ref": "#/$defs/MatchPreview"
+    }
+  },
+  "required": [
+    "meta",
+    "competitions",
+    "clubs",
+    "club_details",
+    "roll_of_honour",
+    "players",
+    "league_players",
+    "staff",
+    "coaches",
+    "coaching_history",
+    "officials",
+    "stadiums",
+    "results",
+    "fixtures",
+    "standings",
+    "top_scorers",
+    "head_to_head",
+    "match_preview"
+  ],
+  "title": "Universe",
+  "type": "object"
+}

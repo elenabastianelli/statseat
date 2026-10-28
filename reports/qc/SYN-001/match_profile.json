@@ -1,0 +1,1272 @@
+{
+  "match_id": "SYN-001",
+  "competition_id": "MER-1",
+  "season": "2026/27",
+  "fs_hz": {
+    "1": 25.0,
+    "2": 25.0
+  },
+  "sampling": {
+    "1": {
+      "fs_hz": 25.0,
+      "dt_median_s": 0.04,
+      "dt_std_s": 0.0,
+      "dt_min_s": 0.04,
+      "dt_max_s": 0.04,
+      "pct_dt_outside_tol": 0.0,
+      "n_steps": 1601950,
+      "n_steps_dn_not_1": 0,
+      "pct_dn1_with_dt_in_tol": 100.0
+    },
+    "2": {
+      "fs_hz": 25.0,
+      "dt_median_s": 0.04,
+      "dt_std_s": 0.0,
+      "dt_min_s": 0.04,
+      "dt_max_s": 0.04,
+      "pct_dt_outside_tol": 0.0,
+      "n_steps": 1666346,
+      "n_steps_dn_not_1": 0,
+      "pct_dn1_with_dt_in_tol": 100.0
+    }
+  },
+  "frame_ranges": {
+    "per_half": {
+      "1": {
+        "n_first": 10000,
+        "n_last": 79650,
+        "n_frames_span": 69651,
+        "t_first_utc": "2026-10-24T14:00:06.480000+00:00",
+        "t_last_utc": "2026-10-24T14:46:32.480000+00:00",
+        "n_framesets": 23
+      },
+      "2": {
+        "n_first": 100000,
+        "n_last": 172450,
+        "n_frames_span": 72451,
+        "t_first_utc": "2026-10-24T15:02:13.480000+00:00",
+        "t_last_utc": "2026-10-24T15:50:31.480000+00:00",
+        "n_framesets": 27
+      }
+    },
+    "half_offsets": {
+      "1->2": {
+        "first_n_next_half": 100000,
+        "jump_from_last_n": 20350
+      }
+    }
+  },
+  "pitch_length_m": 105.0,
+  "pitch_width_m": 68.0,
+  "pitch_size_source": "match metadata",
+  "pitch_size_tracking_meta": [
+    105.0,
+    68.0
+  ],
+  "tracking_origin": "centre",
+  "centre_spot_in_tracking": [
+    0.0,
+    0.0
+  ],
+  "consistent_votes": true,
+  "votes": [
+    "centre",
+    "centre",
+    "centre",
+    "centre",
+    "centre",
+    "centre"
+  ],
+  "player_x_range": [
+    -53.130001,
+    53.419998
+  ],
+  "player_y_range": [
+    -35.02,
+    34.91
+  ],
+  "player_x_p0_5_p99_5": [
+    -47.709999,
+    49.450001
+  ],
+  "player_y_p0_5_p99_5": [
+    -34.369999,
+    32.75
+  ],
+  "long_axis": "x",
+  "axis_orientation": {
+    "long_axis": "x",
+    "x_positive_towards": "right goal (team_right defends +x)",
+    "y_sign_vs_events": "same"
+  },
+  "event_origin": "centre",
+  "kickoff_xy": [
+    -0.37,
+    -0.18
+  ],
+  "event_x_range": [
+    -50.63,
+    53.0
+  ],
+  "event_y_range": [
+    -34.5,
+    34.5
+  ],
+  "centre_spot_in_events": [
+    0.0,
+    0.0
+  ],
+  "event_to_tracking_transform": {
+    "x_tracking": "+1 * (x_event - 0.0) + 0.0",
+    "y_tracking": "+1 * (y_event - 0.0) + 0.0",
+    "by_half": {
+      "1": {
+        "n": 388,
+        "median_m": 0.906116
+      },
+      "2": {
+        "n": 441,
+        "median_m": 0.994082
+      }
+    },
+    "candidates": [
+      {
+        "sx": 1,
+        "sy": 1,
+        "median_dist_m": 0.958019,
+        "best_lag_s": -0.0
+      },
+      {
+        "sx": 1,
+        "sy": -1,
+        "median_dist_m": 24.222,
+        "best_lag_s": 0.8
+      },
+      {
+        "sx": -1,
+        "sy": 1,
+        "median_dist_m": 27.557353,
+        "best_lag_s": -1.36
+      },
+      {
+        "sx": -1,
+        "sy": -1,
+        "median_dist_m": 43.918681,
+        "best_lag_s": 3.0
+      }
+    ],
+    "best": {
+      "sx": 1,
+      "sy": 1,
+      "median_dist_m": 0.958019,
+      "best_lag_s": -0.0
+    },
+    "n_events_used": 829,
+    "dist_mean_m": 1.014282,
+    "dist_std_m": 0.517903,
+    "dist_p90_m": 1.714723,
+    "by_type": [
+      {
+        "type": "CornerKick",
+        "count": 4,
+        "median": 0.79,
+        "mean": 0.81
+      },
+      {
+        "type": "FreeKick",
+        "count": 22,
+        "median": 1.04,
+        "mean": 1.17
+      },
+      {
+        "type": "GoalKick",
+        "count": 13,
+        "median": 0.94,
+        "mean": 0.95
+      },
+      {
+        "type": "KickOff",
+        "count": 5,
+        "median": 0.89,
+        "mean": 0.84
+      },
+      {
+        "type": "Play",
+        "count": 690,
+        "median": 0.98,
+        "mean": 1.03
+      },
+      {
+        "type": "ShotAtGoal",
+        "count": 21,
+        "median": 0.95,
+        "mean": 1.13
+      },
+      {
+        "type": "ThrowIn",
+        "count": 74,
+        "median": 0.66,
+        "mean": 0.84
+      }
+    ],
+    "y_sign_margin_m": 23.263981
+  },
+  "kickoff_frames": [
+    {
+      "found": true,
+      "dead_ball_before": false,
+      "frame_index": 0,
+      "n": 10000,
+      "t_utc": "2026-10-24T14:00:06.480000019+00:00",
+      "ball_x": 0.03,
+      "ball_y": 0.02,
+      "ball_dist_first_live_m": 0.036056,
+      "backtrack_dist_m": 0.036056,
+      "frame_minus_event_s": 0.0,
+      "half": 1,
+      "game_section": "firstHalf",
+      "event_time_utc": "2026-10-24T14:00:06.480000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 35229,
+      "n": 45229,
+      "t_utc": "2026-10-24T14:23:35.640000105+00:00",
+      "ball_x": 0.05,
+      "ball_y": 0.02,
+      "ball_dist_first_live_m": 0.053852,
+      "backtrack_dist_m": 0.053852,
+      "frame_minus_event_s": 0.0,
+      "half": 1,
+      "game_section": "firstHalf",
+      "event_time_utc": "2026-10-24T14:23:35.640000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 62221,
+      "n": 72221,
+      "t_utc": "2026-10-24T14:41:35.319999933+00:00",
+      "ball_x": 0.05,
+      "ball_y": -0.01,
+      "ball_dist_first_live_m": 0.05099,
+      "backtrack_dist_m": 0.05099,
+      "frame_minus_event_s": 0.0,
+      "half": 1,
+      "game_section": "firstHalf",
+      "event_time_utc": "2026-10-24T14:41:35.320000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": false,
+      "frame_index": 0,
+      "n": 100000,
+      "t_utc": "2026-10-24T15:02:13.480000019+00:00",
+      "ball_x": 0.02,
+      "ball_y": -0.02,
+      "ball_dist_first_live_m": 0.028284,
+      "backtrack_dist_m": 0.028284,
+      "frame_minus_event_s": 0.0,
+      "half": 2,
+      "game_section": "secondHalf",
+      "event_time_utc": "2026-10-24T15:02:13.480000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 65567,
+      "n": 165567,
+      "t_utc": "2026-10-24T15:45:56.160000086+00:00",
+      "ball_x": 0.02,
+      "ball_y": -0.04,
+      "ball_dist_first_live_m": 0.044721,
+      "backtrack_dist_m": 0.044721,
+      "frame_minus_event_s": 0.0,
+      "half": 2,
+      "game_section": "secondHalf",
+      "event_time_utc": "2026-10-24T15:45:56.160000+00:00"
+    }
+  ],
+  "direction_per_half": {
+    "1": {
+      "team_left": "home",
+      "team_right": "away",
+      "gk_mean_x_home": -39.137896,
+      "gk_mean_x_away": 41.399357,
+      "gk_left_team": "home",
+      "confirmed": true,
+      "home_attacks_positive_x": true
+    },
+    "2": {
+      "team_left": "away",
+      "team_right": "home",
+      "gk_mean_x_home": 41.440444,
+      "gk_mean_x_away": -39.524452,
+      "gk_left_team": "away",
+      "confirmed": true,
+      "home_attacks_positive_x": false
+    }
+  },
+  "timezones": {
+    "events": [
+      "+00:00"
+    ],
+    "tracking": [
+      "+00:00"
+    ]
+  },
+  "objects": {
+    "teams": {
+      "home": {
+        "lineup_size": 20,
+        "starters": 11,
+        "with_frameset": 13,
+        "framesets_per_half": {
+          "1": 11,
+          "2": 13
+        }
+      },
+      "away": {
+        "lineup_size": 20,
+        "starters": 11,
+        "with_frameset": 13,
+        "framesets_per_half": {
+          "1": 11,
+          "2": 13
+        }
+      }
+    },
+    "ball_present_per_half": {
+      "1": true,
+      "2": true
+    },
+    "lineup_without_frameset": 14,
+    "lineup_without_frameset_starters": 0,
+    "framesets_without_lineup": [],
+    "referees_tracked": false,
+    "non_player_objects_by_team_label": {}
+  },
+  "substitutions": [
+    {
+      "time_utc": "2026-10-24T15:26:27.160000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "CAL-04",
+      "player_in": "CAL-37",
+      "playing_position": "RCM",
+      "in_frameset_start_minus_event_s": 0.04,
+      "out_frameset_end_minus_event_s": 0.0
+    },
+    {
+      "time_utc": "2026-10-24T15:26:31.160000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "BRA-27",
+      "player_in": "BRA-49",
+      "playing_position": "RW",
+      "in_frameset_start_minus_event_s": 0.04,
+      "out_frameset_end_minus_event_s": 0.0
+    },
+    {
+      "time_utc": "2026-10-24T15:32:22.040000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "CAL-10",
+      "player_in": "CAL-19",
+      "playing_position": "LS",
+      "in_frameset_start_minus_event_s": 0.04,
+      "out_frameset_end_minus_event_s": 0.0
+    },
+    {
+      "time_utc": "2026-10-24T15:32:24.040000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "BRA-09",
+      "player_in": "BRA-46",
+      "playing_position": "ST",
+      "in_frameset_start_minus_event_s": 0.04,
+      "out_frameset_end_minus_event_s": 0.0
+    }
+  ],
+  "cards": {
+    "yellow": 1
+  },
+  "delete_events": 0,
+  "events_raw": 1244,
+  "events_kept": 1244,
+  "events_out_of_order_in_file": 0,
+  "event_types_kept": {
+    "Play": 690,
+    "TacklingGame": 185,
+    "OtherBallAction": 165,
+    "ThrowIn": 74,
+    "BallClaiming": 31,
+    "FreeKick": 22,
+    "ShotAtGoal": 21,
+    "Foul": 20,
+    "GoalKick": 13,
+    "KickOff": 5,
+    "CornerKick": 4,
+    "Substitution": 4,
+    "Offside": 3,
+    "FinalWhistle": 2,
+    "Nutmeg": 1,
+    "Caution": 1,
+    "Penalty": 1,
+    "VideoAssistantAction": 1,
+    "PenaltyNotAwarded": 1
+  },
+  "playing_time": {
+    "1": {
+      "gross_s": null,
+      "net_s": null,
+      "tracking_duration_s": 2786.04,
+      "tracking_minus_gross_s": null,
+      "ball_alive_s": 1552.28,
+      "ball_alive_minus_net_s": null,
+      "ball_live_s": 1552.28
+    },
+    "2": {
+      "gross_s": null,
+      "net_s": null,
+      "tracking_duration_s": 2898.04,
+      "tracking_minus_gross_s": null,
+      "ball_alive_s": 1687.28,
+      "ball_alive_minus_net_s": null,
+      "ball_live_s": 1687.28
+    }
+  },
+  "guidelines_version": "v4.2 (2026-10-25)",
+  "provider": "InsideTheGame synthetic",
+  "format": "InsideTheGame synthetic folder (match_info.json, events.json, positions.parquet)",
+  "units": {
+    "coordinates": {
+      "units": "m",
+      "scale_to_m": 1.0,
+      "span": 127.220001
+    },
+    "provider_speed": {
+      "units": "unknown",
+      "scale_to_ms": null,
+      "peak": null
+    },
+    "provider_step": "cm (D), converted to m",
+    "provider_acceleration": "m/s2 (A)"
+  },
+  "canonical_transform": {
+    "x_canonical": "+1 * (x_tracking - 0.0)",
+    "y_canonical": "+1 * (y_tracking - 0.0)",
+    "rotation_deg": 0,
+    "reason": "home attacks +x in period 1 after normalisation"
+  },
+  "event_to_canonical_transform": {
+    "x_canonical": "+1 * (x_event - 0.0)",
+    "y_canonical": "+1 * (y_event - 0.0)"
+  },
+  "kickoff_per_period": {
+    "1": {
+      "kickoff_utc": "2026-10-24T14:00:06.480000019+00:00",
+      "source": "KickOff event",
+      "tracking_start_offset_s": 0.0,
+      "metadata_kickoff_minus_event_s": -6.48
+    },
+    "2": {
+      "kickoff_utc": "2026-10-24T15:02:13.480000019+00:00",
+      "source": "KickOff event",
+      "tracking_start_offset_s": 0.0
+    }
+  },
+  "tracking_area_edges": {
+    "edges": [],
+    "candidates_rejected": [
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.55,
+        "beyond_line_m": 0.55,
+        "samples": 643,
+        "distinct_positions": 290,
+        "runs": 198,
+        "tracks": 12,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.54,
+        "beyond_line_m": 0.54,
+        "samples": 629,
+        "distinct_positions": 292,
+        "runs": 201,
+        "tracks": 13,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.56,
+        "beyond_line_m": 0.56,
+        "samples": 596,
+        "distinct_positions": 291,
+        "runs": 198,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.53,
+        "beyond_line_m": 0.53,
+        "samples": 596,
+        "distinct_positions": 291,
+        "runs": 184,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.58,
+        "beyond_line_m": 0.58,
+        "samples": 580,
+        "distinct_positions": 255,
+        "runs": 184,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.51,
+        "beyond_line_m": 0.51,
+        "samples": 546,
+        "distinct_positions": 258,
+        "runs": 192,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.52,
+        "beyond_line_m": 0.52,
+        "samples": 541,
+        "distinct_positions": 247,
+        "runs": 179,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.57,
+        "beyond_line_m": 0.57,
+        "samples": 521,
+        "distinct_positions": 266,
+        "runs": 191,
+        "tracks": 12,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.5,
+        "beyond_line_m": 0.5,
+        "samples": 516,
+        "distinct_positions": 265,
+        "runs": 183,
+        "tracks": 14,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "-",
+        "value_m": -34.49,
+        "beyond_line_m": 0.49,
+        "samples": 498,
+        "distinct_positions": 274,
+        "runs": 172,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      }
+    ],
+    "n_candidates_rejected": 172
+  },
+  "parking_values": {
+    "parking_values": [],
+    "candidates_rejected": [
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 34.69,
+        "beyond_line_m": 0.69,
+        "samples": 26,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      }
+    ],
+    "n_candidates_rejected": 1
+  },
+  "coordinate_resolution_m": 0.009998,
+  "event_clock_offset": {
+    "1": {
+      "event_clock_offset_s": 0.0,
+      "event_offset_dispersion_s": 0.0,
+      "n_anchors": 59,
+      "search_window_s": 5.0,
+      "anchor_offset_p10_p90_s": [
+        0.0,
+        0.0
+      ],
+      "by_type": [
+        {
+          "type": "CornerKick",
+          "count": 1,
+          "median": 0.0
+        },
+        {
+          "type": "FreeKick",
+          "count": 13,
+          "median": 0.0
+        },
+        {
+          "type": "GoalKick",
+          "count": 3,
+          "median": 0.0
+        },
+        {
+          "type": "KickOff",
+          "count": 3,
+          "median": 0.0
+        },
+        {
+          "type": "ThrowIn",
+          "count": 39,
+          "median": 0.0
+        }
+      ],
+      "negligible": true
+    },
+    "2": {
+      "event_clock_offset_s": 0.0,
+      "event_offset_dispersion_s": 0.0,
+      "n_anchors": 60,
+      "search_window_s": 5.0,
+      "anchor_offset_p10_p90_s": [
+        0.0,
+        0.0
+      ],
+      "by_type": [
+        {
+          "type": "CornerKick",
+          "count": 3,
+          "median": 0.0
+        },
+        {
+          "type": "FreeKick",
+          "count": 9,
+          "median": 0.0
+        },
+        {
+          "type": "GoalKick",
+          "count": 10,
+          "median": 0.0
+        },
+        {
+          "type": "KickOff",
+          "count": 2,
+          "median": 0.0
+        },
+        {
+          "type": "Penalty",
+          "count": 1,
+          "median": 0.0
+        },
+        {
+          "type": "ThrowIn",
+          "count": 35,
+          "median": 0.0
+        }
+      ],
+      "negligible": true
+    }
+  },
+  "provider_kinematics_supplied": {
+    "speed_S": false,
+    "acceleration_A": false,
+    "step_D": false,
+    "use": "tests only"
+  },
+  "ball_status_supplied": true,
+  "ball_possession_supplied": true,
+  "ball_height_supplied": true,
+  "ball_height": {
+    "supplied": true,
+    "finite_share_live": 1.0,
+    "range_m": 77.47,
+    "rule": "finite on >= 50 % of live ball samples and spanning more than 0.5 m (a constant height is not usable)"
+  },
+  "formations": {
+    "home": {
+      "source_formation": "4-2-3-1",
+      "formation": "4-2-3-1"
+    },
+    "away": {
+      "source_formation": "4-4-2",
+      "formation": "4-4-2"
+    }
+  },
+  "venue_country": "not supplied",
+  "lineup_roles": [
+    {
+      "person_id": "BRA-01",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "BRA-02",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "RB",
+      "role": "RB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "BRA-04",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "RCB",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "BRA-05",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "LCB",
+      "role": "LCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "BRA-03",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "BRA-08",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "RDM",
+      "role": "RDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "BRA-06",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "LDM",
+      "role": "LDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "BRA-27",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "RW",
+      "role": "RW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "BRA-10",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "CAM",
+      "role": "CAM",
+      "role_group": "AM"
+    },
+    {
+      "person_id": "BRA-11",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "LW",
+      "role": "LW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "BRA-09",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "BRA-30",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "BRA-26",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "RCB",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "BRA-15",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "BRA-29",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "CDM",
+      "role": "CDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "BRA-38",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "LCM",
+      "role": "LCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "BRA-49",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "LW",
+      "role": "LW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "BRA-17",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "CAM",
+      "role": "CAM",
+      "role_group": "AM"
+    },
+    {
+      "person_id": "BRA-46",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "BRA-18",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "CAL-01",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "CAL-02",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "RB",
+      "role": "RB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "CAL-05",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "RCB",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "CAL-06",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "LCB",
+      "role": "LCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "CAL-24",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "CAL-07",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "RM",
+      "role": "RM",
+      "role_group": "W"
+    },
+    {
+      "person_id": "CAL-04",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "RCM",
+      "role": "RCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "CAL-08",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "LCM",
+      "role": "LCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "CAL-39",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "LM",
+      "role": "LM",
+      "role_group": "W"
+    },
+    {
+      "person_id": "CAL-09",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "RS",
+      "role": "RS",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "CAL-10",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "LS",
+      "role": "LS",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "CAL-30",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "CAL-21",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "LCB",
+      "role": "LCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "CAL-03",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "CAL-16",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "CDM",
+      "role": "CDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "CAL-37",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "LCM",
+      "role": "LCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "CAL-42",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "RM",
+      "role": "RM",
+      "role_group": "W"
+    },
+    {
+      "person_id": "CAL-47",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "CAM",
+      "role": "CAM",
+      "role_group": "AM"
+    },
+    {
+      "person_id": "CAL-22",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "CAL-19",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST"
+    }
+  ],
+  "role_evidence_period1": [
+    {
+      "object_id": "BRA-01",
+      "team_side": "home",
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK",
+      "mean_x_att": -39.137896,
+      "mean_y_att": -0.338612
+    },
+    {
+      "object_id": "BRA-02",
+      "team_side": "home",
+      "source_code": "RB",
+      "role": "RB",
+      "role_group": "FB",
+      "mean_x_att": -4.770773,
+      "mean_y_att": -20.955505
+    },
+    {
+      "object_id": "BRA-03",
+      "team_side": "home",
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB",
+      "mean_x_att": -5.694091,
+      "mean_y_att": 18.317937
+    },
+    {
+      "object_id": "BRA-04",
+      "team_side": "home",
+      "source_code": "RCB",
+      "role": "RCB",
+      "role_group": "CB",
+      "mean_x_att": -13.110759,
+      "mean_y_att": -10.960607
+    },
+    {
+      "object_id": "BRA-05",
+      "team_side": "home",
+      "source_code": "LCB",
+      "role": "LCB",
+      "role_group": "CB",
+      "mean_x_att": -13.270946,
+      "mean_y_att": 7.278569
+    },
+    {
+      "object_id": "BRA-06",
+      "team_side": "home",
+      "source_code": "LDM",
+      "role": "LDM",
+      "role_group": "DM",
+      "mean_x_att": -0.881218,
+      "mean_y_att": 0.386417
+    },
+    {
+      "object_id": "BRA-08",
+      "team_side": "home",
+      "source_code": "RDM",
+      "role": "RDM",
+      "role_group": "DM",
+      "mean_x_att": -0.604199,
+      "mean_y_att": -3.950532
+    },
+    {
+      "object_id": "BRA-09",
+      "team_side": "home",
+      "source_code": "ST",
+      "role": "ST",
+      "role_group": "ST",
+      "mean_x_att": 16.448985,
+      "mean_y_att": -1.342292
+    },
+    {
+      "object_id": "BRA-10",
+      "team_side": "home",
+      "source_code": "CAM",
+      "role": "CAM",
+      "role_group": "AM",
+      "mean_x_att": 9.431766,
+      "mean_y_att": -1.352935
+    },
+    {
+      "object_id": "BRA-11",
+      "team_side": "home",
+      "source_code": "LW",
+      "role": "LW",
+      "role_group": "W",
+      "mean_x_att": 8.391197,
+      "mean_y_att": 14.580361
+    },
+    {
+      "object_id": "BRA-27",
+      "team_side": "home",
+      "source_code": "RW",
+      "role": "RW",
+      "role_group": "W",
+      "mean_x_att": 8.377016,
+      "mean_y_att": -17.284556
+    },
+    {
+      "object_id": "CAL-01",
+      "team_side": "away",
+      "source_code": "GK",
+      "role": "GK",
+      "role_group": "GK",
+      "mean_x_att": -41.406516,
+      "mean_y_att": 0.264503
+    },
+    {
+      "object_id": "CAL-02",
+      "team_side": "away",
+      "source_code": "RB",
+      "role": "RB",
+      "role_group": "FB",
+      "mean_x_att": -12.410241,
+      "mean_y_att": -16.409528
+    },
+    {
+      "object_id": "CAL-04",
+      "team_side": "away",
+      "source_code": "RCM",
+      "role": "RCM",
+      "role_group": "CM",
+      "mean_x_att": -0.304531,
+      "mean_y_att": -6.218942
+    },
+    {
+      "object_id": "CAL-05",
+      "team_side": "away",
+      "source_code": "RCB",
+      "role": "RCB",
+      "role_group": "CB",
+      "mean_x_att": -19.661141,
+      "mean_y_att": -7.404251
+    },
+    {
+      "object_id": "CAL-06",
+      "team_side": "away",
+      "source_code": "LCB",
+      "role": "LCB",
+      "role_group": "CB",
+      "mean_x_att": -19.391564,
+      "mean_y_att": 9.316597
+    },
+    {
+      "object_id": "CAL-07",
+      "team_side": "away",
+      "source_code": "RM",
+      "role": "RM",
+      "role_group": "W",
+      "mean_x_att": -5.042133,
+      "mean_y_att": -21.607749
+    },
+    {
+      "object_id": "CAL-08",
+      "team_side": "away",
+      "source_code": "LCM",
+      "role": "LCM",
+      "role_group": "CM",
+      "mean_x_att": -0.563031,
+      "mean_y_att": 8.62755
+    },
+    {
+      "object_id": "CAL-09",
+      "team_side": "away",
+      "source_code": "RS",
+      "role": "RS",
+      "role_group": "ST",
+      "mean_x_att": 9.603792,
+      "mean_y_att": -0.008576
+    },
+    {
+      "object_id": "CAL-10",
+      "team_side": "away",
+      "source_code": "LS",
+      "role": "LS",
+      "role_group": "ST",
+      "mean_x_att": 9.934781,
+      "mean_y_att": 2.150582
+    },
+    {
+      "object_id": "CAL-24",
+      "team_side": "away",
+      "source_code": "LB",
+      "role": "LB",
+      "role_group": "FB",
+      "mean_x_att": -11.871666,
+      "mean_y_att": 18.607146
+    },
+    {
+      "object_id": "CAL-39",
+      "team_side": "away",
+      "source_code": "LM",
+      "role": "LM",
+      "role_group": "W",
+      "mean_x_att": -5.142247,
+      "mean_y_att": 21.906425
+    }
+  ],
+  "unmapped_codes": {},
+  "event_types": {
+    "by_type": {
+      "ball_claiming": 31,
+      "caution": 1,
+      "corner_kick": 4,
+      "final_whistle": 2,
+      "foul": 20,
+      "free_kick": 22,
+      "goal_kick": 13,
+      "kick_off": 5,
+      "nutmeg": 1,
+      "offside": 3,
+      "other_ball_action": 165,
+      "penalty": 1,
+      "penalty_not_awarded": 1,
+      "play": 690,
+      "shot_at_goal": 21,
+      "substitution": 4,
+      "tackling_game": 185,
+      "throw_in": 74,
+      "video_assistant_action": 1
+    },
+    "outside_dfl_list": {
+      "penalty": 1
+    },
+    "unmapped": {}
+  }
+}

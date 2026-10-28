@@ -1,0 +1,45 @@
+{
+  "match_id": "SYN-001",
+  "phase": "half_time",
+  "minute": 45,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+    "home": 1,
+    "away": 0
+  },
+  "sections": [
+    {
+      "section": "pre_match",
+      "unlocked": true,
+      "unlocks_at_phase": null
+    },
+    {
+      "section": "live",
+      "unlocked": false,
+      "unlocks_at_phase": "second_half"
+    },
+    {
+      "section": "data_stats",
+      "unlocked": true,
+      "unlocks_at_phase": null
+    },
+    {
+      "section": "games",
+      "unlocked": true,
+      "unlocks_at_phase": null
+    },
+    {
+      "section": "recap",
+      "unlocked": false,
+      "unlocks_at_phase": "full_time"
+    },
+    {
+      "section": "ask_archie",
+      "unlocked": true,
+      "unlocks_at_phase": null
+    }
+  ],
+  "as_of_s": 2820.0,
+  "server_time": "2026-10-24T15:52:00+01:00"
+}

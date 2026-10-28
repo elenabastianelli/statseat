@@ -1,0 +1,33 @@
+{
+  "games": [
+    {
+      "game_id": "tiki_taka_toe",
+      "title": "Tic Tac Goal",
+      "available": true,
+      "unlocks_at_phase": null,
+      "rules": "Fill a cell with a player of the two squads who meets both its row and column criteria. A wrong answer loses the turn; 20 s per turn, 10 minutes per game. Three in a row wins."
+    },
+    {
+      "game_id": "guess_the_player",
+      "title": "Guess the player",
+      "available": true,
+      "unlocks_at_phase": null,
+      "rules": "A player's whole career, with the transfer fees and the current club hidden: pick the right name among four. 5 questions, 20 s each."
+    },
+    {
+      "game_id": "quiz",
+      "title": "Match quiz",
+      "available": true,
+      "unlocks_at_phase": null,
+      "rules": "Questions on this match's first half, at half-time."
+    }
+  ],
+  "prize": {
+    "sponsor_name": "Quayspoke Cycles",
+    "sponsor_sector": "bicycles and cycling gear",
+    "name": "Lamplighters Store voucher",
+    "description": "A 50-euro voucher for the Lamplighters Store, the club shop at the foot of the Main Stand (sector W1).",
+    "value_eur": 50,
+    "how_to_claim": "The winner sees the voucher in statseat and shows it at the store counter, on match day or within 30 days."
+  }
+}

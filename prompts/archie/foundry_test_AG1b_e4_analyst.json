@@ -1,0 +1,260 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5685.0,
+  "server_time": "2026-10-26T11:06:06.957115+01:00"
+ },
+ "turns": [
+  {
+   "question": "What was the xG of each team, and which was the biggest chance?",
+   "answer": {
+    "answer_id": "ANS-8bad620190ef",
+    "text": "Calderholm United finished with 2.61 xG to Brackwater Athletic’s 0.4. The biggest chance was Calderholm’s #7 Rutger van Dalfsen penalty at 53', valued at 0.79 xG—a big chance. The xG cumulative chart is in Data & Statistics.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2.61",
+      "value": 2.61,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.CAL"
+     },
+     {
+      "text": "0.4",
+      "value": 0.4,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.BRA"
+     },
+     {
+      "text": "7",
+      "value": 7.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "CAL-07"
+      },
+      "source_field": "CAL-07.shirt_number"
+     },
+     {
+      "text": "53'",
+      "value": 53.0,
+      "unit": "'",
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "shots[8].minute"
+     },
+     {
+      "text": "0.79",
+      "value": 0.79,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "shots[8].xg"
+     }
+    ],
+    "points_to": {
+     "chart_id": "xg_cumulative",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-d0b88b69bbf14c4a",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Analyzer version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5901,
+       "tokens_out": 138,
+       "latency_ms": 9149
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 3708,
+       "tokens_out": 73,
+       "latency_ms": 3523
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.4, CAL 2.61",
+       "latency_ms": 14
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the xG of each team, and which was the biggest chance in Brackwater Athletic v Calderholm United?"
+       },
+       "result_summary": "Brackwater Athletic: xG 0.4; Calderholm United: xG 2.61.\nThe biggest chance was Calderholm United’s #7 Rutger van Dalfsen penalty at 53', xG 0.79 (“big chance”).",
+       "latency_ms": 3544
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 5,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 9820,
+     "latency_ms": 12786,
+     "cost_usd": 0.001066
+    }
+   }
+  },
+  {
+   "question": "Was it offside at minute 16?",
+   "answer": {
+    "answer_id": "ANS-d16cfa7b01b6",
+    "text": "Yes—Brightwell was ruled offside, with a 3.7 m margin. The 16th-minute timeline also records his shot going wide and a foul on Cotterell.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "3.7 m",
+      "value": 3.7,
+      "unit": "m",
+      "tool": "offside_check",
+      "arguments": {
+       "minute": 16
+      },
+      "source_field": "margin_m"
+     },
+     {
+      "text": "16th",
+      "value": 16.0,
+      "unit": null,
+      "tool": "match_events",
+      "arguments": {
+       "from_minute": 16,
+       "until_minute": 16,
+       "last": 30
+      },
+      "source_field": "events[0].minute"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-a64ff863a42941f1",
+     "method": "Archie routed the question to The Analyst, which called 2 deterministic tools with the fan's session (no future, Analyzer version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5887,
+       "tokens_out": 179,
+       "latency_ms": 5487
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 4301,
+       "tokens_out": 117,
+       "latency_ms": 4887
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "match_events",
+       "arguments": {
+        "from_minute": 16,
+        "until_minute": 16,
+        "last": 30
+       },
+       "result_summary": "2 events, last foul 16'",
+       "latency_ms": 2
+      },
+      {
+       "agent": "The Analyst",
+       "tool": "offside_check",
+       "arguments": {
+        "minute": 16
+       },
+       "result_summary": "offside 16': offside (+3.7 m, band 2 m)",
+       "latency_ms": 1410
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What happened at minute 16, including whether an offside was called?"
+       },
+       "result_summary": "At 16', Calderholm’s Mortimer Brightwell had a shot that went wide, and Damien Fontanieu fouled Brackwater’s Oberon Cotterell.  \nOn a separate offside check involving Brightwell: verdict offside, marg",
+       "latency_ms": 6310
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:match_events",
+      "tool:offside_check"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 10484,
+     "latency_ms": 11807,
+     "cost_usd": 0.001167
+    }
+   }
+  }
+ ]
+}

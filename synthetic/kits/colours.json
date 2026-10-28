@@ -1,0 +1,574 @@
+{
+  "BRA": {
+    "home": {
+      "shirt": "#1B2A4A",
+      "shorts": "#1B2A4A",
+      "socks": "#F2A900"
+    },
+    "away": {
+      "shirt": "#F2A900",
+      "shorts": "#1B2A4A",
+      "socks": "#F2A900"
+    },
+    "source": "universe club_details.kits"
+  },
+  "CAL": {
+    "home": {
+      "shirt": "#7A1F2B",
+      "shorts": "#FFFFFF",
+      "socks": "#7A1F2B"
+    },
+    "away": {
+      "shirt": "#8FC1E3",
+      "shorts": "#7A1F2B",
+      "socks": "#8FC1E3"
+    },
+    "source": "universe club_details.kits"
+  },
+  "FEN": {
+    "home": {
+      "shirt": "#1E6B3A",
+      "shorts": "#FFFFFF",
+      "socks": "#1E6B3A"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#1E6B3A",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "PEL": {
+    "home": {
+      "shirt": "#F4F4F0",
+      "shorts": "#0E7C7B",
+      "socks": "#F4F4F0"
+    },
+    "away": {
+      "shirt": "#0E7C7B",
+      "shorts": "#F4F4F0",
+      "socks": "#0E7C7B"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "RAV": {
+    "home": {
+      "shirt": "#141414",
+      "shorts": "#B8BCC2",
+      "socks": "#141414"
+    },
+    "away": {
+      "shirt": "#B8BCC2",
+      "shorts": "#141414",
+      "socks": "#B8BCC2"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "OST": {
+    "home": {
+      "shirt": "#C8102E",
+      "shorts": "#FFFFFF",
+      "socks": "#C8102E"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#C8102E",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "MAR": {
+    "home": {
+      "shirt": "#F26A21",
+      "shorts": "#111111",
+      "socks": "#F26A21"
+    },
+    "away": {
+      "shirt": "#111111",
+      "shorts": "#F26A21",
+      "socks": "#111111"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "SAL": {
+    "home": {
+      "shirt": "#1F4FA3",
+      "shorts": "#FFFFFF",
+      "socks": "#1F4FA3"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#1F4FA3",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "GLE": {
+    "home": {
+      "shirt": "#4B2E83",
+      "shorts": "#E1B12C",
+      "socks": "#4B2E83"
+    },
+    "away": {
+      "shirt": "#E1B12C",
+      "shorts": "#4B2E83",
+      "socks": "#E1B12C"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "WES": {
+    "home": {
+      "shirt": "#F7D417",
+      "shorts": "#1C3F94",
+      "socks": "#F7D417"
+    },
+    "away": {
+      "shirt": "#1C3F94",
+      "shorts": "#F7D417",
+      "socks": "#1C3F94"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "KIN": {
+    "home": {
+      "shirt": "#0072CE",
+      "shorts": "#FF8200",
+      "socks": "#0072CE"
+    },
+    "away": {
+      "shirt": "#FF8200",
+      "shorts": "#0072CE",
+      "socks": "#FF8200"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "ELL": {
+    "home": {
+      "shirt": "#6D1A36",
+      "shorts": "#D9C7A0",
+      "socks": "#6D1A36"
+    },
+    "away": {
+      "shirt": "#D9C7A0",
+      "shorts": "#6D1A36",
+      "socks": "#D9C7A0"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "ALD": {
+    "home": {
+      "shirt": "#2E7D32",
+      "shorts": "#FBC02D",
+      "socks": "#2E7D32"
+    },
+    "away": {
+      "shirt": "#FBC02D",
+      "shorts": "#2E7D32",
+      "socks": "#FBC02D"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "HOL": {
+    "home": {
+      "shirt": "#FFFFFF",
+      "shorts": "#000000",
+      "socks": "#FFFFFF"
+    },
+    "away": {
+      "shirt": "#000000",
+      "shorts": "#FFFFFF",
+      "socks": "#000000"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "COP": {
+    "home": {
+      "shirt": "#B87333",
+      "shorts": "#1A1A1A",
+      "socks": "#B87333"
+    },
+    "away": {
+      "shirt": "#1A1A1A",
+      "shorts": "#B87333",
+      "socks": "#1A1A1A"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "WEX": {
+    "home": {
+      "shirt": "#87CEEB",
+      "shorts": "#FFFFFF",
+      "socks": "#87CEEB"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#87CEEB",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "LOW": {
+    "home": {
+      "shirt": "#6B8E23",
+      "shorts": "#FFFFFF",
+      "socks": "#6B8E23"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#6B8E23",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "TAR": {
+    "home": {
+      "shirt": "#5A6770",
+      "shorts": "#D7263D",
+      "socks": "#5A6770"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#5A6770",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "PFO": {
+    "home": {
+      "shirt": "#24452F",
+      "shorts": "#C9A227",
+      "socks": "#24452F"
+    },
+    "away": {
+      "shirt": "#C9A227",
+      "shorts": "#24452F",
+      "socks": "#C9A227"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "QUA": {
+    "home": {
+      "shirt": "#9E9E9E",
+      "shorts": "#0D47A1",
+      "socks": "#9E9E9E"
+    },
+    "away": {
+      "shirt": "#0D47A1",
+      "shorts": "#9E9E9E",
+      "socks": "#0D47A1"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "BRE": {
+    "home": {
+      "shirt": "#00838F",
+      "shorts": "#FFFFFF",
+      "socks": "#00838F"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#00838F",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "DUN": {
+    "home": {
+      "shirt": "#FFFFFF",
+      "shorts": "#2E7D32",
+      "socks": "#FFFFFF"
+    },
+    "away": {
+      "shirt": "#2E7D32",
+      "shorts": "#FFFFFF",
+      "socks": "#2E7D32"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "SKE": {
+    "home": {
+      "shirt": "#8E24AA",
+      "shorts": "#FFFFFF",
+      "socks": "#8E24AA"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#8E24AA",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "VAN": {
+    "home": {
+      "shirt": "#D84315",
+      "shorts": "#FFFFFF",
+      "socks": "#D84315"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#D84315",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "HEW": {
+    "home": {
+      "shirt": "#43A047",
+      "shorts": "#000000",
+      "socks": "#43A047"
+    },
+    "away": {
+      "shirt": "#000000",
+      "shorts": "#43A047",
+      "socks": "#000000"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "OAK": {
+    "home": {
+      "shirt": "#5D4037",
+      "shorts": "#FFD54F",
+      "socks": "#5D4037"
+    },
+    "away": {
+      "shirt": "#FFD54F",
+      "shorts": "#5D4037",
+      "socks": "#FFD54F"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "MIR": {
+    "home": {
+      "shirt": "#283593",
+      "shorts": "#E0E0E0",
+      "socks": "#283593"
+    },
+    "away": {
+      "shirt": "#E0E0E0",
+      "shorts": "#283593",
+      "socks": "#E0E0E0"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "CRO": {
+    "home": {
+      "shirt": "#212121",
+      "shorts": "#FFEB3B",
+      "socks": "#212121"
+    },
+    "away": {
+      "shirt": "#FFEB3B",
+      "shorts": "#212121",
+      "socks": "#FFEB3B"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "EMB": {
+    "home": {
+      "shirt": "#BF360C",
+      "shorts": "#263238",
+      "socks": "#BF360C"
+    },
+    "away": {
+      "shirt": "#263238",
+      "shorts": "#BF360C",
+      "socks": "#263238"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "FAL": {
+    "home": {
+      "shirt": "#37474F",
+      "shorts": "#4FC3F7",
+      "socks": "#37474F"
+    },
+    "away": {
+      "shirt": "#4FC3F7",
+      "shorts": "#37474F",
+      "socks": "#4FC3F7"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "STW": {
+    "home": {
+      "shirt": "#5D5D5D",
+      "shorts": "#C62828",
+      "socks": "#5D5D5D"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#5D5D5D",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "BRM": {
+    "home": {
+      "shirt": "#2E7D32",
+      "shorts": "#FFFFFF",
+      "socks": "#2E7D32"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#2E7D32",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "QUI": {
+    "home": {
+      "shirt": "#283593",
+      "shorts": "#FFEB3B",
+      "socks": "#283593"
+    },
+    "away": {
+      "shirt": "#FFEB3B",
+      "shorts": "#283593",
+      "socks": "#FFEB3B"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "TID": {
+    "home": {
+      "shirt": "#00838F",
+      "shorts": "#FFFFFF",
+      "socks": "#00838F"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#00838F",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "LAR": {
+    "home": {
+      "shirt": "#6A1B9A",
+      "shorts": "#E1BEE7",
+      "socks": "#6A1B9A"
+    },
+    "away": {
+      "shirt": "#E1BEE7",
+      "shorts": "#6A1B9A",
+      "socks": "#E1BEE7"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "WRE": {
+    "home": {
+      "shirt": "#8D6E63",
+      "shorts": "#FFF3E0",
+      "socks": "#8D6E63"
+    },
+    "away": {
+      "shirt": "#FFF3E0",
+      "shorts": "#8D6E63",
+      "socks": "#FFF3E0"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "GRY": {
+    "home": {
+      "shirt": "#455A64",
+      "shorts": "#FFFFFF",
+      "socks": "#455A64"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#455A64",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "IRM": {
+    "home": {
+      "shirt": "#212121",
+      "shorts": "#FF6F00",
+      "socks": "#212121"
+    },
+    "away": {
+      "shirt": "#FF6F00",
+      "shorts": "#212121",
+      "socks": "#FF6F00"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "CBF": {
+    "home": {
+      "shirt": "#B71C1C",
+      "shorts": "#FFFFFF",
+      "socks": "#B71C1C"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#B71C1C",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "HLM": {
+    "home": {
+      "shirt": "#1565C0",
+      "shorts": "#90CAF9",
+      "socks": "#1565C0"
+    },
+    "away": {
+      "shirt": "#90CAF9",
+      "shorts": "#1565C0",
+      "socks": "#90CAF9"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "PNB": {
+    "home": {
+      "shirt": "#F9A825",
+      "shorts": "#212121",
+      "socks": "#F9A825"
+    },
+    "away": {
+      "shirt": "#212121",
+      "shorts": "#F9A825",
+      "socks": "#212121"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "KES": {
+    "home": {
+      "shirt": "#4E342E",
+      "shorts": "#FFCC80",
+      "socks": "#4E342E"
+    },
+    "away": {
+      "shirt": "#FFCC80",
+      "shorts": "#4E342E",
+      "socks": "#FFCC80"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "FRH": {
+    "home": {
+      "shirt": "#33691E",
+      "shorts": "#DCEDC8",
+      "socks": "#33691E"
+    },
+    "away": {
+      "shirt": "#DCEDC8",
+      "shorts": "#33691E",
+      "socks": "#DCEDC8"
+    },
+    "source": "proposed from colours (M-1)"
+  },
+  "MRB": {
+    "home": {
+      "shirt": "#827717",
+      "shorts": "#FFFFFF",
+      "socks": "#827717"
+    },
+    "away": {
+      "shirt": "#FFFFFF",
+      "shorts": "#827717",
+      "socks": "#FFFFFF"
+    },
+    "source": "proposed from colours (M-1)"
+  }
+}

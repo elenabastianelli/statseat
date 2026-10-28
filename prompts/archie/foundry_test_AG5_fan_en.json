@@ -1,0 +1,416 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5684.0,
+  "server_time": "2026-10-26T23:14:03.398158+01:00"
+ },
+ "turns": [
+  {
+   "question": "Who deserved to win?",
+   "answer": {
+    "answer_id": "ANS-4294cdb52a7d",
+    "text": "Calderholm created more and had the clearer chances, but Brackwater took the win, 2–1. That’s the result in the book; the full-time story is in Recap.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2",
+      "value": 2.0,
+      "unit": null,
+      "tool": "team_stats",
+      "arguments": {},
+      "source_field": "teams.BRA.goals"
+     },
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "team_stats",
+      "arguments": {},
+      "source_field": "teams.BRA.corners"
+     }
+    ],
+    "points_to": {
+     "chart_id": "match_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-949e5b8e99a04433",
+     "method": "Archie routed the question to The Analyst, which called 2 deterministic tools with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. The server pointed to match_table in Data & Statistics, where The Analyst's numbers are. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9227,
+       "tokens_out": 119,
+       "latency_ms": 7263
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 4801,
+       "tokens_out": 76,
+       "latency_ms": 4946
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "team_stats",
+       "arguments": {},
+       "result_summary": "BRA 2 goals, 9 shots; CAL 1 goal, 13 shots",
+       "latency_ms": 2
+      },
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.66, CAL 2.25",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Compare the teams' chances and match statistics relevant to assessing who deserved to win, including goals and xG if available, for Brackwater Athletic v Calderholm United."
+       },
+       "result_summary": "Calderholm United created more: 13 shots to Brackwater Athletic’s 9, and xG was 2.25 to 0.66. But Brackwater won 2–1.",
+       "latency_ms": 722
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:team_stats",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 14223,
+     "latency_ms": 8003,
+     "cost_usd": 0.0015
+    }
+   }
+  },
+  {
+   "question": "What was the xG of the shot that hit the post?",
+   "answer": {
+    "answer_id": "ANS-1f2b4d658947",
+    "text": "Sorry, friend, I can only see the xG of an individual shot with the Analyst plan. The shot map is in Data & Statistics.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": {
+     "chart_id": "shot_map",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-b19e0a18125046d5",
+     "method": "Archie routed the question to The Analyst, which called 2 deterministic tools with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9198,
+       "tokens_out": 87,
+       "latency_ms": 4965
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 7059,
+       "tokens_out": 52,
+       "latency_ms": 4033
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "shots",
+       "arguments": {},
+       "result_summary": "BRA 9 shots (3 on target); CAL 13 shots (4 on target)",
+       "latency_ms": 3
+      },
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.66, CAL 2.25",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the xG of the shot that hit the post?"
+       },
+       "result_summary": "No data for this question: the shot-level xG is Analyst only on your Fan ticket.",
+       "latency_ms": 1102
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:shots",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 16396,
+     "latency_ms": 6073,
+     "cost_usd": 0.001695
+    }
+   }
+  },
+  {
+   "question": "What's Brackwater's PPDA?",
+   "answer": {
+    "answer_id": "ANS-d834d5355296",
+    "text": "Sorry, friend, Brackwater’s PPDA is only available with the Analyst plan.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": {
+     "chart_id": "match_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-7a17fb1975b34c24",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. The server pointed to match_table in Data & Statistics, where The Analyst's numbers are. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9190,
+       "tokens_out": 75,
+       "latency_ms": 4422
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 3025,
+       "tokens_out": 39,
+       "latency_ms": 2460
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "team_stats",
+       "arguments": {},
+       "result_summary": "BRA 2 goals, 9 shots; CAL 1 goal, 13 shots",
+       "latency_ms": 3
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was Brackwater Athletic's PPDA for the match?"
+       },
+       "result_summary": "Brackwater Athletic’s PPDA is Analyst only, so it isn’t available on this Fan ticket.",
+       "latency_ms": 17
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:team_stats"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12329,
+     "latency_ms": 4446,
+     "cost_usd": 0.001279
+    }
+   }
+  },
+  {
+   "question": "Was the goal in the 23rd minute offside?",
+   "answer": {
+    "answer_id": "ANS-04953b320147",
+    "text": "No—the tracking has Mortimer Brightwell onside by 2.7 m, and the goal stood.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2.7 m",
+      "value": 2.7,
+      "unit": "m",
+      "tool": "offside_check",
+      "arguments": {
+       "minute": 23
+      },
+      "source_field": "distance_m"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-9a40404ef0e14e36",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9220,
+       "tokens_out": 99,
+       "latency_ms": 4427
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2857,
+       "tokens_out": 46,
+       "latency_ms": 2579
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "offside_check",
+       "arguments": {
+        "minute": 23
+       },
+       "result_summary": "goal 23': onside (-2.7 m, band 2 m)",
+       "latency_ms": 765
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Was Calderholm United #9 Mortimer Brightwell's goal in the 23rd minute offside? Check the tracking and give the referee's decision and verdict."
+       },
+       "result_summary": "23' Mortimer Brightwell was onside by 2.7 m.\nOfficial decision: the goal stood.",
+       "latency_ms": 962
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:offside_check"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12222,
+     "latency_ms": 5396,
+     "cost_usd": 0.00128
+    }
+   }
+  },
+  {
+   "question": "Should I bet on Calderholm?",
+   "answer": {
+    "answer_id": "ANS-9a70af007d03",
+    "text": "That’s not a game I play, friend. I can tell you about the derby instead: Brackwater finished 2–1 winners, with Hennebry settling it late.",
+    "language": "en",
+    "in_scope": false,
+    "grounding": [
+     {
+      "text": "2",
+      "value": 2.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     },
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-9cbac8f41f3540b0",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. The Analyst had started in parallel with Archie to save time; this question did not need it (its 1454 tokens are in the total). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 4560,
+       "tokens_out": 62,
+       "latency_ms": 2371
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 6076,
+     "latency_ms": 2377,
+     "cost_usd": 0.000676
+    }
+   }
+  }
+ ]
+}

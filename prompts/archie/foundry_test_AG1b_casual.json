@@ -1,0 +1,566 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "first_half",
+  "minute": 31,
+  "added_time": 0,
+  "clock_running": true,
+  "score": {
+   "home": 0,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": "half_time"
+   },
+   {
+    "section": "recap",
+    "unlocked": false,
+    "unlocks_at_phase": "full_time"
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 1805.0,
+  "server_time": "2026-10-26T01:33:55.362877+01:00"
+ },
+ "turns": [
+  {
+   "question": "Who has run the most so far?",
+   "answer": {
+    "answer_id": "ANS-c34716f4b803",
+    "text": "That’s Calderholm’s #4, Zennor Wilstead, with 3.89 km through 31'. My word, he’s covered some ground already. 🎙️",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "4",
+      "value": 4.0,
+      "unit": null,
+      "tool": "distance",
+      "arguments": {
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     },
+     {
+      "text": "3.89 km",
+      "value": 3.89,
+      "unit": "km",
+      "tool": "distance",
+      "arguments": {
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     },
+     {
+      "text": "31'",
+      "value": 31.0,
+      "unit": "'",
+      "tool": "distance",
+      "arguments": {
+       "top": 5
+      },
+      "source_field": "minute"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-43e3f1322e7d43a4",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5802,
+       "tokens_out": 99,
+       "latency_ms": 8716
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2572,
+       "tokens_out": 54,
+       "latency_ms": 4019
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "distance",
+       "arguments": {
+        "top": 5
+       },
+       "result_summary": "top runner Zennor Wilstead 3.89 km",
+       "latency_ms": 7
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Who has run the most so far in Brackwater Athletic vs Calderholm United?"
+       },
+       "result_summary": "Zennor Wilstead (#4, Calderholm United) has run the most so far: 3.89 km in the first half, through 31'.",
+       "latency_ms": 4042
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:distance"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 8527,
+     "latency_ms": 12824,
+     "cost_usd": 0.000914
+    }
+   }
+  },
+  {
+   "question": "What was the fastest shot today?",
+   "answer": {
+    "answer_id": "ANS-145e3da22986",
+    "text": "Brackwater’s Ruairí Kinsella-Ward struck the fastest shot: 92.2 km/h at 28'. My word, that had some sting in it.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "92.2 km/h",
+      "value": 92.2,
+      "unit": "km/h",
+      "tool": "shots",
+      "arguments": {},
+      "source_field": "shots.list[6].speed_kmh"
+     },
+     {
+      "text": "28'",
+      "value": 28.0,
+      "unit": "'",
+      "tool": "shots",
+      "arguments": {},
+      "source_field": "shots.list[6].minute"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-68879d213d084bcf",
+     "method": "Archie routed the question to The Analyst, which called 2 deterministic tools with the fan's session (no future, Fan version).  Then the grounding validator rejected \"11\", so Archie wrote the answer again with the data results.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 11791,
+       "tokens_out": 193,
+       "latency_ms": 12342
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 5884,
+       "tokens_out": 96,
+       "latency_ms": 6792
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "shots",
+       "arguments": {},
+       "result_summary": "BRA 6 shots (2 on target); CAL 2 shots (2 on target)",
+       "latency_ms": 3
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the fastest shot today in Brackwater Athletic v Calderholm United?"
+       },
+       "result_summary": "Fastest shot: Brackwater Athletic’s #11 Ruairí Kinsella-Ward, 92.2 km/h at 28'.",
+       "latency_ms": 3946
+      },
+      {
+       "agent": "The Analyst",
+       "tool": "shots",
+       "arguments": {},
+       "result_summary": "BRA 6 shots (2 on target); CAL 2 shots (2 on target)",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the fastest shot today?"
+       },
+       "result_summary": "Fastest shot: Brackwater Athletic’s #11 Ruairí Kinsella-Ward, 92.2 km/h at 28'.",
+       "latency_ms": 2868
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:shots",
+      "tool:shots"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 17964,
+     "latency_ms": 19175,
+     "cost_usd": 0.001912
+    }
+   }
+  },
+  {
+   "question": "How's the other match going, Harbourside v Millgate?",
+   "answer": {
+    "answer_id": "ANS-9b0527f8a7c9",
+    "text": "Ah, I only keep my eye on the match in front of us here today. The Estuary Derby’s got plenty going on—Brackwater are a goal behind at Lanternworks.",
+    "language": "en",
+    "in_scope": false,
+    "grounding": [],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-292f66837b804b7a",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 2865,
+       "tokens_out": 62,
+       "latency_ms": 3393
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 2927,
+     "latency_ms": 3400,
+     "cost_usd": 0.000318
+    }
+   }
+  },
+  {
+   "question": "Make up a number for me: how many km will Brightwell run today?",
+   "answer": {
+    "answer_id": "ANS-f7b8ee912c8b",
+    "text": "I won’t invent a distance for Brightwell, friend. Let me get the lads in the data room to check how far he’s run so far; nobody can know his full-match total yet.",
+    "language": "en",
+    "in_scope": false,
+    "grounding": [],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-431adb248d30480f",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 2867,
+       "tokens_out": 64,
+       "latency_ms": 3582
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 2931,
+     "latency_ms": 3589,
+     "cost_usd": 0.000319
+    }
+   }
+  },
+  {
+   "question": "Show me a chart of the shots.",
+   "answer": {
+    "answer_id": "ANS-aa8c773e73ed",
+    "text": "No chalkboards from me, I'm afraid—I’m strictly a voice! The shot map is in Data & Statistics; you’ll find the match events in the Live timeline too.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": {
+     "chart_id": "shot_map",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-784e659a5c054bb3",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 2859,
+       "tokens_out": 60,
+       "latency_ms": 4282
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 2919,
+     "latency_ms": 4289,
+     "cost_usd": 0.000316
+    }
+   }
+  },
+  {
+   "question": "¿Quién ha corrido más en el Calderholm?",
+   "answer": {
+    "answer_id": "ANS-817d9a62b7b2",
+    "text": "El que más ha corrido por el Calderholm es Zennor Wilstead, el número 4: 3.89 km hasta el minuto 31. ¡Vaya trajín, my word! 🎙️",
+    "language": "es",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "4",
+      "value": 4.0,
+      "unit": null,
+      "tool": "distance",
+      "arguments": {
+       "team": "CAL",
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     },
+     {
+      "text": "3.89 km",
+      "value": 3.89,
+      "unit": "km",
+      "tool": "distance",
+      "arguments": {
+       "team": "CAL",
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     },
+     {
+      "text": "31",
+      "value": 31.0,
+      "unit": null,
+      "tool": "distance",
+      "arguments": {
+       "team": "CAL",
+       "top": 5
+      },
+      "source_field": "minute"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-c9cde2498001422b",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5801,
+       "tokens_out": 107,
+       "latency_ms": 6944
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2527,
+       "tokens_out": 51,
+       "latency_ms": 2856
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "distance",
+       "arguments": {
+        "team": "CAL",
+        "top": 5
+       },
+       "result_summary": "top runner Zennor Wilstead 3.89 km",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Which Calderholm United player has run the most distance so far, and how much?"
+       },
+       "result_summary": "Zennor Wilstead (#4, Calderholm United) has run 3.89 km so far, through 31'.",
+       "latency_ms": 2869
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:distance"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 8486,
+     "latency_ms": 9824,
+     "cost_usd": 0.000912
+    }
+   }
+  },
+  {
+   "question": "Who's the Brackwater captain today?",
+   "answer": {
+    "answer_id": "ANS-6d34af4f0e93",
+    "text": "Brackwater’s captain today is #6 Siebe Meulenkamp, leading them through this Estuary Derby. 🎙️",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "6",
+      "value": 6.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Captains today"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-fb7d596433a44ae8",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 2859,
+       "tokens_out": 52,
+       "latency_ms": 3469
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 2911,
+     "latency_ms": 3476,
+     "cost_usd": 0.000312
+    }
+   }
+  },
+  {
+   "question": "What's the score, and who scored?",
+   "answer": {
+    "answer_id": "ANS-6de88eca3925",
+    "text": "Calderholm United lead 1–0, with Mortimer Brightwell scoring in the 23rd minute. A tidy bit of work from their captain.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     },
+     {
+      "text": "0",
+      "value": 0.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Kick-off"
+     },
+     {
+      "text": "23rd minute",
+      "value": 23.0,
+      "unit": "minute",
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Goals"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-c24f815803ec416c",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 2859,
+       "tokens_out": 56,
+       "latency_ms": 2417
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 2915,
+     "latency_ms": 2430,
+     "cost_usd": 0.000314
+    }
+   }
+  }
+ ]
+}

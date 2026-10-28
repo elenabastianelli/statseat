@@ -1,0 +1,30 @@
+{
+  "round_id": "QZ-0001",
+  "question": "Who covered the most distance in the first half?",
+  "metric": "distance_covered",
+  "scope": "first_half",
+  "options": [
+    {
+      "option_id": "A",
+      "label": "Siebe Meulenkamp",
+      "player_id": "BRA-06"
+    },
+    {
+      "option_id": "B",
+      "label": "Oisín Hennebry",
+      "player_id": "BRA-08"
+    },
+    {
+      "option_id": "C",
+      "label": "Zennor Wilstead",
+      "player_id": "CAL-04"
+    },
+    {
+      "option_id": "D",
+      "label": "Damien Fontanieu",
+      "player_id": "CAL-08"
+    }
+  ],
+  "answer_seconds": 20,
+  "deadline": "2026-10-24T15:55:20+01:00"
+}

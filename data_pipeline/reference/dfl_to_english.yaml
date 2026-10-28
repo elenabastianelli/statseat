@@ -1,0 +1,80 @@
+# DFL -> English mapping (guidelines v4.2, section 16). Reviewed and versioned; never translated at runtime.
+# HL/HR and DLM/DRM were resolved in v3 from formations and mean attacking-normalised positions on the six matches.
+version: "2026-10-25"
+playing_positions:
+  TW:  {role: GK,  label: Goalkeeper, group: GK}
+  IVL: {role: LCB, label: Left centre back, group: CB}
+  IVR: {role: RCB, label: Right centre back, group: CB}
+  IVZ: {role: CB,  label: Centre back, group: CB}
+  LV:  {role: LB,  label: Left back, group: FB}
+  RV:  {role: RB,  label: Right back, group: FB}
+  DML: {role: LDM, label: Left defensive midfielder, group: DM}
+  DMR: {role: RDM, label: Right defensive midfielder, group: DM}
+  DMZ: {role: CDM, label: Central defensive midfielder, group: DM}
+  DLM: {role: LWB, label: Left wing back, group: FB}
+  DRM: {role: RWB, label: Right wing back, group: FB}
+  HL:  {role: LCM, label: Left central midfielder, group: CM}
+  HR:  {role: RCM, label: Right central midfielder, group: CM}
+  LM:  {role: LM,  label: Left wide midfielder, group: W}
+  RM:  {role: RM,  label: Right wide midfielder, group: W}
+  ZO:  {role: CAM, label: Attacking midfielder, group: AM}
+  OLM: {role: LW,  label: Left winger, group: W}
+  ORM: {role: RW,  label: Right winger, group: W}
+  STZ: {role: ST,  label: Striker, group: ST}
+  STL: {role: LS,  label: Left striker, group: ST}
+  STR: {role: RS,  label: Right striker, group: ST}
+formations:
+  "4-4-2 Double-6 offensive Outliner": "4-4-2 (double pivot, attacking wide midfielders)"
+values:
+  "Fußball": football
+  "Ligabetrieb": league match
+  "Heimtrikot": home kit
+  "Auswärtstrikot": away kit
+  "Deutschland": Germany
+  "trainer": head coach
+  "assistantTrainer": assistant coach
+# Shot outcomes (section 16.3, v4): DFL ShotAtGoal sub-type -> English outcome. On target = goal + saved (R-SHOT-COUNTS);
+# woodwork is counted separately (R-WOODWORK-STAT). OtherShot -> wide follows the engine's decision of 24 October.
+shot_outcomes:
+  SuccessfulShot: {outcome: goal, on_target: true}
+  SavedShot: {outcome: saved, on_target: true}
+  BlockedShot: {outcome: blocked, on_target: false}
+  ShotWide: {outcome: wide, on_target: false}
+  ShotWoodWork: {outcome: woodwork, on_target: false}
+  OtherShot: {outcome: wide, on_target: false}
+# Event types (section 16.4, v4.2, R-MAP-EN): DFL event type -> English snake_case name used in our outputs. The first
+# 23 (dfl_list: true) are the 23-type list of the dataset; Delete is a placeholder dropped at load (R-DELETE). The last 8
+# (dfl_list: false) appear in the six matches but are not in that list: Penalty is a restart handled since v4
+# (R-RESTART-SUB); the other 7 were "unknown" before v4.2.
+event_types:
+  BallClaiming: {name: ball_claiming, dfl_list: true}
+  Caution: {name: caution, dfl_list: true}
+  ChanceWithoutShot: {name: chance_without_shot, dfl_list: true}
+  CornerKick: {name: corner_kick, dfl_list: true}
+  Delete: {name: delete, dfl_list: true}
+  FairPlay: {name: fair_play, dfl_list: true}
+  FinalWhistle: {name: final_whistle, dfl_list: true}
+  Foul: {name: foul, dfl_list: true}
+  FreeKick: {name: free_kick, dfl_list: true}
+  GoalKick: {name: goal_kick, dfl_list: true}
+  KickOff: {name: kick_off, dfl_list: true}
+  Nutmeg: {name: nutmeg, dfl_list: true}
+  Offside: {name: offside, dfl_list: true}
+  OtherBallAction: {name: other_ball_action, dfl_list: true}
+  PenaltyNotAwarded: {name: penalty_not_awarded, dfl_list: true}
+  Play: {name: play, dfl_list: true}
+  RefereeBall: {name: referee_ball, dfl_list: true}
+  ShotAtGoal: {name: shot_at_goal, dfl_list: true}
+  SpectacularPlay: {name: spectacular_play, dfl_list: true}
+  Substitution: {name: substitution, dfl_list: true}
+  TacklingGame: {name: tackling_game, dfl_list: true}
+  ThrowIn: {name: throw_in, dfl_list: true}
+  VideoAssistantAction: {name: video_assistant_action, dfl_list: true}
+  Penalty: {name: penalty, dfl_list: false}
+  GoalDisallowed: {name: goal_disallowed, dfl_list: false}
+  BallDeflection: {name: ball_deflection, dfl_list: false}
+  OtherPlayerAction: {name: other_player_action, dfl_list: false}
+  PlayerNotSentOff: {name: player_not_sent_off, dfl_list: false}
+  PossessionLossBeforeGoal: {name: possession_loss_before_goal, dfl_list: false}
+  Run: {name: run, dfl_list: false}
+  SitterPrevented: {name: sitter_prevented, dfl_list: false}

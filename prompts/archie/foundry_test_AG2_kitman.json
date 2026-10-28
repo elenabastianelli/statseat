@@ -1,0 +1,388 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5685.0,
+  "server_time": "2026-10-26T12:25:31.989092+01:00"
+ },
+ "turns": [
+  {
+   "question": "Chi è il numero 10 del Brackwater e da dove viene?",
+   "answer": {
+    "answer_id": "ANS-fbb4f3b59172",
+    "text": "Il numero 10 del Brackwater è Riku Shimazaki, nato a Sendai, in Giappone. Una bella storia da portare in campo, my word!",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "10",
+      "value": 10.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "BRA-10"
+      },
+      "source_field": "BRA-10.shirt_number"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-14a57d75dbdf4fd2",
+     "method": "Archie asked Kit Man, who searched the matchday documents. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 6337,
+       "tokens_out": 98,
+       "latency_ms": 7252
+      },
+      {
+       "agent": "Kit Man",
+       "model": "gpt-6-luna",
+       "role": "matchday documents (file search)",
+       "tokens_in": 10058,
+       "tokens_out": 97,
+       "latency_ms": 4952
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "Archie",
+       "tool": "ask_kit_man",
+       "arguments": {
+        "question": "Who is Brackwater Athletic's number 10, and where is he from?"
+       },
+       "result_summary": "Brackwater Athletic’s number 10 is Riku Shimazaki. He was born in Sendai, Japan.  — Brackwater Athletic squad document. [squad-BRA.md]",
+       "latency_ms": 4952
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "kitman:squad-BRA.md"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 16590,
+     "latency_ms": 12291,
+     "cost_usd": 0.001737
+    }
+   }
+  },
+  {
+   "question": "Perché chiamano Hennebry 'Diesel'?",
+   "answer": {
+    "answer_id": "ANS-5ad867571c3a",
+    "text": "Lo chiamano “Diesel” perché continua a correre anche quando gli altri hanno finito la benzina. E oggi, con quel gol all’88', il soprannome calza a pennello!",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "88'",
+      "value": 88.0,
+      "unit": "'",
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Goals"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-d73f135496e347fa",
+     "method": "Archie asked Kit Man, who searched the matchday documents. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 6335,
+       "tokens_out": 108,
+       "latency_ms": 7082
+      },
+      {
+       "agent": "Kit Man",
+       "model": "gpt-6-luna",
+       "role": "matchday documents (file search)",
+       "tokens_in": 10041,
+       "tokens_out": 100,
+       "latency_ms": 6131
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "Archie",
+       "tool": "ask_kit_man",
+       "arguments": {
+        "question": "Why is Brackwater Athletic player Oisín Hennebry nicknamed 'Diesel'?"
+       },
+       "result_summary": "He’s nicknamed “Diesel” because he keeps running long after everyone else has stopped. I used the **Brackwater Athletic squad** document. [squad-BRA.md]",
+       "latency_ms": 6131
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "kitman:squad-BRA.md"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 16584,
+     "latency_ms": 13224,
+     "cost_usd": 0.001742
+    }
+   }
+  },
+  {
+   "question": "Raccontami la storia dello stadio",
+   "answer": {
+    "answer_id": "ANS-42c4b1c63af9",
+    "text": "Il Lanternworks Stadium fu inaugurato nel 2004, sul sito della fabbrica di lampade Harrow Quay, dove nacque il Brackwater Athletic. Le quattro ciminiere di mattoni rossi sono state conservate dietro la tribuna Nord e, di notte, si accendono d’ambra: un bel pezzo di storia che veglia sul derby. 🎙️",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2004",
+      "value": 2004.0,
+      "unit": null,
+      "tool": "ask_kit_man",
+      "arguments": {},
+      "source_field": "kitman.0"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-566744264cb74c94",
+     "method": "Archie asked Kit Man, who searched the matchday documents. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 6436,
+       "tokens_out": 135,
+       "latency_ms": 5506
+      },
+      {
+       "agent": "Kit Man",
+       "model": "gpt-6-luna",
+       "role": "matchday documents (file search)",
+       "tokens_in": 10220,
+       "tokens_out": 204,
+       "latency_ms": 6089
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "Archie",
+       "tool": "ask_kit_man",
+       "arguments": {
+        "question": "Tell me the history of Lanternworks Stadium."
+       },
+       "result_summary": "Lanternworks Stadium opened in 2004, on the site of the Harrow Quay lamp factory where Brackwater Athletic was founded. The club moved there from its  [stadium.md]",
+       "latency_ms": 6089
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "kitman:stadium.md"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 16995,
+     "latency_ms": 11608,
+     "cost_usd": 0.001835
+    }
+   }
+  },
+  {
+   "question": "Cos'è il fuorigioco?",
+   "answer": {
+    "answer_id": "ANS-682fcb739d62",
+    "text": "Un giocatore è in posizione di fuorigioco se, quando un compagno gioca il pallone, si trova nella metà campo avversaria ed è più vicino alla linea di porta sia del pallone sia del penultimo avversario. Ma è punibile solo se entra attivamente nell’azione, per esempio giocando il pallone o interferendo con un avversario. 🎙️",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-475d2d869a4b4c9d",
+     "method": "Archie asked Kit Man, who searched the matchday documents. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 6369,
+       "tokens_out": 136,
+       "latency_ms": 5449
+      },
+      {
+       "agent": "Kit Man",
+       "model": "gpt-6-luna",
+       "role": "matchday documents (file search)",
+       "tokens_in": 10221,
+       "tokens_out": 131,
+       "latency_ms": 4978
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "Archie",
+       "tool": "ask_kit_man",
+       "arguments": {
+        "question": "What is the offside rule in football?"
+       },
+       "result_summary": "A player is in an offside position if, when a teammate plays the ball, they’re in the opponents’ half and nearer the goal line than both the ball and  [rules.md]",
+       "latency_ms": 4978
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "kitman:rules.md"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 16857,
+     "latency_ms": 10439,
+     "cost_usd": 0.001793
+    }
+   }
+  },
+  {
+   "question": "Chi ha corso di più?",
+   "answer": {
+    "answer_id": "ANS-c89f922e343c",
+    "text": "Il più instancabile è stato Sullivan Yelholme, numero 39 del Calderholm: ha percorso 12.27 km. Una gran giornata di lavoro, my word! 🎙️",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "39",
+      "value": 39.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "CAL-39"
+      },
+      "source_field": "CAL-39.shirt_number"
+     },
+     {
+      "text": "12.27 km",
+      "value": 12.27,
+      "unit": "km",
+      "tool": "distance",
+      "arguments": {
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-1d5d198ec87e4376",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 6295,
+       "tokens_out": 94,
+       "latency_ms": 4545
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2766,
+       "tokens_out": 45,
+       "latency_ms": 3609
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "distance",
+       "arguments": {
+        "top": 5
+       },
+       "result_summary": "top runner Sullivan Yelholme 12.27 km",
+       "latency_ms": 7
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Who ran the most distance in today's match?"
+       },
+       "result_summary": "Sullivan Yelholme (#39, Calderholm United) ran the most distance: 12.27 km.",
+       "latency_ms": 3624
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:distance"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 9200,
+     "latency_ms": 8179,
+     "cost_usd": 0.000976
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,436 @@
+{
+  "$defs": {
+    "Environment": {
+      "additionalProperties": false,
+      "properties": {
+        "stadium_id": {
+          "title": "Stadium Id",
+          "type": "string"
+        },
+        "pitch_x_m": {
+          "title": "Pitch X M",
+          "type": "number"
+        },
+        "pitch_y_m": {
+          "title": "Pitch Y M",
+          "type": "number"
+        },
+        "roof": {
+          "title": "Roof",
+          "type": "string"
+        },
+        "floodlight": {
+          "enum": [
+            "on",
+            "off"
+          ],
+          "title": "Floodlight",
+          "type": "string"
+        },
+        "weather": {
+          "$ref": "#/$defs/Weather"
+        },
+        "forecast": {
+          "items": {
+            "$ref": "#/$defs/ForecastSlot"
+          },
+          "minItems": 3,
+          "title": "Forecast",
+          "type": "array"
+        },
+        "stadium_capacity": {
+          "description": "Seats of the stadium, the universe's stadiums[].capacity.",
+          "exclusiveMinimum": 0,
+          "title": "Stadium Capacity",
+          "type": "integer"
+        },
+        "tickets_sold": {
+          "title": "Tickets Sold",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "stadium_id",
+        "pitch_x_m",
+        "pitch_y_m",
+        "roof",
+        "floodlight",
+        "weather",
+        "forecast",
+        "stadium_capacity",
+        "tickets_sold"
+      ],
+      "title": "Environment",
+      "type": "object"
+    },
+    "ForecastSlot": {
+      "additionalProperties": false,
+      "properties": {
+        "time": {
+          "pattern": "^\\d{2}:\\d{2}$",
+          "title": "Time",
+          "type": "string"
+        },
+        "phase": {
+          "title": "Phase",
+          "type": "string"
+        },
+        "temperature_c": {
+          "title": "Temperature C",
+          "type": "integer"
+        },
+        "precipitation": {
+          "enum": [
+            "none",
+            "light_rain",
+            "rain",
+            "snow"
+          ],
+          "title": "Precipitation",
+          "type": "string"
+        },
+        "chance_of_rain_pct": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Chance Of Rain Pct",
+          "type": "integer"
+        },
+        "wind": {
+          "title": "Wind",
+          "type": "string"
+        },
+        "sky": {
+          "title": "Sky",
+          "type": "string"
+        }
+      },
+      "required": [
+        "time",
+        "phase",
+        "temperature_c",
+        "precipitation",
+        "chance_of_rain_pct",
+        "wind",
+        "sky"
+      ],
+      "title": "ForecastSlot",
+      "type": "object"
+    },
+    "KitFiles": {
+      "additionalProperties": false,
+      "description": "The SVG drawings of a club's two kits, paths relative to the repository root.",
+      "properties": {
+        "home": {
+          "title": "Home",
+          "type": "string"
+        },
+        "away": {
+          "title": "Away",
+          "type": "string"
+        }
+      },
+      "required": [
+        "home",
+        "away"
+      ],
+      "title": "KitFiles",
+      "type": "object"
+    },
+    "LineupEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "shirt_number": {
+          "title": "Shirt Number",
+          "type": "integer"
+        },
+        "starting": {
+          "title": "Starting",
+          "type": "boolean"
+        },
+        "playing_position": {
+          "description": "English code: the formation slot for starters, the natural position for substitutes.",
+          "enum": [
+            "GK",
+            "LCB",
+            "RCB",
+            "CB",
+            "LB",
+            "RB",
+            "LWB",
+            "RWB",
+            "CDM",
+            "LDM",
+            "RDM",
+            "LCM",
+            "RCM",
+            "LM",
+            "RM",
+            "CAM",
+            "LW",
+            "RW",
+            "ST",
+            "LS",
+            "RS"
+          ],
+          "title": "Playing Position",
+          "type": "string"
+        },
+        "captain": {
+          "default": false,
+          "title": "Captain",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "player_id",
+        "shirt_number",
+        "starting",
+        "playing_position"
+      ],
+      "title": "LineupEntry",
+      "type": "object"
+    },
+    "MatchOfficial": {
+      "additionalProperties": false,
+      "properties": {
+        "official_id": {
+          "title": "Official Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "referee",
+            "assistant_referee_1",
+            "assistant_referee_2",
+            "fourth_official",
+            "video_assistant_referee",
+            "assistant_video_assistant_referee"
+          ],
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "official_id",
+        "role"
+      ],
+      "title": "MatchOfficial",
+      "type": "object"
+    },
+    "MatchStaff": {
+      "additionalProperties": false,
+      "properties": {
+        "staff_id": {
+          "title": "Staff Id",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "head_coach",
+            "assistant_coach",
+            "goalkeeper_coach",
+            "fitness_coach",
+            "head_physio",
+            "club_doctor",
+            "kit_manager"
+          ],
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "staff_id",
+        "role"
+      ],
+      "title": "MatchStaff",
+      "type": "object"
+    },
+    "MatchTeam": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "enum": [
+            "home",
+            "guest"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "team_id": {
+          "title": "Team Id",
+          "type": "string"
+        },
+        "formation": {
+          "title": "Formation",
+          "type": "string"
+        },
+        "kit": {
+          "description": "The kit the team wears in this match (a key of kit_files).",
+          "enum": [
+            "home",
+            "away"
+          ],
+          "title": "Kit",
+          "type": "string"
+        },
+        "crest_file": {
+          "description": "SVG of the club crest, path relative to the repository root (synthetic/crests/<team_id>.svg).",
+          "title": "Crest File",
+          "type": "string"
+        },
+        "kit_files": {
+          "$ref": "#/$defs/KitFiles",
+          "description": "SVGs of the home and away kits (synthetic/kits/<team_id>_<kit>.svg)."
+        },
+        "lineup": {
+          "items": {
+            "$ref": "#/$defs/LineupEntry"
+          },
+          "title": "Lineup",
+          "type": "array"
+        },
+        "staff": {
+          "description": "Head coach and bench staff (DFL TrainerStaff).",
+          "items": {
+            "$ref": "#/$defs/MatchStaff"
+          },
+          "minItems": 1,
+          "title": "Staff",
+          "type": "array"
+        }
+      },
+      "required": [
+        "role",
+        "team_id",
+        "formation",
+        "kit",
+        "crest_file",
+        "kit_files",
+        "lineup",
+        "staff"
+      ],
+      "title": "MatchTeam",
+      "type": "object"
+    },
+    "Weather": {
+      "additionalProperties": false,
+      "properties": {
+        "temperature_c": {
+          "title": "Temperature C",
+          "type": "integer"
+        },
+        "precipitation": {
+          "enum": [
+            "none",
+            "light_rain",
+            "rain",
+            "snow"
+          ],
+          "title": "Precipitation",
+          "type": "string"
+        },
+        "wind": {
+          "title": "Wind",
+          "type": "string"
+        },
+        "humidity_pct": {
+          "title": "Humidity Pct",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "temperature_c",
+        "precipitation",
+        "wind",
+        "humidity_pct"
+      ],
+      "title": "Weather",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "match_id": {
+      "title": "Match Id",
+      "type": "string"
+    },
+    "universe_id": {
+      "title": "Universe Id",
+      "type": "string"
+    },
+    "competition_id": {
+      "title": "Competition Id",
+      "type": "string"
+    },
+    "season": {
+      "title": "Season",
+      "type": "string"
+    },
+    "matchday": {
+      "title": "Matchday",
+      "type": "integer"
+    },
+    "planned_kickoff": {
+      "description": "ISO 8601 local time with offset.",
+      "title": "Planned Kickoff",
+      "type": "string"
+    },
+    "home_team_id": {
+      "title": "Home Team Id",
+      "type": "string"
+    },
+    "guest_team_id": {
+      "title": "Guest Team Id",
+      "type": "string"
+    },
+    "environment": {
+      "$ref": "#/$defs/Environment"
+    },
+    "teams": {
+      "items": {
+        "$ref": "#/$defs/MatchTeam"
+      },
+      "title": "Teams",
+      "type": "array"
+    },
+    "officials": {
+      "items": {
+        "$ref": "#/$defs/MatchOfficial"
+      },
+      "title": "Officials",
+      "type": "array"
+    },
+    "result": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Filled when the match is generated (Tactician).",
+      "title": "Result"
+    }
+  },
+  "required": [
+    "match_id",
+    "universe_id",
+    "competition_id",
+    "season",
+    "matchday",
+    "planned_kickoff",
+    "home_team_id",
+    "guest_team_id",
+    "environment",
+    "teams",
+    "officials"
+  ],
+  "title": "MatchInfo",
+  "type": "object"
+}

@@ -1,0 +1,83 @@
+{
+ "source": "Foundry Responses API, agent kitman-prototype v3 (gpt-6-luna, file_search max_num_results 20), V-L3 test of 25/10; ids (file, response, conversation) removed",
+ "note": "When the text carries citation markers (U+E200 filecite U+E202 turnNfileM ... U+E201) the annotations are empty: the document must come from the file search results (request include=[\"file_search_call.results\"]); these responses were made without it, so they have no results",
+ "cases": [
+  {
+   "question": "What trophies have Brackwater won? When was the last one?",
+   "text": "Brackwater have won **5 Meridian League titles, 4 Meridian Cups and 2 Meridian Super Shields**. Their most recent trophy was the **Meridian Super Shield in 2018**. \n\n**Document used:** *Brackwater Athletic* club document.",
+   "annotations": [
+    {
+     "type": "file_citation",
+     "filename": "club-BRA.md",
+     "index": 164
+    }
+   ],
+   "has_markers": false
+  },
+  {
+   "question": "What is Audun Ulvestad's salary?",
+   "text": "I don’t know—Audun Ulvestad’s salary isn’t listed in the squad document. ",
+   "annotations": [
+    {
+     "type": "file_citation",
+     "filename": "squad-BRA.md",
+     "index": 73
+    }
+   ],
+   "has_markers": false
+  },
+  {
+   "question": "Who is the referee today? Does he give a lot of cards?",
+   "text": "Today’s referee is **Treve Cranstead**. He gives fewer cards than average: **3.4 yellows per match** in his top-division career, compared with the panel average of 3.9. He’s described as someone who prefers to let the game flow.  ",
+   "annotations": [
+    {
+     "type": "file_citation",
+     "filename": "matchday.md",
+     "index": 229
+    },
+    {
+     "type": "file_citation",
+     "filename": "officials.md",
+     "index": 230
+    }
+   ],
+   "has_markers": false
+  },
+  {
+   "question": "Is Jarvis Fairbrass playing today? I thought he was injured.",
+   "text": "No—Jarvis is out of today’s matchday squad. He was ruled out this morning with a stomach bug, not an injury. Used the matchday document. fileciteturn0file2turn0file3",
+   "annotations": [],
+   "has_markers": true
+  },
+  {
+   "question": "When was this stadium built?",
+   "text": "Lanternworks Stadium opened in 2004.  — *stadium.md*",
+   "annotations": [
+    {
+     "type": "file_citation",
+     "filename": "stadium.md",
+     "index": 37
+    }
+   ],
+   "has_markers": false
+  },
+  {
+   "question": "How are the other matches going?",
+   "text": "I don’t know—the documents don’t give live updates or scores for today’s other matches. I checked the matchday and league documents. fileciteturn0file9turn0file4",
+   "annotations": [],
+   "has_markers": true
+  },
+  {
+   "question": "Who takes the penalties for Calderholm?",
+   "text": "Rutger van Dalfsen is Calderholm’s first-choice penalty taker today. The next choices are Mortimer Brightwell, then Gijs Veenstra-Bakker. fileciteturn0file1turn0file2",
+   "annotations": [],
+   "has_markers": true
+  },
+  {
+   "question": "How many goals has Mortimer Brightwell scored this season? Is he the league's top scorer?",
+   "text": "Mortimer Brightwell has scored **4 league goals** this season. He’s **not the league’s top scorer**; he’s joint third, behind Moussa Thiandoum on 6 and Ansel Birchcombe on 5. Used: *squad-CAL.md* and *league.md*. fileciteturn0file0turn0file2",
+   "annotations": [],
+   "has_markers": true
+  }
+ ]
+}

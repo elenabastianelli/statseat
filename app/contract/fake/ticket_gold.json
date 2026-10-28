@@ -1,0 +1,60 @@
+{
+  "ticket_id": "TKT-SYN001-G-0001",
+  "tier": "gold",
+  "match": {
+    "match_id": "SYN-001",
+    "home_team_id": "BRA",
+    "away_team_id": "CAL",
+    "home_name": "Brackwater Athletic",
+    "away_name": "Calderholm United",
+    "title": "The Estuary Derby",
+    "kickoff": "2026-10-24T15:00:00+01:00",
+    "stadium_name": "Lanternworks Stadium"
+  },
+  "seat": {
+    "stand_id": "W",
+    "stand_name": "Main Stand",
+    "sector_id": "W3",
+    "sector_type": "home",
+    "gate_id": "G",
+    "row": "8",
+    "seat": "11"
+  },
+  "valid_from": "2026-10-20T00:00:00+01:00",
+  "valid_until": "2026-11-10T23:59:59+01:00",
+  "valid_now": true,
+  "features": {
+    "allowed_modes": [
+      "analyst",
+      "casual"
+    ],
+    "default_mode": "analyst",
+    "inspector": false,
+    "demo_panel": false,
+    "multi_device": false,
+    "perks": [
+      "Analyst mode: advanced charts, xG, zone maps and the defensive line",
+      "Switch to Fan at any time"
+    ]
+  },
+  "images": [
+    {
+      "format": "svg",
+      "url": "/api/ticket/image?format=svg",
+      "path": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.svg",
+      "available": false
+    },
+    {
+      "format": "pdf",
+      "url": "/api/ticket/image?format=pdf",
+      "path": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.pdf",
+      "available": false
+    },
+    {
+      "format": "png",
+      "url": "/api/ticket/image?format=png",
+      "path": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.png",
+      "available": false
+    }
+  ]
+}

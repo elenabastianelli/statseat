@@ -1,0 +1,7899 @@
+{
+  "match_id": "SYN-001",
+  "mode": "analyst",
+  "scope": "full_match",
+  "up_to_minute": 90,
+  "as_of_s": 5760.0,
+  "score": {
+    "home": 2,
+    "away": 1
+  },
+  "charts": [
+    {
+      "chart_id": "momentum",
+      "title": "Who is pushing",
+      "section": "data_stats",
+      "modes": [
+        "casual",
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "shot_map",
+      "title": "Shot map",
+      "section": "data_stats",
+      "modes": [
+        "casual",
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "xg_cumulative",
+      "title": "Expected goals over time",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "peak_intensity",
+      "title": "Running intensity",
+      "section": "data_stats",
+      "modes": [
+        "casual",
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "acceleration_load",
+      "title": "Acceleration load",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "ball_circulation",
+      "title": "Ball circulation speed",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "zone_map",
+      "title": "Zones of play",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "speed_zones",
+      "title": "Distance by speed zone",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    },
+    {
+      "chart_id": "defensive_shape",
+      "title": "Defensive line and team length",
+      "section": "data_stats",
+      "modes": [
+        "analyst"
+      ]
+    }
+  ],
+  "locked_charts": [],
+  "goal_marks": [
+    {
+      "team_id": "BRA",
+      "minute": 23
+    },
+    {
+      "team_id": "CAL",
+      "minute": 58
+    },
+    {
+      "team_id": "BRA",
+      "minute": 79
+    }
+  ],
+  "shots": [
+    {
+      "team_id": "BRA",
+      "shots": 12,
+      "on_target": 5,
+      "goals": 2
+    },
+    {
+      "team_id": "CAL",
+      "shots": 9,
+      "on_target": 4,
+      "goals": 1
+    }
+  ],
+  "counts": [
+    {
+      "team_id": "BRA",
+      "corners": 7,
+      "fouls": 11,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "penalties": 1,
+      "woodwork": 1,
+      "offsides": 2,
+      "sprints": 83,
+      "tackles": 17,
+      "ball_recoveries": 49
+    },
+    {
+      "team_id": "CAL",
+      "corners": 5,
+      "fouls": 14,
+      "yellow_cards": 2,
+      "red_cards": 0,
+      "penalties": 0,
+      "woodwork": 0,
+      "offsides": 3,
+      "sprints": 81,
+      "tackles": 25,
+      "ball_recoveries": 47
+    }
+  ],
+  "possession": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "value": 54.0
+      },
+      {
+        "team_id": "CAL",
+        "value": 46.0
+      }
+    ]
+  },
+  "goals_vs_xg": [
+    {
+      "team_id": "BRA",
+      "goals": 2,
+      "xg": 1.86
+    },
+    {
+      "team_id": "CAL",
+      "goals": 1,
+      "xg": 1.19
+    }
+  ],
+  "effective_playing_time": {
+    "first_half_min": 28.4,
+    "second_half_min": 29.5,
+    "total_min": 57.9,
+    "played_min": 96.0,
+    "in_play_pct": 60.3,
+    "reference_world_cup_2022_min": 59.0,
+    "reference_bundesliga_pct": 62.0
+  },
+  "player_focus": [
+    {
+      "player_id": "BRA-01",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "top_speed_minute": 4,
+      "sprints": 0,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 22,
+      "pass_accuracy_pct": 85.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 29,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-08"
+      ],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-01",
+        "km_0_7": 2.15,
+        "km_7_15": 1.99,
+        "km_15_20": 0.65,
+        "km_20_25": 0.38,
+        "km_over_25": 0.21
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-01",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.7,
+            2.8,
+            6.1,
+            4.3,
+            2.5,
+            5.9
+          ],
+          [
+            1.1,
+            4.5,
+            2.7,
+            6.1,
+            4.3,
+            7.6
+          ],
+          [
+            2.9,
+            1.1,
+            4.4,
+            2.6,
+            6.0,
+            4.2
+          ],
+          [
+            4.6,
+            2.8,
+            6.1,
+            4.3,
+            2.5,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 73.4
+        },
+        {
+          "minute": 10,
+          "value": 67.7
+        },
+        {
+          "minute": 15,
+          "value": 57.3
+        },
+        {
+          "minute": 20,
+          "value": 50.1
+        },
+        {
+          "minute": 25,
+          "value": 51.5
+        },
+        {
+          "minute": 30,
+          "value": 60.5
+        },
+        {
+          "minute": 35,
+          "value": 70.2
+        },
+        {
+          "minute": 40,
+          "value": 73.4
+        },
+        {
+          "minute": 45,
+          "value": 67.5
+        },
+        {
+          "minute": 50,
+          "value": 57.1
+        },
+        {
+          "minute": 55,
+          "value": 50.0
+        },
+        {
+          "minute": 60,
+          "value": 51.6
+        },
+        {
+          "minute": 65,
+          "value": 60.7
+        },
+        {
+          "minute": 70,
+          "value": 70.4
+        },
+        {
+          "minute": 75,
+          "value": 73.3
+        },
+        {
+          "minute": 80,
+          "value": 67.3
+        },
+        {
+          "minute": 85,
+          "value": 56.9
+        },
+        {
+          "minute": 90,
+          "value": 50.0
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-02",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "top_speed_minute": 5,
+      "sprints": 10,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 44,
+      "pass_accuracy_pct": 86.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-02",
+        "km_0_7": 4.42,
+        "km_7_15": 4.08,
+        "km_15_20": 1.32,
+        "km_20_25": 0.77,
+        "km_over_25": 0.45
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-02",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.3,
+            2.6,
+            5.9
+          ],
+          [
+            1.1,
+            4.5,
+            2.7,
+            6.1,
+            4.3,
+            7.6
+          ],
+          [
+            2.9,
+            1.1,
+            4.4,
+            2.6,
+            6.0,
+            4.2
+          ],
+          [
+            4.6,
+            2.8,
+            6.1,
+            4.3,
+            2.6,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 124.9
+        },
+        {
+          "minute": 10,
+          "value": 117.0
+        },
+        {
+          "minute": 15,
+          "value": 117.4
+        },
+        {
+          "minute": 20,
+          "value": 125.8
+        },
+        {
+          "minute": 25,
+          "value": 135.9
+        },
+        {
+          "minute": 30,
+          "value": 140.0
+        },
+        {
+          "minute": 35,
+          "value": 135.0
+        },
+        {
+          "minute": 40,
+          "value": 124.7
+        },
+        {
+          "minute": 45,
+          "value": 116.9
+        },
+        {
+          "minute": 50,
+          "value": 117.5
+        },
+        {
+          "minute": 55,
+          "value": 126.0
+        },
+        {
+          "minute": 60,
+          "value": 136.0
+        },
+        {
+          "minute": 65,
+          "value": 140.0
+        },
+        {
+          "minute": 70,
+          "value": 134.9
+        },
+        {
+          "minute": 75,
+          "value": 124.5
+        },
+        {
+          "minute": 80,
+          "value": 116.9
+        },
+        {
+          "minute": 85,
+          "value": 117.6
+        },
+        {
+          "minute": 90,
+          "value": 126.2
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-03",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "top_speed_minute": 6,
+      "sprints": 10,
+      "acceleration_load_kmh": 12432.0,
+      "passes": 44,
+      "pass_accuracy_pct": 87.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-03",
+        "km_0_7": 4.46,
+        "km_7_15": 4.12,
+        "km_15_20": 1.34,
+        "km_20_25": 0.78,
+        "km_over_25": 0.44
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-03",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.7,
+            2.8,
+            6.1,
+            4.3,
+            2.6,
+            5.9
+          ],
+          [
+            1.1,
+            4.5,
+            2.7,
+            6.1,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.6,
+            6.0,
+            4.2
+          ],
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.3,
+            2.6,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 118.4
+        },
+        {
+          "minute": 10,
+          "value": 126.1
+        },
+        {
+          "minute": 15,
+          "value": 136.4
+        },
+        {
+          "minute": 20,
+          "value": 141.5
+        },
+        {
+          "minute": 25,
+          "value": 137.5
+        },
+        {
+          "minute": 30,
+          "value": 127.4
+        },
+        {
+          "minute": 35,
+          "value": 118.9
+        },
+        {
+          "minute": 40,
+          "value": 118.5
+        },
+        {
+          "minute": 45,
+          "value": 126.3
+        },
+        {
+          "minute": 50,
+          "value": 136.6
+        },
+        {
+          "minute": 55,
+          "value": 141.5
+        },
+        {
+          "minute": 60,
+          "value": 137.3
+        },
+        {
+          "minute": 65,
+          "value": 127.2
+        },
+        {
+          "minute": 70,
+          "value": 118.8
+        },
+        {
+          "minute": 75,
+          "value": 118.5
+        },
+        {
+          "minute": 80,
+          "value": 126.5
+        },
+        {
+          "minute": 85,
+          "value": 136.8
+        },
+        {
+          "minute": 90,
+          "value": 141.5
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-04",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.46,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.2,
+      "top_speed_minute": 7,
+      "sprints": 5,
+      "acceleration_load_kmh": 10656.0,
+      "passes": 48,
+      "pass_accuracy_pct": 88.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 68,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-04",
+        "km_0_7": 4.18,
+        "km_7_15": 3.87,
+        "km_15_20": 1.26,
+        "km_20_25": 0.73,
+        "km_over_25": 0.42
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-04",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            5.9
+          ],
+          [
+            1.1,
+            4.5,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.2
+          ],
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 116.9
+        },
+        {
+          "minute": 10,
+          "value": 122.9
+        },
+        {
+          "minute": 15,
+          "value": 119.8
+        },
+        {
+          "minute": 20,
+          "value": 110.1
+        },
+        {
+          "minute": 25,
+          "value": 101.1
+        },
+        {
+          "minute": 30,
+          "value": 99.6
+        },
+        {
+          "minute": 35,
+          "value": 106.7
+        },
+        {
+          "minute": 40,
+          "value": 117.1
+        },
+        {
+          "minute": 45,
+          "value": 122.9
+        },
+        {
+          "minute": 50,
+          "value": 119.7
+        },
+        {
+          "minute": 55,
+          "value": 109.9
+        },
+        {
+          "minute": 60,
+          "value": 101.0
+        },
+        {
+          "minute": 65,
+          "value": 99.6
+        },
+        {
+          "minute": 70,
+          "value": 106.9
+        },
+        {
+          "minute": 75,
+          "value": 117.3
+        },
+        {
+          "minute": 80,
+          "value": 122.9
+        },
+        {
+          "minute": 85,
+          "value": 119.5
+        },
+        {
+          "minute": 90,
+          "value": 109.7
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-05",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "top_speed_minute": 8,
+      "sprints": 5,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 68,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-05",
+        "km_0_7": 4.03,
+        "km_7_15": 3.73,
+        "km_15_20": 1.21,
+        "km_20_25": 0.71,
+        "km_over_25": 0.4
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-05",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            5.9
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 114.6
+        },
+        {
+          "minute": 10,
+          "value": 105.3
+        },
+        {
+          "minute": 15,
+          "value": 95.8
+        },
+        {
+          "minute": 20,
+          "value": 93.2
+        },
+        {
+          "minute": 25,
+          "value": 99.6
+        },
+        {
+          "minute": 30,
+          "value": 110.0
+        },
+        {
+          "minute": 35,
+          "value": 116.7
+        },
+        {
+          "minute": 40,
+          "value": 114.5
+        },
+        {
+          "minute": 45,
+          "value": 105.1
+        },
+        {
+          "minute": 50,
+          "value": 95.7
+        },
+        {
+          "minute": 55,
+          "value": 93.3
+        },
+        {
+          "minute": 60,
+          "value": 99.8
+        },
+        {
+          "minute": 65,
+          "value": 110.2
+        },
+        {
+          "minute": 70,
+          "value": 116.7
+        },
+        {
+          "minute": 75,
+          "value": 114.3
+        },
+        {
+          "minute": 80,
+          "value": 104.9
+        },
+        {
+          "minute": 85,
+          "value": 95.5
+        },
+        {
+          "minute": 90,
+          "value": 93.3
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-06",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.42,
+        "approx": false,
+        "unmeasured_pct": 0.5,
+        "reliability": {
+          "measured_pct": 99.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.5,
+      "top_speed_minute": 9,
+      "sprints": 6,
+      "acceleration_load_kmh": 11664.0,
+      "passes": 61,
+      "pass_accuracy_pct": 85.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 87,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-04"
+      ],
+      "xg": 0.07,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-06",
+        "km_0_7": 4.57,
+        "km_7_15": 4.23,
+        "km_15_20": 1.37,
+        "km_20_25": 0.8,
+        "km_over_25": 0.45
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-06",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.3,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            6.0
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            6.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 113.1
+        },
+        {
+          "minute": 10,
+          "value": 109.6
+        },
+        {
+          "minute": 15,
+          "value": 115.1
+        },
+        {
+          "minute": 20,
+          "value": 125.4
+        },
+        {
+          "minute": 25,
+          "value": 132.8
+        },
+        {
+          "minute": 30,
+          "value": 131.6
+        },
+        {
+          "minute": 35,
+          "value": 122.8
+        },
+        {
+          "minute": 40,
+          "value": 113.0
+        },
+        {
+          "minute": 45,
+          "value": 109.6
+        },
+        {
+          "minute": 50,
+          "value": 115.2
+        },
+        {
+          "minute": 55,
+          "value": 125.6
+        },
+        {
+          "minute": 60,
+          "value": 132.9
+        },
+        {
+          "minute": 65,
+          "value": 131.5
+        },
+        {
+          "minute": 70,
+          "value": 122.6
+        },
+        {
+          "minute": 75,
+          "value": 112.8
+        },
+        {
+          "minute": 80,
+          "value": 109.6
+        },
+        {
+          "minute": 85,
+          "value": 115.4
+        },
+        {
+          "minute": 90,
+          "value": 125.8
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-08",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.62,
+        "approx": false,
+        "unmeasured_pct": 0.7,
+        "reliability": {
+          "measured_pct": 99.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.2,
+      "top_speed_minute": 11,
+      "sprints": 6,
+      "acceleration_load_kmh": 11952.0,
+      "passes": 61,
+      "pass_accuracy_pct": 87.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 87,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0.03,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-08",
+        "km_0_7": 4.65,
+        "km_7_15": 4.3,
+        "km_15_20": 1.39,
+        "km_20_25": 0.81,
+        "km_over_25": 0.47
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-08",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.6,
+            2.7,
+            6.0,
+            4.4,
+            2.7,
+            6.0
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.4,
+            2.7,
+            6.0,
+            4.4,
+            2.7,
+            6.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 134.8
+        },
+        {
+          "minute": 10,
+          "value": 135.7
+        },
+        {
+          "minute": 15,
+          "value": 128.1
+        },
+        {
+          "minute": 20,
+          "value": 117.8
+        },
+        {
+          "minute": 25,
+          "value": 112.5
+        },
+        {
+          "minute": 30,
+          "value": 116.3
+        },
+        {
+          "minute": 35,
+          "value": 126.3
+        },
+        {
+          "minute": 40,
+          "value": 134.9
+        },
+        {
+          "minute": 45,
+          "value": 135.6
+        },
+        {
+          "minute": 50,
+          "value": 127.9
+        },
+        {
+          "minute": 55,
+          "value": 117.6
+        },
+        {
+          "minute": 60,
+          "value": 112.5
+        },
+        {
+          "minute": 65,
+          "value": 116.5
+        },
+        {
+          "minute": 70,
+          "value": 126.5
+        },
+        {
+          "minute": 75,
+          "value": 135.0
+        },
+        {
+          "minute": 80,
+          "value": 135.6
+        },
+        {
+          "minute": 85,
+          "value": 127.8
+        },
+        {
+          "minute": 90,
+          "value": 117.5
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-09",
+      "team_id": "BRA",
+      "minutes_played": 72,
+      "distance": {
+        "km": 7.92,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "top_speed_minute": 12,
+      "sprints": 7,
+      "acceleration_load_kmh": 9216.0,
+      "passes": 20,
+      "pass_accuracy_pct": 88.1,
+      "shots": 2,
+      "goals": 1,
+      "touches": 28,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-01"
+      ],
+      "xg": 0.53,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-09",
+        "km_0_7": 3.17,
+        "km_7_15": 2.93,
+        "km_15_20": 0.95,
+        "km_20_25": 0.55,
+        "km_over_25": 0.32
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-09",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.6,
+            2.7,
+            6.0,
+            4.4,
+            2.7,
+            6.0
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.4,
+            7.6
+          ],
+          [
+            2.7,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.4,
+            2.7,
+            6.0,
+            4.4,
+            2.7,
+            6.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 132.8
+        },
+        {
+          "minute": 10,
+          "value": 122.3
+        },
+        {
+          "minute": 15,
+          "value": 116.2
+        },
+        {
+          "minute": 20,
+          "value": 119.0
+        },
+        {
+          "minute": 25,
+          "value": 128.6
+        },
+        {
+          "minute": 30,
+          "value": 137.8
+        },
+        {
+          "minute": 35,
+          "value": 139.5
+        },
+        {
+          "minute": 40,
+          "value": 132.6
+        },
+        {
+          "minute": 45,
+          "value": 122.2
+        },
+        {
+          "minute": 50,
+          "value": 116.2
+        },
+        {
+          "minute": 55,
+          "value": 119.1
+        },
+        {
+          "minute": 60,
+          "value": 128.8
+        },
+        {
+          "minute": 65,
+          "value": 137.9
+        },
+        {
+          "minute": 70,
+          "value": 139.5
+        },
+        {
+          "minute": 75,
+          "value": 132.4
+        },
+        {
+          "minute": 80,
+          "value": 122.0
+        },
+        {
+          "minute": 85,
+          "value": 116.1
+        },
+        {
+          "minute": 90,
+          "value": 119.3
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-10",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "top_speed_minute": 13,
+      "sprints": 8,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "shots": 2,
+      "goals": 0,
+      "touches": 66,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-01"
+      ],
+      "xg": 0.16,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-10",
+        "km_0_7": 4.46,
+        "km_7_15": 4.12,
+        "km_15_20": 1.34,
+        "km_20_25": 0.78,
+        "km_over_25": 0.44
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-10",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.6,
+            2.8,
+            6.2,
+            4.3,
+            2.5,
+            5.9
+          ],
+          [
+            1.2,
+            4.5,
+            2.7,
+            6.1,
+            4.2,
+            7.6
+          ],
+          [
+            2.9,
+            1.1,
+            4.4,
+            2.6,
+            6.0,
+            4.1
+          ],
+          [
+            4.6,
+            2.8,
+            6.2,
+            4.3,
+            2.5,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 116.5
+        },
+        {
+          "minute": 10,
+          "value": 118.2
+        },
+        {
+          "minute": 15,
+          "value": 127.4
+        },
+        {
+          "minute": 20,
+          "value": 137.0
+        },
+        {
+          "minute": 25,
+          "value": 139.8
+        },
+        {
+          "minute": 30,
+          "value": 133.7
+        },
+        {
+          "minute": 35,
+          "value": 123.2
+        },
+        {
+          "minute": 40,
+          "value": 116.4
+        },
+        {
+          "minute": 45,
+          "value": 118.4
+        },
+        {
+          "minute": 50,
+          "value": 127.6
+        },
+        {
+          "minute": 55,
+          "value": 137.2
+        },
+        {
+          "minute": 60,
+          "value": 139.8
+        },
+        {
+          "minute": 65,
+          "value": 133.5
+        },
+        {
+          "minute": 70,
+          "value": 123.0
+        },
+        {
+          "minute": 75,
+          "value": 116.4
+        },
+        {
+          "minute": 80,
+          "value": 118.5
+        },
+        {
+          "minute": 85,
+          "value": 127.8
+        },
+        {
+          "minute": 90,
+          "value": 137.3
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-11",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.85,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "top_speed_minute": 14,
+      "sprints": 12,
+      "acceleration_load_kmh": 12624.0,
+      "passes": 35,
+      "pass_accuracy_pct": 85.1,
+      "shots": 3,
+      "goals": 1,
+      "touches": 51,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-07"
+      ],
+      "xg": 0.85,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-11",
+        "km_0_7": 4.34,
+        "km_7_15": 4.01,
+        "km_15_20": 1.3,
+        "km_20_25": 0.76,
+        "km_over_25": 0.44
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-11",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.7,
+            2.8,
+            6.1,
+            4.3,
+            2.5,
+            5.9
+          ],
+          [
+            1.1,
+            4.5,
+            2.7,
+            6.1,
+            4.3,
+            7.6
+          ],
+          [
+            2.9,
+            1.1,
+            4.4,
+            2.6,
+            6.0,
+            4.2
+          ],
+          [
+            4.6,
+            2.8,
+            6.1,
+            4.3,
+            2.5,
+            5.9
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 129.7
+        },
+        {
+          "minute": 10,
+          "value": 139.7
+        },
+        {
+          "minute": 15,
+          "value": 143.5
+        },
+        {
+          "minute": 20,
+          "value": 138.2
+        },
+        {
+          "minute": 25,
+          "value": 127.9
+        },
+        {
+          "minute": 30,
+          "value": 120.3
+        },
+        {
+          "minute": 35,
+          "value": 121.2
+        },
+        {
+          "minute": 40,
+          "value": 129.9
+        },
+        {
+          "minute": 45,
+          "value": 139.8
+        },
+        {
+          "minute": 50,
+          "value": 143.4
+        },
+        {
+          "minute": 55,
+          "value": 138.0
+        },
+        {
+          "minute": 60,
+          "value": 127.7
+        },
+        {
+          "minute": 65,
+          "value": 120.2
+        },
+        {
+          "minute": 70,
+          "value": 121.3
+        },
+        {
+          "minute": 75,
+          "value": 130.1
+        },
+        {
+          "minute": 80,
+          "value": 140.0
+        },
+        {
+          "minute": 85,
+          "value": 143.4
+        },
+        {
+          "minute": 90,
+          "value": 137.8
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-27",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.6,
+      "top_speed_minute": 29,
+      "sprints": 12,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 35,
+      "pass_accuracy_pct": 86.1,
+      "shots": 2,
+      "goals": 0,
+      "touches": 50,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-02"
+      ],
+      "xg": 0.17,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-27",
+        "km_0_7": 4.38,
+        "km_7_15": 4.05,
+        "km_15_20": 1.31,
+        "km_20_25": 0.77,
+        "km_over_25": 0.43
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-27",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.2,
+            2.8,
+            6.1,
+            4.4,
+            2.7,
+            6.0
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.4,
+            2.8,
+            6.1,
+            4.4,
+            2.7,
+            6.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 144.3
+        },
+        {
+          "minute": 10,
+          "value": 136.8
+        },
+        {
+          "minute": 15,
+          "value": 126.5
+        },
+        {
+          "minute": 20,
+          "value": 121.1
+        },
+        {
+          "minute": 25,
+          "value": 124.7
+        },
+        {
+          "minute": 30,
+          "value": 134.6
+        },
+        {
+          "minute": 35,
+          "value": 143.3
+        },
+        {
+          "minute": 40,
+          "value": 144.2
+        },
+        {
+          "minute": 45,
+          "value": 136.6
+        },
+        {
+          "minute": 50,
+          "value": 126.3
+        },
+        {
+          "minute": 55,
+          "value": 121.0
+        },
+        {
+          "minute": 60,
+          "value": 124.8
+        },
+        {
+          "minute": 65,
+          "value": 134.8
+        },
+        {
+          "minute": 70,
+          "value": 143.4
+        },
+        {
+          "minute": 75,
+          "value": 144.1
+        },
+        {
+          "minute": 80,
+          "value": 136.4
+        },
+        {
+          "minute": 85,
+          "value": 126.1
+        },
+        {
+          "minute": 90,
+          "value": 121.0
+        }
+      ]
+    },
+    {
+      "player_id": "BRA-46",
+      "team_id": "BRA",
+      "minutes_played": 24,
+      "distance": {
+        "km": 2.57,
+        "approx": false,
+        "unmeasured_pct": 0.9,
+        "reliability": {
+          "measured_pct": 99.1,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 35.1,
+      "top_speed_minute": 77,
+      "sprints": 2,
+      "acceleration_load_kmh": 2964.0,
+      "passes": 6,
+      "pass_accuracy_pct": 85.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 9,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-06"
+      ],
+      "xg": 0.05,
+      "speed_zones": {
+        "team_id": "BRA",
+        "player_id": "BRA-46",
+        "km_0_7": 1.03,
+        "km_7_15": 0.95,
+        "km_15_20": 0.31,
+        "km_20_25": 0.18,
+        "km_over_25": 0.1
+      },
+      "zone_map": {
+        "team_id": "BRA",
+        "player_id": "BRA-46",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            4.3,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            6.0
+          ],
+          [
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3,
+            7.6
+          ],
+          [
+            2.8,
+            1.1,
+            4.4,
+            2.7,
+            6.0,
+            4.3
+          ],
+          [
+            4.5,
+            2.8,
+            6.1,
+            4.4,
+            2.6,
+            6.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 75,
+          "value": 127.1
+        },
+        {
+          "minute": 80,
+          "value": 116.8
+        },
+        {
+          "minute": 85,
+          "value": 111.5
+        },
+        {
+          "minute": 90,
+          "value": 115.3
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-01",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "top_speed_minute": 4,
+      "sprints": 0,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 18,
+      "pass_accuracy_pct": 77.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 24,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-01",
+        "km_0_7": 2.15,
+        "km_7_15": 1.99,
+        "km_15_20": 0.65,
+        "km_20_25": 0.38,
+        "km_over_25": 0.21
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-01",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.5,
+            5.2,
+            3.3,
+            6.8,
+            4.9,
+            3.1
+          ],
+          [
+            3.5,
+            1.7,
+            5.1,
+            3.2,
+            6.7,
+            4.8
+          ],
+          [
+            5.3,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.8,
+            5.2,
+            3.3,
+            6.8,
+            4.9,
+            3.1
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 73.4
+        },
+        {
+          "minute": 10,
+          "value": 67.7
+        },
+        {
+          "minute": 15,
+          "value": 57.3
+        },
+        {
+          "minute": 20,
+          "value": 50.1
+        },
+        {
+          "minute": 25,
+          "value": 51.5
+        },
+        {
+          "minute": 30,
+          "value": 60.5
+        },
+        {
+          "minute": 35,
+          "value": 70.2
+        },
+        {
+          "minute": 40,
+          "value": 73.4
+        },
+        {
+          "minute": 45,
+          "value": 67.5
+        },
+        {
+          "minute": 50,
+          "value": 57.1
+        },
+        {
+          "minute": 55,
+          "value": 50.0
+        },
+        {
+          "minute": 60,
+          "value": 51.6
+        },
+        {
+          "minute": 65,
+          "value": 60.7
+        },
+        {
+          "minute": 70,
+          "value": 70.4
+        },
+        {
+          "minute": 75,
+          "value": 73.3
+        },
+        {
+          "minute": 80,
+          "value": 67.3
+        },
+        {
+          "minute": 85,
+          "value": 56.9
+        },
+        {
+          "minute": 90,
+          "value": 50.0
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-02",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.3,
+        "reliability": {
+          "measured_pct": 98.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "top_speed_minute": 5,
+      "sprints": 9,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 37,
+      "pass_accuracy_pct": 78.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 55,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-02",
+        "km_0_7": 4.42,
+        "km_7_15": 4.08,
+        "km_15_20": 1.32,
+        "km_20_25": 0.77,
+        "km_over_25": 0.45
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-02",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.2,
+            3.3,
+            6.7,
+            4.9,
+            3.1
+          ],
+          [
+            3.5,
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.8
+          ],
+          [
+            5.2,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.7,
+            5.2,
+            3.3,
+            6.7,
+            4.9,
+            3.1
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 124.9
+        },
+        {
+          "minute": 10,
+          "value": 117.0
+        },
+        {
+          "minute": 15,
+          "value": 117.4
+        },
+        {
+          "minute": 20,
+          "value": 125.8
+        },
+        {
+          "minute": 25,
+          "value": 135.9
+        },
+        {
+          "minute": 30,
+          "value": 140.0
+        },
+        {
+          "minute": 35,
+          "value": 135.0
+        },
+        {
+          "minute": 40,
+          "value": 124.7
+        },
+        {
+          "minute": 45,
+          "value": 116.9
+        },
+        {
+          "minute": 50,
+          "value": 117.5
+        },
+        {
+          "minute": 55,
+          "value": 126.0
+        },
+        {
+          "minute": 60,
+          "value": 136.0
+        },
+        {
+          "minute": 65,
+          "value": 140.0
+        },
+        {
+          "minute": 70,
+          "value": 134.9
+        },
+        {
+          "minute": 75,
+          "value": 124.5
+        },
+        {
+          "minute": 80,
+          "value": 116.9
+        },
+        {
+          "minute": 85,
+          "value": 117.6
+        },
+        {
+          "minute": 90,
+          "value": 126.2
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-04",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 12.0,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.6,
+      "top_speed_minute": 7,
+      "sprints": 7,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 51,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 73,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-03"
+      ],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-04",
+        "km_0_7": 4.8,
+        "km_7_15": 4.44,
+        "km_15_20": 1.44,
+        "km_20_25": 0.84,
+        "km_over_25": 0.48
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-04",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.1,
+            3.3,
+            6.7,
+            4.9,
+            3.2
+          ],
+          [
+            3.4,
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.9
+          ],
+          [
+            5.2,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.9,
+            3.2
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 136.9
+        },
+        {
+          "minute": 10,
+          "value": 142.9
+        },
+        {
+          "minute": 15,
+          "value": 139.8
+        },
+        {
+          "minute": 20,
+          "value": 130.1
+        },
+        {
+          "minute": 25,
+          "value": 121.1
+        },
+        {
+          "minute": 30,
+          "value": 119.6
+        },
+        {
+          "minute": 35,
+          "value": 126.7
+        },
+        {
+          "minute": 40,
+          "value": 137.1
+        },
+        {
+          "minute": 45,
+          "value": 142.9
+        },
+        {
+          "minute": 50,
+          "value": 139.7
+        },
+        {
+          "minute": 55,
+          "value": 129.9
+        },
+        {
+          "minute": 60,
+          "value": 121.0
+        },
+        {
+          "minute": 65,
+          "value": 119.6
+        },
+        {
+          "minute": 70,
+          "value": 126.9
+        },
+        {
+          "minute": 75,
+          "value": 137.3
+        },
+        {
+          "minute": 80,
+          "value": 142.9
+        },
+        {
+          "minute": 85,
+          "value": 139.5
+        },
+        {
+          "minute": 90,
+          "value": 129.7
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-05",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": true,
+        "unmeasured_pct": 1.6,
+        "reliability": {
+          "measured_pct": 98.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "top_speed_minute": 8,
+      "sprints": 4,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 40,
+      "pass_accuracy_pct": 76.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 61,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-06"
+      ],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-05",
+        "km_0_7": 4.03,
+        "km_7_15": 3.73,
+        "km_15_20": 1.21,
+        "km_20_25": 0.71,
+        "km_over_25": 0.4
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-05",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            4.9
+          ],
+          [
+            5.1,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 114.6
+        },
+        {
+          "minute": 10,
+          "value": 105.3
+        },
+        {
+          "minute": 15,
+          "value": 95.8
+        },
+        {
+          "minute": 20,
+          "value": 93.2
+        },
+        {
+          "minute": 25,
+          "value": 99.6
+        },
+        {
+          "minute": 30,
+          "value": 110.0
+        },
+        {
+          "minute": 35,
+          "value": 116.7
+        },
+        {
+          "minute": 40,
+          "value": 114.5
+        },
+        {
+          "minute": 45,
+          "value": 105.1
+        },
+        {
+          "minute": 50,
+          "value": 95.7
+        },
+        {
+          "minute": 55,
+          "value": 93.3
+        },
+        {
+          "minute": 60,
+          "value": 99.8
+        },
+        {
+          "minute": 65,
+          "value": 110.2
+        },
+        {
+          "minute": 70,
+          "value": 116.7
+        },
+        {
+          "minute": 75,
+          "value": 114.3
+        },
+        {
+          "minute": 80,
+          "value": 104.9
+        },
+        {
+          "minute": 85,
+          "value": 95.5
+        },
+        {
+          "minute": 90,
+          "value": 93.3
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-06",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.18,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.7,
+      "top_speed_minute": 9,
+      "sprints": 4,
+      "acceleration_load_kmh": 10224.0,
+      "passes": 40,
+      "pass_accuracy_pct": 77.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 62,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0.04,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-06",
+        "km_0_7": 4.07,
+        "km_7_15": 3.77,
+        "km_15_20": 1.22,
+        "km_20_25": 0.71,
+        "km_over_25": 0.41
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-06",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            4.9
+          ],
+          [
+            5.1,
+            3.4,
+            1.6,
+            5.0,
+            3.3,
+            6.6
+          ],
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 98.1
+        },
+        {
+          "minute": 10,
+          "value": 94.6
+        },
+        {
+          "minute": 15,
+          "value": 100.1
+        },
+        {
+          "minute": 20,
+          "value": 110.4
+        },
+        {
+          "minute": 25,
+          "value": 117.8
+        },
+        {
+          "minute": 30,
+          "value": 116.6
+        },
+        {
+          "minute": 35,
+          "value": 107.8
+        },
+        {
+          "minute": 40,
+          "value": 98.0
+        },
+        {
+          "minute": 45,
+          "value": 94.6
+        },
+        {
+          "minute": 50,
+          "value": 100.2
+        },
+        {
+          "minute": 55,
+          "value": 110.6
+        },
+        {
+          "minute": 60,
+          "value": 117.9
+        },
+        {
+          "minute": 65,
+          "value": 116.5
+        },
+        {
+          "minute": 70,
+          "value": 107.6
+        },
+        {
+          "minute": 75,
+          "value": 97.8
+        },
+        {
+          "minute": 80,
+          "value": 94.6
+        },
+        {
+          "minute": 85,
+          "value": 100.4
+        },
+        {
+          "minute": 90,
+          "value": 110.8
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-07",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.9,
+      "top_speed_minute": 18,
+      "sprints": 11,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 29,
+      "pass_accuracy_pct": 78.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 41,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-05"
+      ],
+      "xg": 0.05,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-07",
+        "km_0_7": 4.38,
+        "km_7_15": 4.05,
+        "km_15_20": 1.31,
+        "km_20_25": 0.77,
+        "km_over_25": 0.43
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-07",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            4.9
+          ],
+          [
+            5.1,
+            3.4,
+            1.6,
+            5.0,
+            3.3,
+            6.6
+          ],
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            5.0,
+            3.2
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 125.6
+        },
+        {
+          "minute": 10,
+          "value": 135.8
+        },
+        {
+          "minute": 15,
+          "value": 143.9
+        },
+        {
+          "minute": 20,
+          "value": 143.7
+        },
+        {
+          "minute": 25,
+          "value": 135.5
+        },
+        {
+          "minute": 30,
+          "value": 125.3
+        },
+        {
+          "minute": 35,
+          "value": 121.0
+        },
+        {
+          "minute": 40,
+          "value": 125.7
+        },
+        {
+          "minute": 45,
+          "value": 136.0
+        },
+        {
+          "minute": 50,
+          "value": 144.0
+        },
+        {
+          "minute": 55,
+          "value": 143.6
+        },
+        {
+          "minute": 60,
+          "value": 135.3
+        },
+        {
+          "minute": 65,
+          "value": 125.2
+        },
+        {
+          "minute": 70,
+          "value": 121.0
+        },
+        {
+          "minute": 75,
+          "value": 125.9
+        },
+        {
+          "minute": 80,
+          "value": 136.2
+        },
+        {
+          "minute": 85,
+          "value": 144.0
+        },
+        {
+          "minute": 90,
+          "value": 143.6
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-08",
+      "team_id": "CAL",
+      "minutes_played": 81,
+      "distance": {
+        "km": 10.04,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.9,
+      "top_speed_minute": 11,
+      "sprints": 6,
+      "acceleration_load_kmh": 10489.5,
+      "passes": 43,
+      "pass_accuracy_pct": 79.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 3,
+      "ball_recoveries": 5,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0.03,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-08",
+        "km_0_7": 4.02,
+        "km_7_15": 3.71,
+        "km_15_20": 1.2,
+        "km_20_25": 0.7,
+        "km_over_25": 0.41
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-08",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.6,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0
+          ],
+          [
+            5.1,
+            3.4,
+            1.6,
+            5.0,
+            3.3,
+            6.6
+          ],
+          [
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 139.8
+        },
+        {
+          "minute": 10,
+          "value": 140.7
+        },
+        {
+          "minute": 15,
+          "value": 133.1
+        },
+        {
+          "minute": 20,
+          "value": 122.8
+        },
+        {
+          "minute": 25,
+          "value": 117.5
+        },
+        {
+          "minute": 30,
+          "value": 121.3
+        },
+        {
+          "minute": 35,
+          "value": 131.3
+        },
+        {
+          "minute": 40,
+          "value": 139.9
+        },
+        {
+          "minute": 45,
+          "value": 140.6
+        },
+        {
+          "minute": 50,
+          "value": 132.9
+        },
+        {
+          "minute": 55,
+          "value": 122.6
+        },
+        {
+          "minute": 60,
+          "value": 117.5
+        },
+        {
+          "minute": 65,
+          "value": 121.5
+        },
+        {
+          "minute": 70,
+          "value": 131.5
+        },
+        {
+          "minute": 75,
+          "value": 140.0
+        },
+        {
+          "minute": 80,
+          "value": 140.6
+        },
+        {
+          "minute": 85,
+          "value": 132.8
+        },
+        {
+          "minute": 90,
+          "value": 122.5
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-09",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.56,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "top_speed_minute": 12,
+      "sprints": 9,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 22,
+      "pass_accuracy_pct": 80.4,
+      "shots": 3,
+      "goals": 1,
+      "touches": 34,
+      "tackles": 1,
+      "ball_recoveries": 2,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-05"
+      ],
+      "xg": 0.63,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-09",
+        "km_0_7": 4.22,
+        "km_7_15": 3.91,
+        "km_15_20": 1.27,
+        "km_20_25": 0.74,
+        "km_over_25": 0.42
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-09",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.6,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0
+          ],
+          [
+            5.0,
+            3.3,
+            1.7,
+            5.0,
+            3.3,
+            6.7
+          ],
+          [
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 132.8
+        },
+        {
+          "minute": 10,
+          "value": 122.3
+        },
+        {
+          "minute": 15,
+          "value": 116.2
+        },
+        {
+          "minute": 20,
+          "value": 119.0
+        },
+        {
+          "minute": 25,
+          "value": 128.6
+        },
+        {
+          "minute": 30,
+          "value": 137.8
+        },
+        {
+          "minute": 35,
+          "value": 139.5
+        },
+        {
+          "minute": 40,
+          "value": 132.6
+        },
+        {
+          "minute": 45,
+          "value": 122.2
+        },
+        {
+          "minute": 50,
+          "value": 116.2
+        },
+        {
+          "minute": 55,
+          "value": 119.1
+        },
+        {
+          "minute": 60,
+          "value": 128.8
+        },
+        {
+          "minute": 65,
+          "value": 137.9
+        },
+        {
+          "minute": 70,
+          "value": 139.5
+        },
+        {
+          "minute": 75,
+          "value": 132.4
+        },
+        {
+          "minute": 80,
+          "value": 122.0
+        },
+        {
+          "minute": 85,
+          "value": 116.1
+        },
+        {
+          "minute": 90,
+          "value": 119.3
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-10",
+      "team_id": "CAL",
+      "minutes_played": 65,
+      "distance": {
+        "km": 6.89,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.4,
+      "top_speed_minute": 13,
+      "sprints": 6,
+      "acceleration_load_kmh": 7930.0,
+      "passes": 15,
+      "pass_accuracy_pct": 76.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 22,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0.14,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-10",
+        "km_0_7": 2.76,
+        "km_7_15": 2.55,
+        "km_15_20": 0.83,
+        "km_20_25": 0.48,
+        "km_over_25": 0.27
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-10",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.2,
+            3.3,
+            6.8,
+            4.9,
+            3.0
+          ],
+          [
+            3.5,
+            1.7,
+            5.1,
+            3.2,
+            6.7,
+            4.8
+          ],
+          [
+            5.3,
+            3.4,
+            1.6,
+            5.0,
+            3.1,
+            6.6
+          ],
+          [
+            1.8,
+            5.2,
+            3.3,
+            6.8,
+            4.9,
+            3.0
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 110.5
+        },
+        {
+          "minute": 10,
+          "value": 112.2
+        },
+        {
+          "minute": 15,
+          "value": 121.4
+        },
+        {
+          "minute": 20,
+          "value": 131.0
+        },
+        {
+          "minute": 25,
+          "value": 133.8
+        },
+        {
+          "minute": 30,
+          "value": 127.7
+        },
+        {
+          "minute": 35,
+          "value": 117.2
+        },
+        {
+          "minute": 40,
+          "value": 110.4
+        },
+        {
+          "minute": 45,
+          "value": 112.4
+        },
+        {
+          "minute": 50,
+          "value": 121.6
+        },
+        {
+          "minute": 55,
+          "value": 131.2
+        },
+        {
+          "minute": 60,
+          "value": 133.8
+        },
+        {
+          "minute": 65,
+          "value": 127.5
+        },
+        {
+          "minute": 70,
+          "value": 117.0
+        },
+        {
+          "minute": 75,
+          "value": 110.4
+        },
+        {
+          "minute": 80,
+          "value": 112.5
+        },
+        {
+          "minute": 85,
+          "value": 121.8
+        },
+        {
+          "minute": 90,
+          "value": 131.3
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-19",
+      "team_id": "CAL",
+      "minutes_played": 31,
+      "distance": {
+        "km": 3.41,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.9,
+      "top_speed_minute": 66,
+      "sprints": 3,
+      "acceleration_load_kmh": 3968.0,
+      "passes": 7,
+      "pass_accuracy_pct": 80.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 10,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0.06,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-19",
+        "km_0_7": 1.36,
+        "km_7_15": 1.26,
+        "km_15_20": 0.41,
+        "km_20_25": 0.24,
+        "km_over_25": 0.14
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-19",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.6,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0
+          ],
+          [
+            5.0,
+            3.3,
+            1.7,
+            5.0,
+            3.3,
+            6.7
+          ],
+          [
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 65,
+          "value": 118.7
+        },
+        {
+          "minute": 70,
+          "value": 128.2
+        },
+        {
+          "minute": 75,
+          "value": 137.5
+        },
+        {
+          "minute": 80,
+          "value": 139.6
+        },
+        {
+          "minute": 85,
+          "value": 132.9
+        },
+        {
+          "minute": 90,
+          "value": 122.5
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-22",
+      "team_id": "CAL",
+      "minutes_played": 15,
+      "distance": {
+        "km": 1.62,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "top_speed_minute": 84,
+      "sprints": 2,
+      "acceleration_load_kmh": 1875.0,
+      "passes": 3,
+      "pass_accuracy_pct": 78.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 5,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-08"
+      ],
+      "xg": 0.24,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-22",
+        "km_0_7": 0.65,
+        "km_7_15": 0.6,
+        "km_15_20": 0.19,
+        "km_20_25": 0.11,
+        "km_over_25": 0.07
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-22",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.2,
+            3.3,
+            6.7,
+            4.9,
+            3.1
+          ],
+          [
+            3.5,
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.8
+          ],
+          [
+            5.2,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.7,
+            5.2,
+            3.3,
+            6.7,
+            4.9,
+            3.1
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 80,
+          "value": 132.1
+        },
+        {
+          "minute": 85,
+          "value": 137.0
+        },
+        {
+          "minute": 90,
+          "value": 132.8
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-24",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.23,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "top_speed_minute": 7,
+      "sprints": 9,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 37,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 55,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-24",
+        "km_0_7": 4.49,
+        "km_7_15": 4.16,
+        "km_15_20": 1.35,
+        "km_20_25": 0.79,
+        "km_over_25": 0.44
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-24",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.8,
+            5.1,
+            3.3,
+            6.7,
+            4.9,
+            3.2
+          ],
+          [
+            3.4,
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.9
+          ],
+          [
+            5.2,
+            3.4,
+            1.6,
+            5.0,
+            3.2,
+            6.6
+          ],
+          [
+            1.7,
+            5.1,
+            3.3,
+            6.7,
+            4.9,
+            3.2
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 131.5
+        },
+        {
+          "minute": 10,
+          "value": 121.9
+        },
+        {
+          "minute": 15,
+          "value": 119.2
+        },
+        {
+          "minute": 20,
+          "value": 125.4
+        },
+        {
+          "minute": 25,
+          "value": 135.9
+        },
+        {
+          "minute": 30,
+          "value": 142.6
+        },
+        {
+          "minute": 35,
+          "value": 140.6
+        },
+        {
+          "minute": 40,
+          "value": 131.3
+        },
+        {
+          "minute": 45,
+          "value": 121.8
+        },
+        {
+          "minute": 50,
+          "value": 119.3
+        },
+        {
+          "minute": 55,
+          "value": 125.6
+        },
+        {
+          "minute": 60,
+          "value": 136.1
+        },
+        {
+          "minute": 65,
+          "value": 142.7
+        },
+        {
+          "minute": 70,
+          "value": 140.5
+        },
+        {
+          "minute": 75,
+          "value": 131.1
+        },
+        {
+          "minute": 80,
+          "value": 121.7
+        },
+        {
+          "minute": 85,
+          "value": 119.3
+        },
+        {
+          "minute": 90,
+          "value": 125.8
+        }
+      ]
+    },
+    {
+      "player_id": "CAL-39",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.6,
+        "reliability": {
+          "measured_pct": 99.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "top_speed_minute": 22,
+      "sprints": 11,
+      "acceleration_load_kmh": 13056.0,
+      "passes": 29,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 40,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": 0,
+      "speed_zones": {
+        "team_id": "CAL",
+        "player_id": "CAL-39",
+        "km_0_7": 4.46,
+        "km_7_15": 4.12,
+        "km_15_20": 1.34,
+        "km_20_25": 0.78,
+        "km_over_25": 0.44
+      },
+      "zone_map": {
+        "team_id": "CAL",
+        "player_id": "CAL-39",
+        "rows": 4,
+        "cols": 6,
+        "cells_pct": [
+          [
+            1.6,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ],
+          [
+            3.4,
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0
+          ],
+          [
+            5.0,
+            3.3,
+            1.7,
+            5.0,
+            3.3,
+            6.7
+          ],
+          [
+            1.7,
+            5.0,
+            3.3,
+            6.7,
+            5.0,
+            3.3
+          ]
+        ],
+        "chart_id": "zone_map"
+      },
+      "acceleration_load_series": [
+        {
+          "minute": 5,
+          "value": 132.2
+        },
+        {
+          "minute": 10,
+          "value": 124.7
+        },
+        {
+          "minute": 15,
+          "value": 125.8
+        },
+        {
+          "minute": 20,
+          "value": 134.6
+        },
+        {
+          "minute": 25,
+          "value": 144.5
+        },
+        {
+          "minute": 30,
+          "value": 147.9
+        },
+        {
+          "minute": 35,
+          "value": 142.3
+        },
+        {
+          "minute": 40,
+          "value": 132.0
+        },
+        {
+          "minute": 45,
+          "value": 124.6
+        },
+        {
+          "minute": 50,
+          "value": 125.9
+        },
+        {
+          "minute": 55,
+          "value": 134.8
+        },
+        {
+          "minute": 60,
+          "value": 144.6
+        },
+        {
+          "minute": 65,
+          "value": 147.9
+        },
+        {
+          "minute": 70,
+          "value": 142.2
+        },
+        {
+          "minute": 75,
+          "value": 131.8
+        },
+        {
+          "minute": 80,
+          "value": 124.6
+        },
+        {
+          "minute": 85,
+          "value": 126.0
+        },
+        {
+          "minute": 90,
+          "value": 135.0
+        }
+      ]
+    }
+  ],
+  "distance_covered": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "distance": {
+          "km": 109.18,
+          "approx": false,
+          "unmeasured_pct": 0.9,
+          "reliability": {
+            "measured_pct": 99.1,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 67.69,
+          "ball_stopped_km": 41.49,
+          "in_possession_km": 41.97,
+          "out_of_possession_km": 25.72
+        }
+      },
+      {
+        "team_id": "CAL",
+        "distance": {
+          "km": 109.13,
+          "approx": true,
+          "unmeasured_pct": 1.2,
+          "reliability": {
+            "measured_pct": 98.8,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 67.66,
+          "ball_stopped_km": 41.47,
+          "in_possession_km": 39.24,
+          "out_of_possession_km": 28.42
+        }
+      }
+    ],
+    "top_runner": {
+      "player_id": "CAL-04",
+      "distance": {
+        "km": 12.0,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "splits": {
+        "ball_in_play_km": 7.44,
+        "ball_stopped_km": 4.56,
+        "in_possession_km": 4.32,
+        "out_of_possession_km": 3.12
+      }
+    },
+    "players": [
+      {
+        "player_id": "BRA-01",
+        "distance": {
+          "km": 5.38,
+          "approx": true,
+          "unmeasured_pct": 1.7,
+          "reliability": {
+            "measured_pct": 98.3,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 3.34,
+          "ball_stopped_km": 2.04,
+          "in_possession_km": 2.07,
+          "out_of_possession_km": 1.27
+        }
+      },
+      {
+        "player_id": "BRA-02",
+        "distance": {
+          "km": 11.04,
+          "approx": true,
+          "unmeasured_pct": 1.8,
+          "reliability": {
+            "measured_pct": 98.2,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.84,
+          "ball_stopped_km": 4.2,
+          "in_possession_km": 4.24,
+          "out_of_possession_km": 2.6
+        }
+      },
+      {
+        "player_id": "BRA-04",
+        "distance": {
+          "km": 10.46,
+          "approx": false,
+          "unmeasured_pct": 0.3,
+          "reliability": {
+            "measured_pct": 99.7,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.49,
+          "ball_stopped_km": 3.97,
+          "in_possession_km": 4.02,
+          "out_of_possession_km": 2.47
+        }
+      },
+      {
+        "player_id": "BRA-05",
+        "distance": {
+          "km": 10.08,
+          "approx": false,
+          "unmeasured_pct": 0.4,
+          "reliability": {
+            "measured_pct": 99.6,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.25,
+          "ball_stopped_km": 3.83,
+          "in_possession_km": 3.88,
+          "out_of_possession_km": 2.37
+        }
+      },
+      {
+        "player_id": "BRA-03",
+        "distance": {
+          "km": 11.14,
+          "approx": false,
+          "unmeasured_pct": 0.2,
+          "reliability": {
+            "measured_pct": 99.8,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.91,
+          "ball_stopped_km": 4.23,
+          "in_possession_km": 4.28,
+          "out_of_possession_km": 2.63
+        }
+      },
+      {
+        "player_id": "BRA-08",
+        "distance": {
+          "km": 11.62,
+          "approx": false,
+          "unmeasured_pct": 0.7,
+          "reliability": {
+            "measured_pct": 99.3,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 7.2,
+          "ball_stopped_km": 4.42,
+          "in_possession_km": 4.46,
+          "out_of_possession_km": 2.74
+        }
+      },
+      {
+        "player_id": "BRA-06",
+        "distance": {
+          "km": 11.42,
+          "approx": false,
+          "unmeasured_pct": 0.5,
+          "reliability": {
+            "measured_pct": 99.5,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 7.08,
+          "ball_stopped_km": 4.34,
+          "in_possession_km": 4.39,
+          "out_of_possession_km": 2.69
+        }
+      },
+      {
+        "player_id": "BRA-27",
+        "distance": {
+          "km": 10.94,
+          "approx": false,
+          "unmeasured_pct": 0.8,
+          "reliability": {
+            "measured_pct": 99.2,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.78,
+          "ball_stopped_km": 4.16,
+          "in_possession_km": 4.2,
+          "out_of_possession_km": 2.58
+        }
+      },
+      {
+        "player_id": "BRA-10",
+        "distance": {
+          "km": 11.14,
+          "approx": true,
+          "unmeasured_pct": 1.7,
+          "reliability": {
+            "measured_pct": 98.3,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.91,
+          "ball_stopped_km": 4.23,
+          "in_possession_km": 4.28,
+          "out_of_possession_km": 2.63
+        }
+      },
+      {
+        "player_id": "BRA-11",
+        "distance": {
+          "km": 10.85,
+          "approx": true,
+          "unmeasured_pct": 1.8,
+          "reliability": {
+            "measured_pct": 98.2,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.73,
+          "ball_stopped_km": 4.12,
+          "in_possession_km": 4.17,
+          "out_of_possession_km": 2.56
+        }
+      },
+      {
+        "player_id": "BRA-09",
+        "distance": {
+          "km": 7.92,
+          "approx": false,
+          "unmeasured_pct": 0.8,
+          "reliability": {
+            "measured_pct": 99.2,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 4.91,
+          "ball_stopped_km": 3.01,
+          "in_possession_km": 3.04,
+          "out_of_possession_km": 1.87
+        }
+      },
+      {
+        "player_id": "BRA-46",
+        "distance": {
+          "km": 2.57,
+          "approx": false,
+          "unmeasured_pct": 0.9,
+          "reliability": {
+            "measured_pct": 99.1,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 1.59,
+          "ball_stopped_km": 0.98,
+          "in_possession_km": 0.99,
+          "out_of_possession_km": 0.6
+        }
+      },
+      {
+        "player_id": "CAL-01",
+        "distance": {
+          "km": 5.38,
+          "approx": true,
+          "unmeasured_pct": 1.2,
+          "reliability": {
+            "measured_pct": 98.8,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 3.34,
+          "ball_stopped_km": 2.04,
+          "in_possession_km": 1.94,
+          "out_of_possession_km": 1.4
+        }
+      },
+      {
+        "player_id": "CAL-02",
+        "distance": {
+          "km": 11.04,
+          "approx": true,
+          "unmeasured_pct": 1.3,
+          "reliability": {
+            "measured_pct": 98.7,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.84,
+          "ball_stopped_km": 4.2,
+          "in_possession_km": 3.97,
+          "out_of_possession_km": 2.87
+        }
+      },
+      {
+        "player_id": "CAL-05",
+        "distance": {
+          "km": 10.08,
+          "approx": true,
+          "unmeasured_pct": 1.6,
+          "reliability": {
+            "measured_pct": 98.4,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.25,
+          "ball_stopped_km": 3.83,
+          "in_possession_km": 3.62,
+          "out_of_possession_km": 2.63
+        }
+      },
+      {
+        "player_id": "CAL-06",
+        "distance": {
+          "km": 10.18,
+          "approx": true,
+          "unmeasured_pct": 1.7,
+          "reliability": {
+            "measured_pct": 98.3,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.31,
+          "ball_stopped_km": 3.87,
+          "in_possession_km": 3.66,
+          "out_of_possession_km": 2.65
+        }
+      },
+      {
+        "player_id": "CAL-24",
+        "distance": {
+          "km": 11.23,
+          "approx": true,
+          "unmeasured_pct": 1.7,
+          "reliability": {
+            "measured_pct": 98.3,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.96,
+          "ball_stopped_km": 4.27,
+          "in_possession_km": 4.04,
+          "out_of_possession_km": 2.92
+        }
+      },
+      {
+        "player_id": "CAL-07",
+        "distance": {
+          "km": 10.94,
+          "approx": true,
+          "unmeasured_pct": 1.8,
+          "reliability": {
+            "measured_pct": 98.2,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.78,
+          "ball_stopped_km": 4.16,
+          "in_possession_km": 3.93,
+          "out_of_possession_km": 2.85
+        }
+      },
+      {
+        "player_id": "CAL-04",
+        "distance": {
+          "km": 12.0,
+          "approx": true,
+          "unmeasured_pct": 1.5,
+          "reliability": {
+            "measured_pct": 98.5,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 7.44,
+          "ball_stopped_km": 4.56,
+          "in_possession_km": 4.32,
+          "out_of_possession_km": 3.12
+        }
+      },
+      {
+        "player_id": "CAL-08",
+        "distance": {
+          "km": 10.04,
+          "approx": false,
+          "unmeasured_pct": 0.2,
+          "reliability": {
+            "measured_pct": 99.8,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.22,
+          "ball_stopped_km": 3.82,
+          "in_possession_km": 3.61,
+          "out_of_possession_km": 2.61
+        }
+      },
+      {
+        "player_id": "CAL-39",
+        "distance": {
+          "km": 11.14,
+          "approx": false,
+          "unmeasured_pct": 0.6,
+          "reliability": {
+            "measured_pct": 99.4,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.91,
+          "ball_stopped_km": 4.23,
+          "in_possession_km": 4.01,
+          "out_of_possession_km": 2.9
+        }
+      },
+      {
+        "player_id": "CAL-09",
+        "distance": {
+          "km": 10.56,
+          "approx": false,
+          "unmeasured_pct": 0.3,
+          "reliability": {
+            "measured_pct": 99.7,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 6.55,
+          "ball_stopped_km": 4.01,
+          "in_possession_km": 3.8,
+          "out_of_possession_km": 2.75
+        }
+      },
+      {
+        "player_id": "CAL-10",
+        "distance": {
+          "km": 6.89,
+          "approx": true,
+          "unmeasured_pct": 1.2,
+          "reliability": {
+            "measured_pct": 98.8,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 4.27,
+          "ball_stopped_km": 2.62,
+          "in_possession_km": 2.48,
+          "out_of_possession_km": 1.79
+        }
+      },
+      {
+        "player_id": "CAL-22",
+        "distance": {
+          "km": 1.62,
+          "approx": true,
+          "unmeasured_pct": 1.5,
+          "reliability": {
+            "measured_pct": 98.5,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 1.0,
+          "ball_stopped_km": 0.62,
+          "in_possession_km": 0.58,
+          "out_of_possession_km": 0.42
+        }
+      },
+      {
+        "player_id": "CAL-19",
+        "distance": {
+          "km": 3.41,
+          "approx": false,
+          "unmeasured_pct": 0.4,
+          "reliability": {
+            "measured_pct": 99.6,
+            "level": "high"
+          }
+        },
+        "splits": {
+          "ball_in_play_km": 2.11,
+          "ball_stopped_km": 1.3,
+          "in_possession_km": 1.22,
+          "out_of_possession_km": 0.89
+        }
+      }
+    ]
+  },
+  "top_speed": [
+    {
+      "player_id": "BRA-46",
+      "team_id": "BRA",
+      "kmh": 35.1,
+      "minute": 77
+    },
+    {
+      "player_id": "BRA-27",
+      "team_id": "BRA",
+      "kmh": 34.6,
+      "minute": 29
+    },
+    {
+      "player_id": "BRA-11",
+      "team_id": "BRA",
+      "kmh": 33.4,
+      "minute": 14
+    },
+    {
+      "player_id": "BRA-03",
+      "team_id": "BRA",
+      "kmh": 32.5,
+      "minute": 6
+    },
+    {
+      "player_id": "BRA-02",
+      "team_id": "BRA",
+      "kmh": 32.3,
+      "minute": 5
+    },
+    {
+      "player_id": "CAL-19",
+      "team_id": "CAL",
+      "kmh": 34.9,
+      "minute": 66
+    },
+    {
+      "player_id": "CAL-07",
+      "team_id": "CAL",
+      "kmh": 33.9,
+      "minute": 18
+    },
+    {
+      "player_id": "CAL-39",
+      "team_id": "CAL",
+      "kmh": 33.4,
+      "minute": 22
+    },
+    {
+      "player_id": "CAL-24",
+      "team_id": "CAL",
+      "kmh": 32.5,
+      "minute": 7
+    },
+    {
+      "player_id": "CAL-10",
+      "team_id": "CAL",
+      "kmh": 32.4,
+      "minute": 13
+    }
+  ],
+  "peak_intensity": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "start_minute": 74,
+        "end_minute": 79,
+        "metres_per_minute": 134.2
+      },
+      {
+        "team_id": "CAL",
+        "start_minute": 55,
+        "end_minute": 60,
+        "metres_per_minute": 132.8
+      }
+    ],
+    "series": [
+      {
+        "team_id": "BRA",
+        "points": [
+          {
+            "minute": 1,
+            "value": 102.4
+          },
+          {
+            "minute": 2,
+            "value": 104.2
+          },
+          {
+            "minute": 3,
+            "value": 106.1
+          },
+          {
+            "minute": 4,
+            "value": 108.1
+          },
+          {
+            "minute": 5,
+            "value": 110.1
+          },
+          {
+            "minute": 6,
+            "value": 112.0
+          },
+          {
+            "minute": 7,
+            "value": 113.7
+          },
+          {
+            "minute": 8,
+            "value": 115.1
+          },
+          {
+            "minute": 9,
+            "value": 116.2
+          },
+          {
+            "minute": 10,
+            "value": 116.8
+          },
+          {
+            "minute": 11,
+            "value": 117.0
+          },
+          {
+            "minute": 12,
+            "value": 116.7
+          },
+          {
+            "minute": 13,
+            "value": 116.1
+          },
+          {
+            "minute": 14,
+            "value": 115.0
+          },
+          {
+            "minute": 15,
+            "value": 113.5
+          },
+          {
+            "minute": 16,
+            "value": 111.8
+          },
+          {
+            "minute": 17,
+            "value": 109.9
+          },
+          {
+            "minute": 18,
+            "value": 107.8
+          },
+          {
+            "minute": 19,
+            "value": 105.8
+          },
+          {
+            "minute": 20,
+            "value": 103.9
+          },
+          {
+            "minute": 21,
+            "value": 102.3
+          },
+          {
+            "minute": 22,
+            "value": 100.9
+          },
+          {
+            "minute": 23,
+            "value": 99.8
+          },
+          {
+            "minute": 24,
+            "value": 99.2
+          },
+          {
+            "minute": 25,
+            "value": 99.0
+          },
+          {
+            "minute": 26,
+            "value": 99.3
+          },
+          {
+            "minute": 27,
+            "value": 100.0
+          },
+          {
+            "minute": 28,
+            "value": 101.1
+          },
+          {
+            "minute": 29,
+            "value": 102.6
+          },
+          {
+            "minute": 30,
+            "value": 104.3
+          },
+          {
+            "minute": 31,
+            "value": 106.2
+          },
+          {
+            "minute": 32,
+            "value": 108.2
+          },
+          {
+            "minute": 33,
+            "value": 110.2
+          },
+          {
+            "minute": 34,
+            "value": 112.1
+          },
+          {
+            "minute": 35,
+            "value": 113.8
+          },
+          {
+            "minute": 36,
+            "value": 115.2
+          },
+          {
+            "minute": 37,
+            "value": 116.2
+          },
+          {
+            "minute": 38,
+            "value": 116.8
+          },
+          {
+            "minute": 39,
+            "value": 117.0
+          },
+          {
+            "minute": 40,
+            "value": 116.7
+          },
+          {
+            "minute": 41,
+            "value": 116.0
+          },
+          {
+            "minute": 42,
+            "value": 114.9
+          },
+          {
+            "minute": 43,
+            "value": 113.4
+          },
+          {
+            "minute": 44,
+            "value": 111.6
+          },
+          {
+            "minute": 45,
+            "value": 109.7
+          },
+          {
+            "minute": 46,
+            "value": 107.7
+          },
+          {
+            "minute": 47,
+            "value": 105.7
+          },
+          {
+            "minute": 48,
+            "value": 103.8
+          },
+          {
+            "minute": 49,
+            "value": 102.1
+          },
+          {
+            "minute": 50,
+            "value": 100.8
+          },
+          {
+            "minute": 51,
+            "value": 99.8
+          },
+          {
+            "minute": 52,
+            "value": 99.2
+          },
+          {
+            "minute": 53,
+            "value": 99.0
+          },
+          {
+            "minute": 54,
+            "value": 99.3
+          },
+          {
+            "minute": 55,
+            "value": 100.1
+          },
+          {
+            "minute": 56,
+            "value": 101.2
+          },
+          {
+            "minute": 57,
+            "value": 102.7
+          },
+          {
+            "minute": 58,
+            "value": 104.4
+          },
+          {
+            "minute": 59,
+            "value": 106.4
+          },
+          {
+            "minute": 60,
+            "value": 108.4
+          },
+          {
+            "minute": 61,
+            "value": 110.4
+          },
+          {
+            "minute": 62,
+            "value": 112.3
+          },
+          {
+            "minute": 63,
+            "value": 113.9
+          },
+          {
+            "minute": 64,
+            "value": 115.3
+          },
+          {
+            "minute": 65,
+            "value": 116.3
+          },
+          {
+            "minute": 66,
+            "value": 116.9
+          },
+          {
+            "minute": 67,
+            "value": 117.0
+          },
+          {
+            "minute": 68,
+            "value": 116.7
+          },
+          {
+            "minute": 69,
+            "value": 115.9
+          },
+          {
+            "minute": 70,
+            "value": 114.8
+          },
+          {
+            "minute": 71,
+            "value": 113.3
+          },
+          {
+            "minute": 72,
+            "value": 111.5
+          },
+          {
+            "minute": 73,
+            "value": 109.6
+          },
+          {
+            "minute": 74,
+            "value": 107.5
+          },
+          {
+            "minute": 75,
+            "value": 134.2
+          },
+          {
+            "minute": 76,
+            "value": 134.2
+          },
+          {
+            "minute": 77,
+            "value": 134.2
+          },
+          {
+            "minute": 78,
+            "value": 134.2
+          },
+          {
+            "minute": 79,
+            "value": 134.2
+          },
+          {
+            "minute": 80,
+            "value": 99.1
+          },
+          {
+            "minute": 81,
+            "value": 99.0
+          },
+          {
+            "minute": 82,
+            "value": 99.4
+          },
+          {
+            "minute": 83,
+            "value": 100.1
+          },
+          {
+            "minute": 84,
+            "value": 101.3
+          },
+          {
+            "minute": 85,
+            "value": 102.8
+          },
+          {
+            "minute": 86,
+            "value": 104.6
+          },
+          {
+            "minute": 87,
+            "value": 106.5
+          },
+          {
+            "minute": 88,
+            "value": 108.5
+          },
+          {
+            "minute": 89,
+            "value": 110.5
+          },
+          {
+            "minute": 90,
+            "value": 112.4
+          }
+        ]
+      },
+      {
+        "team_id": "CAL",
+        "points": [
+          {
+            "minute": 1,
+            "value": 115.7
+          },
+          {
+            "minute": 2,
+            "value": 116.6
+          },
+          {
+            "minute": 3,
+            "value": 117.0
+          },
+          {
+            "minute": 4,
+            "value": 116.9
+          },
+          {
+            "minute": 5,
+            "value": 116.4
+          },
+          {
+            "minute": 6,
+            "value": 115.5
+          },
+          {
+            "minute": 7,
+            "value": 114.2
+          },
+          {
+            "minute": 8,
+            "value": 112.6
+          },
+          {
+            "minute": 9,
+            "value": 110.7
+          },
+          {
+            "minute": 10,
+            "value": 108.7
+          },
+          {
+            "minute": 11,
+            "value": 106.7
+          },
+          {
+            "minute": 12,
+            "value": 104.8
+          },
+          {
+            "minute": 13,
+            "value": 103.0
+          },
+          {
+            "minute": 14,
+            "value": 101.4
+          },
+          {
+            "minute": 15,
+            "value": 100.2
+          },
+          {
+            "minute": 16,
+            "value": 99.4
+          },
+          {
+            "minute": 17,
+            "value": 99.0
+          },
+          {
+            "minute": 18,
+            "value": 99.1
+          },
+          {
+            "minute": 19,
+            "value": 99.6
+          },
+          {
+            "minute": 20,
+            "value": 100.6
+          },
+          {
+            "minute": 21,
+            "value": 101.9
+          },
+          {
+            "minute": 22,
+            "value": 103.5
+          },
+          {
+            "minute": 23,
+            "value": 105.3
+          },
+          {
+            "minute": 24,
+            "value": 107.3
+          },
+          {
+            "minute": 25,
+            "value": 109.3
+          },
+          {
+            "minute": 26,
+            "value": 111.3
+          },
+          {
+            "minute": 27,
+            "value": 113.1
+          },
+          {
+            "minute": 28,
+            "value": 114.6
+          },
+          {
+            "minute": 29,
+            "value": 115.8
+          },
+          {
+            "minute": 30,
+            "value": 116.6
+          },
+          {
+            "minute": 31,
+            "value": 117.0
+          },
+          {
+            "minute": 32,
+            "value": 116.9
+          },
+          {
+            "minute": 33,
+            "value": 116.4
+          },
+          {
+            "minute": 34,
+            "value": 115.4
+          },
+          {
+            "minute": 35,
+            "value": 114.1
+          },
+          {
+            "minute": 36,
+            "value": 112.4
+          },
+          {
+            "minute": 37,
+            "value": 110.6
+          },
+          {
+            "minute": 38,
+            "value": 108.6
+          },
+          {
+            "minute": 39,
+            "value": 106.6
+          },
+          {
+            "minute": 40,
+            "value": 104.6
+          },
+          {
+            "minute": 41,
+            "value": 102.9
+          },
+          {
+            "minute": 42,
+            "value": 101.3
+          },
+          {
+            "minute": 43,
+            "value": 100.2
+          },
+          {
+            "minute": 44,
+            "value": 99.4
+          },
+          {
+            "minute": 45,
+            "value": 99.0
+          },
+          {
+            "minute": 46,
+            "value": 99.1
+          },
+          {
+            "minute": 47,
+            "value": 99.7
+          },
+          {
+            "minute": 48,
+            "value": 100.6
+          },
+          {
+            "minute": 49,
+            "value": 102.0
+          },
+          {
+            "minute": 50,
+            "value": 103.6
+          },
+          {
+            "minute": 51,
+            "value": 105.5
+          },
+          {
+            "minute": 52,
+            "value": 107.5
+          },
+          {
+            "minute": 53,
+            "value": 109.5
+          },
+          {
+            "minute": 54,
+            "value": 111.4
+          },
+          {
+            "minute": 55,
+            "value": 113.2
+          },
+          {
+            "minute": 56,
+            "value": 132.8
+          },
+          {
+            "minute": 57,
+            "value": 132.8
+          },
+          {
+            "minute": 58,
+            "value": 132.8
+          },
+          {
+            "minute": 59,
+            "value": 132.8
+          },
+          {
+            "minute": 60,
+            "value": 132.8
+          },
+          {
+            "minute": 61,
+            "value": 116.3
+          },
+          {
+            "minute": 62,
+            "value": 115.3
+          },
+          {
+            "minute": 63,
+            "value": 114.0
+          },
+          {
+            "minute": 64,
+            "value": 112.3
+          },
+          {
+            "minute": 65,
+            "value": 110.4
+          },
+          {
+            "minute": 66,
+            "value": 108.4
+          },
+          {
+            "minute": 67,
+            "value": 106.4
+          },
+          {
+            "minute": 68,
+            "value": 104.5
+          },
+          {
+            "minute": 69,
+            "value": 102.7
+          },
+          {
+            "minute": 70,
+            "value": 101.2
+          },
+          {
+            "minute": 71,
+            "value": 100.1
+          },
+          {
+            "minute": 72,
+            "value": 99.3
+          },
+          {
+            "minute": 73,
+            "value": 99.0
+          },
+          {
+            "minute": 74,
+            "value": 99.1
+          },
+          {
+            "minute": 75,
+            "value": 99.7
+          },
+          {
+            "minute": 76,
+            "value": 100.7
+          },
+          {
+            "minute": 77,
+            "value": 102.1
+          },
+          {
+            "minute": 78,
+            "value": 103.8
+          },
+          {
+            "minute": 79,
+            "value": 105.6
+          },
+          {
+            "minute": 80,
+            "value": 107.6
+          },
+          {
+            "minute": 81,
+            "value": 109.6
+          },
+          {
+            "minute": 82,
+            "value": 111.6
+          },
+          {
+            "minute": 83,
+            "value": 113.3
+          },
+          {
+            "minute": 84,
+            "value": 114.8
+          },
+          {
+            "minute": 85,
+            "value": 116.0
+          },
+          {
+            "minute": 86,
+            "value": 116.7
+          },
+          {
+            "minute": 87,
+            "value": 117.0
+          },
+          {
+            "minute": 88,
+            "value": 116.8
+          },
+          {
+            "minute": 89,
+            "value": 116.2
+          },
+          {
+            "minute": 90,
+            "value": 115.2
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "player_id": "BRA-01",
+        "team_id": "BRA",
+        "start_minute": 75,
+        "end_minute": 80,
+        "metres_per_minute": 71.2
+      },
+      {
+        "player_id": "BRA-02",
+        "team_id": "BRA",
+        "start_minute": 76,
+        "end_minute": 81,
+        "metres_per_minute": 140.2
+      },
+      {
+        "player_id": "BRA-03",
+        "team_id": "BRA",
+        "start_minute": 74,
+        "end_minute": 79,
+        "metres_per_minute": 141.2
+      },
+      {
+        "player_id": "BRA-04",
+        "team_id": "BRA",
+        "start_minute": 75,
+        "end_minute": 80,
+        "metres_per_minute": 134.2
+      },
+      {
+        "player_id": "BRA-05",
+        "team_id": "BRA",
+        "start_minute": 76,
+        "end_minute": 81,
+        "metres_per_minute": 135.2
+      },
+      {
+        "player_id": "BRA-06",
+        "team_id": "BRA",
+        "start_minute": 74,
+        "end_minute": 79,
+        "metres_per_minute": 136.2
+      },
+      {
+        "player_id": "BRA-08",
+        "team_id": "BRA",
+        "start_minute": 76,
+        "end_minute": 81,
+        "metres_per_minute": 138.2
+      },
+      {
+        "player_id": "BRA-09",
+        "team_id": "BRA",
+        "start_minute": 74,
+        "end_minute": 79,
+        "metres_per_minute": 130.2
+      },
+      {
+        "player_id": "BRA-10",
+        "team_id": "BRA",
+        "start_minute": 75,
+        "end_minute": 80,
+        "metres_per_minute": 131.2
+      },
+      {
+        "player_id": "BRA-11",
+        "team_id": "BRA",
+        "start_minute": 76,
+        "end_minute": 81,
+        "metres_per_minute": 140.2
+      },
+      {
+        "player_id": "BRA-27",
+        "team_id": "BRA",
+        "start_minute": 74,
+        "end_minute": 79,
+        "metres_per_minute": 138.2
+      },
+      {
+        "player_id": "BRA-46",
+        "team_id": "BRA",
+        "start_minute": 75,
+        "end_minute": 80,
+        "metres_per_minute": 131.2
+      },
+      {
+        "player_id": "CAL-01",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 69.8
+      },
+      {
+        "player_id": "CAL-02",
+        "team_id": "CAL",
+        "start_minute": 57,
+        "end_minute": 62,
+        "metres_per_minute": 138.8
+      },
+      {
+        "player_id": "CAL-04",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 140.8
+      },
+      {
+        "player_id": "CAL-05",
+        "team_id": "CAL",
+        "start_minute": 57,
+        "end_minute": 62,
+        "metres_per_minute": 133.8
+      },
+      {
+        "player_id": "CAL-06",
+        "team_id": "CAL",
+        "start_minute": 55,
+        "end_minute": 60,
+        "metres_per_minute": 134.8
+      },
+      {
+        "player_id": "CAL-07",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 143.8
+      },
+      {
+        "player_id": "CAL-08",
+        "team_id": "CAL",
+        "start_minute": 57,
+        "end_minute": 62,
+        "metres_per_minute": 144.8
+      },
+      {
+        "player_id": "CAL-09",
+        "team_id": "CAL",
+        "start_minute": 55,
+        "end_minute": 60,
+        "metres_per_minute": 128.8
+      },
+      {
+        "player_id": "CAL-10",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 129.8
+      },
+      {
+        "player_id": "CAL-19",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 129.8
+      },
+      {
+        "player_id": "CAL-22",
+        "team_id": "CAL",
+        "start_minute": 56,
+        "end_minute": 61,
+        "metres_per_minute": 132.8
+      },
+      {
+        "player_id": "CAL-24",
+        "team_id": "CAL",
+        "start_minute": 55,
+        "end_minute": 60,
+        "metres_per_minute": 142.8
+      },
+      {
+        "player_id": "CAL-39",
+        "team_id": "CAL",
+        "start_minute": 55,
+        "end_minute": 60,
+        "metres_per_minute": 139.8
+      }
+    ],
+    "chart_id": "peak_intensity"
+  },
+  "acceleration_load": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "total_kmh": 118932.0,
+        "per_minute_kmh": 1238.9,
+        "reliability": {
+          "measured_pct": 99.1,
+          "level": "high"
+        }
+      },
+      {
+        "team_id": "CAL",
+        "total_kmh": 120118.5,
+        "per_minute_kmh": 1251.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      }
+    ],
+    "series": [
+      {
+        "team_id": "BRA",
+        "points": [
+          {
+            "minute": 5,
+            "value": 1298.4
+          },
+          {
+            "minute": 10,
+            "value": 1269.8
+          },
+          {
+            "minute": 15,
+            "value": 1217.9
+          },
+          {
+            "minute": 20,
+            "value": 1181.8
+          },
+          {
+            "minute": 25,
+            "value": 1189.0
+          },
+          {
+            "minute": 30,
+            "value": 1233.9
+          },
+          {
+            "minute": 35,
+            "value": 1282.6
+          },
+          {
+            "minute": 40,
+            "value": 1298.3
+          },
+          {
+            "minute": 45,
+            "value": 1269.0
+          },
+          {
+            "minute": 50,
+            "value": 1216.9
+          },
+          {
+            "minute": 55,
+            "value": 1181.5
+          },
+          {
+            "minute": 60,
+            "value": 1189.5
+          },
+          {
+            "minute": 65,
+            "value": 1234.9
+          },
+          {
+            "minute": 70,
+            "value": 1283.3
+          },
+          {
+            "minute": 75,
+            "value": 1298.1
+          },
+          {
+            "minute": 80,
+            "value": 1268.1
+          },
+          {
+            "minute": 85,
+            "value": 1216.0
+          },
+          {
+            "minute": 90,
+            "value": 1181.2
+          }
+        ]
+      },
+      {
+        "team_id": "CAL",
+        "points": [
+          {
+            "minute": 5,
+            "value": 1235.9
+          },
+          {
+            "minute": 10,
+            "value": 1196.2
+          },
+          {
+            "minute": 15,
+            "value": 1198.2
+          },
+          {
+            "minute": 20,
+            "value": 1240.3
+          },
+          {
+            "minute": 25,
+            "value": 1290.6
+          },
+          {
+            "minute": 30,
+            "value": 1311.1
+          },
+          {
+            "minute": 35,
+            "value": 1286.3
+          },
+          {
+            "minute": 40,
+            "value": 1234.9
+          },
+          {
+            "minute": 45,
+            "value": 1195.8
+          },
+          {
+            "minute": 50,
+            "value": 1198.7
+          },
+          {
+            "minute": 55,
+            "value": 1241.3
+          },
+          {
+            "minute": 60,
+            "value": 1291.4
+          },
+          {
+            "minute": 65,
+            "value": 1311.1
+          },
+          {
+            "minute": 70,
+            "value": 1285.5
+          },
+          {
+            "minute": 75,
+            "value": 1233.9
+          },
+          {
+            "minute": 80,
+            "value": 1195.5
+          },
+          {
+            "minute": 85,
+            "value": 1199.2
+          },
+          {
+            "minute": 90,
+            "value": 1242.3
+          }
+        ]
+      }
+    ],
+    "chart_id": "acceleration_load"
+  },
+  "speed_zones": [
+    {
+      "team_id": "BRA",
+      "player_id": null,
+      "km_0_7": 43.67,
+      "km_7_15": 40.4,
+      "km_15_20": 13.1,
+      "km_20_25": 7.64,
+      "km_over_25": 4.37
+    },
+    {
+      "team_id": "CAL",
+      "player_id": null,
+      "km_0_7": 43.65,
+      "km_7_15": 40.38,
+      "km_15_20": 13.1,
+      "km_20_25": 7.64,
+      "km_over_25": 4.36
+    }
+  ],
+  "passes": [
+    {
+      "team_id": "BRA",
+      "passes": 472,
+      "accuracy_pct": 86.1,
+      "avg_length_m": 18.3,
+      "long_balls": 35
+    },
+    {
+      "team_id": "CAL",
+      "passes": 371,
+      "accuracy_pct": 78.4,
+      "avg_length_m": 21.9,
+      "long_balls": 26
+    }
+  ],
+  "ball_circulation": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "value": 29.9,
+        "reliability": {
+          "measured_pct": 97.4,
+          "level": "high"
+        }
+      },
+      {
+        "team_id": "CAL",
+        "value": 26.6,
+        "reliability": {
+          "measured_pct": 96.1,
+          "level": "high"
+        }
+      }
+    ],
+    "unit": "km/h",
+    "series": [
+      {
+        "team_id": "BRA",
+        "points": [
+          {
+            "minute": 5,
+            "value": 32.1
+          },
+          {
+            "minute": 10,
+            "value": 31.0
+          },
+          {
+            "minute": 15,
+            "value": 29.1
+          },
+          {
+            "minute": 20,
+            "value": 27.8
+          },
+          {
+            "minute": 25,
+            "value": 28.1
+          },
+          {
+            "minute": 30,
+            "value": 29.7
+          },
+          {
+            "minute": 35,
+            "value": 31.5
+          },
+          {
+            "minute": 40,
+            "value": 32.1
+          },
+          {
+            "minute": 45,
+            "value": 31.0
+          },
+          {
+            "minute": 50,
+            "value": 29.1
+          },
+          {
+            "minute": 55,
+            "value": 27.8
+          },
+          {
+            "minute": 60,
+            "value": 28.1
+          },
+          {
+            "minute": 65,
+            "value": 29.8
+          },
+          {
+            "minute": 70,
+            "value": 31.5
+          },
+          {
+            "minute": 75,
+            "value": 32.1
+          },
+          {
+            "minute": 80,
+            "value": 31.0
+          },
+          {
+            "minute": 85,
+            "value": 29.1
+          },
+          {
+            "minute": 90,
+            "value": 27.8
+          }
+        ]
+      },
+      {
+        "team_id": "CAL",
+        "points": [
+          {
+            "minute": 5,
+            "value": 26.0
+          },
+          {
+            "minute": 10,
+            "value": 24.6
+          },
+          {
+            "minute": 15,
+            "value": 24.7
+          },
+          {
+            "minute": 20,
+            "value": 26.2
+          },
+          {
+            "minute": 25,
+            "value": 28.0
+          },
+          {
+            "minute": 30,
+            "value": 28.8
+          },
+          {
+            "minute": 35,
+            "value": 27.9
+          },
+          {
+            "minute": 40,
+            "value": 26.0
+          },
+          {
+            "minute": 45,
+            "value": 24.6
+          },
+          {
+            "minute": 50,
+            "value": 24.7
+          },
+          {
+            "minute": 55,
+            "value": 26.2
+          },
+          {
+            "minute": 60,
+            "value": 28.1
+          },
+          {
+            "minute": 65,
+            "value": 28.8
+          },
+          {
+            "minute": 70,
+            "value": 27.9
+          },
+          {
+            "minute": 75,
+            "value": 26.0
+          },
+          {
+            "minute": 80,
+            "value": 24.6
+          },
+          {
+            "minute": 85,
+            "value": 24.7
+          },
+          {
+            "minute": 90,
+            "value": 26.3
+          }
+        ]
+      }
+    ],
+    "chart_id": "ball_circulation"
+  },
+  "shot_speed": [
+    {
+      "player_id": "BRA-09",
+      "team_id": "BRA",
+      "kmh": 108.4,
+      "minute": 23,
+      "event_id": "E005"
+    },
+    {
+      "player_id": "CAL-22",
+      "team_id": "CAL",
+      "kmh": 103.6,
+      "minute": 86,
+      "event_id": "E031"
+    }
+  ],
+  "counter_attacks": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "count": 1
+      },
+      {
+        "team_id": "CAL",
+        "count": 2
+      }
+    ],
+    "items": [
+      {
+        "team_id": "BRA",
+        "minute": 41,
+        "recovery_event_id": null,
+        "shot_event_id": "E013"
+      },
+      {
+        "team_id": "CAL",
+        "minute": 49,
+        "recovery_event_id": null,
+        "shot_event_id": "E018"
+      },
+      {
+        "team_id": "CAL",
+        "minute": 86,
+        "recovery_event_id": null,
+        "shot_event_id": "E031"
+      }
+    ]
+  },
+  "ppda": [
+    {
+      "team_id": "BRA",
+      "value": 10.2
+    },
+    {
+      "team_id": "CAL",
+      "value": 12.7
+    }
+  ],
+  "leaders": [
+    {
+      "team_id": "BRA",
+      "top_runner": {
+        "player_id": "BRA-08",
+        "value": 11.62
+      },
+      "top_sprinter": {
+        "player_id": "BRA-11",
+        "value": 12.0
+      },
+      "top_passer": {
+        "player_id": "BRA-06",
+        "value": 61.0
+      },
+      "most_touches": [
+        {
+          "player_id": "BRA-06",
+          "value": 87.0
+        },
+        {
+          "player_id": "BRA-08",
+          "value": 87.0
+        },
+        {
+          "player_id": "BRA-04",
+          "value": 68.0
+        }
+      ]
+    },
+    {
+      "team_id": "CAL",
+      "top_runner": {
+        "player_id": "CAL-04",
+        "value": 12.0
+      },
+      "top_sprinter": {
+        "player_id": "CAL-07",
+        "value": 11.0
+      },
+      "top_passer": {
+        "player_id": "CAL-04",
+        "value": 51.0
+      },
+      "most_touches": [
+        {
+          "player_id": "CAL-04",
+          "value": 73.0
+        },
+        {
+          "player_id": "CAL-08",
+          "value": 63.0
+        },
+        {
+          "player_id": "CAL-06",
+          "value": 62.0
+        }
+      ]
+    }
+  ],
+  "players": [
+    {
+      "player_id": "BRA-01",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "sprints": 0,
+      "peak_m_per_min": 71.2,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 22,
+      "pass_accuracy_pct": 85.1,
+      "long_balls": 8,
+      "touches": 29,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0
+    },
+    {
+      "player_id": "BRA-02",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "sprints": 10,
+      "peak_m_per_min": 140.2,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 44,
+      "pass_accuracy_pct": 86.1,
+      "long_balls": 3,
+      "touches": 63,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-03",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "sprints": 10,
+      "peak_m_per_min": 141.2,
+      "acceleration_load_kmh": 12432.0,
+      "passes": 44,
+      "pass_accuracy_pct": 87.1,
+      "long_balls": 3,
+      "touches": 63,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-04",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.46,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.2,
+      "sprints": 5,
+      "peak_m_per_min": 134.2,
+      "acceleration_load_kmh": 10656.0,
+      "passes": 48,
+      "pass_accuracy_pct": 88.1,
+      "long_balls": 6,
+      "touches": 68,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-05",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "sprints": 5,
+      "peak_m_per_min": 135.2,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "long_balls": 6,
+      "touches": 68,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-06",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.42,
+        "approx": false,
+        "unmeasured_pct": 0.5,
+        "reliability": {
+          "measured_pct": 99.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.5,
+      "sprints": 6,
+      "peak_m_per_min": 136.2,
+      "acceleration_load_kmh": 11664.0,
+      "passes": 61,
+      "pass_accuracy_pct": 85.1,
+      "long_balls": 3,
+      "touches": 87,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.07,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-08",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.62,
+        "approx": false,
+        "unmeasured_pct": 0.7,
+        "reliability": {
+          "measured_pct": 99.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.2,
+      "sprints": 6,
+      "peak_m_per_min": 138.2,
+      "acceleration_load_kmh": 11952.0,
+      "passes": 61,
+      "pass_accuracy_pct": 87.1,
+      "long_balls": 3,
+      "touches": 87,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.03,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-09",
+      "team_id": "BRA",
+      "minutes_played": 72,
+      "distance": {
+        "km": 7.92,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "sprints": 7,
+      "peak_m_per_min": 130.2,
+      "acceleration_load_kmh": 9216.0,
+      "passes": 20,
+      "pass_accuracy_pct": 88.1,
+      "long_balls": 0,
+      "touches": 28,
+      "shots": 2,
+      "goals": 1,
+      "xg": 0.53,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "BRA-10",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "sprints": 8,
+      "peak_m_per_min": 131.2,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "long_balls": 1,
+      "touches": 66,
+      "shots": 2,
+      "goals": 0,
+      "xg": 0.16,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2
+    },
+    {
+      "player_id": "BRA-11",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.85,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "sprints": 12,
+      "peak_m_per_min": 140.2,
+      "acceleration_load_kmh": 12624.0,
+      "passes": 35,
+      "pass_accuracy_pct": 85.1,
+      "long_balls": 1,
+      "touches": 51,
+      "shots": 3,
+      "goals": 1,
+      "xg": 0.85,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2
+    },
+    {
+      "player_id": "BRA-27",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.6,
+      "sprints": 12,
+      "peak_m_per_min": 138.2,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 35,
+      "pass_accuracy_pct": 86.1,
+      "long_balls": 1,
+      "touches": 50,
+      "shots": 2,
+      "goals": 0,
+      "xg": 0.17,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2
+    },
+    {
+      "player_id": "BRA-46",
+      "team_id": "BRA",
+      "minutes_played": 24,
+      "distance": {
+        "km": 2.57,
+        "approx": false,
+        "unmeasured_pct": 0.9,
+        "reliability": {
+          "measured_pct": 99.1,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 35.1,
+      "sprints": 2,
+      "peak_m_per_min": 131.2,
+      "acceleration_load_kmh": 2964.0,
+      "passes": 6,
+      "pass_accuracy_pct": 85.1,
+      "long_balls": 0,
+      "touches": 9,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.05,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-01",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "sprints": 0,
+      "peak_m_per_min": 69.8,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 18,
+      "pass_accuracy_pct": 77.4,
+      "long_balls": 6,
+      "touches": 24,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0
+    },
+    {
+      "player_id": "CAL-02",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.3,
+        "reliability": {
+          "measured_pct": 98.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "sprints": 9,
+      "peak_m_per_min": 138.8,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 37,
+      "pass_accuracy_pct": 78.4,
+      "long_balls": 2,
+      "touches": 55,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-04",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 12.0,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.6,
+      "sprints": 7,
+      "peak_m_per_min": 140.8,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 51,
+      "pass_accuracy_pct": 80.4,
+      "long_balls": 2,
+      "touches": 73,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-05",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": true,
+        "unmeasured_pct": 1.6,
+        "reliability": {
+          "measured_pct": 98.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "sprints": 4,
+      "peak_m_per_min": 133.8,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 40,
+      "pass_accuracy_pct": 76.4,
+      "long_balls": 5,
+      "touches": 61,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0
+    },
+    {
+      "player_id": "CAL-06",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.18,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.7,
+      "sprints": 4,
+      "peak_m_per_min": 134.8,
+      "acceleration_load_kmh": 10224.0,
+      "passes": 40,
+      "pass_accuracy_pct": 77.4,
+      "long_balls": 5,
+      "touches": 62,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.04,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0
+    },
+    {
+      "player_id": "CAL-07",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.9,
+      "sprints": 11,
+      "peak_m_per_min": 143.8,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 29,
+      "pass_accuracy_pct": 78.4,
+      "long_balls": 1,
+      "touches": 41,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.05,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2
+    },
+    {
+      "player_id": "CAL-08",
+      "team_id": "CAL",
+      "minutes_played": 81,
+      "distance": {
+        "km": 10.04,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.9,
+      "sprints": 6,
+      "peak_m_per_min": 144.8,
+      "acceleration_load_kmh": 10489.5,
+      "passes": 43,
+      "pass_accuracy_pct": 79.4,
+      "long_balls": 2,
+      "touches": 63,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.03,
+      "tackles": 3,
+      "ball_recoveries": 5,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-09",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.56,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "sprints": 9,
+      "peak_m_per_min": 128.8,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 22,
+      "pass_accuracy_pct": 80.4,
+      "long_balls": 0,
+      "touches": 34,
+      "shots": 3,
+      "goals": 1,
+      "xg": 0.63,
+      "tackles": 1,
+      "ball_recoveries": 2,
+      "fouls_committed": 1,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-10",
+      "team_id": "CAL",
+      "minutes_played": 65,
+      "distance": {
+        "km": 6.89,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.4,
+      "sprints": 6,
+      "peak_m_per_min": 129.8,
+      "acceleration_load_kmh": 7930.0,
+      "passes": 15,
+      "pass_accuracy_pct": 76.4,
+      "long_balls": 0,
+      "touches": 22,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.14,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-19",
+      "team_id": "CAL",
+      "minutes_played": 31,
+      "distance": {
+        "km": 3.41,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.9,
+      "sprints": 3,
+      "peak_m_per_min": 129.8,
+      "acceleration_load_kmh": 3968.0,
+      "passes": 7,
+      "pass_accuracy_pct": 80.4,
+      "long_balls": 0,
+      "touches": 10,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.06,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-22",
+      "team_id": "CAL",
+      "minutes_played": 15,
+      "distance": {
+        "km": 1.62,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "sprints": 2,
+      "peak_m_per_min": 132.8,
+      "acceleration_load_kmh": 1875.0,
+      "passes": 3,
+      "pass_accuracy_pct": 78.4,
+      "long_balls": 0,
+      "touches": 5,
+      "shots": 1,
+      "goals": 0,
+      "xg": 0.24,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 0
+    },
+    {
+      "player_id": "CAL-24",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.23,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "sprints": 9,
+      "peak_m_per_min": 142.8,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 37,
+      "pass_accuracy_pct": 80.4,
+      "long_balls": 2,
+      "touches": 55,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1
+    },
+    {
+      "player_id": "CAL-39",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.6,
+        "reliability": {
+          "measured_pct": 99.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "sprints": 11,
+      "peak_m_per_min": 139.8,
+      "acceleration_load_kmh": 13056.0,
+      "passes": 29,
+      "pass_accuracy_pct": 80.4,
+      "long_balls": 1,
+      "touches": 40,
+      "shots": 0,
+      "goals": 0,
+      "xg": 0,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2
+    }
+  ],
+  "xg": {
+    "teams": [
+      {
+        "team_id": "BRA",
+        "value": 1.86
+      },
+      {
+        "team_id": "CAL",
+        "value": 1.19
+      }
+    ],
+    "cumulative": [
+      {
+        "team_id": "BRA",
+        "points": [
+          {
+            "minute": 0,
+            "value": 0.0
+          },
+          {
+            "minute": 6,
+            "value": 0.05
+          },
+          {
+            "minute": 14,
+            "value": 0.14
+          },
+          {
+            "minute": 23,
+            "value": 0.45
+          },
+          {
+            "minute": 29,
+            "value": 0.51
+          },
+          {
+            "minute": 38,
+            "value": 0.54
+          },
+          {
+            "minute": 41,
+            "value": 0.76
+          },
+          {
+            "minute": 44,
+            "value": 0.83
+          },
+          {
+            "minute": 52,
+            "value": 0.87
+          },
+          {
+            "minute": 61,
+            "value": 0.94
+          },
+          {
+            "minute": 70,
+            "value": 1.05
+          },
+          {
+            "minute": 79,
+            "value": 1.81
+          },
+          {
+            "minute": 88,
+            "value": 1.86
+          }
+        ]
+      },
+      {
+        "team_id": "CAL",
+        "points": [
+          {
+            "minute": 0,
+            "value": 0.0
+          },
+          {
+            "minute": 18,
+            "value": 0.08
+          },
+          {
+            "minute": 33,
+            "value": 0.22
+          },
+          {
+            "minute": 39,
+            "value": 0.27
+          },
+          {
+            "minute": 45,
+            "value": 0.3
+          },
+          {
+            "minute": 49,
+            "value": 0.47
+          },
+          {
+            "minute": 58,
+            "value": 0.85
+          },
+          {
+            "minute": 66,
+            "value": 0.91
+          },
+          {
+            "minute": 86,
+            "value": 1.15
+          },
+          {
+            "minute": 90,
+            "value": 1.19
+          }
+        ]
+      }
+    ],
+    "method": "visible angle and opponents in the shot triangle (Materials/METRICS.md section 9)",
+    "chart_id": "xg_cumulative"
+  },
+  "momentum": {
+    "current": -0.11,
+    "series": [
+      {
+        "minute": 1,
+        "value": 0.51
+      },
+      {
+        "minute": 2,
+        "value": 0.46
+      },
+      {
+        "minute": 3,
+        "value": 0.39
+      },
+      {
+        "minute": 4,
+        "value": 0.32
+      },
+      {
+        "minute": 5,
+        "value": 0.24
+      },
+      {
+        "minute": 6,
+        "value": 0.16
+      },
+      {
+        "minute": 7,
+        "value": 0.08
+      },
+      {
+        "minute": 8,
+        "value": 0.0
+      },
+      {
+        "minute": 9,
+        "value": -0.07
+      },
+      {
+        "minute": 10,
+        "value": -0.14
+      },
+      {
+        "minute": 11,
+        "value": -0.2
+      },
+      {
+        "minute": 12,
+        "value": -0.24
+      },
+      {
+        "minute": 13,
+        "value": -0.27
+      },
+      {
+        "minute": 14,
+        "value": -0.29
+      },
+      {
+        "minute": 15,
+        "value": -0.3
+      },
+      {
+        "minute": 16,
+        "value": -0.29
+      },
+      {
+        "minute": 17,
+        "value": -0.27
+      },
+      {
+        "minute": 18,
+        "value": -0.23
+      },
+      {
+        "minute": 19,
+        "value": -0.18
+      },
+      {
+        "minute": 20,
+        "value": -0.12
+      },
+      {
+        "minute": 21,
+        "value": -0.05
+      },
+      {
+        "minute": 22,
+        "value": 0.02
+      },
+      {
+        "minute": 23,
+        "value": 0.1
+      },
+      {
+        "minute": 24,
+        "value": 0.18
+      },
+      {
+        "minute": 25,
+        "value": 0.26
+      },
+      {
+        "minute": 26,
+        "value": 0.34
+      },
+      {
+        "minute": 27,
+        "value": 0.41
+      },
+      {
+        "minute": 28,
+        "value": 0.47
+      },
+      {
+        "minute": 29,
+        "value": 0.52
+      },
+      {
+        "minute": 30,
+        "value": 0.56
+      },
+      {
+        "minute": 31,
+        "value": 0.59
+      },
+      {
+        "minute": 32,
+        "value": 0.6
+      },
+      {
+        "minute": 33,
+        "value": 0.6
+      },
+      {
+        "minute": 34,
+        "value": 0.58
+      },
+      {
+        "minute": 35,
+        "value": 0.55
+      },
+      {
+        "minute": 36,
+        "value": 0.5
+      },
+      {
+        "minute": 37,
+        "value": 0.45
+      },
+      {
+        "minute": 38,
+        "value": 0.38
+      },
+      {
+        "minute": 39,
+        "value": 0.31
+      },
+      {
+        "minute": 40,
+        "value": 0.23
+      },
+      {
+        "minute": 41,
+        "value": 0.15
+      },
+      {
+        "minute": 42,
+        "value": 0.07
+      },
+      {
+        "minute": 43,
+        "value": -0.01
+      },
+      {
+        "minute": 44,
+        "value": -0.08
+      },
+      {
+        "minute": 45,
+        "value": -0.14
+      },
+      {
+        "minute": 46,
+        "value": -0.2
+      },
+      {
+        "minute": 47,
+        "value": -0.25
+      },
+      {
+        "minute": 48,
+        "value": -0.28
+      },
+      {
+        "minute": 49,
+        "value": -0.3
+      },
+      {
+        "minute": 50,
+        "value": -0.3
+      },
+      {
+        "minute": 51,
+        "value": -0.29
+      },
+      {
+        "minute": 52,
+        "value": -0.26
+      },
+      {
+        "minute": 53,
+        "value": -0.23
+      },
+      {
+        "minute": 54,
+        "value": -0.18
+      },
+      {
+        "minute": 55,
+        "value": -0.11
+      },
+      {
+        "minute": 56,
+        "value": -0.05
+      },
+      {
+        "minute": 57,
+        "value": 0.03
+      },
+      {
+        "minute": 58,
+        "value": 0.11
+      },
+      {
+        "minute": 59,
+        "value": 0.19
+      },
+      {
+        "minute": 60,
+        "value": 0.27
+      },
+      {
+        "minute": 61,
+        "value": 0.35
+      },
+      {
+        "minute": 62,
+        "value": 0.42
+      },
+      {
+        "minute": 63,
+        "value": 0.48
+      },
+      {
+        "minute": 64,
+        "value": 0.53
+      },
+      {
+        "minute": 65,
+        "value": 0.56
+      },
+      {
+        "minute": 66,
+        "value": 0.59
+      },
+      {
+        "minute": 67,
+        "value": 0.6
+      },
+      {
+        "minute": 68,
+        "value": 0.6
+      },
+      {
+        "minute": 69,
+        "value": 0.58
+      },
+      {
+        "minute": 70,
+        "value": 0.54
+      },
+      {
+        "minute": 71,
+        "value": 0.5
+      },
+      {
+        "minute": 72,
+        "value": 0.44
+      },
+      {
+        "minute": 73,
+        "value": 0.38
+      },
+      {
+        "minute": 74,
+        "value": 0.3
+      },
+      {
+        "minute": 75,
+        "value": 0.23
+      },
+      {
+        "minute": 76,
+        "value": 0.15
+      },
+      {
+        "minute": 77,
+        "value": 0.07
+      },
+      {
+        "minute": 78,
+        "value": -0.01
+      },
+      {
+        "minute": 79,
+        "value": -0.08
+      },
+      {
+        "minute": 80,
+        "value": -0.15
+      },
+      {
+        "minute": 81,
+        "value": -0.2
+      },
+      {
+        "minute": 82,
+        "value": -0.25
+      },
+      {
+        "minute": 83,
+        "value": -0.28
+      },
+      {
+        "minute": 84,
+        "value": -0.3
+      },
+      {
+        "minute": 85,
+        "value": -0.3
+      },
+      {
+        "minute": 86,
+        "value": -0.29
+      },
+      {
+        "minute": 87,
+        "value": -0.26
+      },
+      {
+        "minute": 88,
+        "value": -0.22
+      },
+      {
+        "minute": 89,
+        "value": -0.17
+      },
+      {
+        "minute": 90,
+        "value": -0.11
+      }
+    ],
+    "chart_id": "momentum"
+  },
+  "shot_map": {
+    "shots": [
+      {
+        "event_id": "E002",
+        "team_id": "BRA",
+        "player_id": "BRA-11",
+        "minute": 6,
+        "x": 34.0,
+        "y": -12.5,
+        "xg": 0.05,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 88.2
+      },
+      {
+        "event_id": "E003",
+        "team_id": "BRA",
+        "player_id": "BRA-10",
+        "minute": 14,
+        "x": 36.5,
+        "y": 4.0,
+        "xg": 0.09,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 96.7
+      },
+      {
+        "event_id": "E004",
+        "team_id": "CAL",
+        "player_id": "CAL-09",
+        "minute": 18,
+        "x": 40.5,
+        "y": 6.0,
+        "xg": 0.08,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 91.3
+      },
+      {
+        "event_id": "E005",
+        "team_id": "BRA",
+        "player_id": "BRA-09",
+        "minute": 23,
+        "x": 43.0,
+        "y": -2.0,
+        "xg": 0.31,
+        "outcome": "goal",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 108.4
+      },
+      {
+        "event_id": "E007",
+        "team_id": "BRA",
+        "player_id": "BRA-27",
+        "minute": 29,
+        "x": 37.0,
+        "y": 9.5,
+        "xg": 0.06,
+        "outcome": "blocked",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 84.0
+      },
+      {
+        "event_id": "E008",
+        "team_id": "CAL",
+        "player_id": "CAL-10",
+        "minute": 33,
+        "x": 41.0,
+        "y": -5.5,
+        "xg": 0.14,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 99.1
+      },
+      {
+        "event_id": "E011",
+        "team_id": "BRA",
+        "player_id": "BRA-08",
+        "minute": 38,
+        "x": 30.5,
+        "y": 1.5,
+        "xg": 0.03,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 101.5
+      },
+      {
+        "event_id": "E012",
+        "team_id": "CAL",
+        "player_id": "CAL-07",
+        "minute": 39,
+        "x": 38.0,
+        "y": 12.0,
+        "xg": 0.05,
+        "outcome": "blocked",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 86.4
+      },
+      {
+        "event_id": "E013",
+        "team_id": "BRA",
+        "player_id": "BRA-09",
+        "minute": 41,
+        "x": 44.5,
+        "y": 3.0,
+        "xg": 0.22,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 94.8
+      },
+      {
+        "event_id": "E014",
+        "team_id": "BRA",
+        "player_id": "BRA-06",
+        "minute": 44,
+        "x": 33.0,
+        "y": -3.0,
+        "xg": 0.07,
+        "outcome": "woodwork",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 104.9
+      },
+      {
+        "event_id": "E015",
+        "team_id": "CAL",
+        "player_id": "CAL-08",
+        "minute": 45,
+        "x": 32.0,
+        "y": -8.0,
+        "xg": 0.03,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 89.5
+      },
+      {
+        "event_id": "E018",
+        "team_id": "CAL",
+        "player_id": "CAL-09",
+        "minute": 49,
+        "x": 42.0,
+        "y": 2.5,
+        "xg": 0.17,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 97.6
+      },
+      {
+        "event_id": "E019",
+        "team_id": "BRA",
+        "player_id": "BRA-11",
+        "minute": 52,
+        "x": 35.5,
+        "y": -10.0,
+        "xg": 0.04,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 92.0
+      },
+      {
+        "event_id": "E020",
+        "team_id": "CAL",
+        "player_id": "CAL-09",
+        "minute": 58,
+        "x": 46.5,
+        "y": 1.0,
+        "xg": 0.38,
+        "outcome": "goal",
+        "is_penalty": false,
+        "is_header": true,
+        "speed_kmh": null
+      },
+      {
+        "event_id": "E021",
+        "team_id": "BRA",
+        "player_id": "BRA-10",
+        "minute": 61,
+        "x": 36.0,
+        "y": 6.5,
+        "xg": 0.07,
+        "outcome": "blocked",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 90.3
+      },
+      {
+        "event_id": "E023",
+        "team_id": "CAL",
+        "player_id": "CAL-19",
+        "minute": 66,
+        "x": 39.0,
+        "y": -9.0,
+        "xg": 0.06,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 93.2
+      },
+      {
+        "event_id": "E024",
+        "team_id": "BRA",
+        "player_id": "BRA-27",
+        "minute": 70,
+        "x": 40.0,
+        "y": 11.0,
+        "xg": 0.11,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 98.0
+      },
+      {
+        "event_id": "E029",
+        "team_id": "BRA",
+        "player_id": "BRA-11",
+        "minute": 79,
+        "x": 41.5,
+        "y": 0.0,
+        "xg": 0.76,
+        "outcome": "goal",
+        "is_penalty": true,
+        "is_header": false,
+        "speed_kmh": 101.2
+      },
+      {
+        "event_id": "E031",
+        "team_id": "CAL",
+        "player_id": "CAL-22",
+        "minute": 86,
+        "x": 44.0,
+        "y": -4.0,
+        "xg": 0.24,
+        "outcome": "saved",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 103.6
+      },
+      {
+        "event_id": "E032",
+        "team_id": "BRA",
+        "player_id": "BRA-46",
+        "minute": 88,
+        "x": 37.5,
+        "y": 7.0,
+        "xg": 0.05,
+        "outcome": "wide",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 87.1
+      },
+      {
+        "event_id": "E033",
+        "team_id": "CAL",
+        "player_id": "CAL-06",
+        "minute": 90,
+        "x": 34.5,
+        "y": 2.0,
+        "xg": 0.04,
+        "outcome": "blocked",
+        "is_penalty": false,
+        "is_header": false,
+        "speed_kmh": 82.6
+      }
+    ],
+    "chart_id": "shot_map"
+  },
+  "zone_map": [
+    {
+      "team_id": "BRA",
+      "player_id": null,
+      "rows": 4,
+      "cols": 6,
+      "cells_pct": [
+        [
+          4.5,
+          2.8,
+          6.1,
+          4.4,
+          2.6,
+          5.9
+        ],
+        [
+          1.1,
+          4.5,
+          2.7,
+          6.0,
+          4.3,
+          7.6
+        ],
+        [
+          2.8,
+          1.1,
+          4.4,
+          2.7,
+          6.0,
+          4.2
+        ],
+        [
+          4.5,
+          2.8,
+          6.1,
+          4.4,
+          2.6,
+          5.9
+        ]
+      ],
+      "chart_id": "zone_map"
+    },
+    {
+      "team_id": "CAL",
+      "player_id": null,
+      "rows": 4,
+      "cols": 6,
+      "cells_pct": [
+        [
+          1.8,
+          5.3,
+          3.3,
+          6.8,
+          4.9,
+          2.9
+        ],
+        [
+          3.6,
+          1.7,
+          5.1,
+          3.2,
+          6.7,
+          4.7
+        ],
+        [
+          5.4,
+          3.5,
+          1.5,
+          5.0,
+          3.1,
+          6.5
+        ],
+        [
+          1.8,
+          5.3,
+          3.3,
+          6.8,
+          4.9,
+          2.9
+        ]
+      ],
+      "chart_id": "zone_map"
+    }
+  ],
+  "defensive_shape": [
+    {
+      "team_id": "BRA",
+      "defensive_line_m": [
+        {
+          "minute": 5,
+          "value": 39.5
+        },
+        {
+          "minute": 10,
+          "value": 41.0
+        },
+        {
+          "minute": 15,
+          "value": 40.2
+        },
+        {
+          "minute": 20,
+          "value": 37.8
+        },
+        {
+          "minute": 25,
+          "value": 35.5
+        },
+        {
+          "minute": 30,
+          "value": 35.1
+        },
+        {
+          "minute": 35,
+          "value": 36.9
+        },
+        {
+          "minute": 40,
+          "value": 39.5
+        },
+        {
+          "minute": 45,
+          "value": 41.0
+        },
+        {
+          "minute": 50,
+          "value": 40.2
+        },
+        {
+          "minute": 55,
+          "value": 37.7
+        },
+        {
+          "minute": 60,
+          "value": 35.5
+        },
+        {
+          "minute": 65,
+          "value": 35.2
+        },
+        {
+          "minute": 70,
+          "value": 37.0
+        },
+        {
+          "minute": 75,
+          "value": 39.6
+        },
+        {
+          "minute": 80,
+          "value": 41.0
+        },
+        {
+          "minute": 85,
+          "value": 40.1
+        },
+        {
+          "minute": 90,
+          "value": 37.7
+        }
+      ],
+      "team_length_m": [
+        {
+          "minute": 5,
+          "value": 32.3
+        },
+        {
+          "minute": 10,
+          "value": 31.5
+        },
+        {
+          "minute": 15,
+          "value": 32.7
+        },
+        {
+          "minute": 20,
+          "value": 34.8
+        },
+        {
+          "minute": 25,
+          "value": 36.4
+        },
+        {
+          "minute": 30,
+          "value": 36.1
+        },
+        {
+          "minute": 35,
+          "value": 34.3
+        },
+        {
+          "minute": 40,
+          "value": 32.2
+        },
+        {
+          "minute": 45,
+          "value": 31.5
+        },
+        {
+          "minute": 50,
+          "value": 32.7
+        },
+        {
+          "minute": 55,
+          "value": 34.9
+        },
+        {
+          "minute": 60,
+          "value": 36.4
+        },
+        {
+          "minute": 65,
+          "value": 36.1
+        },
+        {
+          "minute": 70,
+          "value": 34.2
+        },
+        {
+          "minute": 75,
+          "value": 32.2
+        },
+        {
+          "minute": 80,
+          "value": 31.5
+        },
+        {
+          "minute": 85,
+          "value": 32.7
+        },
+        {
+          "minute": 90,
+          "value": 34.9
+        }
+      ],
+      "chart_id": "defensive_shape"
+    },
+    {
+      "team_id": "CAL",
+      "defensive_line_m": [
+        {
+          "minute": 5,
+          "value": 35.9
+        },
+        {
+          "minute": 10,
+          "value": 33.6
+        },
+        {
+          "minute": 15,
+          "value": 31.2
+        },
+        {
+          "minute": 20,
+          "value": 30.6
+        },
+        {
+          "minute": 25,
+          "value": 32.2
+        },
+        {
+          "minute": 30,
+          "value": 34.8
+        },
+        {
+          "minute": 35,
+          "value": 36.4
+        },
+        {
+          "minute": 40,
+          "value": 35.9
+        },
+        {
+          "minute": 45,
+          "value": 33.5
+        },
+        {
+          "minute": 50,
+          "value": 31.2
+        },
+        {
+          "minute": 55,
+          "value": 30.6
+        },
+        {
+          "minute": 60,
+          "value": 32.2
+        },
+        {
+          "minute": 65,
+          "value": 34.8
+        },
+        {
+          "minute": 70,
+          "value": 36.4
+        },
+        {
+          "minute": 75,
+          "value": 35.8
+        },
+        {
+          "minute": 80,
+          "value": 33.5
+        },
+        {
+          "minute": 85,
+          "value": 31.1
+        },
+        {
+          "minute": 90,
+          "value": 30.6
+        }
+      ],
+      "team_length_m": [
+        {
+          "minute": 5,
+          "value": 36.0
+        },
+        {
+          "minute": 10,
+          "value": 38.1
+        },
+        {
+          "minute": 15,
+          "value": 39.8
+        },
+        {
+          "minute": 20,
+          "value": 39.7
+        },
+        {
+          "minute": 25,
+          "value": 38.0
+        },
+        {
+          "minute": 30,
+          "value": 35.9
+        },
+        {
+          "minute": 35,
+          "value": 35.0
+        },
+        {
+          "minute": 40,
+          "value": 36.0
+        },
+        {
+          "minute": 45,
+          "value": 38.1
+        },
+        {
+          "minute": 50,
+          "value": 39.8
+        },
+        {
+          "minute": 55,
+          "value": 39.7
+        },
+        {
+          "minute": 60,
+          "value": 38.0
+        },
+        {
+          "minute": 65,
+          "value": 35.9
+        },
+        {
+          "minute": 70,
+          "value": 35.0
+        },
+        {
+          "minute": 75,
+          "value": 36.0
+        },
+        {
+          "minute": 80,
+          "value": 38.2
+        },
+        {
+          "minute": 85,
+          "value": 39.8
+        },
+        {
+          "minute": 90,
+          "value": 39.7
+        }
+      ],
+      "chart_id": "defensive_shape"
+    }
+  ],
+  "inspector": {
+    "methods": [
+      {
+        "metric": "distance_covered",
+        "method": "Sum of distances between cleaned positions (Savitzky-Golay), valid samples only; '≈' when unmeasured time >= 1 %; team = outfield players",
+        "tool": "engine.physical.distance_covered",
+        "parameters": {
+          "filter": "savitzky_golay",
+          "window_s": 0.5
+        },
+        "data_excluded_pct": 0.9
+      },
+      {
+        "metric": "top_speed",
+        "method": "Maximum of our own speed from cleaned positions, outside the ±1 s validity windows",
+        "tool": "engine.physical.top_speed",
+        "parameters": {
+          "max_kmh": 38
+        },
+        "data_excluded_pct": 0.9
+      },
+      {
+        "metric": "speed_zones",
+        "method": "Distance split by FIFA speed zones",
+        "tool": "engine.physical.speed_zones",
+        "parameters": {
+          "zones_kmh": "0-7,7-15,15-20,20-25,25+"
+        },
+        "data_excluded_pct": 0.9
+      },
+      {
+        "metric": "peak_intensity",
+        "method": "Rolling five-minute window, step 1 s, metres per minute per player; team = mean of its outfield players",
+        "tool": "engine.physical.peak_intensity",
+        "parameters": {
+          "window_min": 5
+        },
+        "data_excluded_pct": 0.9
+      },
+      {
+        "metric": "acceleration_load",
+        "method": "Sum of the absolute changes of speed (|dv/dt| dt), measured samples only",
+        "tool": "engine.physical.acceleration_load",
+        "parameters": {
+          "unit": "km/h"
+        },
+        "data_excluded_pct": 0.9
+      },
+      {
+        "metric": "ball_circulation",
+        "method": "Median ball speed while the team is in possession and the ball is in play, without the 2 s after shots and clearances",
+        "tool": "engine.ball.circulation_speed",
+        "parameters": {
+          "unit": "km/h"
+        },
+        "data_excluded_pct": 1.2
+      },
+      {
+        "metric": "possession",
+        "method": "Share of ball-in-play time by team in possession",
+        "tool": "engine.events.possession",
+        "parameters": {},
+        "data_excluded_pct": 0.0
+      },
+      {
+        "metric": "xg",
+        "method": "Visible goal angle (fixed slope 2.84) and opponents in the shot triangle, calibrated on real match data; penalties 0.79",
+        "tool": "engine.shots.xg",
+        "parameters": {
+          "angle_slope": 2.84,
+          "penalty_xg": 0.79
+        },
+        "data_excluded_pct": 0.0
+      },
+      {
+        "metric": "momentum",
+        "method": "Territory and danger in the last 5 minutes, weights 0.5 and 0.5",
+        "tool": "engine.momentum",
+        "parameters": {
+          "window_min": 5
+        },
+        "data_excluded_pct": 0.0
+      },
+      {
+        "metric": "shot_speed",
+        "method": "Peak ball speed in the 0.5 s after the shot, ball in play, headers excluded",
+        "tool": "engine.shots.shot_speed",
+        "parameters": {
+          "max_kmh": 211
+        },
+        "data_excluded_pct": 0.0
+      }
+    ],
+    "computed_at": "2026-10-24T16:53:40+01:00",
+    "source": "fake"
+  }
+}

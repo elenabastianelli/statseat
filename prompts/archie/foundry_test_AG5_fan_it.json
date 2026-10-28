@@ -1,0 +1,412 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5684.0,
+  "server_time": "2026-10-26T23:12:50.061533+01:00"
+ },
+ "turns": [
+  {
+   "question": "Quanto è finita?",
+   "answer": {
+    "answer_id": "ANS-c1c3787e2c28",
+    "text": "Brackwater Athletic 2–1 Calderholm United, al triplice fischio. L’Estuary Derby si è deciso nel finale.",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2",
+      "value": 2.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     },
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-853cfca579254541",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. The Analyst had started in parallel with Archie to save time; this question did not need it (its 2911 tokens are in the total). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 4558,
+       "tokens_out": 53,
+       "latency_ms": 5253
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 7522,
+     "latency_ms": 5310,
+     "cost_usd": 0.000787
+    }
+   }
+  },
+  {
+   "question": "Chi ha corso di più?",
+   "answer": {
+    "answer_id": "ANS-8e8b2675cf80",
+    "text": "Ha corso di più Rutger van Dalfsen, numero 7 del Calderholm: 12,68 km in una gran giornata di lavoro. Trovi il dato nella tabella Running di Data & Statistics.",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "7",
+      "value": 7.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "CAL-07"
+      },
+      "source_field": "CAL-07.shirt_number"
+     },
+     {
+      "text": "12,68 km",
+      "value": 12.68,
+      "unit": "km",
+      "tool": "distance",
+      "arguments": {
+       "top": 5
+      },
+      "source_field": "distance.top_runner.km"
+     }
+    ],
+    "points_to": {
+     "chart_id": "running_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-f43faca78f1d4893",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9185,
+       "tokens_out": 98,
+       "latency_ms": 5446
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2950,
+       "tokens_out": 44,
+       "latency_ms": 2573
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "distance",
+       "arguments": {
+        "top": 5
+       },
+       "result_summary": "top runner Rutger van Dalfsen 12.68 km",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Which player covered the most distance in the match?"
+       },
+       "result_summary": "Rutger van Dalfsen (#7, Calderholm United) ran the most: 12.68 km.",
+       "latency_ms": 75
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:distance"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12277,
+     "latency_ms": 5527,
+     "cost_usd": 0.001285
+    }
+   }
+  },
+  {
+   "question": "Qual è l'xG delle due squadre?",
+   "answer": {
+    "answer_id": "ANS-72c6a18252ed",
+    "text": "Brackwater Athletic chiude con 0,66 di xG, Calderholm United con 2,25: gli ospiti hanno creato occasioni più nitide, ma il Brackwater si prende la vittoria. Trovi il confronto nella riga Gol vs xG della tabella Match in Data & Statistics.",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "0,66",
+      "value": 0.66,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.BRA"
+     },
+     {
+      "text": "2,25",
+      "value": 2.25,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.CAL"
+     }
+    ],
+    "points_to": {
+     "chart_id": "match_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-2cc945f29eea4c7f",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9196,
+       "tokens_out": 125,
+       "latency_ms": 5614
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2802,
+       "tokens_out": 42,
+       "latency_ms": 2463
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.66, CAL 2.25",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What is the xG of each team in the full match?"
+       },
+       "result_summary": "Brackwater Athletic: 0.66 xG  \nCalderholm United: 2.25 xG",
+       "latency_ms": 0
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12165,
+     "latency_ms": 5620,
+     "cost_usd": 0.001283
+    }
+   }
+  },
+  {
+   "question": "Fammi vedere il grafico dell'xG",
+   "answer": {
+    "answer_id": "ANS-caa357514e41",
+    "text": "Mi dispiace, amico, il grafico dell’xG è disponibile solo con il piano Analyst. Lo trovi bloccato in Data & Statistics.",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": {
+     "chart_id": "xg_cumulative",
+     "section": "data_stats",
+     "locked": true,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-7647f36cca664144",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9215,
+       "tokens_out": 94,
+       "latency_ms": 5256
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2800,
+       "tokens_out": 60,
+       "latency_ms": 2671
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.66, CAL 2.25",
+       "latency_ms": 4
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What is the xG over time chart availability/access for this match?"
+       },
+       "result_summary": "Expected goals (xG): Brackwater Athletic 0.66; Calderholm United 2.25. The xG over time chart is Analyst only and isn’t available on this Fan ticket.",
+       "latency_ms": 358
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12169,
+     "latency_ms": 5621,
+     "cost_usd": 0.001278
+    }
+   }
+  },
+  {
+   "question": "Perché chiamano Hennebry 'Diesel'?",
+   "answer": {
+    "answer_id": "ANS-39ad2fd8989b",
+    "text": "Lo chiamano “Diesel” perché continua a correre anche quando gli altri hanno già smesso. E all’88' si è fatto trovare ancora in moto, firmando il gol decisivo.",
+    "language": "it",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "88'",
+      "value": 88.0,
+      "unit": "'",
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Goals"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-e68626c8035b4dbe",
+     "method": "Archie asked Kit Man, who searched the matchday documents. The Analyst had started in parallel with Archie to save time; this question did not need it (its 1467 tokens are in the total). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9218,
+       "tokens_out": 100,
+       "latency_ms": 6232
+      },
+      {
+       "agent": "Kit Man",
+       "model": "gpt-6-luna",
+       "role": "matchday documents (file search)",
+       "tokens_in": 9672,
+       "tokens_out": 99,
+       "latency_ms": 5953
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "Archie",
+       "tool": "ask_kit_man",
+       "arguments": {
+        "question": "Why is Oisín Hennebry nicknamed 'Diesel'?"
+       },
+       "result_summary": "He’s nicknamed “Diesel” because he keeps running long after everyone else has stopped.  Document used: Brackwater Athletic squad. [squad-BRA.md]",
+       "latency_ms": 5953
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "kitman:squad-BRA.md"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 20556,
+     "latency_ms": 12193,
+     "cost_usd": 0.002182
+    }
+   }
+  }
+ ]
+}

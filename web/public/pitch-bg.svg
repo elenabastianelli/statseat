@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 1050">
+  <!-- Background of the app: a football pitch seen from the stands, mown in stripes. Blurred and faded by CSS. -->
+  <rect width="680" height="1050" fill="#0f5a34"/>
+  <g fill="#136b3e">
+    <rect y="0" width="680" height="75"/><rect y="150" width="680" height="75"/><rect y="300" width="680" height="75"/>
+    <rect y="450" width="680" height="75"/><rect y="600" width="680" height="75"/><rect y="750" width="680" height="75"/>
+    <rect y="900" width="680" height="75"/>
+  </g>
+  <g fill="none" stroke="#e8f5ec" stroke-width="5">
+    <rect x="30" y="30" width="620" height="990"/>
+    <line x1="30" y1="525" x2="650" y2="525"/>
+    <circle cx="340" cy="525" r="91"/>
+    <rect x="138" y="30" width="404" height="165"/><rect x="248" y="30" width="184" height="55"/>
+    <rect x="138" y="855" width="404" height="165"/><rect x="248" y="965" width="184" height="55"/>
+    <path d="M267 195 A91 91 0 0 0 413 195"/><path d="M267 855 A91 91 0 0 1 413 855"/>
+  </g>
+  <g fill="#e8f5ec"><circle cx="340" cy="525" r="6"/><circle cx="340" cy="140" r="5"/><circle cx="340" cy="910" r="5"/></g>
+</svg>

@@ -1,0 +1,163 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5685.0,
+  "server_time": "2026-10-26T11:11:09.486664+01:00"
+ },
+ "turns": [
+  {
+   "question": "Was the goal in the 23rd minute offside? And how many xG did each team have?",
+   "answer": {
+    "answer_id": "ANS-2e2e58561fbe",
+    "text": "The 23rd-minute goal stood, and the tracking check found Brightwell onside. Brackwater had 0.4 xG; Calderholm had 2.61 xG.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "23rd",
+      "value": 23.0,
+      "unit": null,
+      "tool": "offside_check",
+      "arguments": {
+       "minute": 23
+      },
+      "source_field": "moment.minute"
+     },
+     {
+      "text": "0.4",
+      "value": 0.4,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.BRA"
+     },
+     {
+      "text": "2.61",
+      "value": 2.61,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.CAL"
+     }
+    ],
+    "points_to": {
+     "chart_id": "match_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-c1a9be555a8b49b7",
+     "method": "Archie routed the question to The Analyst, which called 2 deterministic tools with the fan's session (no future, Fan version).  Then the grounding validator rejected \"3.6 m\", so Archie wrote the answer again with the data results.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9180,
+       "tokens_out": 238,
+       "latency_ms": 11590
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 5329,
+       "tokens_out": 84,
+       "latency_ms": 7552
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.4, CAL 2.61",
+       "latency_ms": 6
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the final xG for each team in Brackwater Athletic v Calderholm United?"
+       },
+       "result_summary": "Brackwater Athletic: 0.4 xG  \nCalderholm United: 2.61 xG",
+       "latency_ms": 3191
+      },
+      {
+       "agent": "The Analyst",
+       "tool": "offside_check",
+       "arguments": {
+        "minute": 23
+       },
+       "result_summary": "goal 23': onside (-3.6 m, band 2 m)",
+       "latency_ms": 1394
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Tracking check: was Calderholm United's 23rd-minute goal by #9 Mortimer Brightwell offside? State the referee's decision and tracking verdict."
+       },
+       "result_summary": "Official decision: the goal stood. Tracking verdict: onside by 3.6 m.",
+       "latency_ms": 5776
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals",
+      "tool:offside_check"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 14831,
+     "latency_ms": 17456,
+     "cost_usd": 0.001612
+    }
+   }
+  }
+ ]
+}

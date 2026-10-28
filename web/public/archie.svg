@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="58 48 136 136">
+  <title>Archie</title>
+  <!-- Archie's head for the Ask Archie button and the avatar: the same drawing as archie-character.svg (task L-2h,
+       approved 25/10), cropped to a circle. Change both together. -->
+  <circle cx="126" cy="116" r="68" fill="#FFF6DC"/>
+  <g clip-path="url(#round)">
+  <defs>
+    <clipPath id="round"><circle cx="126" cy="116" r="68"/></clipPath>
+    <pattern id="tweed" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#8A6A48"/>
+      <path d="M0 0 V6" stroke="#77593B" stroke-width="2"/>
+    </pattern>
+    <pattern id="coat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <rect width="8" height="8" fill="#2F5A47"/>
+      <path d="M0 0 V8" stroke="#2A5140" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <path d="M30 300 C30 236 58 206 120 202 C182 206 210 236 210 300 Z" fill="url(#coat)"/>
+  <path d="M120 206 L92 300 M120 206 L148 300" stroke="#234536" stroke-width="2" fill="none"/>
+  <path d="M94 210 L120 262 L104 214 Z" fill="#26493A"/>
+  <path d="M146 210 L120 262 L136 214 Z" fill="#26493A"/>
+  <g fill="#C9A45C" stroke="#8E6F33" stroke-width="1.5">
+    <circle cx="106" cy="272" r="4.5"/><circle cx="134" cy="272" r="4.5"/>
+    <circle cx="104" cy="292" r="4.5"/><circle cx="136" cy="292" r="4.5"/>
+  </g>
+  <rect x="56" y="250" width="26" height="8" rx="2" fill="#26493A"/>
+  <rect x="59" y="238" width="18" height="16" rx="2" fill="#F3E6C8" stroke="#C9B48A" stroke-width="1.5"/>
+  <path d="M62 243 H74 M62 247 H72" stroke="#B9A47A" stroke-width="1.2"/>
+  <path d="M78 196 C96 214 144 214 162 196 L166 212 C146 230 94 230 74 212 Z" fill="#F3E6C8"/>
+  <path d="M84 203 C100 218 140 218 156 203 L159 210 C142 224 98 224 81 210 Z" fill="#8E2F3C"/>
+  <path d="M84 216 L74 268 L98 270 L102 222 Z" fill="#F3E6C8"/>
+  <path d="M82 230 L100 232 L99 242 L80 240 Z M78 250 L99 252 L98 261 L76 259 Z" fill="#8E2F3C"/>
+  <path d="M75 268 L74 276 M80 269 L79 278 M86 269 L86 278 M92 270 L92 279 M97 270 L98 278" stroke="#E6D4AE" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="106" y="180" width="28" height="22" rx="8" fill="#E9B98F"/>
+  <path d="M70 120 C70 84 92 70 120 70 C150 70 172 86 172 120 C172 162 150 190 121 190 C92 190 70 164 70 120 Z" fill="#F4C9A3"/>
+  <ellipse cx="70" cy="128" rx="9" ry="13" fill="#EDBB94"/>
+  <ellipse cx="172" cy="128" rx="9" ry="13" fill="#EDBB94"/>
+  <path d="M68 122 Q64 128 69 134" stroke="#D69C76" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g transform="rotate(-28 176 108)">
+    <rect x="160" y="104" width="38" height="7" rx="1.5" fill="#E8B83A"/>
+    <path d="M198 104 L208 107.5 L198 111 Z" fill="#F1D7A8"/>
+    <path d="M205 106.4 L208 107.5 L205 108.6 Z" fill="#3A3A3A"/>
+    <rect x="156" y="104" width="5" height="7" fill="#D98C8C"/>
+  </g>
+  <path d="M74 104 C72 116 73 124 76 132 C78 120 80 112 84 104 Z" fill="#7A4A2A"/>
+  <path d="M168 104 C170 116 169 124 166 132 C164 120 162 112 158 104 Z" fill="#7A4A2A"/>
+  <path d="M68 106 C64 84 86 66 122 64 C152 62 176 72 180 94 C168 90 124 88 98 92 C84 94 74 100 68 106 Z" fill="url(#tweed)"/>
+  <path d="M66 106 C86 94 140 88 184 98 C188 104 184 110 174 110 C142 104 102 104 66 114 Z" fill="#6E5236"/>
+  <path d="M84 80 C104 72 140 70 166 78" stroke="#6E5236" stroke-width="2" fill="none"/>
+  <path d="M90 120 Q102 110 114 118" stroke="#B5652B" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M128 118 Q140 110 152 120" stroke="#B5652B" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="103" cy="131" rx="5.5" ry="6.5" fill="#2B2230"/>
+  <ellipse cx="140" cy="131" rx="5.5" ry="6.5" fill="#2B2230"/>
+  <circle cx="105" cy="128.5" r="1.8" fill="#FFFFFF"/>
+  <circle cx="142" cy="128.5" r="1.8" fill="#FFFFFF"/>
+  <ellipse cx="90" cy="150" rx="10" ry="6.5" fill="#EE9A86" opacity="0.6"/>
+  <ellipse cx="154" cy="150" rx="10" ry="6.5" fill="#EE9A86" opacity="0.6"/>
+  <ellipse cx="122" cy="146" rx="11" ry="9.5" fill="#EDAE88"/>
+  <ellipse cx="118" cy="143" rx="3.5" ry="2.5" fill="#F8D7BC"/>
+  <path d="M108 166 Q122 186 138 166 Q122 172 108 166 Z" fill="#6B2A2E"/>
+  <path d="M114 175 Q122 181 131 175 Q122 178 114 175 Z" fill="#E7808A"/>
+  <path d="M122 158 C112 152 98 156 96 166 C94 172 88 170 86 165 C88 176 102 176 108 166 C112 162 118 162 122 164 C126 162 132 162 136 166 C142 176 156 176 158 165 C156 170 150 172 148 166 C146 156 132 152 122 158 Z" fill="#B5652B"/>
+  <path d="M214 300 C214 262 204 236 182 216" stroke="url(#coat)" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <path d="M196 300 C196 268 190 248 176 232" stroke="#234536" stroke-width="2" fill="none"/>
+  <path d="M166 214 L186 200 L198 214 L178 230 Z" fill="#8E2F3C"/>
+  <path d="M172 210 L182 224 M178 206 L188 220 M184 202 L194 216" stroke="#A9434F" stroke-width="2"/>
+  <path d="M168 222 C176 246 160 254 150 262 C138 272 150 286 142 300" stroke="#2A2A30" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="160" y="170" width="11" height="54" rx="4" fill="#34343C" transform="rotate(12 165 197)"/>
+  <g transform="rotate(12 165 186)">
+    <rect x="152" y="178" width="26" height="20" rx="3" fill="#00A062"/>
+    <text x="165" y="192.5" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">ITG</text>
+  </g>
+  <circle cx="160" cy="160" r="17" fill="#C3C7D0" stroke="#5F6470" stroke-width="3"/>
+  <g stroke="#7D828E" stroke-width="1.4" fill="none">
+    <path d="M146 152 H174 M144 158 H176 M144 164 H176 M146 170 H174"/>
+    <path d="M152 145 V175 M160 143 V177 M168 145 V175"/>
+  </g>
+  <ellipse cx="153" cy="152" rx="4" ry="5" fill="#ECEFF4" opacity="0.85"/>
+  <rect x="156" y="174" width="9" height="6" rx="1.5" fill="#5F6470" transform="rotate(12 160 177)"/>
+  <path d="M160 206 C158 198 164 194 172 196 L184 202 C190 206 188 216 180 218 L166 218 C160 216 158 212 160 206 Z" fill="#5A3B2A"/>
+  <path d="M166 202 L178 206 M164 208 L178 212" stroke="#47301F" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

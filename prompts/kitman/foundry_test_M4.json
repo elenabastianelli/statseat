@@ -1,0 +1,605 @@
+{
+ "test": "M-4 Kit Man on the demo Foundry project: current SYN-001 documents, max_num_results 5 and 10",
+ "project": "the team's Foundry project (gpt-6-luna, GlobalStandard)",
+ "vector_store": "kitman-SYN-001, the 9 files of synthetic/SYN-001/kitman/ at main aa6adeb",
+ "instructions": "prompts/kitman/instructions.md (V-L3 version 3, unchanged), reasoning effort low",
+ "runs": [
+  {
+   "agent": "kitman",
+   "version": "1",
+   "model": "gpt-6-luna",
+   "date": "2026-10-25 19:39",
+   "turns": [
+    {
+     "spec_question": 1,
+     "question": "Who is Brackwater's number 10 and where is he from?",
+     "answer": "Brackwater’s number 10 is Riku Shimazaki, from Sendai, Japan. \n\nDocument used: *Brackwater Athletic squad*.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "squad-BRA.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 6233,
+     "output_tokens": 94,
+     "latency_s": 7.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 2,
+     "question": "Why do they call Oisín Hennebry \"Diesel\"?",
+     "answer": "They call Oisín Hennebry “Diesel” because he keeps running long after everyone else has stopped. I used the Brackwater Athletic squad document.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6175,
+     "output_tokens": 105,
+     "latency_s": 5.0,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 3,
+     "question": "Is Jarvis Fairbrass playing today? I thought he was injured.",
+     "answer": "No—Jarvis Fairbrass is out today. He was ruled out with a stomach bug, not an injury. I checked the matchday document.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6268,
+     "output_tokens": 105,
+     "latency_s": 3.7,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 4,
+     "question": "Who takes the penalties for Calderholm?",
+     "answer": "Rutger van Dalfsen takes penalties first, followed by Mortimer Brightwell.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "matchday.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6031,
+     "output_tokens": 72,
+     "latency_s": 4.2,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 5,
+     "question": "How many goals has Mortimer Brightwell scored this season? Is he the league's top scorer?",
+     "answer": "Mortimer Brightwell has scored **4 league goals** this season. I don’t know whether he’s the league’s top scorer—the documents don’t give the league-wide scoring leaders. Used: *squad-CAL.md* and *matchday.md*.",
+     "documents_cited": [],
+     "documents_found": [
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [
+      "Thiandoum"
+     ],
+     "input_tokens": 6265,
+     "output_tokens": 125,
+     "latency_s": 4.2,
+     "verdict": "partly wrong: 4 goals right, but says it does not know the scorers' table (league.md not retrieved)"
+    },
+    {
+     "spec_question": 6,
+     "question": "What trophies have Brackwater won? When was the last one?",
+     "answer": "Brackwater have won **5 Meridian League titles, 4 Meridian Cups and 2 Meridian Super Shields**. Their latest trophy was the **2018 Meridian Super Shield**. \n\nDocument used: **Brackwater Athletic club profile**.",
+     "documents_cited": [
+      "club-BRA.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 5931,
+     "output_tokens": 108,
+     "latency_s": 3.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 7,
+     "question": "How did it go the last time these two teams met?",
+     "answer": "Their last meeting ended 0–0 at Lanternworks Stadium in the 2025/26 Meridian League. Source: *matchday.md*.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 5900,
+     "output_tokens": 86,
+     "latency_s": 4.6,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 8,
+     "question": "Is the Brackwater manager under pressure if they lose today?",
+     "answer": "No. Mara Ellingham’s job is described as secure; Brackwater are top after eight games, and the chairman says one derby result won’t change that. **Document used: matchday.md.**",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6218,
+     "output_tokens": 110,
+     "latency_s": 4.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 9,
+     "question": "Who is the referee today? Does he give a lot of cards?",
+     "answer": "Today’s referee is Treve Cranstead. He gives fewer yellow cards than the panel average: 3.4 per game over his top-division career, compared with 3.9. He tends to let play flow and talk to players.  \n\nSource: the matchday and match officials documents.",
+     "documents_cited": [
+      "matchday.md",
+      "officials.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "matchday.md",
+      "officials.md",
+      "rules.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 5733,
+     "output_tokens": 147,
+     "latency_s": 3.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 10,
+     "question": "When was this stadium built?",
+     "answer": "Lanternworks Stadium opened in 2004. **Document used:** *stadium.md*.",
+     "documents_cited": [
+      "stadium.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6114,
+     "output_tokens": 76,
+     "latency_s": 3.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 11,
+     "question": "Will it rain in the second half?",
+     "answer": "The forecast says light rain during the second half, with a 45% chance around 16:20, rising to 55% by full-time. Source: matchday document.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "matchday.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 5897,
+     "output_tokens": 86,
+     "latency_s": 3.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 12,
+     "question": "How are the other matches going?",
+     "answer": "I don’t know—the matchday document doesn’t give live updates for the other matches.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "matchday.md",
+      "rules.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 5827,
+     "output_tokens": 71,
+     "latency_s": 4.2,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 13,
+     "question": "Where is the wheelchair entrance and the nearest car park?",
+     "answer": "The step-free entrance with lifts is **Gate G** on the Main Stand, serving accessible sector W7. The documents don’t say where the nearest car park is, so I don’t know. Used: *Lanternworks Stadium* document.",
+     "documents_cited": [
+      "stadium.md"
+     ],
+     "documents_found": [
+      "matchday.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6114,
+     "output_tokens": 106,
+     "latency_s": 4.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 14,
+     "question": "What is Audun Ulvestad's salary?",
+     "answer": "I don’t know; Audun Ulvestad’s salary isn’t listed in the squad document.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 6058,
+     "output_tokens": 74,
+     "latency_s": 3.1,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 15,
+     "question": "这个球队的主席是谁？",
+     "answer": "如果你指的是主场球队 Calderholm United，主席是 Henrietta Glazebrook。来源：俱乐部资料。",
+     "documents_cited": [
+      "club-CAL.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [
+      "Tallowfield"
+     ],
+     "input_tokens": 5929,
+     "output_tokens": 87,
+     "latency_s": 3.6,
+     "verdict": "wrong: says the home club is Calderholm (chairman Henrietta Glazebrook); the home club is Brackwater"
+    }
+   ],
+   "max_num_results": 5
+  },
+  {
+   "agent": "kitman",
+   "version": "2",
+   "model": "gpt-6-luna",
+   "date": "2026-10-25 19:40",
+   "turns": [
+    {
+     "spec_question": 1,
+     "question": "Who is Brackwater's number 10 and where is he from?",
+     "answer": "Brackwater’s number 10 is Riku Shimazaki. He’s from Sendai, Japan. \n\nDocument used: *Brackwater Athletic squad*.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "matchday.md",
+      "squad-BRA.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 9881,
+     "output_tokens": 95,
+     "latency_s": 4.8,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 2,
+     "question": "Why do they call Oisín Hennebry \"Diesel\"?",
+     "answer": "They call him “Diesel” because he keeps running long after everyone else has stopped.   \n**Document used:** Brackwater Athletic squad.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 9739,
+     "output_tokens": 91,
+     "latency_s": 3.7,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 3,
+     "question": "Is Jarvis Fairbrass playing today? I thought he was injured.",
+     "answer": "No—Jarvis Fairbrass is not in today’s squad. He was ruled out this morning with a stomach bug, not an injury. **Documents used:** *matchday.md* and *squad-BRA.md*.",
+     "documents_cited": [],
+     "documents_found": [
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10432,
+     "output_tokens": 126,
+     "latency_s": 4.1,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 4,
+     "question": "Who takes the penalties for Calderholm?",
+     "answer": "Rutger van Dalfsen takes penalties first, followed by Mortimer Brightwell.  Used the matchday document.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "matchday.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 10183,
+     "output_tokens": 76,
+     "latency_s": 4.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 5,
+     "question": "How many goals has Mortimer Brightwell scored this season? Is he the league's top scorer?",
+     "answer": "Mortimer Brightwell has scored **4 goals** this season. He is **joint third** in the Meridian League scoring list, not the top scorer; Moussa Thiandoum leads with 6. Used the squad and league documents.",
+     "documents_cited": [],
+     "documents_found": [
+      "club-CAL.md",
+      "league.md",
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10211,
+     "output_tokens": 122,
+     "latency_s": 3.8,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 6,
+     "question": "What trophies have Brackwater won? When was the last one?",
+     "answer": "Brackwater have won five Meridian League titles (most recently 2001/02), four Meridian Cups (most recently 2017/18), and two Meridian Super Shields (most recently 2018). So their latest listed trophy was the Super Shield in 2018. **Document used: Brackwater Athletic club honours.**",
+     "documents_cited": [
+      "club-BRA.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "league.md",
+      "matchday.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10071,
+     "output_tokens": 129,
+     "latency_s": 4.1,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 7,
+     "question": "How did it go the last time these two teams met?",
+     "answer": "Last time, Brackwater Athletic and Calderholm United drew 0–0 at Lanternworks Stadium in the 2025/26 Meridian League. Used the *Matchday* document.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-CAL.md",
+      "league.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10068,
+     "output_tokens": 105,
+     "latency_s": 3.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 8,
+     "question": "Is the Brackwater manager under pressure if they lose today?",
+     "answer": "No. Mara Ellingham’s job is secure, and the chairman has said one derby result won’t change that. Used the matchday document.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "matchday.md",
+      "squad-BRA.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10129,
+     "output_tokens": 95,
+     "latency_s": 5.7,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 9,
+     "question": "Who is the referee today? Does he give a lot of cards?",
+     "answer": "Today’s referee is **Treve Cranstead**. He gives fewer cards than the national-panel average: **3.4 yellows per game** in his top-division career, compared with **3.9** on average. This season he’s averaging **3.3 yellows per game**. So, not especially card-happy. \n\nUsed: *Match officials* and *Matchday*.",
+     "documents_cited": [],
+     "documents_found": [
+      "matchday.md",
+      "officials.md",
+      "rules.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 9698,
+     "output_tokens": 161,
+     "latency_s": 4.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 10,
+     "question": "When was this stadium built?",
+     "answer": "Lanternworks Stadium opened in 2004. Source: stadium.md.",
+     "documents_cited": [
+      "stadium.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "league.md",
+      "matchday.md",
+      "squad-BRA.md",
+      "squad-CAL.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10251,
+     "output_tokens": 63,
+     "latency_s": 3.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 11,
+     "question": "Will it rain in the second half?",
+     "answer": "The forecast says light rain during the second half, with a 45% chance at 16:20, rising to 55% by full-time. Source: *matchday.md*.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "matchday.md",
+      "rules.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 9911,
+     "output_tokens": 99,
+     "latency_s": 3.2,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 12,
+     "question": "How are the other matches going?",
+     "answer": "I don’t know—the matchday document doesn’t give live updates or scores for the other matches.",
+     "documents_cited": [
+      "matchday.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "matchday.md",
+      "rules.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 9979,
+     "output_tokens": 77,
+     "latency_s": 3.4,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 13,
+     "question": "Where is the wheelchair entrance and the nearest car park?",
+     "answer": "The step-free entrance is **Gate G** on the Main Stand, serving accessible sector W7. I don’t know the nearest car park—the stadium document doesn’t give car-park locations. \n\n*Document used: stadium.md*",
+     "documents_cited": [
+      "stadium.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "matchday.md",
+      "squad-BRA.md",
+      "stadium.md"
+     ],
+     "raw_citation_markers": false,
+     "keywords_missing": [],
+     "input_tokens": 9980,
+     "output_tokens": 116,
+     "latency_s": 4.5,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 14,
+     "question": "What is Audun Ulvestad's salary?",
+     "answer": "I don’t know—his salary isn’t listed in the squad document.",
+     "documents_cited": [
+      "squad-BRA.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "matchday.md",
+      "officials.md",
+      "squad-BRA.md",
+      "squad-CAL.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 10003,
+     "output_tokens": 71,
+     "latency_s": 3.6,
+     "verdict": "correct"
+    },
+    {
+     "spec_question": 15,
+     "question": "这个球队的主席是谁？",
+     "answer": "今天比赛是布拉克沃特竞技对阵卡尔德霍姆联：布拉克沃特竞技主席是安布罗斯·塔洛菲尔德；卡尔德霍姆联主席是亨丽埃塔·格莱兹布鲁克。依据两队俱乐部资料。",
+     "documents_cited": [
+      "club-BRA.md",
+      "club-CAL.md"
+     ],
+     "documents_found": [
+      "club-BRA.md",
+      "club-CAL.md",
+      "league.md",
+      "matchday.md"
+     ],
+     "raw_citation_markers": true,
+     "keywords_missing": [],
+     "input_tokens": 9886,
+     "output_tokens": 140,
+     "latency_s": 4.1,
+     "verdict": "correct"
+    }
+   ],
+   "max_num_results": 10
+  }
+ ]
+}

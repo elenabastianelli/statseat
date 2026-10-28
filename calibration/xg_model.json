@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "description": "Expected-goals model (visible angle with a fixed slope plus opponents in the shot triangle, DFL open-play shots)",
+    "source": "DFL/Sportec open data: Bassek, M., Rein, R., Weber, H., Memmert, D. (2025). An integrated dataset of spatiotemporal and event data in elite soccer. Scientific Data 12:195. https://doi.org/10.1038/s41597-025-04505-y. Licence: CC-BY 4.0. Aggregate statistics only; no raw, frame-level or person-level data.",
+    "doi": "10.1038/s41597-025-04505-y",
+    "licence": "CC-BY 4.0 (data); these aggregates are derived statistics with attribution",
+    "matches_used": ["J03WMX", "J03WOH", "J03WOY", "J03WPY", "J03WQQ", "J03WR9"],
+    "generated_by": "cd data_pipeline && .venv/bin/python -m insidethegame_data.calibration",
+    "guidelines_version": "v4.2 (2026-10-25)",
+    "pipeline_version": "0.4.2",
+    "config_hash": "249b8571dbc799bb",
+    "config": {
+      "min_valid_minutes": 60.0,
+      "speed_zone_edges_kmh": [7.0, 15.0, 20.0, 25.0],
+      "speed_zone_labels": ["0-7", "7-15", "15-20", "20-25", "25+"],
+      "sprint_speed_kmh": 25.0,
+      "sprint_min_s": 1.0,
+      "work_rate_speed_kmh": 20.0,
+      "bin_s": 300.0,
+      "bins_per_period": 9,
+      "bin_min_presence_frac": 0.95,
+      "bin_min_valid_frac": 0.9,
+      "std_pitch_length_m": 105.0,
+      "std_pitch_width_m": 68.0,
+      "pos_grid_nx": 12,
+      "pos_grid_ny": 8,
+      "pos_min_count": 50,
+      "zone_nx": 6,
+      "zone_ny": 4,
+      "direction_sectors": 8,
+      "long_pass_m": 30.0,
+      "kick_speed_window_s": 0.5,
+      "air_rise_m": 1.0,
+      "air_landing_m": 0.5,
+      "progression_min_s": 3.0,
+      "passing_min_passes": 20,
+      "percentile_min_n": 5,
+      "attribute_quantile_levels_pct": [2.5, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 97.5],
+      "xg_angle_slope": 2.84,
+      "xg_angle_slope_source": "Soccermatics angle-only logistic fit, logit(xG) = -3.52 + 2.84 * theta, on 8,451 shots of the 2017/18 Premier League in the open Wyscout data (Pappalardo et al. 2019, Scientific Data 6:236, doi:10.1038/s41597-019-0247-7, CC BY 4.0)",
+      "penalty_xg": 0.79,
+      "xg_l2": 1.0,
+      "xg_min_shots": 20,
+      "xg_max_iter": 100,
+      "xg_tol": 0.0,
+      "xg_bins": [0.0, 0.05, 0.1, 0.2, 0.35, 1.0],
+      "float_decimals": 4
+    },
+    "prep_config_hash": {
+      "J03WMX": "d51430005c524f6c",
+      "J03WOH": "d51430005c524f6c",
+      "J03WOY": "d51430005c524f6c",
+      "J03WPY": "d51430005c524f6c",
+      "J03WQQ": "d51430005c524f6c",
+      "J03WR9": "d51430005c524f6c"
+    },
+    "input_hashes": {
+      "J03WMX": {
+        "tracking_canonical.parquet": "c0261d2129e1707e7adf60a66a4a8703769b8955f729f7e9c77ebb01fd0b7fa0",
+        "events_canonical.csv": "3c72d71a899a6bcbaf2eabec82d457101a28bc83de4200f237ec03ea68675aa0",
+        "match_profile.json": "d8c3af3c9291d6300cf69b9c5335982da75f8f0977d4b88af986624f19caea12"
+      },
+      "J03WOH": {
+        "tracking_canonical.parquet": "2df4ed30fbfc2798e7954cd43eb84ff1d24888ca36ade139da351bbddac8e5b2",
+        "events_canonical.csv": "f6c800087c903e735c248d76c8c3c8857c571ddc5aa7824b0b123f18dee36473",
+        "match_profile.json": "57dd03674bd6c2edfa98c20807136aee0736416093d9e8e55e1644205985ce88"
+      },
+      "J03WOY": {
+        "tracking_canonical.parquet": "09b173e1c55dadd6fb087d2eb0a86dc8b09925043c91d86b16cc72c8baf01d54",
+        "events_canonical.csv": "95bac5882753126419571f416bd3d4897ddb12fcb2d3b91c05585bfea3c8539f",
+        "match_profile.json": "38e558d6425006cd090ccf91d0a7a351f62e620a5db70e25829dcb2fece07b62"
+      },
+      "J03WPY": {
+        "tracking_canonical.parquet": "c05be7e79c9d63a4a539ca746ec8de90ae2640ce781efad9170bbc02d7c419f2",
+        "events_canonical.csv": "fb6b7802d5f02561f0150bc7f99fe049eb6191423953ac1d2a7adc0a1be76ac5",
+        "match_profile.json": "a4fabec3b3c4c45e395f8a7e5b78280f4053e726085c53e3ff5d8a4cfe8cbd85"
+      },
+      "J03WQQ": {
+        "tracking_canonical.parquet": "7f502d52a84b12d2de9111915ddf6fbc12bcd22eb55bf093251d588fc9249fbc",
+        "events_canonical.csv": "a355cb27f4641d16bace21febece1f5d5c55b945ac67a4d899dee39468486a3f",
+        "match_profile.json": "392bcec88dc7fb2e66865e902eb7636021baee91d2ad172a51a8fe8da358cd61"
+      },
+      "J03WR9": {
+        "tracking_canonical.parquet": "7103c5e59615af0ae8816e1d94fc61cbbcc5cab8fb58349cfff73609270fabde",
+        "events_canonical.csv": "a14bfddd72fb739a6488fc28c7a79d812684cc5bd6314faf5c62aa8b4074127c",
+        "match_profile.json": "cea83f13786503126b1b93bae6721300f1094bc7472e66cd1f2c0c66f5c14161"
+      }
+    },
+    "library_versions": {
+      "python": "3.12.13",
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "lxml": "6.1.3.0",
+      "pyyaml": "6.0.2",
+      "insidethegame_data": "0.4.2",
+      "kloppy": "3.19.1",
+      "pyarrow": "26.0.0"
+    },
+    "conventions": {
+      "coordinates": "metres, centre origin, team-attacking direction: the team attacks +x, left is +y; pitch 105 x 68 m",
+      "validity": "valid samples only (valid_kinematics = true); estimated gap samples never count for speed, peaks or per-90 values",
+      "per90": "normalised on measured (valid) time of each player-match (team decision 2026-10-24); see coverage",
+      "ball": "ball status and possession are the provider's (never derived from a stationary ball)"
+    },
+    "notes": ["Materials/METRICS.md section 9. Open-play shots (DFL ShotAtGoal) located from the trajectories; features measured at the synchronised frame in the shooting team's attacking coordinates: distance_m from the ball to the centre of the goal line; visible_angle_rad = atan2(w x, x^2 + y^2 - (w/2)^2) with w = 7.32 m, x the distance from the goal line and y the lateral offset; opponents_in_triangle = opposing outfield players with valid samples inside the ball-post-post triangle.", "Use from Python: insidethegame_data.calibration.xg(distance_m, visible_angle_rad, opponents_in_triangle); features: shot_features(...).", "Label: annotated outcome SuccessfulShot (team decision 2026-10-24). Agreement with the tracking goal-line crossing: 13 of 13 annotated goals are also detected as a crossing.", "20 of 144 open-play shots could not be located and are left out (0 of them goals).", "Model updating (v4.2, Materials/METRICS.md section 9): logit(xG) = a + 2.84 * visible_angle_rad + b * opponents_in_triangle. The angle slope is fixed (Soccermatics angle-only logistic fit, logit(xG) = -3.52 + 2.84 * theta, on 8,451 shots of the 2017/18 Premier League in the open Wyscout data (Pappalardo et al. 2019, Scientific Data 6:236, doi:10.1038/s41597-019-0247-7, CC BY 4.0)); only a and b are fitted on the 124 located open-play shots (13 goals), two parameters as the rule of about 10 events per variable allows (Peduzzi et al. 1996); L2 = 1 on the standardised b. The distance coefficient is 0 (coef[0]): the visible angle already contains the distance. The first fit (three free slopes) gave the angle a wrong, negative sign; it is replaced.", "Checks: b < 0 True; 6 m central > penalty spot > edge of the box True; sum of xG 13.00 vs 13 goals; calibration_table; examples.", "Leave-one-match-out log loss 0.3398 vs 0.3440 for a constant rate. Use it for relative chance quality (a wider visible angle and fewer defenders give a higher xG); do not read single coefficients as causal effects.", "Penalties: a fixed penalty_xg = 0.79 (Opta, as reported by FBref), counted in the team's xG; direct free kicks use the same model; headers and the goalkeeper position have no feature of their own (too few goals).", "Opponents with an invalid sample within 20 m of the ball are not counted (never use an invalid value): this happens on 5 shots."]
+  },
+  "model": "logistic regression with the visible-angle slope fixed (model updating, Materials/METRICS.md section 9): only the intercept a and the slope b of opponents_in_triangle are fitted (Newton's method, L2 on the standardised b, intercept not penalised)",
+  "formula": "xG = 1 / (1 + exp(-(intercept + coef[0]*distance_m + coef[1]*visible_angle_rad + coef[2]*opponents_in_triangle)))",
+  "features": ["distance_m", "visible_angle_rad", "opponents_in_triangle"],
+  "coef": [0.0, 2.84, -0.9125],
+  "intercept": -3.1923,
+  "fitted_parameters": ["intercept", "opponents_in_triangle"],
+  "angle_slope_fixed": 2.84,
+  "angle_slope_source": "Soccermatics angle-only logistic fit, logit(xG) = -3.52 + 2.84 * theta, on 8,451 shots of the 2017/18 Premier League in the open Wyscout data (Pappalardo et al. 2019, Scientific Data 6:236, doi:10.1038/s41597-019-0247-7, CC BY 4.0)",
+  "penalty_xg": 0.79,
+  "l2_lambda": 1.0,
+  "b_standardised": -0.6294,
+  "iterations": 7,
+  "n_shots": 124,
+  "n_goals": 13,
+  "checks": {
+    "b_negative": true,
+    "six_m_central_above_penalty_spot_above_edge_of_box": true,
+    "sum_xg_vs_goals": {
+      "sum_xg": 13.0,
+      "goals": 13
+    }
+  },
+  "n_open_play_shots_annotated": 144,
+  "n_dropped_not_located": 20,
+  "goals_not_located": 0,
+  "label": "annotated outcome SuccessfulShot",
+  "label_agreement_with_tracking": {
+    "annotated_goals": 13,
+    "tracking_goal_line_crossings": 13,
+    "both": 13
+  },
+  "features_summary": {
+    "distance_m": {
+      "n": 124,
+      "mean": 17.4785,
+      "sd": 7.6528,
+      "p10": 8.464,
+      "p25": 11.4701,
+      "p50": 16.3786,
+      "p75": 21.8648,
+      "p90": 27.0843
+    },
+    "visible_angle_rad": {
+      "n": 124,
+      "mean": 0.4219,
+      "sd": 0.1979,
+      "p10": 0.2288,
+      "p25": 0.2739,
+      "p50": 0.3644,
+      "p75": 0.485,
+      "p90": 0.7178
+    },
+    "opponents_in_triangle": {
+      "n": 124,
+      "mean": 0.5,
+      "sd": 0.6926,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.0,
+      "p90": 1.0
+    }
+  },
+  "opponents_in_triangle_counts": {
+    "0": 74,
+    "1": 40,
+    "2": 8,
+    "3": 2
+  },
+  "shots_with_invalid_opponent_within_20m": 5,
+  "calibration_table": [
+    {
+      "xg_from": 0.0,
+      "xg_to": 0.05,
+      "n_shots": 37,
+      "predicted_goals": 1.0936,
+      "observed_goals": 1,
+      "mean_xg": 0.0296,
+      "observed_rate": 0.027
+    },
+    {
+      "xg_from": 0.05,
+      "xg_to": 0.1,
+      "n_shots": 36,
+      "predicted_goals": 2.7295,
+      "observed_goals": 3,
+      "mean_xg": 0.0758,
+      "observed_rate": 0.0833
+    },
+    {
+      "xg_from": 0.1,
+      "xg_to": 0.2,
+      "n_shots": 35,
+      "predicted_goals": 4.6697,
+      "observed_goals": 6,
+      "mean_xg": 0.1334,
+      "observed_rate": 0.1714
+    },
+    {
+      "xg_from": 0.2,
+      "xg_to": 0.35,
+      "n_shots": 14,
+      "predicted_goals": 3.6271,
+      "observed_goals": 3,
+      "mean_xg": 0.2591,
+      "observed_rate": 0.2143
+    },
+    {
+      "xg_from": 0.35,
+      "xg_to": 1.0,
+      "n_shots": 2,
+      "predicted_goals": 0.88,
+      "observed_goals": 0,
+      "mean_xg": 0.44,
+      "observed_rate": 0.0
+    }
+  ],
+  "in_sample": {
+    "log_loss": 0.319,
+    "brier": 0.0917,
+    "sum_xg": 13.0
+  },
+  "leave_one_match_out": {
+    "n_shots": 124,
+    "log_loss": 0.3398,
+    "baseline_constant_rate_log_loss": 0.344,
+    "brier": 0.0939
+  },
+  "examples": [
+    {
+      "distance_m": 6.0,
+      "visible_angle_rad": 1.0955,
+      "opponents_in_triangle": 0,
+      "xg": 0.4797,
+      "description": "6 m central (centre of the goal-area line), no defender in the triangle"
+    },
+    {
+      "distance_m": 11.0,
+      "visible_angle_rad": 0.6424,
+      "opponents_in_triangle": 0,
+      "xg": 0.203,
+      "description": "penalty spot in open play, no defender in the triangle"
+    },
+    {
+      "distance_m": 11.0,
+      "visible_angle_rad": 0.6424,
+      "opponents_in_triangle": 2,
+      "xg": 0.0394,
+      "description": "penalty spot in open play, two defenders in the triangle"
+    },
+    {
+      "distance_m": 16.5,
+      "visible_angle_rad": 0.4366,
+      "opponents_in_triangle": 0,
+      "xg": 0.1243,
+      "description": "edge of the box, central, no defender in the triangle"
+    },
+    {
+      "distance_m": 16.5,
+      "visible_angle_rad": 0.4366,
+      "opponents_in_triangle": 1,
+      "xg": 0.0539,
+      "description": "edge of the box, central, one defender in the triangle"
+    },
+    {
+      "distance_m": 10.198,
+      "visible_angle_rad": 0.1602,
+      "opponents_in_triangle": 0,
+      "xg": 0.0608,
+      "description": "tight angle: 2 m from the goal line, 10 m wide of the centre, no defender"
+    },
+    {
+      "distance_m": 25.0,
+      "visible_angle_rad": 0.2907,
+      "opponents_in_triangle": 1,
+      "xg": 0.0363,
+      "description": "25 m central, one defender in the triangle"
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "match_id": "SYN-001",
+  "as_of_s": 5760.0,
+  "events": [
+    {
+      "event_id": "E001",
+      "type": "KickOff",
+      "period": 1,
+      "minute": 1,
+      "match_time_s": 0.0,
+      "team_id": "BRA",
+      "player_id": "BRA-09",
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E002",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 6,
+      "match_time_s": 312.0,
+      "team_id": "BRA",
+      "player_id": "BRA-11",
+      "secondary_player_id": null,
+      "x": 34.0,
+      "y": -12.5,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.05,
+        "speed_kmh": 88.2
+      }
+    },
+    {
+      "event_id": "E003",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 14,
+      "match_time_s": 820.0,
+      "team_id": "BRA",
+      "player_id": "BRA-10",
+      "secondary_player_id": null,
+      "x": 36.5,
+      "y": 4.0,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.09,
+        "speed_kmh": 96.7
+      }
+    },
+    {
+      "event_id": "E004",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 18,
+      "match_time_s": 1025.0,
+      "team_id": "CAL",
+      "player_id": "CAL-09",
+      "secondary_player_id": null,
+      "x": 40.5,
+      "y": 6.0,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.08,
+        "speed_kmh": 91.3
+      }
+    },
+    {
+      "event_id": "E005",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 23,
+      "match_time_s": 1334.0,
+      "team_id": "BRA",
+      "player_id": "BRA-09",
+      "secondary_player_id": "BRA-10",
+      "x": 43.0,
+      "y": -2.0,
+      "qualifiers": {
+        "outcome": "goal",
+        "xg": 0.31,
+        "speed_kmh": 108.4
+      }
+    },
+    {
+      "event_id": "E006",
+      "type": "CornerKick",
+      "period": 1,
+      "minute": 27,
+      "match_time_s": 1590.0,
+      "team_id": "BRA",
+      "player_id": "BRA-11",
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E007",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 29,
+      "match_time_s": 1682.0,
+      "team_id": "BRA",
+      "player_id": "BRA-27",
+      "secondary_player_id": null,
+      "x": 37.0,
+      "y": 9.5,
+      "qualifiers": {
+        "outcome": "blocked",
+        "xg": 0.06,
+        "speed_kmh": 84.0
+      }
+    },
+    {
+      "event_id": "E008",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 33,
+      "match_time_s": 1970.0,
+      "team_id": "CAL",
+      "player_id": "CAL-10",
+      "secondary_player_id": null,
+      "x": 41.0,
+      "y": -5.5,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.14,
+        "speed_kmh": 99.1
+      }
+    },
+    {
+      "event_id": "E009",
+      "type": "Foul",
+      "period": 1,
+      "minute": 37,
+      "match_time_s": 2168.0,
+      "team_id": "CAL",
+      "player_id": "CAL-04",
+      "secondary_player_id": "BRA-10",
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E010",
+      "type": "Caution",
+      "period": 1,
+      "minute": 37,
+      "match_time_s": 2200.0,
+      "team_id": "CAL",
+      "player_id": "CAL-04",
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "card": "yellow"
+      }
+    },
+    {
+      "event_id": "E011",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 38,
+      "match_time_s": 2235.0,
+      "team_id": "BRA",
+      "player_id": "BRA-08",
+      "secondary_player_id": null,
+      "x": 30.5,
+      "y": 1.5,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.03,
+        "speed_kmh": 101.5
+      }
+    },
+    {
+      "event_id": "E012",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 39,
+      "match_time_s": 2302.0,
+      "team_id": "CAL",
+      "player_id": "CAL-07",
+      "secondary_player_id": null,
+      "x": 38.0,
+      "y": 12.0,
+      "qualifiers": {
+        "outcome": "blocked",
+        "xg": 0.05,
+        "speed_kmh": 86.4
+      }
+    },
+    {
+      "event_id": "E013",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 41,
+      "match_time_s": 2403.0,
+      "team_id": "BRA",
+      "player_id": "BRA-09",
+      "secondary_player_id": null,
+      "x": 44.5,
+      "y": 3.0,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.22,
+        "speed_kmh": 94.8
+      }
+    },
+    {
+      "event_id": "E014",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 44,
+      "match_time_s": 2611.0,
+      "team_id": "BRA",
+      "player_id": "BRA-06",
+      "secondary_player_id": null,
+      "x": 33.0,
+      "y": -3.0,
+      "qualifiers": {
+        "outcome": "woodwork",
+        "xg": 0.07,
+        "speed_kmh": 104.9
+      }
+    },
+    {
+      "event_id": "E015",
+      "type": "ShotAtGoal",
+      "period": 1,
+      "minute": 45,
+      "match_time_s": 2710.0,
+      "team_id": "CAL",
+      "player_id": "CAL-08",
+      "secondary_player_id": null,
+      "x": 32.0,
+      "y": -8.0,
+      "qualifiers": {
+        "outcome": "wide",
+        "added_time": 1.0,
+        "xg": 0.03,
+        "speed_kmh": 89.5
+      }
+    },
+    {
+      "event_id": "E016",
+      "type": "FinalWhistle",
+      "period": 1,
+      "minute": 45,
+      "match_time_s": 2760.0,
+      "team_id": null,
+      "player_id": null,
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "added_time": 2.0
+      }
+    },
+    {
+      "event_id": "E017",
+      "type": "KickOff",
+      "period": 2,
+      "minute": 46,
+      "match_time_s": 0.0,
+      "team_id": "CAL",
+      "player_id": "CAL-09",
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E018",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 49,
+      "match_time_s": 200.0,
+      "team_id": "CAL",
+      "player_id": "CAL-09",
+      "secondary_player_id": null,
+      "x": 42.0,
+      "y": 2.5,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.17,
+        "speed_kmh": 97.6
+      }
+    },
+    {
+      "event_id": "E019",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 52,
+      "match_time_s": 405.0,
+      "team_id": "BRA",
+      "player_id": "BRA-11",
+      "secondary_player_id": null,
+      "x": 35.5,
+      "y": -10.0,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.04,
+        "speed_kmh": 92.0
+      }
+    },
+    {
+      "event_id": "E020",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 58,
+      "match_time_s": 731.0,
+      "team_id": "CAL",
+      "player_id": "CAL-09",
+      "secondary_player_id": "CAL-07",
+      "x": 46.5,
+      "y": 1.0,
+      "qualifiers": {
+        "outcome": "goal",
+        "header": true,
+        "xg": 0.38,
+        "speed_kmh": 79.5
+      }
+    },
+    {
+      "event_id": "E021",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 61,
+      "match_time_s": 937.0,
+      "team_id": "BRA",
+      "player_id": "BRA-10",
+      "secondary_player_id": null,
+      "x": 36.0,
+      "y": 6.5,
+      "qualifiers": {
+        "outcome": "blocked",
+        "xg": 0.07,
+        "speed_kmh": 90.3
+      }
+    },
+    {
+      "event_id": "E022",
+      "type": "Substitution",
+      "period": 2,
+      "minute": 64,
+      "match_time_s": 1080.0,
+      "team_id": "CAL",
+      "player_id": "CAL-10",
+      "secondary_player_id": "CAL-19",
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E023",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 66,
+      "match_time_s": 1248.0,
+      "team_id": "CAL",
+      "player_id": "CAL-19",
+      "secondary_player_id": null,
+      "x": 39.0,
+      "y": -9.0,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.06,
+        "speed_kmh": 93.2
+      }
+    },
+    {
+      "event_id": "E024",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 70,
+      "match_time_s": 1465.0,
+      "team_id": "BRA",
+      "player_id": "BRA-27",
+      "secondary_player_id": null,
+      "x": 40.0,
+      "y": 11.0,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.11,
+        "speed_kmh": 98.0
+      }
+    },
+    {
+      "event_id": "E025",
+      "type": "Substitution",
+      "period": 2,
+      "minute": 71,
+      "match_time_s": 1500.0,
+      "team_id": "BRA",
+      "player_id": "BRA-09",
+      "secondary_player_id": "BRA-46",
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E026",
+      "type": "Foul",
+      "period": 2,
+      "minute": 77,
+      "match_time_s": 1872.0,
+      "team_id": "CAL",
+      "player_id": "CAL-05",
+      "secondary_player_id": "BRA-46",
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "in_penalty_area": true
+      }
+    },
+    {
+      "event_id": "E027",
+      "type": "Caution",
+      "period": 2,
+      "minute": 77,
+      "match_time_s": 1910.0,
+      "team_id": "CAL",
+      "player_id": "CAL-05",
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "card": "yellow"
+      }
+    },
+    {
+      "event_id": "E028",
+      "type": "VideoAssistantAction",
+      "period": 2,
+      "minute": 78,
+      "match_time_s": 1950.0,
+      "team_id": null,
+      "player_id": null,
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "decision": "penalty_confirmed"
+      }
+    },
+    {
+      "event_id": "E029",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 79,
+      "match_time_s": 2020.0,
+      "team_id": "BRA",
+      "player_id": "BRA-11",
+      "secondary_player_id": null,
+      "x": 41.5,
+      "y": 0.0,
+      "qualifiers": {
+        "outcome": "goal",
+        "penalty": true,
+        "xg": 0.76,
+        "speed_kmh": 101.2
+      }
+    },
+    {
+      "event_id": "E030",
+      "type": "Substitution",
+      "period": 2,
+      "minute": 80,
+      "match_time_s": 2040.0,
+      "team_id": "CAL",
+      "player_id": "CAL-08",
+      "secondary_player_id": "CAL-22",
+      "x": null,
+      "y": null,
+      "qualifiers": {}
+    },
+    {
+      "event_id": "E031",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 86,
+      "match_time_s": 2405.0,
+      "team_id": "CAL",
+      "player_id": "CAL-22",
+      "secondary_player_id": null,
+      "x": 44.0,
+      "y": -4.0,
+      "qualifiers": {
+        "outcome": "saved",
+        "xg": 0.24,
+        "speed_kmh": 103.6
+      }
+    },
+    {
+      "event_id": "E032",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 88,
+      "match_time_s": 2553.0,
+      "team_id": "BRA",
+      "player_id": "BRA-46",
+      "secondary_player_id": null,
+      "x": 37.5,
+      "y": 7.0,
+      "qualifiers": {
+        "outcome": "wide",
+        "xg": 0.05,
+        "speed_kmh": 87.1
+      }
+    },
+    {
+      "event_id": "E033",
+      "type": "ShotAtGoal",
+      "period": 2,
+      "minute": 90,
+      "match_time_s": 2835.0,
+      "team_id": "CAL",
+      "player_id": "CAL-06",
+      "secondary_player_id": null,
+      "x": 34.5,
+      "y": 2.0,
+      "qualifiers": {
+        "outcome": "blocked",
+        "added_time": 3.0,
+        "xg": 0.04,
+        "speed_kmh": 82.6
+      }
+    },
+    {
+      "event_id": "E034",
+      "type": "FinalWhistle",
+      "period": 2,
+      "minute": 90,
+      "match_time_s": 2880.0,
+      "team_id": null,
+      "player_id": null,
+      "secondary_player_id": null,
+      "x": null,
+      "y": null,
+      "qualifiers": {
+        "added_time": 4.0
+      }
+    }
+  ]
+}

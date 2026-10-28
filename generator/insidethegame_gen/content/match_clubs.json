@@ -1,0 +1,100 @@
+{
+  "_note": "Hand-authored details for the two clubs of SYN-001. All people, places and events are invented. Every person uses the same name fields as the players (first_name, last_name, title, nickname). Text never states current-season facts (position, form): those are generated from the simulated results.",
+  "derby_name": "The Estuary Derby",
+  "derby_story": "Brackwater and Calderholm face each other across the Calder estuary, less than nine kilometres apart. The first meeting, in 1896, was abandoned at half-time when the tide flooded the pitch. Since then the derby has been played 212 times in all competitions, and the old ferry that links the two towns is still known as 'the derby boat'.",
+  "job_security_thresholds": {"_note": "League position after the last round: up to 'secure' is secure, up to 'stable' is stable, below is under pressure.", "secure": 4, "stable": 10},
+  "clubs": {
+    "BRA": {
+      "formation": "4-2-3-1",
+      "playing_style": "Possession-based, with quick switches of play to the wingers and full backs who push high.",
+      "colour_names": "navy blue and amber",
+      "kits": {"home": {"shirt": "#1B2A4A", "shorts": "#1B2A4A", "socks": "#F2A900", "description": "Navy shirt and navy shorts with amber socks; amber trim on the collar and cuffs."}, "away": {"shirt": "#F2A900", "shorts": "#1B2A4A", "socks": "#F2A900", "description": "Amber shirt with navy shorts and amber socks."}},
+      "chairman": {"first_name": "Ambrose", "last_name": "Tallowfield", "title": null, "nickname": null, "since": 2015, "bio": "Owner of a local ferry and shipping company and a Foundry End season-ticket holder for forty years. In 2015 he led the supporters' trust that bought the club back from outside owners, and he has chaired it ever since."},
+      "history": [
+        "Brackwater Athletic was founded in 1889 by workers of the Harrow Quay lamp factory, who played on a cinder pitch next to the docks. The club took its nickname, The Lamplighters, from the factory's night shift, who lit the street lamps on the way to evening matches.",
+        "The club turned professional in 1904 and won its first league title in 1932. Its golden era came between 1978 and 1986, with three league titles and two Meridian Cups under head coach Walter Penhallow, whose statue stands outside the North stand.",
+        "In 2004 the club left its historic ground at Cinder Lane and moved to the Lanternworks Stadium, built on the site of the old lamp factory. The academy, opened the same year, has produced more than forty first-team players.",
+        "After a difficult decade, Brackwater finished third last season, their best league finish since 2002."
+      ],
+      "honours": [
+        {"competition": "Meridian League", "seasons": ["1931/32", "1978/79", "1982/83", "1985/86", "2001/02"]},
+        {"competition": "Meridian Cup", "seasons": ["1913/14", "1980/81", "1984/85", "2017/18"]},
+        {"competition": "Meridian Super Shield", "seasons": ["1983", "2018"]}
+      ],
+      "records": {"biggest_win": "9-0 against Dunstrow Athletic in the Meridian Cup, January 1958.", "top_scorer": "Ivo Varnhagen, 187 goals (1979-1990).", "most_appearances": "Desmond Ockley, 512 league games (1995-2011)."},
+      "last_season": {"competition_id": "MER-1", "position": 3},
+      "legends": [
+        {"first_name": "Walter", "last_name": "Penhallow", "title": null, "nickname": null, "role": "head coach 1976-1989", "fact": "Led the club to three league titles; the statue outside the North stand shows him holding his famous flat cap."},
+        {"first_name": "Ivo", "last_name": "Varnhagen", "title": null, "nickname": null, "role": "forward 1979-1990", "fact": "Scored 187 goals for the club, a record that still stands."},
+        {"first_name": "Desmond", "last_name": "Ockley", "title": null, "nickname": null, "role": "goalkeeper 1995-2011", "fact": "Played 512 league games, more than anyone in club history, and kept goal in the 2001/02 title season."}
+      ],
+      "traditions": ["Before kick-off the North stand holds up thousands of small amber lights, a nod to the lamp factory.", "The club anthem, 'Light the Quay', is sung as the teams walk out.", "A lamp is lit in the club museum after every home win and stays on until the next match."],
+      "head_coach": {
+        "tactical_style": "An attacking 4-2-3-1: patient build-up through the two holding midfielders, then quick switches to the wingers. The full backs push high, the number 10 has a free role, and the team presses straight after losing the ball.",
+        "career": [
+          "Played 280 games in midfield for Brackwater Athletic Women (1997-2012) and captained them for six seasons.",
+          "Coached the Brackwater under-21 side (2014-2018), then was assistant coach at Kingsfold Rovers (2018-2021).",
+          "Head coach of Vanbridge United from 2021/22 to 2023/24, winning the Meridian Championship in 2023/24.",
+          "Head coach of Brackwater Athletic since the summer of 2024; third in the Meridian League in 2025/26."
+        ],
+        "contract_until": 2028,
+        "job_security": {"secure": "Her contract runs until {contract}. With the team {position} after {played} games, her position is not in question, and the chairman has said that one derby result will not change that.", "stable": "Her contract runs until {contract}. The club's target is a top-four finish; the team is {position} after {played} games. The board has given her its full support and no single result will decide her future.", "under_pressure": "Her contract runs until {contract}. The team is {position} after {played} games, below the club's top-four target. The chairman has publicly backed her, but a long run of defeats would increase the pressure."}
+      },
+      "staff": [
+        {"role": "head_coach", "first_name": "Mara", "last_name": "Ellingham", "title": null, "nickname": null, "nationality": "Meridia", "born": 1979, "since": 2024, "bio": "A former Brackwater Athletic Women midfielder, she took over in 2024 after winning the Meridian Championship with Vanbridge United. She is known for her attacking 4-2-3-1 and for promoting academy players."},
+        {"role": "assistant_coach", "first_name": "Tomasz", "last_name": "Wierzbic", "title": null, "nickname": null, "nationality": "Poland", "born": 1977, "since": 2024, "bio": "Tactical analyst and set-piece specialist, he followed Ellingham from Vanbridge."},
+        {"role": "goalkeeper_coach", "first_name": "Rhys", "last_name": "Garrowby", "title": null, "nickname": null, "nationality": "Meridia", "born": 1972, "since": 2015, "bio": "Played 140 games in goal for Wexmouth Town."},
+        {"role": "fitness_coach", "first_name": "Anouk", "last_name": "Verlinde", "title": null, "nickname": null, "nationality": "Netherlands", "born": 1986, "since": 2022, "bio": "Sports scientist in charge of training load and recovery."},
+        {"role": "head_physio", "first_name": "Callum", "last_name": "Aird", "title": null, "nickname": null, "nationality": "Scotland", "born": 1983, "since": 2019, "bio": "Leads the medical team on the bench on matchdays."},
+        {"role": "club_doctor", "first_name": "Helena", "last_name": "Strand", "title": "Dr.", "nickname": null, "nationality": "Norway", "born": 1975, "since": 2012, "bio": "Club doctor for more than a decade."},
+        {"role": "kit_manager", "first_name": "Bernard", "last_name": "Pryce", "title": null, "nickname": "Bunny", "nationality": "Meridia", "born": 1961, "since": 1991, "bio": "Has prepared every Brackwater kit since 1991 and never forgotten a pair of boots."}
+      ]
+    },
+    "CAL": {
+      "formation": "4-4-2",
+      "playing_style": "Direct and intense: a high press, early balls to two strikers and many crosses from wide.",
+      "colour_names": "maroon and sky blue",
+      "kits": {"home": {"shirt": "#7A1F2B", "shorts": "#FFFFFF", "socks": "#7A1F2B", "description": "Maroon shirt with white shorts and maroon socks."}, "away": {"shirt": "#8FC1E3", "shorts": "#7A1F2B", "socks": "#8FC1E3", "description": "Sky-blue shirt with maroon shorts and sky-blue socks."}},
+      "chairman": {"first_name": "Henrietta", "last_name": "Glazebrook", "title": null, "nickname": null, "since": 2019, "bio": "Runs a ceramics firm founded in the town's kiln district and has chaired the club since 2019. She paid for the restoration of the two brick kilns behind the South terrace, now the club museum."},
+      "history": [
+        "Calderholm United was formed in 1894 by merging two works teams from the town's pottery kilns, which is why fans still call the players The Kilnmen.",
+        "The club won its first league title in 1952 and added three more, the last in 2015/16, when a squad built on a ferocious press lost only two games all season.",
+        "Its ground, The Kilnyard, keeps two of the original brick kilns behind the South terrace, now used as the club museum.",
+        "Calderholm finished fifth last season, Dario Castellane's third in charge."
+      ],
+      "honours": [
+        {"competition": "Meridian League", "seasons": ["1951/52", "1967/68", "1996/97", "2015/16"]},
+        {"competition": "Meridian Cup", "seasons": ["1959/60", "1990/91", "2008/09"]},
+        {"competition": "Meridian Super Shield", "seasons": ["1997", "2016"]}
+      ],
+      "records": {"biggest_win": "8-1 against Copperhythe FC in the Meridian League, during the 1967/68 title season.", "top_scorer": "Kojo Abrefa, 141 goals (2010-2018).", "most_appearances": "Fergal Mulvane, 498 games in all competitions (1988-2003)."},
+      "last_season": {"competition_id": "MER-1", "position": 5},
+      "legends": [
+        {"first_name": "Agnes", "last_name": "Thorley", "title": null, "nickname": null, "role": "club president 1948-1971", "fact": "Saved the club from bankruptcy in 1949 by selling her pottery business."},
+        {"first_name": "Fergal", "last_name": "Mulvane", "title": null, "nickname": null, "role": "centre back 1988-2003", "fact": "Captained the 1997 title team and never received a red card."},
+        {"first_name": "Kojo", "last_name": "Abrefa", "title": null, "nickname": null, "role": "forward 2010-2018", "fact": "Scored the goal that won the 2016 title, a header in the 93rd minute, and is the club's record scorer."}
+      ],
+      "traditions": ["Away fans travel to Brackwater on 'the derby boat', the old estuary ferry.", "The Kilnyard crowd chants the minute of every Calderholm goal at the next home game.", "Players touch the brick of the old kiln on the way to the pitch."],
+      "head_coach": {
+        "tactical_style": "A direct 4-4-2 built on a high press: the two strikers press the centre backs, the wide midfielders deliver early crosses, and the team is drilled to win the ball back within six seconds of losing it.",
+        "career": ["Played as a central defender in the Italian lower divisions until 2005.", "Coached in the Italian lower divisions for fourteen seasons (2009-2023), with two promotions.", "Head coach of Calderholm United since the summer of 2023; fifth in the Meridian League in 2025/26."],
+        "contract_until": 2027,
+        "job_security": {"secure": "His contract runs until {contract}, and the club has opened talks on an extension. With the team {position} after {played} games, his position is not in question.", "stable": "His contract runs until {contract}. The team is {position} after {played} games; the board's target is a place in the top six, and the chairman has said she judges the coach on the whole season, not on one game.", "under_pressure": "His contract runs until {contract}. The team is {position} after {played} games, below the board's top-six target. The chairman has backed him in public, but a poor run would put his job under pressure."}
+      },
+      "staff": [
+        {"role": "head_coach", "first_name": "Dario", "last_name": "Castellane", "title": null, "nickname": null, "nationality": "Italy", "born": 1974, "since": 2023, "bio": "Arrived from the Italian lower leagues and rebuilt the team around pressing and fitness. Calm on the touchline, famous for his long notebook."},
+        {"role": "assistant_coach", "first_name": "Owen", "last_name": "Brackley", "title": null, "nickname": null, "nationality": "Meridia", "born": 1981, "since": 2021, "bio": "Former Calderholm full back who coached the under-21 side for five years."},
+        {"role": "goalkeeper_coach", "first_name": "Matthijs", "last_name": "Doorn", "title": null, "nickname": null, "nationality": "Netherlands", "born": 1976, "since": 2023, "bio": "Specialist in goalkeepers' distribution and positioning."},
+        {"role": "fitness_coach", "first_name": "Sanna", "last_name": "Kivelä", "title": null, "nickname": null, "nationality": "Finland", "born": 1988, "since": 2023, "bio": "Designs the high-intensity programme behind the team's press."},
+        {"role": "head_physio", "first_name": "Priya", "last_name": "Ramdhanie", "title": null, "nickname": null, "nationality": "Meridia", "born": 1985, "since": 2020, "bio": "Previously physio for the Meridia national under-19 team."},
+        {"role": "club_doctor", "first_name": "Luca", "last_name": "Ferreri", "title": "Dr.", "nickname": null, "nationality": "Italy", "born": 1970, "since": 2023, "bio": "Sports-medicine doctor who joined with the head coach."},
+        {"role": "kit_manager", "first_name": "Gwen", "last_name": "Ashdown", "title": null, "nickname": "the Quartermaster", "nationality": "Meridia", "born": 1966, "since": 2004, "bio": "Has looked after the Calderholm kit room since 2004; the players call her 'the Quartermaster'."}
+      ]
+    }
+  },
+  "fixed_coaching_spells": [
+    {"club_id": "VAN", "coach_id": "BRA-S1", "from_season": "2021/22", "to_season": "2023/24"},
+    {"club_id": "BRA", "coach_id": "BRA-S1", "from_season": "2024/25", "to_season": null},
+    {"club_id": "CAL", "coach_id": "CAL-S1", "from_season": "2023/24", "to_season": null}
+  ]
+}

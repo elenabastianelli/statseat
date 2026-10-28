@@ -1,0 +1,52 @@
+{
+  "match_id": "SYN-001",
+  "phase": "first_half",
+  "minute": 31,
+  "as_of_s": 1830.0,
+  "score": {
+    "home": 1,
+    "away": 0
+  },
+  "shots": [
+    {
+      "team_id": "BRA",
+      "shots": 4,
+      "on_target": 2,
+      "goals": 1
+    },
+    {
+      "team_id": "CAL",
+      "shots": 1,
+      "on_target": 0,
+      "goals": 0
+    }
+  ],
+  "counts": [
+    {
+      "team_id": "BRA",
+      "corners": 3,
+      "fouls": 3,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "penalties": 0,
+      "woodwork": 0,
+      "offsides": 0,
+      "sprints": 27,
+      "tackles": 5,
+      "ball_recoveries": 17
+    },
+    {
+      "team_id": "CAL",
+      "corners": 1,
+      "fouls": 4,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "penalties": 0,
+      "woodwork": 0,
+      "offsides": 1,
+      "sprints": 24,
+      "tackles": 9,
+      "ball_recoveries": 15
+    }
+  ]
+}

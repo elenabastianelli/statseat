@@ -1,0 +1,4088 @@
+{
+  "match_id": "SYN-001",
+  "universe_id": "MERIDIA-1.0",
+  "seed": 2026,
+  "generator": "insidethegame_gen.tickets 1.0.0 (deterministic)",
+  "app": "statseat",
+  "disclaimer": "Synthetic demo ticket – not valid for entry. Fictional match, clubs and people.",
+  "code_format": {
+    "pattern": "GNT-SYN001-<S|G|D>-XXXX-XXXX",
+    "regex": "^GNT-[A-Z]+[0-9]+-[SGD]-[0-9A-HJKMNP-TV-Z]{4}-[0-9A-HJKMNP-TV-Z]{4}$",
+    "alphabet": "Crockford base32 (0-9 and A-Z without I, L, O, U); on input O counts as 0 and I or L as 1",
+    "check_character": "the last character: Luhn mod 32 over GNT, the match token, the tier letter and the 7 characters before it",
+    "normalise": "upper case, remove spaces, dashes, dots and underscores, then GNT-<match>-<tier>-XXXX-XXXX",
+    "hash": "code_sha256 = SHA-256 (hex) of the normalised code in UTF-8; plain codes are never stored",
+    "qr_content": "a login link, `https://ca-statseat-ewwubzrkf5dus.happyriver-a61de2d4.switzerlandnorth.azurecontainerapps.io/?ticket=<code>`"
+  },
+  "match": {
+    "name": "The Estuary Derby",
+    "competition": "Meridian League",
+    "season": "2026/27",
+    "matchday": 9,
+    "kickoff_local": "2026-10-24T15:00:00+01:00",
+    "home_team_id": "BRA",
+    "guest_team_id": "CAL",
+    "stadium_id": "STA-LANTERN"
+  },
+  "tiers": {
+    "demo": {
+      "letter": "D",
+      "label": "DEMO · Gold + Inspector",
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "devices": "several",
+      "count": 12
+    },
+    "gold": {
+      "letter": "G",
+      "label": "GOLD · Analyst",
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "devices": "one",
+      "count": 30
+    },
+    "silver": {
+      "letter": "S",
+      "label": "SILVER · Fan",
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "devices": "one",
+      "count": 120
+    }
+  },
+  "counts": {
+    "demo": 12,
+    "gold": 30,
+    "silver": 120,
+    "total": 162
+  },
+  "tickets": [
+    {
+      "ticket_id": "SYN-001-D-001",
+      "tier": "demo",
+      "code_sha256": "fbd76f343e352eeb013ae1f0483cb92f928d597aded17b0647cb0b2d97da7ed8",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 35
+      },
+      "files": {
+        "svg": "svg/demo-001.svg",
+        "pdf": "pdf/demo-001.pdf",
+        "png": "png/demo-001.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 35. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-002",
+      "tier": "demo",
+      "code_sha256": "451f3a6de03663e009b6dd1ec60aa02911e4eeb354e9a33c7810addbf648f03d",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 36
+      },
+      "files": {
+        "svg": "svg/demo-002.svg",
+        "pdf": "pdf/demo-002.pdf",
+        "png": "png/demo-002.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 36. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-003",
+      "tier": "demo",
+      "code_sha256": "2f2973d0b4fafe12f01a71aaedbcc166430a9643af6b687c0da175996eb0c3f2",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 37
+      },
+      "files": {
+        "svg": "svg/demo-003.svg",
+        "pdf": "pdf/demo-003.pdf",
+        "png": "png/demo-003.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 37. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-004",
+      "tier": "demo",
+      "code_sha256": "2bc6762309121d21515eee28ab93056ec48f16c87620d8de1be6051e704bdea9",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 38
+      },
+      "files": {
+        "svg": "svg/demo-004.svg",
+        "pdf": "pdf/demo-004.pdf",
+        "png": "png/demo-004.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 38. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-005",
+      "tier": "demo",
+      "code_sha256": "b123833432a5153924d07684cd665479cb9dc15f6d9d56b1e9ba72de60717b4b",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 39
+      },
+      "files": {
+        "svg": "svg/demo-005.svg",
+        "pdf": "pdf/demo-005.pdf",
+        "png": "png/demo-005.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 39. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-006",
+      "tier": "demo",
+      "code_sha256": "cbe1693eaa3f0235097db6b7e067a5b3fcb5f051fb1ac449ebbf932a7505315b",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 40
+      },
+      "files": {
+        "svg": "svg/demo-006.svg",
+        "pdf": "pdf/demo-006.pdf",
+        "png": "png/demo-006.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 40. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-007",
+      "tier": "demo",
+      "code_sha256": "963cb61ddd345798dec41dc2dcda5b0ae77db77b0a6a8230f31474324bb6f125",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 41
+      },
+      "files": {
+        "svg": "svg/demo-007.svg",
+        "pdf": "pdf/demo-007.pdf",
+        "png": "png/demo-007.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 41. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-008",
+      "tier": "demo",
+      "code_sha256": "0e16ce463e16aee8192e7d9c1a9ddca753ce4f7ef3ed8aace1c3b1ee9c1b5008",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 42
+      },
+      "files": {
+        "svg": "svg/demo-008.svg",
+        "pdf": "pdf/demo-008.pdf",
+        "png": "png/demo-008.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 42. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-009",
+      "tier": "demo",
+      "code_sha256": "5eceee77fcb772f99481eb798621885f65b25a5431e2c3a9851c7504c70fca34",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 43
+      },
+      "files": {
+        "svg": "svg/demo-009.svg",
+        "pdf": "pdf/demo-009.pdf",
+        "png": "png/demo-009.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 43. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-010",
+      "tier": "demo",
+      "code_sha256": "88ac34d37152d331d26004737e4f018a34ba9cd796051541f6df37d78b835618",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 44
+      },
+      "files": {
+        "svg": "svg/demo-010.svg",
+        "pdf": "pdf/demo-010.pdf",
+        "png": "png/demo-010.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 44. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-011",
+      "tier": "demo",
+      "code_sha256": "71ac3ba5803044e4cbf7ddc42963f1883471d7264a7cbb576fece84cf431b271",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 45
+      },
+      "files": {
+        "svg": "svg/demo-011.svg",
+        "pdf": "pdf/demo-011.pdf",
+        "png": "png/demo-011.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 45. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-D-012",
+      "tier": "demo",
+      "code_sha256": "b98130931ce269c1b62f17b9b156fc009d0df87b22b77844feb76b20c76d2648",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": true,
+      "demo_panel": true,
+      "multi_device": true,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W8",
+        "sector_type": "club_level",
+        "row": 6,
+        "seat": 46
+      },
+      "files": {
+        "svg": "svg/demo-012.svg",
+        "pdf": "pdf/demo-012.pdf",
+        "png": "png/demo-012.png"
+      },
+      "alt": "statseat digital ticket, DEMO · Gold + Inspector. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W8, row 6, seat 46. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-001",
+      "tier": "gold",
+      "code_sha256": "7eb7bacbcc2bffdf1770ae48110112b599425bfe6c3e61d681b6e0988a0cd9bc",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 57
+      },
+      "files": {
+        "svg": "svg/gold-001.svg",
+        "pdf": "pdf/gold-001.pdf",
+        "png": "png/gold-001.png"
+      },
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 3, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-002",
+      "tier": "gold",
+      "code_sha256": "5da411254cfcc18e82723ac13eb5f8295156ad78b7b331a85e3c573989f41fb5",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 5,
+        "seat": 35
+      },
+      "files": {
+        "svg": "svg/gold-002.svg",
+        "pdf": "pdf/gold-002.pdf",
+        "png": "png/gold-002.png"
+      },
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 5, seat 35. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-003",
+      "tier": "gold",
+      "code_sha256": "e62726252a861d682cc81c4565d6ce33d687ebf9e58708226fd25e2e15219da3",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 58
+      },
+      "files": {
+        "svg": "svg/gold-003.svg",
+        "pdf": "pdf/gold-003.pdf",
+        "png": "png/gold-003.png"
+      },
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 4, seat 58. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-004",
+      "tier": "gold",
+      "code_sha256": "7c95eb5287513c0a7793e059837a1ae09f4921f96912eec1e2cefbd7c004ab2a",
+      "code_published": true,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 20
+      },
+      "files": {
+        "svg": "svg/gold-004.svg",
+        "pdf": "pdf/gold-004.pdf",
+        "png": "png/gold-004.png"
+      },
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 4, seat 20. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-005",
+      "tier": "gold",
+      "code_sha256": "e726347543cb7c37ab5ec8e551df521383a1a2e836732a317d3259812dedef74",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 5,
+        "seat": 43
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 5, seat 43. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-006",
+      "tier": "gold",
+      "code_sha256": "b5b6df4e0e11effc4726cbbd293963f8764d136148d3ca280b9885c0b0186ca3",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 34
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 8, seat 34. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-007",
+      "tier": "gold",
+      "code_sha256": "8d79732a16068c1ae7697193b33e74fd8a582c87db1db4bd5de483e6ea759c25",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 9,
+        "seat": 55
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 9, seat 55. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-008",
+      "tier": "gold",
+      "code_sha256": "00e61812e2e2ea6b076f36876b361e3c90f54230e52abb35f5512419b878e7d8",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 34
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 4, seat 34. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-009",
+      "tier": "gold",
+      "code_sha256": "2707c683e4fde7a618802c8f442e23a6ce2e77b7b4e4dc8e70eb52341f1552fd",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 50
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 12, seat 50. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-010",
+      "tier": "gold",
+      "code_sha256": "1bf2d0f9a8aa02f31bc94016b9e802ae5454c425e4229d3b3f3868bb25393519",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 5,
+        "seat": 43
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 5, seat 43. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-011",
+      "tier": "gold",
+      "code_sha256": "15ee9bd39e839a9a805a2f52db0fd2f43563ec4c5783ee88a9dfc40f74cbb8cc",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 40
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 3, seat 40. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-012",
+      "tier": "gold",
+      "code_sha256": "ada4e4820eb796dc83acad910928acfd063d825ad4ed4e5cc2d889b1a8166ff0",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 57
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 12, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-013",
+      "tier": "gold",
+      "code_sha256": "255bcd6ad125ab83b1ffaf2d166e9df9d6c97bea53ef15cc52275336948b90b8",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 11,
+        "seat": 51
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 11, seat 51. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-014",
+      "tier": "gold",
+      "code_sha256": "79124e3488cea742677d1380f0bdb4dc68cc76dcfd527af651815e0b04655062",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 41
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 12, seat 41. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-015",
+      "tier": "gold",
+      "code_sha256": "309aa5e36cb160ef6a61f8402cf5dec423b1b6de37f8acf70bc23932852d33df",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 29
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 3, seat 29. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-016",
+      "tier": "gold",
+      "code_sha256": "1c5fc5824127544d5c6a73d00fbc1679f7e1e9bfd1b9c7e4cd51c9ee1bc0b304",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 9,
+        "seat": 60
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 9, seat 60. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-017",
+      "tier": "gold",
+      "code_sha256": "84191d0a6f870177f41bfd3105e46ae39da68a3abd38faed7f72daba3cda57b6",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 22
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 10, seat 22. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-018",
+      "tier": "gold",
+      "code_sha256": "62c8b09b11b12f582ccdca922385fddd9adfa657a6099c1aff395e4e9e3361cf",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 38
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 8, seat 38. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-019",
+      "tier": "gold",
+      "code_sha256": "12164bda14a31c22281466e862743c62bdd77951187079da6681741705b18e3a",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 38
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 3, seat 38. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-020",
+      "tier": "gold",
+      "code_sha256": "c74effab4881ed41a45667f8ffb711d1b56ce896048d89ba996a4fa0fdd29f30",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 57
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 4, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-021",
+      "tier": "gold",
+      "code_sha256": "701ee8403be737bf92c11482e67dd170502255baef921145dd7da88fdaf61595",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 54
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 8, seat 54. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-022",
+      "tier": "gold",
+      "code_sha256": "fa7f6aef00d2c09aa0fccb46d037533b44605c363c2d0f9924409273eccdd776",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 54
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 10, seat 54. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-023",
+      "tier": "gold",
+      "code_sha256": "f0312c4b31097171372a8d39988a6de07258b17fbf6c2c47ff8bec84c372725f",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 57
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 10, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-024",
+      "tier": "gold",
+      "code_sha256": "54dfdd129449ba760a617d30d830be7bbb8c0a9f8e20622a4843db01b8f601b1",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 26
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 7, seat 26. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-025",
+      "tier": "gold",
+      "code_sha256": "24c04c00e301caf77f03ac7ec265f6aef040d097bf83920511a1b4a58476a31f",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 6,
+        "seat": 24
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 6, seat 24. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-026",
+      "tier": "gold",
+      "code_sha256": "dd334a7e0911fd8cbdefef52abf046037abf251d07872e9f9e183238112f4e0c",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 6,
+        "seat": 41
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 6, seat 41. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-027",
+      "tier": "gold",
+      "code_sha256": "95b22013e9f68ce3f977214b8f2f3b211c84376c01dfe8e78b7b10713eaf49c5",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "C",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E4",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 28
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate C, Lamplighters Stand, sector E4, row 7, seat 28. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-028",
+      "tier": "gold",
+      "code_sha256": "1d2351a09380003485ce46378bd158362b2b8e81069de4a4167b4c8b2198473f",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E5",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 29
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E5, row 3, seat 29. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-029",
+      "tier": "gold",
+      "code_sha256": "ba6a5c4ae0bdc0429aea438822c273b1692b95d6c0247c68d65c8297a591eca8",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W3",
+        "sector_type": "home",
+        "row": 11,
+        "seat": 20
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W3, row 11, seat 20. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-G-030",
+      "tier": "gold",
+      "code_sha256": "2bc4b5ad7b3d6fdf79797067413d91201cbe6c9658870a9fee105443f0c79e89",
+      "code_published": false,
+      "modes": [
+        "analyst",
+        "casual"
+      ],
+      "default_mode": "analyst",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W4",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 31
+      },
+      "files": null,
+      "alt": "statseat digital ticket, GOLD · Analyst. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W4, row 8, seat 31. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-001",
+      "tier": "silver",
+      "code_sha256": "e392daa7dd37640f946d4f68eeaed949f0353ea2a73d365a82a40178c1e8cee8",
+      "code_published": true,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 11,
+        "seat": 8
+      },
+      "files": {
+        "svg": "svg/silver-001.svg",
+        "pdf": "pdf/silver-001.pdf",
+        "png": "png/silver-001.png"
+      },
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 11, seat 8. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-002",
+      "tier": "silver",
+      "code_sha256": "ffec15be6a4cea2dc23d980a5943ba9f750a7b78f71ec414772c270161ac6035",
+      "code_published": true,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 29,
+        "seat": 75
+      },
+      "files": {
+        "svg": "svg/silver-002.svg",
+        "pdf": "pdf/silver-002.pdf",
+        "png": "png/silver-002.png"
+      },
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 29, seat 75. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-003",
+      "tier": "silver",
+      "code_sha256": "89870379e2fc655b7aa698d337e3b940d250d62b75a0940b594569de395b0db4",
+      "code_published": true,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 33,
+        "seat": 6
+      },
+      "files": {
+        "svg": "svg/silver-003.svg",
+        "pdf": "pdf/silver-003.pdf",
+        "png": "png/silver-003.png"
+      },
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 33, seat 6. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-004",
+      "tier": "silver",
+      "code_sha256": "f33aa249d39ad127f8712c49f08490d660119e2ec5a8b6210b4ad82cf4071115",
+      "code_published": true,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 14,
+        "seat": 69
+      },
+      "files": {
+        "svg": "svg/silver-004.svg",
+        "pdf": "pdf/silver-004.pdf",
+        "png": "png/silver-004.png"
+      },
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 14, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-005",
+      "tier": "silver",
+      "code_sha256": "20d97daa929a303434c820623f04eb640b3ca7baef387f3cb3fbf94589f8e56f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 32,
+        "seat": 23
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 32, seat 23. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-006",
+      "tier": "silver",
+      "code_sha256": "067a9fa281b67cc20e932704e9aa1cca39cda658e69099847d9edac4428a4276",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 21,
+        "seat": 34
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 21, seat 34. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-007",
+      "tier": "silver",
+      "code_sha256": "a28e62eef6c4851e3f7e9ca4c68609163ddaa70f7568f30a158435f3502d4c97",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 27,
+        "seat": 46
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 27, seat 46. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-008",
+      "tier": "silver",
+      "code_sha256": "d46c4d305fd57a8abac952c450eb4dc5999f60dda6e6e0d765436bca202eb171",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 25,
+        "seat": 15
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 25, seat 15. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-009",
+      "tier": "silver",
+      "code_sha256": "f20651a9a72f5e8e9430c693807fa78f605deb8dfaa628a723c777fb38876bdb",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 26,
+        "seat": 11
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 26, seat 11. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-010",
+      "tier": "silver",
+      "code_sha256": "ebd2674582ece4b722e7c23dbd92bbb096f8e39f4442ef1c6401b0ceec8f1aaa",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 18,
+        "seat": 37
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 18, seat 37. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-011",
+      "tier": "silver",
+      "code_sha256": "47e7a6444929f8b8ccbc843266c9ba3f8145efe9ea59523b66fa4dbd1e3dd50c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 19,
+        "seat": 37
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 19, seat 37. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-012",
+      "tier": "silver",
+      "code_sha256": "cdcb03a82ada835229fbe4850f6f895396383339270cc4aea92dc49e08b6b419",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 18
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 7, seat 18. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-013",
+      "tier": "silver",
+      "code_sha256": "885fb1b2987d0bcfb7e58473cdd4b501abc9f71047dcd75b7f4e22cb14a5b5e5",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 63
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 13, seat 63. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-014",
+      "tier": "silver",
+      "code_sha256": "3cd229840578fe0d1d144026934e427bca17f5712cc43d45673e7eaf4e7efca8",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 67
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 17, seat 67. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-015",
+      "tier": "silver",
+      "code_sha256": "f1cafefb05313ab35e576f179ffb870dcf8ec1f9d261b1ebb7b24fff404b9a6a",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 14,
+        "seat": 46
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 14, seat 46. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-016",
+      "tier": "silver",
+      "code_sha256": "69cc66d5296d555c7a2e8184da5327124c0f50ee640ffe4db6b37cd1f15c6d6f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 69
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 17, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-017",
+      "tier": "silver",
+      "code_sha256": "468228dac38e0f6227c3c156cffd85bebebb51a5fef4d422ef44f386f4fc67d1",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 6
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 17, seat 6. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-018",
+      "tier": "silver",
+      "code_sha256": "92481ec9d61c1585beccdcb510b64f1b6921864e8f312a3c6666a142ea6a6114",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 21,
+        "seat": 45
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 21, seat 45. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-019",
+      "tier": "silver",
+      "code_sha256": "7557afadeeacd637d4d530497eca4321378069f0919259f8b1491e9d2a825d0c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 29,
+        "seat": 77
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 29, seat 77. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-020",
+      "tier": "silver",
+      "code_sha256": "14f684c80cb66a3a5f3d033add0f151ff03cad28d0061a3e7bb9284b88ead935",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 42
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 13, seat 42. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-021",
+      "tier": "silver",
+      "code_sha256": "8b72de584734a994e511173dfcdaa3e839dd83149f6fcf1be1cfe53bf0dc3db2",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 67
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 23, seat 67. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-022",
+      "tier": "silver",
+      "code_sha256": "765d48e5c2867df2e78f404a71298282cd0a2dd0741c8adf1422c623c5445961",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 6,
+        "seat": 66
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 6, seat 66. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-023",
+      "tier": "silver",
+      "code_sha256": "91cd116112d2977eaed7a6b9ace1ca2211a80bd64995cb4f9b29da2c8d37eaaa",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 35
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 8, seat 35. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-024",
+      "tier": "silver",
+      "code_sha256": "962d87e55d92a6a52a83315c5a5d6fa36db8a9bba3ec8f26a60d1c7fe8c02ac9",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 80
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 12, seat 80. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-025",
+      "tier": "silver",
+      "code_sha256": "27093b88c31305e442cedfd2421d370d3e08993f6d193d3e136296bb14876b6c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 28,
+        "seat": 23
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 28, seat 23. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-026",
+      "tier": "silver",
+      "code_sha256": "27079afbb38d08aaba08269317ad022adfac12cbf866f113f894b133cf98b6f1",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 14
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 24, seat 14. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-027",
+      "tier": "silver",
+      "code_sha256": "9a0cf6be36617a9e4991955d4eab7f421c35d7b59fc557154fd0784983f2a038",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 47
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 20, seat 47. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-028",
+      "tier": "silver",
+      "code_sha256": "c6bd67aeefc7dd5d1641a63c66c310e9f710abc6d61f82497ed318f61237d1f3",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 25,
+        "seat": 41
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 25, seat 41. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-029",
+      "tier": "silver",
+      "code_sha256": "c3d2ed908252356ebf5f30ec94a0c676fafcfc2fd3015cf96f6eb35bbc9e58fb",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 69
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 4, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-030",
+      "tier": "silver",
+      "code_sha256": "3c3c374492c42eca2390378108c3bad44e06de98ac2b2f3ab2951792fe0de403",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 28
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 8, seat 28. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-031",
+      "tier": "silver",
+      "code_sha256": "137d6089fe921744abe3b9759f5f0b838275a0e2c646b1a67aafe2a062a1de9c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 73
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 7, seat 73. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-032",
+      "tier": "silver",
+      "code_sha256": "4c7ee41a7562c97fa98908f59b337d2ade28b45df4aae5fdc553f6c89aeeb2bd",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 25,
+        "seat": 13
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 25, seat 13. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-033",
+      "tier": "silver",
+      "code_sha256": "b4a3e29c226da5385321ed041d4f027f085899892d0adb09f89944302e2c8021",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 16,
+        "seat": 13
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 16, seat 13. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-034",
+      "tier": "silver",
+      "code_sha256": "3fb63360ba30110aa0ce43f093cb313b19b9618155576ef2c470d563a3a184e1",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 53
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 24, seat 53. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-035",
+      "tier": "silver",
+      "code_sha256": "d313c7608649bbaed54f460f80191714db756e598ed37c95e85ece92e11bf96f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 5,
+        "seat": 38
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 5, seat 38. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-036",
+      "tier": "silver",
+      "code_sha256": "286e2e90dbe2e34328875f5ca888faf7d33f9cc866ed2e83bb95642af32d41a1",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 21,
+        "seat": 33
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 21, seat 33. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-037",
+      "tier": "silver",
+      "code_sha256": "36aeb1dcc51aca547ea72f4d97208b0c627159258c9c05207d125113c79d3457",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 28,
+        "seat": 38
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 28, seat 38. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-038",
+      "tier": "silver",
+      "code_sha256": "318a50f4c398fd679007a47970604998591d2dab85dbaf02e58c6cbe81bd4d41",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 29,
+        "seat": 49
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 29, seat 49. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-039",
+      "tier": "silver",
+      "code_sha256": "53d6070c624a5e295d751ce57010983facde92f131302ec138340f8231cd7ff3",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 30,
+        "seat": 14
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 30, seat 14. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-040",
+      "tier": "silver",
+      "code_sha256": "6b5057a6e8bd49f6277fafe5fa25688d0ef86a68996160e9180dcd32497c859e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 16
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 4, seat 16. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-041",
+      "tier": "silver",
+      "code_sha256": "694112305ee5930d15dc35a296ab6ddbfd4f215226d20be05366180623763d9f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 1,
+        "seat": 7
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 1, seat 7. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-042",
+      "tier": "silver",
+      "code_sha256": "d5f6aa4669e977469b58077f1263bd5e9232d4dd343e3d21c78ce70942f83fa7",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 30
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 13, seat 30. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-043",
+      "tier": "silver",
+      "code_sha256": "cdb04485dbce55471d62b0727128651bef7af53c6a96f2c69c1511d338761c89",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 16,
+        "seat": 6
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 16, seat 6. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-044",
+      "tier": "silver",
+      "code_sha256": "5156dca6d4babe73f9b5768128d8e7034d6f227a66fa7fd706a1cd51acd1f72c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 75
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 23, seat 75. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-045",
+      "tier": "silver",
+      "code_sha256": "3a7403a1669096ea2cf33d43de014907211172741b53660349aec77422b15ff0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 47
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 3, seat 47. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-046",
+      "tier": "silver",
+      "code_sha256": "f895cea52153d7f8ece99f9441ad063e6b967fdb8f18b3ea563c602670a7635f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 59
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 17, seat 59. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-047",
+      "tier": "silver",
+      "code_sha256": "70e41a1d6e0eabf6cc886523401e88b9a099d1a7f863d0b0685216f5adcdff93",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 27,
+        "seat": 41
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 27, seat 41. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-048",
+      "tier": "silver",
+      "code_sha256": "39bf35cb05920b04e9ff68f10043e8c01d34f7b02c77bdc012b0f6010d9ec068",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 16,
+        "seat": 28
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 16, seat 28. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-049",
+      "tier": "silver",
+      "code_sha256": "997503ba0804ac957cbea34a413895b97573a449421495da6de541d41051aab8",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 25
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 13, seat 25. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-050",
+      "tier": "silver",
+      "code_sha256": "ec888169b951e82dc078b2c3638fc34aac248a1090f2830d0c867475d2fa29f0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 14,
+        "seat": 57
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 14, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-051",
+      "tier": "silver",
+      "code_sha256": "fe1121e726fecbf438a81a7350ff54436a1b01ff4a1a337d2c5948b9d928a6ca",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 58
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 10, seat 58. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-052",
+      "tier": "silver",
+      "code_sha256": "e963e554cf7910872c82ed40d6d3a944c55741c6c5675f29dd0f7915be7d9397",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 2,
+        "seat": 34
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 2, seat 34. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-053",
+      "tier": "silver",
+      "code_sha256": "7e8049e6b61e1e6d01728d9772ad66daf27b3df9960649c88d8b6378690dd4ca",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 18,
+        "seat": 31
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 18, seat 31. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-054",
+      "tier": "silver",
+      "code_sha256": "8ef378953b86cf2f45f39ab3ac59dcd84325f146a47b57e4639430326dd12c28",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 23
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 23, seat 23. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-055",
+      "tier": "silver",
+      "code_sha256": "719942992926f0dd912fe962d2830ebe53aff4b00114607c033b941fa6d5ff85",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 54
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 12, seat 54. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-056",
+      "tier": "silver",
+      "code_sha256": "2cb2a61633bfaae0120e88daa7fda6928e10fd8a08433f27a85dedab5a9a957d",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 27,
+        "seat": 63
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 27, seat 63. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-057",
+      "tier": "silver",
+      "code_sha256": "c17c091aadcb2632627d8639ea29827bd7da7e92722ef33289c53569ab41ee68",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 19,
+        "seat": 3
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 19, seat 3. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-058",
+      "tier": "silver",
+      "code_sha256": "16fbf0944de8111864600c8acbddfa6e41bb73e7bc45c140f55a85d6a9e0fbc3",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 33,
+        "seat": 21
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 33, seat 21. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-059",
+      "tier": "silver",
+      "code_sha256": "dcb15abe2cd05524b995985c80428d6537499d317787518d15f78f913f62494b",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 6,
+        "seat": 58
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 6, seat 58. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-060",
+      "tier": "silver",
+      "code_sha256": "bcdcfa16d226852e182eceb627a6b324649ebb45372ff28e0f7f667144e92d0c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 6
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 12, seat 6. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-061",
+      "tier": "silver",
+      "code_sha256": "13bd0b27282272b1929644e6b3ebea2ab5f6887c5408c0a2b8001c0fae5ca324",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 19,
+        "seat": 70
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 19, seat 70. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-062",
+      "tier": "silver",
+      "code_sha256": "078869808c652aafef0c8caf6f50ca718022edc985a827d25ec50c9b91ba8ef0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 5
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 23, seat 5. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-063",
+      "tier": "silver",
+      "code_sha256": "2e80be493dd47e94bfd3025eb1bb7d8a2538608f39d3bbb5cd461ed212103716",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 15
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 20, seat 15. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-064",
+      "tier": "silver",
+      "code_sha256": "e0e3d05a6cc79de65229edacd8afdabb5647d8db5a27f45a42655e632f67c3c4",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 2,
+        "seat": 10
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 2, seat 10. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-065",
+      "tier": "silver",
+      "code_sha256": "da32da57d369e74a43a96d7065145b68fa79d6dd133133e9a2d7eda8fe4ba01e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 21
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 3, seat 21. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-066",
+      "tier": "silver",
+      "code_sha256": "c67925fd8db10b3153ecd01a0f7804fc8570d7cb30e38ba77d4dbca7d0df61e8",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 1,
+        "seat": 52
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 1, seat 52. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-067",
+      "tier": "silver",
+      "code_sha256": "566bf188dd5d14c283dbb16f699176e3704c2279422c74ebb102bfa25e4d6915",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 69
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 7, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-068",
+      "tier": "silver",
+      "code_sha256": "fe1562c7b2aa8e29187bb3dd52714d7436c46e512831503197b262d3ffd04961",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 59
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 13, seat 59. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-069",
+      "tier": "silver",
+      "code_sha256": "a4a25ed43dadadc3ba271993351b97310701aebb4ffa5477db4146e3a636d54e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 20
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 20, seat 20. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-070",
+      "tier": "silver",
+      "code_sha256": "f77f059e35da69f1d2a64b0fd0b4d7f6ae43d5b721e34acdec2c21a24e502715",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 55
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 20, seat 55. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-071",
+      "tier": "silver",
+      "code_sha256": "e7950e013b47f211156233976bbf638d47442f860dad5fc866312b9a97853622",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 70
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 13, seat 70. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-072",
+      "tier": "silver",
+      "code_sha256": "d79263da9e5a8a2af19d4a173250d2faad12d071c7f09104928a285631f0ef8e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 32
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 24, seat 32. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-073",
+      "tier": "silver",
+      "code_sha256": "6716e02d9b8d7223ed6f91d98565fa1584a479168b9865fcceb192e17bb0d4ca",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 18,
+        "seat": 16
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 18, seat 16. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-074",
+      "tier": "silver",
+      "code_sha256": "1079b34d9d09bd86ac8b0d549637ead778ff7d722573ee7d553e50dd710ad9a5",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 11
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 10, seat 11. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-075",
+      "tier": "silver",
+      "code_sha256": "102d362a0b2c908cbbfdcd272971ce27cb4de3eef77019b7e1d9db7f3f0e4c6b",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 30
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 12, seat 30. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-076",
+      "tier": "silver",
+      "code_sha256": "c9fa3ca05d53b07f7fd2e38898528561886234faa84294a4fe73093bbadd4a10",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 51
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 24, seat 51. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-077",
+      "tier": "silver",
+      "code_sha256": "51714329b04249990dfb380771edb9b1d389ee844a340cc2e158f80878009aaf",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 12
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 17, seat 12. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-078",
+      "tier": "silver",
+      "code_sha256": "b29ace011bb1d90f0f6232943cd8fa6c8707ad66f8be978b3e19c1b263bd0cc4",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 7
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 20, seat 7. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-079",
+      "tier": "silver",
+      "code_sha256": "9ff57e9fd5239285699b0bdd93e3b6718370d50f1335c4ba04aed7e7e5ea207e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 23
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 24, seat 23. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-080",
+      "tier": "silver",
+      "code_sha256": "f73a6d8b300e82a52348250362e9122f2be8e48b477334a8ce06f889652fd5e2",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 17
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 8, seat 17. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-081",
+      "tier": "silver",
+      "code_sha256": "858f4d22aa8e46008ac50add4bfab1434a8213394d8123204333009685081728",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 20,
+        "seat": 69
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 20, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-082",
+      "tier": "silver",
+      "code_sha256": "94695961e6617ec341404e31f620604a27c4cccba191875f34cafaaad80f662f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 28,
+        "seat": 34
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 28, seat 34. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-083",
+      "tier": "silver",
+      "code_sha256": "e1595582b75c2f9788b28afa1b067714b538dd7e664136abaa2ec9e98d03e072",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 21,
+        "seat": 69
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 21, seat 69. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-084",
+      "tier": "silver",
+      "code_sha256": "c5277879e00dbb06a236aca190b18e5a89cb34c77a6427c5fd28ac8795edcab0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 21,
+        "seat": 79
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 21, seat 79. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-085",
+      "tier": "silver",
+      "code_sha256": "253cc280d3f7e366c575e96ceab20de35cf02fef5ca942dbff059a6e21d5b60a",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 30
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 10, seat 30. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-086",
+      "tier": "silver",
+      "code_sha256": "112401374fb436b2ae9e3514b35b6cb490559dd0c4aa9a094831c78907a5eae5",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 13,
+        "seat": 45
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 13, seat 45. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-087",
+      "tier": "silver",
+      "code_sha256": "4bc8ab6d8f24527d33233c7303eb0c77f66f84488788f77c6de2485a75afb487",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 7,
+        "seat": 5
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 7, seat 5. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-088",
+      "tier": "silver",
+      "code_sha256": "f0c2eb499175732b77e04452d5ec99f9f6c9476fda4d277f00a414c9f46ca2b7",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 6,
+        "seat": 50
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 6, seat 50. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-089",
+      "tier": "silver",
+      "code_sha256": "3ba8f89692b0bddd140c9dc0c7c1e861a9512078f91ec30048c1ee3a0f973488",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 22,
+        "seat": 22
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 22, seat 22. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-090",
+      "tier": "silver",
+      "code_sha256": "6b157536b8df4fc25f5269c1c2172735df6c6bb1b126cd035561880385a0354c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 9,
+        "seat": 55
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 9, seat 55. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-091",
+      "tier": "silver",
+      "code_sha256": "d2e1245258141b2d9a2f7e21abc589afa676e6837736ff4f2ff695ff6b940a9e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 16,
+        "seat": 4
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 16, seat 4. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-092",
+      "tier": "silver",
+      "code_sha256": "c49a82ab6aa6e486bade962b7f13566b467110a5dcc8e2b91f0e9ba732aff951",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 23
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 10, seat 23. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-093",
+      "tier": "silver",
+      "code_sha256": "6a051590401f00936f017680f92460d3f51e4823d52ff691e48138c36a82badf",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 12,
+        "seat": 27
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 12, seat 27. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-094",
+      "tier": "silver",
+      "code_sha256": "a09bacbc03ddcbb0a2cf203127b00aba12e3b159e7bd3c20951cb04f9f5f16c3",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 19
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 10, seat 19. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-095",
+      "tier": "silver",
+      "code_sha256": "c11ae46c35e6ee3bf03c6811fb1362a5bf3a864ec4d26714e66457ed2eeee650",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 22,
+        "seat": 20
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 22, seat 20. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-096",
+      "tier": "silver",
+      "code_sha256": "7004639e7a6cf6389797ba2b6a2d8469edb723df0cc7a7582ebead35151713b0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 19,
+        "seat": 1
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 19, seat 1. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-097",
+      "tier": "silver",
+      "code_sha256": "dc78b31d34b821398a4c680d38e9d3a066b61fe00f6ee0a29694bd067e86d681",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 1,
+        "seat": 52
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 1, seat 52. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-098",
+      "tier": "silver",
+      "code_sha256": "d83e90d9c751a35c23503e436119761a8a82eddd3d9642ac9867b0bb6cf60218",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 22,
+        "seat": 70
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 22, seat 70. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-099",
+      "tier": "silver",
+      "code_sha256": "d058175efcc91d3f3af6d914a530d10e58456115a87293ab1771dffae9b7604a",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 57
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 4, seat 57. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-100",
+      "tier": "silver",
+      "code_sha256": "8bb2127163f0bb51e72b83a5186083f6c4f8fe94be543f55f5d46e0c34c35137",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 56
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 10, seat 56. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-101",
+      "tier": "silver",
+      "code_sha256": "7fe4c7695f8668fb4a2776c1a503bb9a20d40f2f923b9e11c5a163ee5cb58818",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 14,
+        "seat": 5
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 14, seat 5. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-102",
+      "tier": "silver",
+      "code_sha256": "f995d5e038fceb2b3aa5b9a572ddb3c255ab4243ef2ee117fbcef3d8394eedf8",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 25,
+        "seat": 37
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 25, seat 37. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-103",
+      "tier": "silver",
+      "code_sha256": "396abcff98720333990c408b9ff60df47ade1f5ea5ab3b04e8c08c61872a9d7f",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E7",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 26
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E7, row 23, seat 26. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-104",
+      "tier": "silver",
+      "code_sha256": "cec55c99d7ad72212897dc55fa354f73c29a90eb33b9e6cd4234970c88f6f951",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E8",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 70
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E8, row 23, seat 70. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-105",
+      "tier": "silver",
+      "code_sha256": "6d2c3570fa0073f873804a518f7f907ebf611bcddd35396f55e5496f441b65fb",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W1",
+        "sector_type": "home",
+        "row": 17,
+        "seat": 27
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W1, row 17, seat 27. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-106",
+      "tier": "silver",
+      "code_sha256": "4ab5c12223f5a2ce74f4670e206e14e1ff6a75e4a9b13f7e0a77c87938d00747",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "G",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W2",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 58
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate G, Main Stand, sector W2, row 3, seat 58. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-107",
+      "tier": "silver",
+      "code_sha256": "2a3a040a194b848d8e41b85a197fb85ab69172974c2bc52902558f6508c994b0",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W5",
+        "sector_type": "home",
+        "row": 23,
+        "seat": 29
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W5, row 23, seat 29. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-108",
+      "tier": "silver",
+      "code_sha256": "bc71ff16c9c35b5bff520845400dc4b1a866cee88a1998338d696fdf8f3a1206",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "H",
+        "stand_id": "W",
+        "stand": "Main Stand",
+        "sector": "W6",
+        "sector_type": "home",
+        "row": 19,
+        "seat": 49
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate H, Main Stand, sector W6, row 19, seat 49. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-109",
+      "tier": "silver",
+      "code_sha256": "47018bb501258397e18f74fb6daa5329ed580078806f09ed69e078b06da324f1",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N1",
+        "sector_type": "home",
+        "row": 28,
+        "seat": 74
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N1, row 28, seat 74. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-110",
+      "tier": "silver",
+      "code_sha256": "97bb6c5d9208639d6b1ff86c0eb4ae4a9c2480c5beaae13a499863ee62d2f24a",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N2",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 13
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N2, row 10, seat 13. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-111",
+      "tier": "silver",
+      "code_sha256": "45ee079e84a7f19c99be25838f1ae0ee73b168e994c70f042f9fe921c28d663e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "A",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N3",
+        "sector_type": "home",
+        "row": 4,
+        "seat": 65
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate A, Foundry End, sector N3, row 4, seat 65. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-112",
+      "tier": "silver",
+      "code_sha256": "bb481d3473727bb1bc83ced79378fd904ab27ca4e4e0ce7f5db8d5d89b65b65d",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N4",
+        "sector_type": "home",
+        "row": 33,
+        "seat": 60
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N4, row 33, seat 60. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-113",
+      "tier": "silver",
+      "code_sha256": "35b965d4ddef0db5db9906b2e4eec0ff50bca38f98b278b30e241514bf45317d",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N5",
+        "sector_type": "home",
+        "row": 26,
+        "seat": 19
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N5, row 26, seat 19. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-114",
+      "tier": "silver",
+      "code_sha256": "1a5ca515acfc65372915a313b94eba3e5dedef28d6013d05ad039730e411cda8",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "B",
+        "stand_id": "N",
+        "stand": "Foundry End",
+        "sector": "N6",
+        "sector_type": "home",
+        "row": 10,
+        "seat": 6
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate B, Foundry End, sector N6, row 10, seat 6. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-115",
+      "tier": "silver",
+      "code_sha256": "270f34eed08a7726a36e90642996fce8928ce76c89be0314fdfb178f71fb3d9e",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S1",
+        "sector_type": "home",
+        "row": 18,
+        "seat": 13
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S1, row 18, seat 13. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-116",
+      "tier": "silver",
+      "code_sha256": "2cb09246ae9bad31cb3aaf25f49a3cef6c0bb2e76e18055c3f00325c71b9b82d",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S2",
+        "sector_type": "home",
+        "row": 11,
+        "seat": 24
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S2, row 11, seat 24. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-117",
+      "tier": "silver",
+      "code_sha256": "7734cd89a96e5b2039e145f42f4cb8695aba8894aaac9cb1478a37e2713ee64d",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S3",
+        "sector_type": "home",
+        "row": 24,
+        "seat": 58
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S3, row 24, seat 58. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-118",
+      "tier": "silver",
+      "code_sha256": "b33288ee65ed5f04cd7f31198f550d85d75d2b9213a714dda73128e78858556c",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S4",
+        "sector_type": "home",
+        "row": 8,
+        "seat": 24
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S4, row 8, seat 24. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-119",
+      "tier": "silver",
+      "code_sha256": "1b459e524729fe13dda416ca8577e4d828b94f322ead31b56a222d16869621f4",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "E",
+        "stand_id": "S",
+        "stand": "Harbour Stand",
+        "sector": "S5",
+        "sector_type": "home",
+        "row": 3,
+        "seat": 36
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate E, Harbour Stand, sector S5, row 3, seat 36. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    },
+    {
+      "ticket_id": "SYN-001-S-120",
+      "tier": "silver",
+      "code_sha256": "9cf8cdb8c4c7b3f639a332d8e61435a64da1c35a28088fc0020ca8aa8f813ace",
+      "code_published": false,
+      "modes": [
+        "casual"
+      ],
+      "default_mode": "casual",
+      "inspector": false,
+      "demo_panel": false,
+      "multi_device": false,
+      "seat": {
+        "gate": "D",
+        "stand_id": "E",
+        "stand": "Lamplighters Stand",
+        "sector": "E6",
+        "sector_type": "home",
+        "row": 1,
+        "seat": 32
+      },
+      "files": null,
+      "alt": "statseat digital ticket, SILVER · Fan. Meridian League, matchday 9: Brackwater Athletic v Calderholm United, The Estuary Derby. Saturday 24 October 2026, kick-off 15:00, Lanternworks Stadium, 1 Lantern Quay, Brackwater. Gate D, Lamplighters Stand, sector E6, row 1, seat 32. Shows the ticket code and a QR code to log in to the statseat app. Synthetic demo ticket – not valid for entry. Fictional match, clubs and people."
+    }
+  ]
+}

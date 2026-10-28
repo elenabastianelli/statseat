@@ -1,0 +1,42 @@
+{
+  "match_id": "SYN-001",
+  "my_rank": 3,
+  "my_points": 241,
+  "entries": [
+    {
+      "rank": 1,
+      "display_name": "Fan 1907 (Lamplighters Stand)",
+      "points": 388,
+      "is_me": false,
+      "is_bot": false
+    },
+    {
+      "rank": 2,
+      "display_name": "Fan 0482 (Foundry End)",
+      "points": 305,
+      "is_me": false,
+      "is_bot": true
+    },
+    {
+      "rank": 3,
+      "display_name": "You",
+      "points": 241,
+      "is_me": true,
+      "is_bot": false
+    },
+    {
+      "rank": 4,
+      "display_name": "Fan 2231 (Harbour Stand)",
+      "points": 198,
+      "is_me": false,
+      "is_bot": false
+    },
+    {
+      "rank": 5,
+      "display_name": "Fan 0045 (Main Stand)",
+      "points": 120,
+      "is_me": false,
+      "is_bot": true
+    }
+  ]
+}

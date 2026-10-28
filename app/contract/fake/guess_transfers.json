@@ -1,0 +1,53 @@
+{
+  "round_id": "GTP-0002",
+  "version": "transfers",
+  "career": null,
+  "transfers": [
+    {
+      "club_name": "Embersley Borough",
+      "season": "2016/17",
+      "fee_eur": 800000,
+      "move": "transfer"
+    },
+    {
+      "club_name": "Fennmoor Town",
+      "season": "2017/18",
+      "fee_eur": 4400000,
+      "move": "transfer"
+    },
+    {
+      "club_name": "Marrowdale Wanderers",
+      "season": "2019/20",
+      "fee_eur": 7100000,
+      "move": "transfer"
+    }
+  ],
+  "options": [
+    {
+      "player_id": "CAL-01",
+      "name": "Pape Faye-Diouf",
+      "team_id": "CAL",
+      "shirt_number": 1
+    },
+    {
+      "player_id": "CAL-13",
+      "name": "Lionel Winstanley",
+      "team_id": "CAL",
+      "shirt_number": 13
+    },
+    {
+      "player_id": "BRA-01",
+      "name": "Rowan Kirkhurst",
+      "team_id": "BRA",
+      "shirt_number": 1
+    },
+    {
+      "player_id": "BRA-13",
+      "name": "Kendrick Saltmarsh",
+      "team_id": "BRA",
+      "shirt_number": 13
+    }
+  ],
+  "answer_seconds": 30,
+  "deadline": "2026-10-24T15:54:30+01:00"
+}

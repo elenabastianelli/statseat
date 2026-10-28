@@ -1,0 +1,108 @@
+{
+  "correct": true,
+  "reason": null,
+  "elapsed_ms": 8240,
+  "game": {
+    "game_session_id": "TTT-0001",
+    "rows": [
+      {
+        "kind": "club",
+        "id": "ALD",
+        "label": "Alder Cross FC"
+      },
+      {
+        "kind": "club",
+        "id": "FEN",
+        "label": "Fennmoor Town"
+      },
+      {
+        "kind": "club",
+        "id": "HOL",
+        "label": "Hollin Vale United"
+      }
+    ],
+    "cols": [
+      {
+        "kind": "club",
+        "id": "OST",
+        "label": "Ostwick Albion"
+      },
+      {
+        "kind": "club",
+        "id": "PEL",
+        "label": "Port Ellery FC"
+      },
+      {
+        "kind": "nationality",
+        "id": "France",
+        "label": "France"
+      }
+    ],
+    "board": [
+      {
+        "row": 0,
+        "col": 0,
+        "owner": "me",
+        "player_id": "BRA-06"
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 1,
+        "col": 0,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 2,
+        "col": 0,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "owner": null,
+        "player_id": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "owner": null,
+        "player_id": null
+      }
+    ],
+    "opponent": {
+      "display_name": "Fan 0482 (Foundry End)",
+      "is_bot": true
+    },
+    "my_symbol": "X",
+    "turn": "opponent",
+    "turn_seconds": 20,
+    "turn_deadline": "2026-10-24T15:52:58+01:00",
+    "status": "playing"
+  },
+  "points_awarded": 10
+}

@@ -1,0 +1,52 @@
+{
+  "_note": "Hand-authored fixture data for SYN-001. The result is not set here: the match itself is generated later (Tactician, task S-4). The forecast is the scripted weather of the match; Kit Man repeats it and never promises more.",
+  "match_id": "SYN-001",
+  "competition_id": "MER-1",
+  "matchday": 9,
+  "planned_kickoff": "2026-10-24T15:00:00+01:00",
+  "home_team_id": "BRA",
+  "guest_team_id": "CAL",
+  "home_kit": "home",
+  "guest_kit": "away",
+  "environment": {
+    "stadium_id": "STA-LANTERN",
+    "roof": "covers every seat; the pitch is open",
+    "floodlight": "on",
+    "weather": {"temperature_c": 13, "precipitation": "none", "wind": "light breeze from the estuary", "humidity_pct": 72},
+    "tickets_sold": 60212,
+    "forecast": [
+      {"time": "15:00", "phase": "kick-off", "temperature_c": 13, "precipitation": "none", "chance_of_rain_pct": 10, "wind": "light breeze from the estuary", "sky": "bright, with high cloud"},
+      {"time": "15:45", "phase": "half-time", "temperature_c": 12, "precipitation": "none", "chance_of_rain_pct": 25, "wind": "light breeze from the estuary", "sky": "cloud thickening from the west"},
+      {"time": "16:20", "phase": "second half", "temperature_c": 12, "precipitation": "light_rain", "chance_of_rain_pct": 45, "wind": "moderate breeze from the estuary", "sky": "overcast"},
+      {"time": "16:50", "phase": "full-time", "temperature_c": 11, "precipitation": "light_rain", "chance_of_rain_pct": 55, "wind": "moderate breeze from the estuary", "sky": "overcast"}
+    ]
+  },
+  "head_to_head_all_time": {"played": 212, "BRA_wins": 84, "CAL_wins": 79, "draws": 49},
+  "programme": [
+    {"time": "12:00", "item": "The Lamplighters Store opens at the foot of the Main Stand (sector W1)."},
+    {"time": "13:30", "item": "Gates open."},
+    {"time": "13:50", "item": "Two under-12 academy sides play a short exhibition game on the pitch."},
+    {"time": "14:15", "item": "Lumo, the club mascot (a lamplighter with a lantern and a long brass pole), greets families in the Lamplighters Stand and poses for photos at the Family Desk."},
+    {"time": "14:35", "item": "Club legend Desmond Ockley walks a lap of the pitch carrying the derby lantern, which is handed to the home captain before kick-off."},
+    {"time": "14:50", "item": "The amber light display starts in the Foundry End and spreads around the stadium."},
+    {"time": "14:52", "item": "The teams walk out to the club anthem, 'Light the Quay', sung by the whole stadium."},
+    {"time": "14:56", "item": "Handshakes, team photos and the coin toss."},
+    {"time": "15:00", "item": "Kick-off."},
+    {"time": "15:47", "item": "Half-time (around this time): the academy under-14 side does a lap of honour after winning its regional tournament."}
+  ],
+  "sponsor": {
+    "_note": "Invented match sponsor (task L-0). Never alcohol, betting or tobacco: validate.py check 6 reads this text too. The prize goes to the winner of the half-time games in statseat.",
+    "id": "SPO-QUAYSPOKE",
+    "name": "Quayspoke Cycles",
+    "sector": "bicycles and cycling gear",
+    "description": "A Brackwater bicycle maker, founded in an old rope works on the quay. It builds city and cargo bikes and runs free repair mornings for the club's academy players.",
+    "prize": {
+      "name": "Lamplighters Store voucher",
+      "description": "A 50-euro voucher for the Lamplighters Store, the club shop at the foot of the Main Stand (sector W1).",
+      "value_eur": 50,
+      "awarded_to": "the winner of the half-time games in statseat",
+      "how_to_claim": "The winner sees the voucher in statseat and shows it at the store counter, on match day or within 30 days."
+    }
+  },
+  "referee_panel_average":{"_note": "Average per game of the national referee panel last season, hand-set; used only as a reference point when describing a referee.", "yellow_cards_per_match": 3.9, "red_cards_per_match": 0.12}
+}

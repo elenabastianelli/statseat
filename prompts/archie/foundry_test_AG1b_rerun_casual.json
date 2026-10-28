@@ -1,0 +1,139 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "first_half",
+  "minute": 31,
+  "added_time": 0,
+  "clock_running": true,
+  "score": {
+   "home": 0,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": "half_time"
+   },
+   {
+    "section": "recap",
+    "unlocked": false,
+    "unlocks_at_phase": "full_time"
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 1805.0,
+  "server_time": "2026-10-26T01:43:35.513848+01:00"
+ },
+ "turns": [
+  {
+   "question": "What was the fastest shot today?",
+   "answer": {
+    "answer_id": "ANS-572082d80e4c",
+    "text": "Brackwater’s #11 Ruairí Kinsella-Ward has the fastest shot so far: 92.2 km/h at 28'. A proper thunderbolt!",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "11",
+      "value": 11.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "BRA-11"
+      },
+      "source_field": "BRA-11.shirt_number"
+     },
+     {
+      "text": "92.2 km/h",
+      "value": 92.2,
+      "unit": "km/h",
+      "tool": "shots",
+      "arguments": {},
+      "source_field": "shots.list[6].speed_kmh"
+     },
+     {
+      "text": "28'",
+      "value": 28.0,
+      "unit": "'",
+      "tool": "shots",
+      "arguments": {},
+      "source_field": "shots.list[6].minute"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-70cd9029ee674e3d",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5801,
+       "tokens_out": 100,
+       "latency_ms": 8680
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2957,
+       "tokens_out": 50,
+       "latency_ms": 3509
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "shots",
+       "arguments": {},
+       "result_summary": "BRA 6 shots (2 on target); CAL 2 shots (2 on target)",
+       "latency_ms": 3
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the fastest shot in today's Brackwater Athletic vs Calderholm United match so far?"
+       },
+       "result_summary": "Fastest shot so far: Brackwater Athletic’s #11 Ruairí Kinsella-Ward, 92.2 km/h at 28'.",
+       "latency_ms": 3520
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:shots"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 8908,
+     "latency_ms": 12280,
+     "cost_usd": 0.000951
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+  "match_id": "SYN-001",
+  "as_of_s": 5760.0,
+  "highlights": [
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-01",
+      "type": "goal",
+      "period": 1,
+      "minute": 23,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-09",
+        "BRA-10"
+      ],
+      "event_ids": [
+        "E005"
+      ],
+      "label": "23' – Goal by Audun Ulvestad (Brackwater Athletic)",
+      "why_it_mattered": "Ulvestad finished Shimazaki's through ball first time: the derby's opening goal, and the loudest moment of the first half.",
+      "importance": 92.0,
+      "score_after": {
+        "home": 1,
+        "away": 0
+      },
+      "xg": 0.31,
+      "inspector": {
+        "importance_factors": {
+          "type": 46.0,
+          "minute": 13.8,
+          "game_state": 27.6,
+          "xg": 4.6
+        },
+        "candidate_rank": 2,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-01"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-02",
+      "type": "speed_peak",
+      "period": 1,
+      "minute": 29,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-27"
+      ],
+      "event_ids": [],
+      "label": "29' – Top speed: Clément Peyrol, 34.6 km/h",
+      "why_it_mattered": "Peyrol hit 34.6 km/h chasing a long switch, the fastest sprint of the first half.",
+      "importance": 41.0,
+      "score_after": {
+        "home": 1,
+        "away": 0
+      },
+      "xg": null,
+      "inspector": {
+        "importance_factors": {
+          "type": 20.5,
+          "minute": 6.1,
+          "game_state": 12.3,
+          "xg": 2.1
+        },
+        "candidate_rank": 7,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-02"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-03",
+      "type": "card",
+      "period": 1,
+      "minute": 37,
+      "team_id": "CAL",
+      "player_ids": [
+        "CAL-04"
+      ],
+      "event_ids": [
+        "E009",
+        "E010"
+      ],
+      "label": "37' – Yellow card for Zennor Wilstead (Calderholm United)",
+      "why_it_mattered": "Wilstead was booked for stopping a Brackwater counter-attack, so he played the rest of the match on a yellow.",
+      "importance": 38.0,
+      "score_after": {
+        "home": 1,
+        "away": 0
+      },
+      "xg": null,
+      "inspector": {
+        "importance_factors": {
+          "type": 19.0,
+          "minute": 5.7,
+          "game_state": 11.4,
+          "xg": 1.9
+        },
+        "candidate_rank": 8,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-03"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-04",
+      "type": "woodwork",
+      "period": 1,
+      "minute": 44,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-06"
+      ],
+      "event_ids": [
+        "E014"
+      ],
+      "label": "44' – Off the crossbar by Siebe Meulenkamp",
+      "why_it_mattered": "Meulenkamp's shot from outside the box hit the crossbar just before half-time: it could have been 2-0.",
+      "importance": 67.0,
+      "score_after": {
+        "home": 1,
+        "away": 0
+      },
+      "xg": 0.07,
+      "inspector": {
+        "importance_factors": {
+          "type": 33.5,
+          "minute": 10.0,
+          "game_state": 20.1,
+          "xg": 3.4
+        },
+        "candidate_rank": 6,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-04"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-05",
+      "type": "goal",
+      "period": 2,
+      "minute": 58,
+      "team_id": "CAL",
+      "player_ids": [
+        "CAL-09",
+        "CAL-07"
+      ],
+      "event_ids": [
+        "E020"
+      ],
+      "label": "58' – Goal by Mortimer Brightwell (Calderholm United)",
+      "why_it_mattered": "Brightwell headed in van Dalfsen's cross to equalise, after Calderholm's best spell of pressure.",
+      "importance": 90.0,
+      "score_after": {
+        "home": 1,
+        "away": 1
+      },
+      "xg": 0.38,
+      "inspector": {
+        "importance_factors": {
+          "type": 45.0,
+          "minute": 13.5,
+          "game_state": 27.0,
+          "xg": 4.5
+        },
+        "candidate_rank": 3,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-05"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-06",
+      "type": "var_review",
+      "period": 2,
+      "minute": 78,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-46",
+        "CAL-05"
+      ],
+      "event_ids": [
+        "E026",
+        "E027",
+        "E028"
+      ],
+      "label": "78' – VAR review: penalty to Brackwater Athletic",
+      "why_it_mattered": "The VAR confirmed the foul by Sowerby on Netherby inside the box: penalty to Brackwater.",
+      "importance": 74.0,
+      "score_after": {
+        "home": 1,
+        "away": 1
+      },
+      "xg": null,
+      "inspector": {
+        "importance_factors": {
+          "type": 37.0,
+          "minute": 11.1,
+          "game_state": 22.2,
+          "xg": 3.7
+        },
+        "candidate_rank": 4,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-06"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-07",
+      "type": "goal",
+      "period": 2,
+      "minute": 79,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-11"
+      ],
+      "event_ids": [
+        "E029"
+      ],
+      "label": "79' – Goal by Ruairí Kinsella-Ward (penalty) (Brackwater Athletic)",
+      "why_it_mattered": "Kinsella-Ward scored the penalty to put Brackwater back in front with eleven minutes left.",
+      "importance": 95.0,
+      "score_after": {
+        "home": 2,
+        "away": 1
+      },
+      "xg": 0.76,
+      "inspector": {
+        "importance_factors": {
+          "type": 47.5,
+          "minute": 14.2,
+          "game_state": 28.5,
+          "xg": 4.8
+        },
+        "candidate_rank": 1,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-07"
+      }
+    },
+    {
+      "schema_version": "v0",
+      "highlight_id": "HL-08",
+      "type": "save",
+      "period": 2,
+      "minute": 86,
+      "team_id": "BRA",
+      "player_ids": [
+        "BRA-01",
+        "CAL-22"
+      ],
+      "event_ids": [
+        "E031"
+      ],
+      "label": "86' – Save by Rowan Kirkhurst from Oluwaseun Olatunde",
+      "why_it_mattered": "Kirkhurst saved Olatunde's close-range shot to keep the lead in the final minutes.",
+      "importance": 70.0,
+      "score_after": {
+        "home": 2,
+        "away": 1
+      },
+      "xg": 0.24,
+      "inspector": {
+        "importance_factors": {
+          "type": 35.0,
+          "minute": 10.5,
+          "game_state": 21.0,
+          "xg": 3.5
+        },
+        "candidate_rank": 5,
+        "labelled_by": "VAR",
+        "model": "gpt-6-sol",
+        "trace_id": "trace-var-hl-08"
+      }
+    }
+  ]
+}

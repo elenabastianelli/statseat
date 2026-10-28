@@ -1,0 +1,17 @@
+# Only what the Dockerfile copies goes into the build context; never secrets or raw data.
+**/.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+web/dist
+.env
+.env.*
+.azure
+.git
+data
+synthetic/replicas
+*-private
+Materials
+docs
+prompts
+generator

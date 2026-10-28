@@ -1,0 +1,9 @@
+[project]
+name = "insidethegame-gen"
+version = "1.0.0"
+description = "InsideTheGame synthetic data generator: Scout (universe), later Tactician (match) and Linesman (validation)"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

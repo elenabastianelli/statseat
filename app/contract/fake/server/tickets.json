@@ -1,0 +1,163 @@
+{
+  "schema_version": "statseat-tickets/1",
+  "hash": "hmac-sha256",
+  "salt_label": "dev-default",
+  "tickets": [
+    {
+      "ticket_id": "TKT-SYN001-S-0001",
+      "code_hash": "c4a3ee1a325f3bd4f7d6c8c33a557a12432f5282c5b06503ac2dd42350eb69ea",
+      "tier": "silver",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "N",
+        "sector_id": "N2",
+        "row": "14",
+        "seat": "21"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-S-0001.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-S-0001.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-S-0001.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-S-0002",
+      "code_hash": "37b5cbc56653e5eba63932b81c4eb2103b4cd7dd07f83894bad78894279e1e40",
+      "tier": "silver",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "N",
+        "sector_id": "N2",
+        "row": "14",
+        "seat": "22"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-S-0002.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-S-0002.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-S-0002.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-S-0003",
+      "code_hash": "4144cb28de26abf96f74aa6fdbeb730ed1e8775a10e83772990e72af038ec1de",
+      "tier": "silver",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "N",
+        "sector_id": "N2",
+        "row": "14",
+        "seat": "23"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-S-0003.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-S-0003.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-S-0003.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-G-0001",
+      "code_hash": "1227c8ad2a732b0be5d83fd328879e87a25ce295f0bcdd67fa1b47bb1516f4aa",
+      "tier": "gold",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "W",
+        "sector_id": "W3",
+        "row": "8",
+        "seat": "11"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-G-0001.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-G-0002",
+      "code_hash": "a55e1934acd5a72952ee41dff8d5dd4ffde5be310fa00df8dca73969846c41b5",
+      "tier": "gold",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "W",
+        "sector_id": "W3",
+        "row": "8",
+        "seat": "12"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-G-0002.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-G-0002.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-G-0002.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-G-0003",
+      "code_hash": "824b0c3bc7b65aee937fe9d6005b5997292a36f8a6ef84ef58e41e3ba2ca5df6",
+      "tier": "gold",
+      "match_id": "SYN-001",
+      "seat": {
+        "stand_id": "W",
+        "sector_id": "W3",
+        "row": "8",
+        "seat": "13"
+      },
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-G-0003.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-G-0003.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-G-0003.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-D-0001",
+      "code_hash": "13e0b2d0c2b175a22cbdefa3e681456e2af702df6fbdb2f499bd4cb72d44687d",
+      "tier": "demo",
+      "match_id": "SYN-001",
+      "seat": null,
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-D-0001.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-D-0001.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-D-0001.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-D-0002",
+      "code_hash": "ad238cd13b94a57ba9c7df9ed74a297f699137623bcf4035eb674faf2951d60c",
+      "tier": "demo",
+      "match_id": "SYN-001",
+      "seat": null,
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-D-0002.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-D-0002.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-D-0002.png"
+      }
+    },
+    {
+      "ticket_id": "TKT-SYN001-D-0003",
+      "code_hash": "10c75e4b78179ab1a23a49ef9b54dcd7dfc3642043501eb8e2d8c079c90aeaab",
+      "tier": "demo",
+      "match_id": "SYN-001",
+      "seat": null,
+      "valid_from": "2026-10-20T00:00:00+01:00",
+      "valid_until": "2026-11-10T23:59:59+01:00",
+      "files": {
+        "svg": "synthetic/SYN-001/tickets/TKT-SYN001-D-0003.svg",
+        "pdf": "synthetic/SYN-001/tickets/TKT-SYN001-D-0003.pdf",
+        "png": "synthetic/SYN-001/tickets/TKT-SYN001-D-0003.png"
+      }
+    }
+  ]
+}

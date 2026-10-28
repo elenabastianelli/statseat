@@ -1,0 +1,5425 @@
+{
+  "meta": {
+    "description": "Linesman realism report: SYN-001 and 6 replicas against the DFL reference (guidelines v4, section 12)",
+    "match_id": "SYN-001",
+    "synthetic_matches": ["SYN-001", "SYN-001-r1", "SYN-001-r2", "SYN-001-r3", "SYN-001-r4", "SYN-001-r5", "SYN-001-r6"],
+    "generated_by": "cd data_pipeline && .venv/bin/python -m insidethegame_data.realism SYN-001 --replicas 6",
+    "guidelines_version": "v4.2 (2026-10-25)",
+    "pipeline_version": "0.4.2",
+    "reference": {
+      "file": "calibration/realism_reference.json",
+      "sha256": "20d6e657693e59099f1296c189ed15eaa693a600d64cc87c858b0ada20f11b84",
+      "matches_used": ["J03WMX", "J03WOH", "J03WOY", "J03WPY", "J03WQQ", "J03WR9"],
+      "source": "DFL/Sportec open data: Bassek, M., Rein, R., Weber, H., Memmert, D. (2025). An integrated dataset of spatiotemporal and event data in elite soccer. Scientific Data 12:195. https://doi.org/10.1038/s41597-025-04505-y. Licence: CC-BY 4.0. Aggregate statistics only; no raw, frame-level or person-level data.",
+      "prep_config_hash": ["d51430005c524f6c"],
+      "pipeline_version": "0.4.2",
+      "quantile_levels_pct": [2.5, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 97.5]
+    },
+    "same_preparation_config": false,
+    "realism_config_hash": "7c8dffd3948010a4",
+    "realism_config": {
+      "quantile_levels_pct": [2.5, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 97.5],
+      "acc_effort_ms2": 3.0,
+      "acc_effort_min_s": 0.5,
+      "peak_window_s": 300.0,
+      "peak_min_valid_frac": 0.9,
+      "shape_sample_s": 1.0,
+      "shape_min_outfield": 9,
+      "possession_spell_min_s": 1.0,
+      "green_ks_max": 0.15,
+      "yellow_ks_max": 0.3,
+      "range_tolerance_frac": 0.1,
+      "small_sample_n": 20,
+      "ks_noise_c_alpha": 1.358,
+      "float_decimals": 4
+    },
+    "synthetic_inputs": {
+      "SYN-001": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "3c9ac8b42ec0bee7ecf71fc54357a3be82ae8ed50365250291a0c804f2966906",
+          "events_canonical.csv": "ad23eaf7bd03413c29cd03a7cf068c12bd5526f73ffa639a11cbb8e69ba60b06",
+          "match_profile.json": "b88a1908e4c7152f6ad0da3c63a5fe121301616d97d31a5e06b5b7b7fc46dd3d"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r1": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "2c2f9ffc43bfd9af8a335b292605d9550a3d38a3a75cb1712a1073a475a46d82",
+          "events_canonical.csv": "2bc702c6e423a3db90c59d1ac508d69947acb50a09e6bdb797707462b5e29d3b",
+          "match_profile.json": "b4baec046f4c4b7538efd8e4fb6de70f27e273837a322faa8ee206c425bb8cb0"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r2": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "f9bb89511ff1bfc93836f720e898a86411742d6ad1e1098ec3edb9ed11299a87",
+          "events_canonical.csv": "c4106fdf937e734bba5eaff4369c41c469470c7658409587950c953791735100",
+          "match_profile.json": "03804f5f054f9ae4c37fea2055caf67ee9b365890990ac08cdcac735f1050621"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r3": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "2beca939757e22f7f2ac391b7140bb2feade7f6819d504141c03700a9920d3c6",
+          "events_canonical.csv": "5a8641d6f7bf89965df4cd09833da7480ecadb1581a138bbfe68e622d8ebd2dd",
+          "match_profile.json": "86d076ef665e948cf64843146e9aea3d47f468191382868154123049945cf5ec"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r4": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "2ce3ace60304f009f1dca8607d967e3e3f252124e637d83ddd50c46fee13e627",
+          "events_canonical.csv": "125e8df8c08f5af6671a5c71a7a4165bd8412c51df82bab599ae6042a3555d8f",
+          "match_profile.json": "cb9ecc5f261a10b521fd6c494063f6ab8739431f792425167f6199b38c8091ec"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r5": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "207cd3cce118328d83e884d0362d33996f1043220f21cf1c71652d186d5d0277",
+          "events_canonical.csv": "7d7ea390e3429b50f49c3880a8ca635fc239f463396c2f1c937ab0e34244ee2f",
+          "match_profile.json": "59af9330fba114ca78c430ca4c312c62d5b23235a4b33c646ecc33a434dd58aa"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      },
+      "SYN-001-r6": {
+        "input_hashes": {
+          "tracking_canonical.parquet": "d91e0546af649e0b9f0b352e1871457342264467267893b97696c2b0fe0f8a62",
+          "events_canonical.csv": "95b11bd2d310826a273356d2b9fdc4656eec2f23a638ba79a7d9d156cc04573f",
+          "match_profile.json": "e7e4bc0b5e97d5997fe3f0cd1112264a6a6d815223708888791544d36a1a0373"
+        },
+        "prep_config_hash": "37640615cf34343e",
+        "pipeline_version": "0.4.2",
+        "provider": "InsideTheGame synthetic"
+      }
+    },
+    "rules": {
+      "ks": "one-sample Kolmogorov-Smirnov distance D = sup |F_syn(x) - F_dfl(x)|; F_dfl is the piecewise-linear CDF through the 21 DFL quantiles at meta.reference.quantile_levels_pct (atoms where quantiles repeat), 0 below the lowest and 1 from the highest; D is exact for that CDF (evaluated at every sample value and knot). The reference has no minimum or maximum (privacy), so against the full DFL distribution D can differ by at most 0.025 in the tails and by at most the largest spacing of two stored levels (0.05) between them",
+      "median_rule": "position of the synthetic median relative to the range (min-max) of the DFL per-match medians: inside, just_outside (within 10 % of the range width) or far_outside",
+      "traffic_light": "green = D <= 0.15 and median inside; yellow = D in (0.15, 0.3] or median just outside; red = D > 0.3 or median far outside. range_only metrics (one value per match or team-match) use the median rule only",
+      "light_sample": "the light of a metric uses the pooled synthetic sample (the match and its replicas); syn_match repeats the comparison for the match alone",
+      "small_sample": "ks_and_range metrics with fewer than 20 values on either side are indicative",
+      "ks_d_noise95": "diagnostic, not part of the light: the two-sample KS critical value 1.358 * sqrt((n + m) / (n m)), the D that two samples of these sizes from the same distribution exceed only 5 % of the time (per-frame samples are autocorrelated: their real chance level is higher)"
+    },
+    "library_versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "insidethegame_data": "0.4.2"
+    }
+  },
+  "summary": {
+    "n_metrics": 107,
+    "lights": {
+      "green": 21,
+      "yellow": 22,
+      "red": 64
+    },
+    "lights_match_alone": {
+      "green": 20,
+      "yellow": 7,
+      "red": 80
+    },
+    "by_group": {
+      "physical": {
+        "green": 3,
+        "yellow": 18,
+        "red": 51
+      },
+      "ball_play": {
+        "green": 3,
+        "yellow": 0,
+        "red": 2
+      },
+      "passes": {
+        "green": 2,
+        "yellow": 1,
+        "red": 3
+      },
+      "shots": {
+        "green": 8,
+        "yellow": 1,
+        "red": 1
+      },
+      "events": {
+        "green": 4,
+        "yellow": 0,
+        "red": 6
+      },
+      "team_shape": {
+        "green": 1,
+        "yellow": 2,
+        "red": 1
+      }
+    },
+    "red_or_yellow_within_noise": ["physical.accelerations_per90.GK", "physical.decelerations_per90.FB", "physical.decelerations_per90.ST", "physical.distance_above_20kmh_per90_m.FB", "physical.distance_above_20kmh_per90_m.GK", "physical.distance_per90_m.CB", "physical.distance_per90_m.ST", "physical.distance_per90_m.W", "physical.peak_5min_m.FB", "physical.peak_5min_m.MF", "physical.sprints_per90.CB", "physical.sprints_per90.FB", "physical.sprints_per90.GK", "physical.top_speed_kmh.CB", "physical.top_speed_kmh.FB", "physical.top_speed_kmh.GK", "physical.top_speed_kmh.W", "physical.zone_0_7_per90_m.ST", "physical.zone_15_20_per90_m.MF", "physical.zone_15_20_per90_m.W", "physical.zone_20_25_per90_m.FB", "physical.zone_20_25_per90_m.GK", "physical.zone_20_25_per90_m.W", "physical.zone_25_plus_per90_m.GK", "physical.zone_25_plus_per90_m.W", "physical.zone_7_15_per90_m.MF", "shots.shot_xg"]
+  },
+  "metrics": {
+    "physical.distance_per90_m.GK": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 5627.26,
+        "p10": 4894.6915,
+        "p90": 6074.8639,
+        "mean": 5509.5431,
+        "match_median_range": [5066.8256, 6010.5909]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 5195.6472,
+        "mean": 5194.8405,
+        "p10": 5086.5106,
+        "p90": 5308.4025,
+        "ks_d": 0.6245,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 5179.3306,
+        "mean": 5179.3306,
+        "p10": 5074.996,
+        "p90": 5283.6651,
+        "ks_d": 0.6274,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.distance_per90_m.CB": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 9697.1445,
+        "p10": 9157.902,
+        "p90": 10199.7221,
+        "mean": 9703.7877,
+        "match_median_range": [9466.7647, 9967.923]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 9737.9361,
+        "mean": 9781.0462,
+        "p10": 9453.9616,
+        "p90": 10055.3346,
+        "ks_d": 0.2289,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 9674.0061,
+        "mean": 9726.2485,
+        "p10": 9610.4812,
+        "p90": 9883.8097,
+        "ks_d": 0.392,
+        "ks_d_noise95": 0.7294,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.distance_per90_m.FB": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 10077.2951,
+        "p10": 9574.5311,
+        "p90": 10550.5002,
+        "mean": 10063.7345,
+        "match_median_range": [9797.9649, 10622.3764]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 10394.7436,
+        "mean": 10364.2985,
+        "p10": 10107.4451,
+        "p90": 10633.7406,
+        "ks_d": 0.4478,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 10528.9128,
+        "mean": 10520.3456,
+        "p10": 10413.0116,
+        "p90": 10620.8257,
+        "ks_d": 0.8683,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_per90_m.MF": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 11078.1617,
+        "p10": 10294.5869,
+        "p90": 11783.07,
+        "mean": 11056.3918,
+        "match_median_range": [10351.6031, 11466.6254]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 11322.038,
+        "mean": 11469.5638,
+        "p10": 11065.3453,
+        "p90": 12021.739,
+        "ks_d": 0.3985,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 11094.8675,
+        "mean": 11393.1915,
+        "p10": 11065.3453,
+        "p90": 11883.3606,
+        "ks_d": 0.4751,
+        "ks_d_noise95": 0.6545,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_per90_m.W": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 10938.0523,
+        "p10": 10187.5298,
+        "p90": 11591.0935,
+        "mean": 10938.0459,
+        "match_median_range": [10586.2433, 11190.9807]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 11159.3705,
+        "mean": 11224.3371,
+        "p10": 10567.4877,
+        "p90": 11877.4314,
+        "ks_d": 0.3316,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 11208.5357,
+        "mean": 11255.3399,
+        "p10": 10606.848,
+        "p90": 11941.2751,
+        "ks_d": 0.407,
+        "ks_d_noise95": 0.7438,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_per90_m.ST": {
+      "group": "physical",
+      "name": "distance_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 10184.1817,
+        "p10": 9551.4416,
+        "p90": 11165.2133,
+        "mean": 10317.5443,
+        "match_median_range": [9578.1922, 10948.7243]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 10022.3546,
+        "mean": 9937.4189,
+        "p10": 9533.9641,
+        "p90": 10332.5101,
+        "ks_d": 0.3507,
+        "ks_d_noise95": 0.4431,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 10056.2564,
+        "mean": 9941.6599,
+        "p10": 9560.2219,
+        "p90": 10277.2594,
+        "ks_d": 0.3989,
+        "ks_d_noise95": 0.8504,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_0_7_per90_m.GK": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 3954.583,
+        "p10": 3842.0315,
+        "p90": 4158.8995,
+        "mean": 4015.3348,
+        "match_median_range": [3804.8394, 4186.4316]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 4197.3675,
+        "mean": 4195.3687,
+        "p10": 4122.3568,
+        "p90": 4259.7303,
+        "ks_d": 0.689,
+        "ks_d_noise95": 0.5342,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 4175.6465,
+        "mean": 4175.6465,
+        "p10": 4134.869,
+        "p90": 4216.424,
+        "ks_d": 0.6479,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_0_7_per90_m.CB": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 3475.7564,
+        "p10": 3219.4171,
+        "p90": 3879.2503,
+        "mean": 3537.5145,
+        "match_median_range": [3373.3281, 3879.2503]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 3616.244,
+        "mean": 3626.3946,
+        "p10": 3515.8687,
+        "p90": 3752.6963,
+        "ks_d": 0.4884,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 3549.3732,
+        "mean": 3537.5504,
+        "p10": 3453.9618,
+        "p90": 3611.6807,
+        "ks_d": 0.4375,
+        "ks_d_noise95": 0.7294,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_0_7_per90_m.FB": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 3570.7564,
+        "p10": 3286.3721,
+        "p90": 3697.7786,
+        "mean": 3522.8406,
+        "match_median_range": [3327.6108, 3592.902]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 3457.409,
+        "mean": 3440.9978,
+        "p10": 3343.3111,
+        "p90": 3569.237,
+        "ks_d": 0.4515,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 3352.9009,
+        "mean": 3346.0579,
+        "p10": 3297.3902,
+        "p90": 3389.2511,
+        "ks_d": 0.8062,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_0_7_per90_m.MF": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 3350.0695,
+        "p10": 2916.3982,
+        "p90": 3572.2893,
+        "mean": 3299.6729,
+        "match_median_range": [3118.0774, 3542.3578]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 3121.18,
+        "mean": 3125.0218,
+        "p10": 3014.4438,
+        "p90": 3223.7818,
+        "ks_d": 0.5923,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 3012.0025,
+        "mean": 3065.1771,
+        "p10": 2962.6928,
+        "p90": 3198.7387,
+        "ks_d": 0.678,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_0_7_per90_m.W": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 3507.8825,
+        "p10": 3215.707,
+        "p90": 3872.2165,
+        "mean": 3523.9919,
+        "match_median_range": [3276.4296, 3785.4751]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 3093.2847,
+        "mean": 3105.8163,
+        "p10": 2886.8168,
+        "p90": 3347.7827,
+        "ks_d": 0.6478,
+        "ks_d_noise95": 0.3976,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 2994.4389,
+        "mean": 2999.5123,
+        "p10": 2869.4567,
+        "p90": 3133.6267,
+        "ks_d": 0.954,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_0_7_per90_m.ST": {
+      "group": "physical",
+      "name": "zone_0_7_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 3608.6335,
+        "p10": 3055.8603,
+        "p90": 4055.0819,
+        "mean": 3569.258,
+        "match_median_range": [3131.4197, 3804.0073]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 3497.2974,
+        "mean": 3518.3877,
+        "p10": 3366.858,
+        "p90": 3686.6487,
+        "ks_d": 0.3619,
+        "ks_d_noise95": 0.4431,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 3448.5263,
+        "mean": 3491.918,
+        "p10": 3362.1685,
+        "p90": 3639.0243,
+        "ks_d": 0.4052,
+        "ks_d_noise95": 0.8504,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_7_15_per90_m.GK": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 1317.8656,
+        "p10": 925.5772,
+        "p90": 1693.0697,
+        "mean": 1321.8632,
+        "match_median_range": [975.7783, 1586.2634]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 912.2537,
+        "mean": 919.0609,
+        "p10": 843.9565,
+        "p90": 996.5272,
+        "ks_d": 0.8669,
+        "ks_d_noise95": 0.5342,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 913.3996,
+        "mean": 913.3996,
+        "p10": 855.0596,
+        "p90": 971.7397,
+        "ks_d": 0.8784,
+        "ks_d_noise95": 1.0372,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_7_15_per90_m.CB": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 4488.3522,
+        "p10": 3854.1512,
+        "p90": 4822.2685,
+        "mean": 4430.0889,
+        "match_median_range": [4160.0643, 4691.9097]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 4881.7031,
+        "mean": 4876.7064,
+        "p10": 4731.8062,
+        "p90": 5015.4133,
+        "ks_d": 0.7178,
+        "ks_d_noise95": 0.3699,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 4878.0921,
+        "mean": 4848.3746,
+        "p10": 4757.8917,
+        "p90": 4915.0834,
+        "ks_d": 0.7581,
+        "ks_d_noise95": 0.7294,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_7_15_per90_m.FB": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 4262.9742,
+        "p10": 3940.7482,
+        "p90": 4700.5917,
+        "mean": 4324.4228,
+        "match_median_range": [3940.7482, 4399.3845]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 4776.2098,
+        "mean": 4766.4631,
+        "p10": 4536.4614,
+        "p90": 4953.0639,
+        "ks_d": 0.7486,
+        "ks_d_noise95": 0.3951,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 4750.2148,
+        "mean": 4762.4701,
+        "p10": 4697.4602,
+        "p90": 4837.2841,
+        "ks_d": 0.8943,
+        "ks_d_noise95": 0.7408,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_7_15_per90_m.MF": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 5139.3501,
+        "p10": 4289.8331,
+        "p90": 5666.7022,
+        "mean": 5110.0249,
+        "match_median_range": [4727.523, 5546.974]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 5163.3439,
+        "mean": 5195.2446,
+        "p10": 4933.6608,
+        "p90": 5455.7276,
+        "ks_d": 0.258,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 5087.6132,
+        "mean": 5024.639,
+        "p10": 4856.4595,
+        "p90": 5163.6589,
+        "ks_d": 0.4358,
+        "ks_d_noise95": 0.6545,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.zone_7_15_per90_m.W": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 4568.5049,
+        "p10": 4125.9352,
+        "p90": 5412.7235,
+        "mean": 4599.7282,
+        "match_median_range": [4394.9558, 4921.2092]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 4964.7713,
+        "mean": 4981.7649,
+        "p10": 4838.0018,
+        "p90": 5142.8858,
+        "ks_d": 0.6943,
+        "ks_d_noise95": 0.3976,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 4885.8762,
+        "mean": 4878.2962,
+        "p10": 4837.0322,
+        "p90": 4913.4963,
+        "ks_d": 0.7511,
+        "ks_d_noise95": 0.7438,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_7_15_per90_m.ST": {
+      "group": "physical",
+      "name": "zone_7_15_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 4272.3554,
+        "p10": 3500.5528,
+        "p90": 5101.2504,
+        "mean": 4304.6168,
+        "match_median_range": [3640.5128, 5001.5015]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 4901.7436,
+        "mean": 4850.428,
+        "p10": 4522.1338,
+        "p90": 5105.1062,
+        "ks_d": 0.5248,
+        "ks_d_noise95": 0.4431,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 4925.7998,
+        "mean": 4733.7449,
+        "p10": 4461.9103,
+        "p90": 4928.7576,
+        "ks_d": 0.5248,
+        "ks_d_noise95": 0.8504,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_15_20_per90_m.GK": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 126.303,
+        "p10": 68.2876,
+        "p90": 186.4636,
+        "mean": 136.3848,
+        "match_median_range": [94.026, 238.4001]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 60.8582,
+        "mean": 60.7325,
+        "p10": 36.5442,
+        "p90": 83.4736,
+        "ks_d": 0.7146,
+        "ks_d_noise95": 0.5342,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 60.2239,
+        "mean": 60.2239,
+        "p10": 53.2572,
+        "p90": 67.1906,
+        "ks_d": 0.8934,
+        "ks_d_noise95": 1.0372,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_15_20_per90_m.CB": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 1189.7486,
+        "p10": 974.9726,
+        "p90": 1469.9914,
+        "mean": 1217.4645,
+        "match_median_range": [1004.3016, 1403.5987]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 875.0181,
+        "mean": 897.0684,
+        "p10": 669.0018,
+        "p90": 1107.0081,
+        "ks_d": 0.5551,
+        "ks_d_noise95": 0.3699,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 892.9632,
+        "mean": 936.5662,
+        "p10": 801.4766,
+        "p90": 1106.5383,
+        "ks_d": 0.6716,
+        "ks_d_noise95": 0.7294,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_15_20_per90_m.FB": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 1380.9862,
+        "p10": 1207.5761,
+        "p90": 1562.4073,
+        "mean": 1405.1573,
+        "match_median_range": [1255.3788, 1829.673]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 1397.9919,
+        "mean": 1396.752,
+        "p10": 1245.3476,
+        "p90": 1539.6002,
+        "ks_d": 0.1427,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 1522.0797,
+        "mean": 1523.9612,
+        "p10": 1417.4814,
+        "p90": 1631.9461,
+        "ks_d": 0.525,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "physical.zone_15_20_per90_m.MF": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 1953.6781,
+        "p10": 1344.5506,
+        "p90": 2333.2439,
+        "mean": 1882.3567,
+        "match_median_range": [1354.5898, 2188.237]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 1963.6624,
+        "mean": 2049.4515,
+        "p10": 1793.7665,
+        "p90": 2377.295,
+        "ks_d": 0.2875,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 1951.4763,
+        "mean": 2087.7106,
+        "p10": 1848.7278,
+        "p90": 2395.0723,
+        "ks_d": 0.3369,
+        "ks_d_noise95": 0.6545,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.zone_15_20_per90_m.W": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 1780.0122,
+        "p10": 1265.6781,
+        "p90": 2078.2642,
+        "mean": 1734.8196,
+        "match_median_range": [1438.9543, 1941.5916]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 1834.5736,
+        "mean": 1816.1922,
+        "p10": 1454.5336,
+        "p90": 2152.6292,
+        "ks_d": 0.2713,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 1880.1054,
+        "mean": 1877.8087,
+        "p10": 1609.839,
+        "p90": 2143.9412,
+        "ks_d": 0.3956,
+        "ks_d_noise95": 0.7438,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.zone_15_20_per90_m.ST": {
+      "group": "physical",
+      "name": "zone_15_20_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 1401.2165,
+        "p10": 1108.3647,
+        "p90": 1921.3619,
+        "mean": 1472.5,
+        "match_median_range": [1270.9051, 1692.57]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 1145.5396,
+        "mean": 1117.1023,
+        "p10": 870.5851,
+        "p90": 1284.1387,
+        "ks_d": 0.634,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 1175.3565,
+        "mean": 1171.9354,
+        "p10": 998.5933,
+        "p90": 1343.909,
+        "ks_d": 0.5564,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_20_25_per90_m.GK": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 23.6074,
+        "p10": 9.2114,
+        "p90": 61.3515,
+        "mean": 31.3576,
+        "match_median_range": [13.7431, 47.2332]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 18.3034,
+        "mean": 19.6784,
+        "p10": 3.6318,
+        "p90": 34.303,
+        "ks_d": 0.278,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 30.0605,
+        "mean": 30.0605,
+        "p10": 28.3108,
+        "p90": 31.8103,
+        "ks_d": 0.5679,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": true
+    },
+    "physical.zone_20_25_per90_m.CB": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 406.6661,
+        "p10": 253.6017,
+        "p90": 519.277,
+        "mean": 403.89,
+        "match_median_range": [327.9807, 485.5203]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 274.2002,
+        "mean": 274.5498,
+        "p10": 191.454,
+        "p90": 353.9748,
+        "ks_d": 0.584,
+        "ks_d_noise95": 0.3699,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 285.65,
+        "mean": 286.9233,
+        "p10": 272.1921,
+        "p90": 302.6731,
+        "ks_d": 0.8255,
+        "ks_d_noise95": 0.7294,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_20_25_per90_m.FB": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 586.5124,
+        "p10": 444.6459,
+        "p90": 706.8352,
+        "mean": 590.2952,
+        "match_median_range": [475.5398, 801.4726]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 610.0662,
+        "mean": 589.0515,
+        "p10": 496.321,
+        "p90": 653.9691,
+        "ks_d": 0.1546,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 676.2866,
+        "mean": 673.6428,
+        "p10": 648.1766,
+        "p90": 696.994,
+        "ks_d": 0.7413,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.zone_20_25_per90_m.MF": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 569.6834,
+        "p10": 442.6291,
+        "p90": 864.922,
+        "mean": 612.4957,
+        "match_median_range": [517.6679, 691.8979]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 900.5667,
+        "mean": 893.0692,
+        "p10": 622.1843,
+        "p90": 1142.0695,
+        "ks_d": 0.5143,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 998.763,
+        "mean": 955.2059,
+        "p10": 751.1546,
+        "p90": 1133.5978,
+        "ks_d": 0.7922,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_20_25_per90_m.W": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 785.5179,
+        "p10": 644.4287,
+        "p90": 974.6456,
+        "mean": 797.4078,
+        "match_median_range": [681.6994, 916.3694]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 857.0727,
+        "mean": 910.3892,
+        "p10": 687.3981,
+        "p90": 1156.9351,
+        "ks_d": 0.3702,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 960.6954,
+        "mean": 995.5461,
+        "p10": 737.9791,
+        "p90": 1280.9935,
+        "ks_d": 0.5,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_20_25_per90_m.ST": {
+      "group": "physical",
+      "name": "zone_20_25_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 732.5663,
+        "p10": 548.8438,
+        "p90": 984.4372,
+        "mean": 735.604,
+        "match_median_range": [563.0431, 835.0826]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 327.4188,
+        "mean": 343.7715,
+        "p10": 258.3066,
+        "p90": 444.4079,
+        "ks_d": 0.9247,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 411.0204,
+        "mean": 425.5045,
+        "p10": 340.1959,
+        "p90": 516.6067,
+        "ks_d": 0.906,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_25_plus_per90_m.GK": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.0,
+        "p10": 0.0,
+        "p90": 16.4487,
+        "mean": 4.6027,
+        "match_median_range": [0.0, 15.2173]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.0,
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "ks_d": 0.4,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "equal"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.0,
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "ks_d": 0.4,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "equal"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.zone_25_plus_per90_m.CB": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 109.4748,
+        "p10": 32.3711,
+        "p90": 185.7387,
+        "mean": 114.8298,
+        "match_median_range": [49.3263, 157.5991]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 101.5346,
+        "mean": 106.3271,
+        "p10": 38.9613,
+        "p90": 185.3838,
+        "ks_d": 0.1473,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 110.0775,
+        "mean": 116.8341,
+        "p10": 96.1558,
+        "p90": 142.9176,
+        "ks_d": 0.3608,
+        "ks_d_noise95": 0.7294,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "physical.zone_25_plus_per90_m.FB": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 194.1515,
+        "p10": 93.3946,
+        "p90": 338.1618,
+        "mean": 221.0186,
+        "match_median_range": [99.0402, 313.3673]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 168.0845,
+        "mean": 171.0342,
+        "p10": 117.9714,
+        "p90": 218.547,
+        "ks_d": 0.416,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 204.6523,
+        "mean": 214.2136,
+        "p10": 195.4676,
+        "p90": 240.6087,
+        "ks_d": 0.5006,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_25_plus_per90_m.MF": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 127.8093,
+        "p10": 55.5768,
+        "p90": 271.0145,
+        "mean": 151.8415,
+        "match_median_range": [58.2279, 194.723]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 216.9769,
+        "mean": 206.7768,
+        "p10": 114.0542,
+        "p90": 302.3703,
+        "ks_d": 0.3386,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 275.2718,
+        "mean": 260.459,
+        "p10": 204.3288,
+        "p90": 304.0466,
+        "ks_d": 0.6741,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_25_plus_per90_m.W": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 251.9975,
+        "p10": 160.6227,
+        "p90": 428.4388,
+        "mean": 282.0983,
+        "match_median_range": [187.1045, 415.6698]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 405.0942,
+        "mean": 410.1745,
+        "p10": 200.2402,
+        "p90": 648.569,
+        "ks_d": 0.3848,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 523.5421,
+        "mean": 504.1765,
+        "p10": 285.6496,
+        "p90": 707.2111,
+        "ks_d": 0.5448,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.zone_25_plus_per90_m.ST": {
+      "group": "physical",
+      "name": "zone_25_plus_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 216.9755,
+        "p10": 123.747,
+        "p90": 342.0768,
+        "mean": 235.5656,
+        "match_median_range": [153.2728, 315.0026]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 102.5922,
+        "mean": 107.7295,
+        "p10": 68.8985,
+        "p90": 138.7714,
+        "ks_d": 0.7575,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 126.7343,
+        "mean": 118.557,
+        "p10": 101.7895,
+        "p90": 132.0537,
+        "ks_d": 0.8697,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.distance_above_20kmh_per90_m.GK": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 25.9067,
+        "p10": 9.2114,
+        "p90": 88.7426,
+        "mean": 35.9604,
+        "match_median_range": [13.7431, 56.262]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 18.3034,
+        "mean": 19.6784,
+        "p10": 3.6318,
+        "p90": 34.303,
+        "ks_d": 0.2832,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 30.0605,
+        "mean": 30.0605,
+        "p10": 28.3108,
+        "p90": 31.8103,
+        "ks_d": 0.5177,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": true
+    },
+    "physical.distance_above_20kmh_per90_m.CB": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 538.3652,
+        "p10": 350.2301,
+        "p90": 681.6799,
+        "mean": 518.7198,
+        "match_median_range": [395.8396, 658.2288]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 377.4374,
+        "mean": 380.8769,
+        "p10": 251.5122,
+        "p90": 504.6496,
+        "ks_d": 0.4698,
+        "ks_d_noise95": 0.3699,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 395.7276,
+        "mean": 403.7573,
+        "p10": 368.3478,
+        "p90": 445.5906,
+        "ks_d": 0.5883,
+        "ks_d_noise95": 0.7294,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_above_20kmh_per90_m.FB": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 791.4547,
+        "p10": 609.3848,
+        "p90": 964.4315,
+        "mean": 811.3137,
+        "match_median_range": [600.0047, 1114.8399]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 766.4445,
+        "mean": 760.0857,
+        "p10": 638.3246,
+        "p90": 889.5968,
+        "ks_d": 0.2891,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 890.5517,
+        "mean": 887.8565,
+        "p10": 863.6327,
+        "p90": 909.9241,
+        "ks_d": 0.5627,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.distance_above_20kmh_per90_m.MF": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 734.4371,
+        "p10": 500.6761,
+        "p90": 1039.3223,
+        "mean": 764.3372,
+        "match_median_range": [575.8958, 869.1625]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 1090.8483,
+        "mean": 1099.846,
+        "p10": 764.4018,
+        "p90": 1434.8339,
+        "ks_d": 0.4893,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 1289.2323,
+        "mean": 1215.665,
+        "p10": 955.4834,
+        "p90": 1431.5653,
+        "ks_d": 0.7573,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_above_20kmh_per90_m.W": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 1087.147,
+        "p10": 886.8745,
+        "p90": 1241.4601,
+        "mean": 1079.5061,
+        "match_median_range": [990.1608, 1179.5446]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 1241.2039,
+        "mean": 1320.5637,
+        "p10": 915.2137,
+        "p90": 1805.5041,
+        "ks_d": 0.4643,
+        "ks_d_noise95": 0.3976,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 1480.8357,
+        "mean": 1499.7226,
+        "p10": 1026.3501,
+        "p90": 1988.2046,
+        "ks_d": 0.5,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.distance_above_20kmh_per90_m.ST": {
+      "group": "physical",
+      "name": "distance_above_20kmh_per90_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 948.3978,
+        "p10": 710.5473,
+        "p90": 1279.8978,
+        "mean": 971.1695,
+        "match_median_range": [762.0941, 1116.278]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 444.9753,
+        "mean": 451.501,
+        "p10": 357.989,
+        "p90": 540.9426,
+        "ks_d": 0.9172,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 506.5738,
+        "mean": 544.0615,
+        "p10": 460.694,
+        "p90": 642.4242,
+        "ks_d": 0.9172,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.top_speed_kmh.GK": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "GK",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 24.1966,
+        "p10": 22.9553,
+        "p90": 26.9531,
+        "mean": 24.4393,
+        "match_median_range": [22.7448, 25.7663]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 23.5317,
+        "mean": 23.1405,
+        "p10": 20.7945,
+        "p90": 24.2994,
+        "ks_d": 0.3994,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 24.5336,
+        "mean": 24.5336,
+        "p10": 24.258,
+        "p90": 24.8092,
+        "ks_d": 0.4985,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.top_speed_kmh.CB": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "CB",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 30.4147,
+        "p10": 27.5046,
+        "p90": 32.5586,
+        "mean": 30.1055,
+        "match_median_range": [27.8495, 31.2661]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 30.5559,
+        "mean": 30.2995,
+        "p10": 28.8259,
+        "p90": 32.0336,
+        "ks_d": 0.1667,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 30.6664,
+        "mean": 30.45,
+        "p10": 29.1993,
+        "p90": 31.5276,
+        "ks_d": 0.2303,
+        "ks_d_noise95": 0.7294,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.top_speed_kmh.FB": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "FB",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 30.5006,
+        "p10": 28.7378,
+        "p90": 32.6949,
+        "mean": 30.5472,
+        "match_median_range": [29.2484, 30.977]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 30.5723,
+        "mean": 30.3655,
+        "p10": 29.215,
+        "p90": 31.177,
+        "ks_d": 0.2477,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 30.6622,
+        "mean": 30.5771,
+        "p10": 30.3181,
+        "p90": 30.768,
+        "ks_d": 0.3695,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.top_speed_kmh.MF": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "MF",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 30.1107,
+        "p10": 28.1844,
+        "p90": 32.1252,
+        "mean": 30.1242,
+        "match_median_range": [29.3066, 31.3838]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 29.6981,
+        "mean": 29.5478,
+        "p10": 28.7576,
+        "p90": 30.4575,
+        "ks_d": 0.3515,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 29.2008,
+        "mean": 29.6259,
+        "p10": 28.9963,
+        "p90": 30.4575,
+        "ks_d": 0.4071,
+        "ks_d_noise95": 0.6545,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.top_speed_kmh.W": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "W",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 31.6614,
+        "p10": 29.824,
+        "p90": 32.9523,
+        "mean": 31.627,
+        "match_median_range": [30.5169, 32.7989]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 31.7508,
+        "mean": 31.9018,
+        "p10": 30.8576,
+        "p90": 32.919,
+        "ks_d": 0.2767,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 31.7062,
+        "mean": 32.3002,
+        "p10": 31.4222,
+        "p90": 33.6535,
+        "ks_d": 0.4519,
+        "ks_d_noise95": 0.7438,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.top_speed_kmh.ST": {
+      "group": "physical",
+      "name": "top_speed_kmh",
+      "role_group": "ST",
+      "unit": "km/h",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 31.1173,
+        "p10": 29.6023,
+        "p90": 32.2756,
+        "mean": 31.0426,
+        "match_median_range": [30.0663, 31.8983]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 29.958,
+        "mean": 30.0999,
+        "p10": 29.5099,
+        "p90": 30.9523,
+        "ks_d": 0.5667,
+        "ks_d_noise95": 0.4431,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 29.6728,
+        "mean": 30.0452,
+        "p10": 29.543,
+        "p90": 30.6964,
+        "ks_d": 0.6424,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.sprints_per90.GK": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "GK",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.0,
+        "p10": 0.0,
+        "p90": 0.8568,
+        "mean": 0.1656,
+        "match_median_range": [0.0, 0.5178]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.0,
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "ks_d": 0.2,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "equal"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.0,
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "ks_d": 0.2,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "equal"
+      },
+      "light": "yellow",
+      "small_sample": true
+    },
+    "physical.sprints_per90.CB": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "CB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 5.6822,
+        "p10": 1.8858,
+        "p90": 9.4746,
+        "mean": 5.9787,
+        "match_median_range": [3.2371, 7.0108]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 4.8221,
+        "mean": 4.8122,
+        "p10": 1.9089,
+        "p90": 8.514,
+        "ks_d": 0.2808,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 5.2272,
+        "mean": 5.4674,
+        "p10": 4.0899,
+        "p90": 7.0372,
+        "ks_d": 0.3728,
+        "ks_d_noise95": 0.7294,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.sprints_per90.FB": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "FB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 9.9387,
+        "p10": 5.4665,
+        "p90": 15.5706,
+        "mean": 10.4802,
+        "match_median_range": [5.6454, 13.5503]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 8.529,
+        "mean": 8.6174,
+        "p10": 5.0634,
+        "p90": 12.5976,
+        "ks_d": 0.3414,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 10.4667,
+        "mean": 11.6511,
+        "p10": 9.7929,
+        "p90": 14.4568,
+        "ks_d": 0.4491,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.sprints_per90.MF": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "MF",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 7.5103,
+        "p10": 2.9881,
+        "p90": 14.2577,
+        "mean": 7.8948,
+        "match_median_range": [3.5081, 8.6101]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 11.3698,
+        "mean": 11.156,
+        "p10": 3.7906,
+        "p90": 17.8788,
+        "ks_d": 0.3815,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 16.1694,
+        "mean": 13.9726,
+        "p10": 9.548,
+        "p90": 17.3327,
+        "ks_d": 0.6424,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.sprints_per90.W": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "W",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 12.3664,
+        "p10": 7.0298,
+        "p90": 21.0334,
+        "mean": 14.1167,
+        "match_median_range": [10.0084, 19.2296]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 21.1451,
+        "mean": 22.9342,
+        "p10": 12.0141,
+        "p90": 36.2937,
+        "ks_d": 0.4186,
+        "ks_d_noise95": 0.3976,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 26.2494,
+        "mean": 28.1048,
+        "p10": 17.0608,
+        "p90": 40.6332,
+        "ks_d": 0.6398,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.sprints_per90.ST": {
+      "group": "physical",
+      "name": "sprints_per90",
+      "role_group": "ST",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 10.5055,
+        "p10": 6.7908,
+        "p90": 17.8644,
+        "mean": 11.7204,
+        "match_median_range": [7.8679, 14.2919]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 5.5146,
+        "mean": 5.599,
+        "p10": 3.7835,
+        "p90": 8.3349,
+        "ks_d": 0.6721,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 6.6741,
+        "mean": 6.5418,
+        "p10": 6.0407,
+        "p90": 6.9901,
+        "ks_d": 0.867,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.peak_5min_m.GK": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "GK",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 422.2628,
+        "p10": 361.6264,
+        "p90": 484.8048,
+        "mean": 423.3034,
+        "match_median_range": [391.5965, 478.9451]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 361.5355,
+        "mean": 362.6867,
+        "p10": 341.5908,
+        "p90": 382.795,
+        "ks_d": 0.8378,
+        "ks_d_noise95": 0.5342,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 376.9942,
+        "mean": 376.9942,
+        "p10": 376.8938,
+        "p90": 377.0947,
+        "ks_d": 0.8619,
+        "ks_d_noise95": 1.0372,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.peak_5min_m.CB": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "CB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 706.7701,
+        "p10": 667.0538,
+        "p90": 756.1989,
+        "mean": 710.672,
+        "match_median_range": [668.5853, 734.0824]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 674.0226,
+        "mean": 679.4291,
+        "p10": 641.6896,
+        "p90": 732.3813,
+        "ks_d": 0.4042,
+        "ks_d_noise95": 0.3699,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 735.0177,
+        "mean": 729.2457,
+        "p10": 711.5516,
+        "p90": 742.3223,
+        "ks_d": 0.5217,
+        "ks_d_noise95": 0.7294,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.peak_5min_m.FB": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "FB",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 732.4259,
+        "p10": 692.936,
+        "p90": 791.9901,
+        "mean": 741.0088,
+        "match_median_range": [704.4468, 754.8112]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 723.0436,
+        "mean": 731.4541,
+        "p10": 683.5152,
+        "p90": 797.5205,
+        "ks_d": 0.2312,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 799.9859,
+        "mean": 799.6675,
+        "p10": 783.3872,
+        "p90": 815.693,
+        "ks_d": 0.8477,
+        "ks_d_noise95": 0.7408,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.peak_5min_m.MF": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "MF",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 821.5519,
+        "p10": 743.3557,
+        "p90": 844.0673,
+        "mean": 807.4032,
+        "match_median_range": [771.5833, 832.7142]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 805.3071,
+        "mean": 812.037,
+        "p10": 765.8409,
+        "p90": 855.0334,
+        "ks_d": 0.2299,
+        "ks_d_noise95": 0.3349,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 855.4663,
+        "mean": 890.4126,
+        "p10": 841.5882,
+        "p90": 957.733,
+        "ks_d": 0.7707,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.peak_5min_m.W": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "W",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 787.7139,
+        "p10": 717.4055,
+        "p90": 832.529,
+        "mean": 781.6187,
+        "match_median_range": [760.8783, 800.3644]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 783.9361,
+        "mean": 790.8876,
+        "p10": 726.8748,
+        "p90": 843.4122,
+        "ks_d": 0.1231,
+        "ks_d_noise95": 0.3976,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 884.8652,
+        "mean": 877.4129,
+        "p10": 805.8883,
+        "p90": 942.9757,
+        "ks_d": 0.6552,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "physical.peak_5min_m.ST": {
+      "group": "physical",
+      "name": "peak_5min_m",
+      "role_group": "ST",
+      "unit": "m",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 730.6533,
+        "p10": 692.7873,
+        "p90": 798.9703,
+        "mean": 746.6907,
+        "match_median_range": [693.8466, 797.5976]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 693.7791,
+        "mean": 695.8478,
+        "p10": 631.6036,
+        "p90": 762.5702,
+        "ks_d": 0.5263,
+        "ks_d_noise95": 0.4431,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 763.5358,
+        "mean": 772.693,
+        "p10": 756.2931,
+        "p90": 792.7558,
+        "ks_d": 0.5702,
+        "ks_d_noise95": 0.8504,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.accelerations_per90.GK": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "GK",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 16.904,
+        "p10": 12.6054,
+        "p90": 27.9098,
+        "mean": 19.1159,
+        "match_median_range": [13.1577, 25.2072]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 18.4764,
+        "mean": 17.3703,
+        "p10": 13.2004,
+        "p90": 21.1516,
+        "ks_d": 0.2718,
+        "ks_d_noise95": 0.5342,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 16.6325,
+        "mean": 16.6325,
+        "p10": 15.4868,
+        "p90": 17.7782,
+        "ks_d": 0.4206,
+        "ks_d_noise95": 1.0372,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": true
+    },
+    "physical.accelerations_per90.CB": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "CB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 36.7099,
+        "p10": 28.3492,
+        "p90": 46.4212,
+        "mean": 36.9925,
+        "match_median_range": [30.6668, 46.0378]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 97.6552,
+        "mean": 91.0884,
+        "p10": 65.189,
+        "p90": 116.4018,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.3699,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 92.1886,
+        "mean": 96.2802,
+        "p10": 76.9298,
+        "p90": 118.9037,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.7294,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.accelerations_per90.FB": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "FB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 37.5361,
+        "p10": 28.6143,
+        "p90": 51.9021,
+        "mean": 39.1269,
+        "match_median_range": [32.0169, 48.5305]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 161.3314,
+        "mean": 158.473,
+        "p10": 139.9456,
+        "p90": 175.1298,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.3951,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 168.8947,
+        "mean": 172.1554,
+        "p10": 166.0828,
+        "p90": 180.8365,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.7408,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.accelerations_per90.MF": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "MF",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 38.3188,
+        "p10": 30.1352,
+        "p90": 51.5992,
+        "mean": 39.9978,
+        "match_median_range": [33.2755, 45.6439]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 194.2337,
+        "mean": 191.3354,
+        "p10": 124.5502,
+        "p90": 264.6089,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 197.837,
+        "mean": 200.7551,
+        "p10": 138.7034,
+        "p90": 263.1495,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.accelerations_per90.W": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "W",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 44.6651,
+        "p10": 34.8476,
+        "p90": 53.9547,
+        "mean": 45.1724,
+        "match_median_range": [36.5222, 54.1286]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 228.6644,
+        "mean": 227.5281,
+        "p10": 179.8373,
+        "p90": 275.0229,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.3976,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 246.3537,
+        "mean": 241.5919,
+        "p10": 197.1063,
+        "p90": 282.268,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.accelerations_per90.ST": {
+      "group": "physical",
+      "name": "accelerations_per90",
+      "role_group": "ST",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 50.1736,
+        "p10": 40.8285,
+        "p90": 61.2071,
+        "mean": 49.9351,
+        "match_median_range": [40.9679, 58.1202]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 143.5285,
+        "mean": 136.2239,
+        "p10": 96.5153,
+        "p90": 161.1932,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.4431,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 153.1627,
+        "mean": 144.5693,
+        "p10": 104.0443,
+        "p90": 181.657,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.decelerations_per90.GK": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "GK",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 17.6083,
+        "p10": 13.2266,
+        "p90": 26.9411,
+        "mean": 19.145,
+        "match_median_range": [11.7636, 23.7862]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 10.0511,
+        "mean": 10.2948,
+        "p10": 6.5992,
+        "p90": 13.3758,
+        "ks_d": 0.7545,
+        "ks_d_noise95": 0.5342,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 9.0293,
+        "mean": 9.0293,
+        "p10": 7.886,
+        "p90": 10.1727,
+        "ks_d": 1.0,
+        "ks_d_noise95": 1.0372,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": true
+    },
+    "physical.decelerations_per90.CB": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "CB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 26,
+        "n_matches": 6,
+        "median": 51.9537,
+        "p10": 35.3896,
+        "p90": 71.0736,
+        "mean": 51.3052,
+        "match_median_range": [40.4246, 61.4995]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 36.2256,
+        "mean": 37.1725,
+        "p10": 29.0114,
+        "p90": 44.2008,
+        "ks_d": 0.6315,
+        "ks_d_noise95": 0.3699,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 39.4576,
+        "mean": 43.7433,
+        "p10": 38.9662,
+        "p90": 51.949,
+        "ks_d": 0.5227,
+        "ks_d_noise95": 0.7294,
+        "median_position": "just_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.decelerations_per90.FB": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "FB",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 21,
+        "n_matches": 6,
+        "median": 61.7451,
+        "p10": 50.2915,
+        "p90": 75.6795,
+        "mean": 63.0536,
+        "match_median_range": [52.6172, 89.4687]
+      },
+      "synthetic": {
+        "n": 27,
+        "median": 63.2055,
+        "mean": 61.9452,
+        "p10": 50.87,
+        "p90": 70.8147,
+        "ks_d": 0.1774,
+        "ks_d_noise95": 0.3951,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 73.2097,
+        "mean": 74.1871,
+        "p10": 69.3864,
+        "p90": 79.7696,
+        "ks_d": 0.7165,
+        "ks_d_noise95": 0.7408,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "physical.decelerations_per90.MF": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "MF",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 31,
+        "n_matches": 6,
+        "median": 55.0681,
+        "p10": 42.8043,
+        "p90": 80.0122,
+        "mean": 59.2924,
+        "match_median_range": [51.7722, 76.6008]
+      },
+      "synthetic": {
+        "n": 35,
+        "median": 105.8149,
+        "mean": 106.9444,
+        "p10": 65.5017,
+        "p90": 145.6283,
+        "ks_d": 0.6817,
+        "ks_d_noise95": 0.3349,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 5,
+        "median": 124.5993,
+        "mean": 115.7107,
+        "p10": 82.3098,
+        "p90": 143.6378,
+        "ks_d": 0.8531,
+        "ks_d_noise95": 0.6545,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.decelerations_per90.W": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "W",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 20,
+        "n_matches": 6,
+        "median": 66.7315,
+        "p10": 49.9652,
+        "p90": 79.223,
+        "mean": 66.7525,
+        "match_median_range": [59.3845, 80.1644]
+      },
+      "synthetic": {
+        "n": 28,
+        "median": 105.294,
+        "mean": 106.0451,
+        "p10": 72.8886,
+        "p90": 137.4617,
+        "ks_d": 0.8214,
+        "ks_d_noise95": 0.3976,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 4,
+        "median": 122.8461,
+        "mean": 120.6305,
+        "p10": 93.9759,
+        "p90": 145.5127,
+        "ks_d": 1.0,
+        "ks_d_noise95": 0.7438,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "physical.decelerations_per90.ST": {
+      "group": "physical",
+      "name": "decelerations_per90",
+      "role_group": "ST",
+      "unit": "count",
+      "observation": "player-match",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 17,
+        "n_matches": 6,
+        "median": 60.9371,
+        "p10": 42.5618,
+        "p90": 73.7759,
+        "mean": 60.8329,
+        "match_median_range": [45.4304, 69.9809]
+      },
+      "synthetic": {
+        "n": 21,
+        "median": 65.2649,
+        "mean": 66.5186,
+        "p10": 52.5578,
+        "p90": 82.0709,
+        "ks_d": 0.2034,
+        "ks_d_noise95": 0.4431,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 3,
+        "median": 75.4032,
+        "mean": 75.57,
+        "p10": 62.1395,
+        "p90": 89.0673,
+        "ks_d": 0.5844,
+        "ks_d_noise95": 0.8504,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": true
+    },
+    "ball_play.ball_in_play_share": {
+      "group": "ball_play",
+      "name": "ball_in_play_share",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.5691,
+        "p10": 0.5298,
+        "p90": 0.5887,
+        "mean": 0.5625,
+        "match_median_range": [0.5243, 0.5926]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.5874,
+        "mean": 0.5868,
+        "p10": 0.5692,
+        "p90": 0.602,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.5699,
+        "mean": 0.5699,
+        "p10": 0.5699,
+        "p90": 0.5699,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "ball_play.possession_dominant_share": {
+      "group": "ball_play",
+      "name": "possession_dominant_share",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.5524,
+        "p10": 0.5231,
+        "p90": 0.6262,
+        "mean": 0.5672,
+        "match_median_range": [0.5043, 0.6284]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.5686,
+        "mean": 0.564,
+        "p10": 0.5369,
+        "p90": 0.5879,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.5589,
+        "mean": 0.5589,
+        "p10": 0.5589,
+        "p90": 0.5589,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "ball_play.ball_speed_live_kmh": {
+      "group": "ball_play",
+      "name": "ball_speed_live_kmh",
+      "role_group": null,
+      "unit": "km/h",
+      "observation": "ball sample",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 480533,
+        "n_matches": 6,
+        "median": 21.6067,
+        "p10": 5.6245,
+        "p90": 53.8625,
+        "mean": 26.3016,
+        "match_median_range": [20.2673, 22.3507]
+      },
+      "synthetic": {
+        "n": 578021,
+        "median": 19.3724,
+        "mean": 20.2454,
+        "p10": 2.1757,
+        "p90": 42.139,
+        "ks_d": 0.1719,
+        "ks_d_noise95": 0.0027,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 80287,
+        "median": 19.7646,
+        "mean": 20.3747,
+        "p10": 2.4253,
+        "p90": 42.4127,
+        "ks_d": 0.1659,
+        "ks_d_noise95": 0.0052,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "ball_play.live_phase_duration_s": {
+      "group": "ball_play",
+      "name": "live_phase_duration_s",
+      "role_group": null,
+      "unit": "s",
+      "observation": "live phase",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 604,
+        "n_matches": 6,
+        "median": 21.06,
+        "p10": 4.492,
+        "p90": 73.12,
+        "mean": 32.1012,
+        "match_median_range": [16.26, 26.66]
+      },
+      "synthetic": {
+        "n": 773,
+        "median": 22.12,
+        "mean": 30.1462,
+        "p10": 4.736,
+        "p90": 66.696,
+        "ks_d": 0.0425,
+        "ks_d_noise95": 0.0737,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 119,
+        "median": 20.36,
+        "mean": 27.2232,
+        "p10": 4.176,
+        "p90": 54.688,
+        "ks_d": 0.085,
+        "ks_d_noise95": 0.1362,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "ball_play.possession_spell_duration_s": {
+      "group": "ball_play",
+      "name": "possession_spell_duration_s",
+      "role_group": null,
+      "unit": "s",
+      "observation": "possession spell",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 2253,
+        "n_matches": 6,
+        "median": 4.48,
+        "p10": 1.48,
+        "p90": 21.096,
+        "mean": 8.5299,
+        "match_median_range": [3.92, 5.44]
+      },
+      "synthetic": {
+        "n": 1743,
+        "median": 10.24,
+        "mean": 13.3623,
+        "p10": 2.968,
+        "p90": 28.096,
+        "ks_d": 0.3101,
+        "ks_d_noise95": 0.0433,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 278,
+        "median": 9.46,
+        "mean": 11.6422,
+        "p10": 2.508,
+        "p90": 23.552,
+        "ks_d": 0.2613,
+        "ks_d_noise95": 0.0863,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "passes.passes_per90": {
+      "group": "passes",
+      "name": "passes_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 367.8541,
+        "p10": 269.4216,
+        "p90": 482.1947,
+        "mean": 372.0989,
+        "match_median_range": [328.1189, 408.3286]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 334.0217,
+        "mean": 344.3541,
+        "p10": 296.4259,
+        "p90": 390.9709,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 327.7575,
+        "mean": 327.7575,
+        "p10": 287.4766,
+        "p90": 368.0385,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "just_outside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "passes.pass_length_m": {
+      "group": "passes",
+      "name": "pass_length_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "pass",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 4522,
+        "n_matches": 6,
+        "median": 15.2575,
+        "p10": 7.0071,
+        "p90": 32.1598,
+        "mean": 17.8708,
+        "match_median_range": [14.424, 15.99]
+      },
+      "synthetic": {
+        "n": 4999,
+        "median": 18.404,
+        "mean": 20.1115,
+        "p10": 7.9788,
+        "p90": 34.1524,
+        "ks_d": 0.1336,
+        "ks_d_noise95": 0.0279,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 680,
+        "median": 18.361,
+        "mean": 20.4809,
+        "p10": 8.5169,
+        "p90": 35.5713,
+        "ks_d": 0.1317,
+        "ks_d_noise95": 0.0559,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "passes.pass_speed_kmh": {
+      "group": "passes",
+      "name": "pass_speed_kmh",
+      "role_group": null,
+      "unit": "km/h",
+      "observation": "pass",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 4522,
+        "n_matches": 6,
+        "median": 52.4998,
+        "p10": 30.5438,
+        "p90": 79.4723,
+        "mean": 53.9655,
+        "match_median_range": [50.1104, 54.0655]
+      },
+      "synthetic": {
+        "n": 4999,
+        "median": 34.1452,
+        "mean": 37.2327,
+        "p10": 24.8463,
+        "p90": 57.5625,
+        "ks_d": 0.4886,
+        "ks_d_noise95": 0.0279,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 680,
+        "median": 33.3599,
+        "mean": 37.1178,
+        "p10": 24.9608,
+        "p90": 58.088,
+        "ks_d": 0.4915,
+        "ks_d_noise95": 0.0559,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "passes.pass_success_own_third": {
+      "group": "passes",
+      "name": "pass_success_own_third",
+      "role_group": null,
+      "unit": "share",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.8312,
+        "p10": 0.7033,
+        "p90": 0.9188,
+        "mean": 0.8171,
+        "match_median_range": [0.7468, 0.8782]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.8016,
+        "mean": 0.7933,
+        "p10": 0.7217,
+        "p90": 0.8491,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.8294,
+        "mean": 0.8294,
+        "p10": 0.812,
+        "p90": 0.8467,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "passes.pass_success_middle_third": {
+      "group": "passes",
+      "name": "pass_success_middle_third",
+      "role_group": null,
+      "unit": "share",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.8261,
+        "p10": 0.7692,
+        "p90": 0.8766,
+        "mean": 0.8223,
+        "match_median_range": [0.8017, 0.8505]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.799,
+        "mean": 0.7917,
+        "p10": 0.7434,
+        "p90": 0.837,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "just_outside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.7775,
+        "mean": 0.7775,
+        "p10": 0.7532,
+        "p90": 0.8019,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "passes.pass_success_final_third": {
+      "group": "passes",
+      "name": "pass_success_final_third",
+      "role_group": null,
+      "unit": "share",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.624,
+        "p10": 0.5643,
+        "p90": 0.6811,
+        "mean": 0.6254,
+        "match_median_range": [0.5944, 0.6621]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.6937,
+        "mean": 0.6977,
+        "p10": 0.6531,
+        "p90": 0.7511,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.7122,
+        "mean": 0.7122,
+        "p10": 0.6799,
+        "p90": 0.7445,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "shots.shots_per_match": {
+      "group": "shots",
+      "name": "shots_per_match",
+      "role_group": null,
+      "unit": "count",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 25.5,
+        "p10": 20.5,
+        "p90": 26.0,
+        "mean": 24.0,
+        "match_median_range": [20.0, 26.0]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 22.0,
+        "mean": 21.8571,
+        "p10": 20.2,
+        "p90": 23.6,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 21.0,
+        "mean": 21.0,
+        "p10": 21.0,
+        "p90": 21.0,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shots_per90": {
+      "group": "shots",
+      "name": "shots_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 11.3732,
+        "p10": 7.5115,
+        "p90": 14.6733,
+        "mean": 11.3018,
+        "match_median_range": [9.2487, 12.7902]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 10.8782,
+        "mean": 10.3946,
+        "p10": 6.6726,
+        "p90": 14.1529,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 9.9752,
+        "mean": 9.9752,
+        "p10": 8.8352,
+        "p90": 11.1153,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_distance_m": {
+      "group": "shots",
+      "name": "shot_distance_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "shot",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 124,
+        "n_matches": 6,
+        "median": 16.3786,
+        "p10": 8.464,
+        "p90": 27.0843,
+        "mean": 17.4785,
+        "match_median_range": [14.3197, 17.9669]
+      },
+      "synthetic": {
+        "n": 151,
+        "median": 17.2432,
+        "mean": 19.1794,
+        "p10": 8.8382,
+        "p90": 31.7616,
+        "ks_d": 0.1212,
+        "ks_d_noise95": 0.1646,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 19,
+        "median": 17.2432,
+        "mean": 17.6223,
+        "p10": 7.8318,
+        "p90": 27.1827,
+        "ks_d": 0.111,
+        "ks_d_noise95": 0.3346,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_speed_kmh": {
+      "group": "shots",
+      "name": "shot_speed_kmh",
+      "role_group": null,
+      "unit": "km/h",
+      "observation": "shot",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 86,
+        "n_matches": 6,
+        "median": 82.654,
+        "p10": 40.2142,
+        "p90": 102.1786,
+        "mean": 77.3423,
+        "match_median_range": [72.9263, 92.8252]
+      },
+      "synthetic": {
+        "n": 137,
+        "median": 53.1429,
+        "mean": 55.0213,
+        "p10": 23.4069,
+        "p90": 85.851,
+        "ks_d": 0.396,
+        "ks_d_noise95": 0.1868,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 17,
+        "median": 77.5235,
+        "mean": 65.3671,
+        "p10": 33.5387,
+        "p90": 85.6894,
+        "ks_d": 0.3673,
+        "ks_d_noise95": 0.3604,
+        "median_position": "inside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "shots.shot_xg": {
+      "group": "shots",
+      "name": "shot_xg",
+      "role_group": null,
+      "unit": "xG",
+      "observation": "shot",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 124,
+        "n_matches": 6,
+        "median": 0.083,
+        "p10": 0.0295,
+        "p90": 0.2231,
+        "mean": 0.1048,
+        "match_median_range": [0.0677, 0.1072]
+      },
+      "synthetic": {
+        "n": 151,
+        "median": 0.0795,
+        "mean": 0.1054,
+        "p10": 0.0358,
+        "p90": 0.1917,
+        "ks_d": 0.152,
+        "ks_d_noise95": 0.1646,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 19,
+        "median": 0.0922,
+        "mean": 0.1067,
+        "p10": 0.035,
+        "p90": 0.1654,
+        "ks_d": 0.1968,
+        "ks_d_noise95": 0.3346,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "higher"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "shots.shot_share_goal": {
+      "group": "shots",
+      "name": "shot_share_goal",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.09,
+        "p10": 0.0385,
+        "p90": 0.1529,
+        "mean": 0.0938,
+        "match_median_range": [0.0385, 0.1905]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.1053,
+        "mean": 0.1145,
+        "p10": 0.0545,
+        "p90": 0.178,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.1429,
+        "mean": 0.1429,
+        "p10": 0.1429,
+        "p90": 0.1429,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_share_saved": {
+      "group": "shots",
+      "name": "shot_share_saved",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.2346,
+        "p10": 0.1438,
+        "p90": 0.3715,
+        "mean": 0.25,
+        "match_median_range": [0.0952, 0.4231]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.1579,
+        "mean": 0.1701,
+        "p10": 0.1221,
+        "p90": 0.2273,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.1429,
+        "mean": 0.1429,
+        "p10": 0.1429,
+        "p90": 0.1429,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_share_blocked": {
+      "group": "shots",
+      "name": "shot_share_blocked",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.2154,
+        "p10": 0.1714,
+        "p90": 0.2692,
+        "mean": 0.2187,
+        "match_median_range": [0.1429, 0.3077]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.2727,
+        "mean": 0.2839,
+        "p10": 0.1905,
+        "p90": 0.3847,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.1905,
+        "mean": 0.1905,
+        "p10": 0.1905,
+        "p90": 0.1905,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_share_wide": {
+      "group": "shots",
+      "name": "shot_share_wide",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.4173,
+        "p10": 0.3338,
+        "p90": 0.5165,
+        "mean": 0.4225,
+        "match_median_range": [0.3077, 0.5714]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.4231,
+        "mean": 0.4248,
+        "p10": 0.2818,
+        "p90": 0.5688,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.4762,
+        "mean": 0.4762,
+        "p10": 0.4762,
+        "p90": 0.4762,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "shots.shot_share_woodwork": {
+      "group": "shots",
+      "name": "shot_share_woodwork",
+      "role_group": null,
+      "unit": "share",
+      "observation": "match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 6,
+        "n_matches": 6,
+        "median": 0.0,
+        "p10": 0.0,
+        "p90": 0.045,
+        "mean": 0.015,
+        "match_median_range": [0.0, 0.05]
+      },
+      "synthetic": {
+        "n": 7,
+        "median": 0.0,
+        "mean": 0.0068,
+        "p10": 0.0,
+        "p90": 0.019,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "equal"
+      },
+      "syn_match": {
+        "n": 1,
+        "median": 0.0476,
+        "mean": 0.0476,
+        "p10": 0.0476,
+        "p90": 0.0476,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "events.fouls_per90": {
+      "group": "events",
+      "name": "fouls_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 10.7265,
+        "p10": 7.5126,
+        "p90": 14.5134,
+        "mean": 10.7026,
+        "match_median_range": [8.3099, 15.2499]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 7.5795,
+        "mean": 7.1823,
+        "p10": 2.8808,
+        "p90": 10.3788,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 9.5002,
+        "mean": 9.5002,
+        "p10": 7.9802,
+        "p90": 11.0203,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.corners_per90": {
+      "group": "events",
+      "name": "corners_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 2.9516,
+        "p10": 1.1283,
+        "p90": 6.473,
+        "mean": 3.9122,
+        "match_median_range": [0.9471, 7.113]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.9519,
+        "mean": 1.0883,
+        "p10": 0.0,
+        "p90": 2.5793,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 1.9,
+        "mean": 1.9,
+        "p10": 1.14,
+        "p90": 2.6601,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "events.throw_ins_per90": {
+      "group": "events",
+      "name": "throw_ins_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 20.0122,
+        "p10": 14.87,
+        "p90": 27.0879,
+        "mean": 20.5308,
+        "match_median_range": [17.0118, 25.5725]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 34.6497,
+        "mean": 34.8882,
+        "p10": 30.5296,
+        "p90": 38.5643,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 35.1508,
+        "mean": 35.1508,
+        "p10": 33.6308,
+        "p90": 36.6708,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "higher"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.free_kicks_per90": {
+      "group": "events",
+      "name": "free_kicks_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 11.2001,
+        "p10": 8.345,
+        "p90": 14.7029,
+        "mean": 11.408,
+        "match_median_range": [9.2332, 15.7418]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 8.0367,
+        "mean": 8.0679,
+        "p10": 3.8952,
+        "p90": 11.9672,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 10.4502,
+        "mean": 10.4502,
+        "p10": 8.1702,
+        "p90": 12.7303,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.cards_per90": {
+      "group": "events",
+      "name": "cards_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 1.8955,
+        "p10": 0.092,
+        "p90": 2.9339,
+        "mean": 2.0375,
+        "match_median_range": [0.9471, 4.155]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.0,
+        "mean": 0.4078,
+        "p10": 0.0,
+        "p90": 0.9531,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 0.475,
+        "mean": 0.475,
+        "p10": 0.095,
+        "p90": 0.855,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.tackles_per90": {
+      "group": "events",
+      "name": "tackles_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 99.5159,
+        "p10": 81.2901,
+        "p90": 106.2672,
+        "mean": 95.6066,
+        "match_median_range": [79.5416, 105.8972]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 69.6273,
+        "mean": 71.186,
+        "p10": 62.0097,
+        "p90": 84.7628,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 87.877,
+        "mean": 87.877,
+        "p10": 85.977,
+        "p90": 89.7771,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.recoveries_per90": {
+      "group": "events",
+      "name": "recoveries_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 13.2776,
+        "p10": 7.6653,
+        "p90": 21.5955,
+        "mean": 14.4195,
+        "match_median_range": [5.5399, 23.6128]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 16.2209,
+        "mean": 16.8621,
+        "p10": 13.5347,
+        "p90": 21.2926,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 14.7253,
+        "mean": 14.7253,
+        "p10": 14.3453,
+        "p90": 15.1053,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "events.clearances_per90": {
+      "group": "events",
+      "name": "clearances_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 9.1814,
+        "p10": 4.0579,
+        "p90": 15.7137,
+        "mean": 9.773,
+        "match_median_range": [5.6904, 17.5725]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 5.6966,
+        "mean": 5.445,
+        "p10": 2.1992,
+        "p90": 6.68,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 6.6502,
+        "mean": 6.6502,
+        "p10": 6.6502,
+        "p90": 6.6502,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "events.goal_kicks_per90": {
+      "group": "events",
+      "name": "goal_kicks_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 7.3777,
+        "p10": 5.5846,
+        "p90": 11.3112,
+        "mean": 8.0827,
+        "match_median_range": [6.4741, 8.9977]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 6.1284,
+        "mean": 6.1806,
+        "p10": 3.1444,
+        "p90": 9.1657,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 6.1751,
+        "mean": 6.1751,
+        "p10": 4.2751,
+        "p90": 8.0752,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "events.offsides_per90": {
+      "group": "events",
+      "name": "offsides_per90",
+      "role_group": null,
+      "unit": "count",
+      "observation": "team-match",
+      "comparison": "range_only",
+      "dfl": {
+        "n": 12,
+        "n_matches": 6,
+        "median": 0.9661,
+        "p10": 0.0,
+        "p90": 1.8898,
+        "mean": 1.0231,
+        "match_median_range": [0.4742, 1.4758]
+      },
+      "synthetic": {
+        "n": 14,
+        "median": 0.9539,
+        "mean": 1.089,
+        "p10": 0.0,
+        "p90": 1.9063,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 2,
+        "median": 1.425,
+        "mean": 1.425,
+        "p10": 1.045,
+        "p90": 1.805,
+        "ks_d": null,
+        "ks_d_noise95": null,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "higher"
+      },
+      "light": "green",
+      "small_sample": false
+    },
+    "team_shape.team_length_in_poss_m": {
+      "group": "team_shape",
+      "name": "team_length_in_poss_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "team-frame",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 18967,
+        "n_matches": 6,
+        "median": 35.69,
+        "p10": 27.69,
+        "p90": 45.014,
+        "mean": 35.9422,
+        "match_median_range": [34.265, 37.38]
+      },
+      "synthetic": {
+        "n": 22904,
+        "median": 33.73,
+        "mean": 33.8159,
+        "p10": 28.413,
+        "p90": 39.4,
+        "ks_d": 0.1962,
+        "ks_d_noise95": 0.0133,
+        "median_position": "far_outside",
+        "light": "red",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3174,
+        "median": 34.06,
+        "mean": 34.2018,
+        "p10": 28.649,
+        "p90": 39.884,
+        "ks_d": 0.1721,
+        "ks_d_noise95": 0.026,
+        "median_position": "just_outside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "light": "red",
+      "small_sample": false
+    },
+    "team_shape.team_length_out_poss_m": {
+      "group": "team_shape",
+      "name": "team_length_out_poss_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "team-frame",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 19015,
+        "n_matches": 6,
+        "median": 32.33,
+        "p10": 23.35,
+        "p90": 43.68,
+        "mean": 32.8663,
+        "match_median_range": [31.04, 34.54]
+      },
+      "synthetic": {
+        "n": 22933,
+        "median": 31.67,
+        "mean": 31.776,
+        "p10": 26.3,
+        "p90": 37.37,
+        "ks_d": 0.1793,
+        "ks_d_noise95": 0.0133,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3185,
+        "median": 32.02,
+        "mean": 32.1468,
+        "p10": 26.354,
+        "p90": 37.966,
+        "ks_d": 0.1621,
+        "ks_d_noise95": 0.026,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "team_shape.team_width_in_poss_m": {
+      "group": "team_shape",
+      "name": "team_width_in_poss_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "team-frame",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 18967,
+        "n_matches": 6,
+        "median": 47.79,
+        "p10": 30.456,
+        "p90": 63.56,
+        "mean": 47.298,
+        "match_median_range": [44.53, 50.97]
+      },
+      "synthetic": {
+        "n": 22904,
+        "median": 46.92,
+        "mean": 46.7054,
+        "p10": 36.41,
+        "p90": 57.07,
+        "ks_d": 0.1722,
+        "ks_d_noise95": 0.0133,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3174,
+        "median": 46.725,
+        "mean": 46.7401,
+        "p10": 36.893,
+        "p90": 57.024,
+        "ks_d": 0.1762,
+        "ks_d_noise95": 0.026,
+        "median_position": "inside",
+        "light": "yellow",
+        "direction": "lower"
+      },
+      "light": "yellow",
+      "small_sample": false
+    },
+    "team_shape.team_width_out_poss_m": {
+      "group": "team_shape",
+      "name": "team_width_out_poss_m",
+      "role_group": null,
+      "unit": "m",
+      "observation": "team-frame",
+      "comparison": "ks_and_range",
+      "dfl": {
+        "n": 19015,
+        "n_matches": 6,
+        "median": 37.92,
+        "p10": 28.24,
+        "p90": 45.72,
+        "mean": 37.4327,
+        "match_median_range": [35.755, 39.76]
+      },
+      "synthetic": {
+        "n": 22933,
+        "median": 37.23,
+        "mean": 37.2579,
+        "p10": 28.07,
+        "p90": 46.37,
+        "ks_d": 0.042,
+        "ks_d_noise95": 0.0133,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "syn_match": {
+        "n": 3185,
+        "median": 37.89,
+        "mean": 37.78,
+        "p10": 28.404,
+        "p90": 46.6,
+        "ks_d": 0.037,
+        "ks_d_noise95": 0.026,
+        "median_position": "inside",
+        "light": "green",
+        "direction": "lower"
+      },
+      "light": "green",
+      "small_sample": false
+    }
+  },
+  "mean_positions": {
+    "CAM": {
+      "in_possession": {
+        "n_samples": 325707,
+        "synthetic_mean_xy_m": [12.2735, -0.2637],
+        "dfl_baseline_xy_m": [6.1129, 0.0],
+        "distance_m": 6.1662
+      },
+      "out_of_possession": {
+        "n_samples": 251086,
+        "synthetic_mean_xy_m": [2.1054, -0.431],
+        "dfl_baseline_xy_m": [4.28, 0.0],
+        "distance_m": 2.2169
+      }
+    },
+    "CDM": {
+      "in_possession": {
+        "n_samples": 45868,
+        "synthetic_mean_xy_m": [1.6666, -4.4211],
+        "dfl_baseline_xy_m": [-5.9155, 0.0],
+        "distance_m": 8.7769
+      },
+      "out_of_possession": {
+        "n_samples": 46028,
+        "synthetic_mean_xy_m": [-12.5133, -5.4799],
+        "dfl_baseline_xy_m": [-7.3517, 0.0],
+        "distance_m": 7.528
+      }
+    },
+    "GK": {
+      "in_possession": {
+        "n_samples": 577978,
+        "synthetic_mean_xy_m": [-38.3527, 0.0189],
+        "dfl_baseline_xy_m": [-35.9124, 0.0],
+        "distance_m": 2.4404
+      },
+      "out_of_possession": {
+        "n_samples": 576760,
+        "synthetic_mean_xy_m": [-42.4255, 0.0322],
+        "dfl_baseline_xy_m": [-38.4978, 0.0],
+        "distance_m": 3.9279
+      }
+    },
+    "LB": {
+      "in_possession": {
+        "n_samples": 628820,
+        "synthetic_mean_xy_m": [-2.3131, 16.8207],
+        "dfl_baseline_xy_m": [-4.7761, 19.4967],
+        "distance_m": 3.6369
+      },
+      "out_of_possession": {
+        "n_samples": 629095,
+        "synthetic_mean_xy_m": [-14.9567, 12.0568],
+        "dfl_baseline_xy_m": [-11.5423, 13.8334],
+        "distance_m": 3.8489
+      }
+    },
+    "LCB": {
+      "in_possession": {
+        "n_samples": 571764,
+        "synthetic_mean_xy_m": [-13.6055, 9.5244],
+        "dfl_baseline_xy_m": [-15.9951, 10.0935],
+        "distance_m": 2.4565
+      },
+      "out_of_possession": {
+        "n_samples": 579751,
+        "synthetic_mean_xy_m": [-19.6889, 5.7923],
+        "dfl_baseline_xy_m": [-15.936, 6.2949],
+        "distance_m": 3.7864
+      }
+    },
+    "LCM": {
+      "in_possession": {
+        "n_samples": 271400,
+        "synthetic_mean_xy_m": [6.7894, 8.4042],
+        "dfl_baseline_xy_m": [3.7489, 7.8647],
+        "distance_m": 3.088
+      },
+      "out_of_possession": {
+        "n_samples": 345396,
+        "synthetic_mean_xy_m": [-3.5347, 6.5678],
+        "dfl_baseline_xy_m": [1.0639, 6.4474],
+        "distance_m": 4.6001
+      }
+    },
+    "LDM": {
+      "in_possession": {
+        "n_samples": 314293,
+        "synthetic_mean_xy_m": [1.9369, 1.7278],
+        "dfl_baseline_xy_m": [-3.5349, 2.03],
+        "distance_m": 5.4801
+      },
+      "out_of_possession": {
+        "n_samples": 241232,
+        "synthetic_mean_xy_m": [-7.7225, 1.9993],
+        "dfl_baseline_xy_m": [-4.8483, 2.2006],
+        "distance_m": 2.8813
+      }
+    },
+    "LM": {
+      "in_possession": {
+        "n_samples": 240332,
+        "synthetic_mean_xy_m": [3.9621, 24.1477],
+        "dfl_baseline_xy_m": [1.6982, 22.2847],
+        "distance_m": 2.9319
+      },
+      "out_of_possession": {
+        "n_samples": 313011,
+        "synthetic_mean_xy_m": [-10.4404, 19.2989],
+        "dfl_baseline_xy_m": [-6.7339, 17.6587],
+        "distance_m": 4.0532
+      }
+    },
+    "LS": {
+      "in_possession": {
+        "n_samples": 220033,
+        "synthetic_mean_xy_m": [15.505, 1.1972],
+        "dfl_baseline_xy_m": [13.346, 0.4723],
+        "distance_m": 2.2774
+      },
+      "out_of_possession": {
+        "n_samples": 293296,
+        "synthetic_mean_xy_m": [6.1677, 1.63],
+        "dfl_baseline_xy_m": [10.3194, 1.2524],
+        "distance_m": 4.1688
+      }
+    },
+    "LW": {
+      "in_possession": {
+        "n_samples": 347622,
+        "synthetic_mean_xy_m": [12.4971, 13.3944],
+        "dfl_baseline_xy_m": [7.5387, 14.5566],
+        "distance_m": 5.0927
+      },
+      "out_of_possession": {
+        "n_samples": 269678,
+        "synthetic_mean_xy_m": [-0.8467, 12.5341],
+        "dfl_baseline_xy_m": [1.1985, 13.4462],
+        "distance_m": 2.2394
+      }
+    },
+    "RB": {
+      "in_possession": {
+        "n_samples": 481979,
+        "synthetic_mean_xy_m": [-2.4487, -21.3437],
+        "dfl_baseline_xy_m": [-4.7761, -19.4967],
+        "distance_m": 2.9712
+      },
+      "out_of_possession": {
+        "n_samples": 487216,
+        "synthetic_mean_xy_m": [-15.139, -15.0819],
+        "dfl_baseline_xy_m": [-11.5423, -13.8334],
+        "distance_m": 3.8072
+      }
+    },
+    "RCB": {
+      "in_possession": {
+        "n_samples": 589430,
+        "synthetic_mean_xy_m": [-13.4869, -9.4731],
+        "dfl_baseline_xy_m": [-15.9951, -10.0935],
+        "distance_m": 2.5838
+      },
+      "out_of_possession": {
+        "n_samples": 579305,
+        "synthetic_mean_xy_m": [-19.6223, -5.871],
+        "dfl_baseline_xy_m": [-15.936, -6.2949],
+        "distance_m": 3.7106
+      }
+    },
+    "RCM": {
+      "in_possession": {
+        "n_samples": 238694,
+        "synthetic_mean_xy_m": [7.3092, -7.5213],
+        "dfl_baseline_xy_m": [3.7489, -7.8647],
+        "distance_m": 3.5768
+      },
+      "out_of_possession": {
+        "n_samples": 309733,
+        "synthetic_mean_xy_m": [-3.5165, -6.0496],
+        "dfl_baseline_xy_m": [1.0639, -6.4474],
+        "distance_m": 4.5977
+      }
+    },
+    "RDM": {
+      "in_possession": {
+        "n_samples": 311300,
+        "synthetic_mean_xy_m": [1.8435, -2.3386],
+        "dfl_baseline_xy_m": [-3.5349, -2.03],
+        "distance_m": 5.3872
+      },
+      "out_of_possession": {
+        "n_samples": 240020,
+        "synthetic_mean_xy_m": [-7.6776, -2.8008],
+        "dfl_baseline_xy_m": [-4.8483, -2.2006],
+        "distance_m": 2.8923
+      }
+    },
+    "RM": {
+      "in_possession": {
+        "n_samples": 255234,
+        "synthetic_mean_xy_m": [4.2954, -21.8691],
+        "dfl_baseline_xy_m": [1.6982, -22.2847],
+        "distance_m": 2.6303
+      },
+      "out_of_possession": {
+        "n_samples": 330827,
+        "synthetic_mean_xy_m": [-10.5156, -17.3159],
+        "dfl_baseline_xy_m": [-6.7339, -17.6587],
+        "distance_m": 3.7972
+      }
+    },
+    "RS": {
+      "in_possession": {
+        "n_samples": 228856,
+        "synthetic_mean_xy_m": [15.781, -0.4939],
+        "dfl_baseline_xy_m": [13.346, -0.4723],
+        "distance_m": 2.4351
+      },
+      "out_of_possession": {
+        "n_samples": 295579,
+        "synthetic_mean_xy_m": [6.634, -0.7224],
+        "dfl_baseline_xy_m": [10.3194, -1.2524],
+        "distance_m": 3.7234
+      }
+    },
+    "RW": {
+      "in_possession": {
+        "n_samples": 303435,
+        "synthetic_mean_xy_m": [12.6454, -15.9979],
+        "dfl_baseline_xy_m": [7.5387, -14.5566],
+        "distance_m": 5.3062
+      },
+      "out_of_possession": {
+        "n_samples": 232478,
+        "synthetic_mean_xy_m": [-0.5329, -15.2393],
+        "dfl_baseline_xy_m": [1.1985, -13.4462],
+        "distance_m": 2.4926
+      }
+    },
+    "ST": {
+      "in_possession": {
+        "n_samples": 393392,
+        "synthetic_mean_xy_m": [17.3539, -0.934],
+        "dfl_baseline_xy_m": [13.732, 0.0],
+        "distance_m": 3.7404
+      },
+      "out_of_possession": {
+        "n_samples": 325259,
+        "synthetic_mean_xy_m": [8.961, -1.0175],
+        "dfl_baseline_xy_m": [11.6326, 0.0],
+        "distance_m": 2.8588
+      }
+    }
+  },
+  "shots_diagnostic": {
+    "label_vs_observed_outcome": {
+      "blocked": {
+        "blocked": 37,
+        "none": 2,
+        "saved": 2,
+        "wide": 2
+      },
+      "goal": {
+        "goal": 18
+      },
+      "saved": {
+        "blocked": 2,
+        "saved": 23,
+        "wide": 1
+      },
+      "wide": {
+        "blocked": 5,
+        "none": 1,
+        "saved": 2,
+        "wide": 57
+      },
+      "woodwork": {
+        "woodwork": 1
+      }
+    },
+    "dfl_label_vs_observed_outcome": {
+      "blocked": {
+        "blocked": 16,
+        "none": 9,
+        "wide": 7
+      },
+      "goal": {
+        "goal": 13
+      },
+      "saved": {
+        "blocked": 2,
+        "none": 4,
+        "saved": 31
+      },
+      "wide": {
+        "blocked": 12,
+        "none": 9,
+        "saved": 6,
+        "wide": 33
+      },
+      "woodwork": {
+        "none": 1,
+        "woodwork": 1
+      }
+    },
+    "woodwork_shots": {
+      "SYN-001": [
+        {
+          "period": 2,
+          "minute": 58,
+          "observed": "woodwork",
+          "type_check": "confirmed",
+          "located": true,
+          "woodwork_distance_m": 0.5,
+          "nearest_woodwork_m": 0.4847,
+          "nearest_woodwork_part": "post",
+          "nearest_after_kick_s": 0.96,
+          "nearest_player_m": 7.8758,
+          "shot_speed_kmh": 79.5743,
+          "ball_step_per_frame_m": 0.8842
+        }
+      ],
+      "SYN-001-r1": [],
+      "SYN-001-r2": [],
+      "SYN-001-r3": [],
+      "SYN-001-r4": [],
+      "SYN-001-r5": [],
+      "SYN-001-r6": []
+    },
+    "note": "label = the outcome label (simulation or provider annotation, R-SHOT-COUNTS); observed = the pipeline's outcome from the trajectory (R-SHOT-OUTCOME, R-WOODWORK). A label 'woodwork' observed otherwise is a woodwork hit the pipeline does not recognise; woodwork_shots gives the nearest approach of the ball samples to the woodwork."
+  },
+  "improvements": [
+    {
+      "name": "top_speed_kmh",
+      "group": "physical",
+      "keys": ["physical.top_speed_kmh.GK", "physical.top_speed_kmh.CB", "physical.top_speed_kmh.FB", "physical.top_speed_kmh.MF", "physical.top_speed_kmh.W", "physical.top_speed_kmh.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.5667,
+      "visibility": 4,
+      "directions": ["lower", "higher", "higher", "lower", "higher", "lower"],
+      "rank": 1
+    },
+    {
+      "name": "pass_speed_kmh",
+      "group": "passes",
+      "keys": ["passes.pass_speed_kmh"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.4886,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 2
+    },
+    {
+      "name": "shot_speed_kmh",
+      "group": "shots",
+      "keys": ["shots.shot_speed_kmh"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.396,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 3
+    },
+    {
+      "name": "team_length_in_poss_m",
+      "group": "team_shape",
+      "keys": ["team_shape.team_length_in_poss_m"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.1962,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 4
+    },
+    {
+      "name": "ball_speed_live_kmh",
+      "group": "ball_play",
+      "keys": ["ball_play.ball_speed_live_kmh"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.1719,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 5
+    },
+    {
+      "name": "pass_length_m",
+      "group": "passes",
+      "keys": ["passes.pass_length_m"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.1336,
+      "visibility": 4,
+      "directions": ["higher"],
+      "rank": 6
+    },
+    {
+      "name": "team_length_out_poss_m",
+      "group": "team_shape",
+      "keys": ["team_shape.team_length_out_poss_m"],
+      "role_groups": [],
+      "worst": "yellow",
+      "max_ks_d": 0.1793,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 7
+    },
+    {
+      "name": "team_width_in_poss_m",
+      "group": "team_shape",
+      "keys": ["team_shape.team_width_in_poss_m"],
+      "role_groups": [],
+      "worst": "yellow",
+      "max_ks_d": 0.1722,
+      "visibility": 4,
+      "directions": ["lower"],
+      "rank": 8
+    },
+    {
+      "name": "accelerations_per90",
+      "group": "physical",
+      "keys": ["physical.accelerations_per90.GK", "physical.accelerations_per90.CB", "physical.accelerations_per90.FB", "physical.accelerations_per90.MF", "physical.accelerations_per90.W", "physical.accelerations_per90.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 1.0,
+      "visibility": 3,
+      "directions": ["higher", "higher", "higher", "higher", "higher", "higher"],
+      "rank": 9
+    },
+    {
+      "name": "decelerations_per90",
+      "group": "physical",
+      "keys": ["physical.decelerations_per90.GK", "physical.decelerations_per90.CB", "physical.decelerations_per90.FB", "physical.decelerations_per90.MF", "physical.decelerations_per90.W", "physical.decelerations_per90.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.8214,
+      "visibility": 3,
+      "directions": ["lower", "lower", "higher", "higher", "higher", "higher"],
+      "rank": 10
+    },
+    {
+      "name": "sprints_per90",
+      "group": "physical",
+      "keys": ["physical.sprints_per90.GK", "physical.sprints_per90.CB", "physical.sprints_per90.FB", "physical.sprints_per90.MF", "physical.sprints_per90.W", "physical.sprints_per90.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.6721,
+      "visibility": 3,
+      "directions": ["equal", "lower", "lower", "higher", "higher", "lower"],
+      "rank": 11
+    },
+    {
+      "name": "zone_25_plus_per90_m",
+      "group": "physical",
+      "keys": ["physical.zone_25_plus_per90_m.GK", "physical.zone_25_plus_per90_m.FB", "physical.zone_25_plus_per90_m.MF", "physical.zone_25_plus_per90_m.W", "physical.zone_25_plus_per90_m.ST"],
+      "role_groups": ["GK", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.7575,
+      "visibility": 3,
+      "directions": ["equal", "lower", "higher", "higher", "lower"],
+      "rank": 12
+    },
+    {
+      "name": "possession_spell_duration_s",
+      "group": "ball_play",
+      "keys": ["ball_play.possession_spell_duration_s"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": 0.3101,
+      "visibility": 3,
+      "directions": ["higher"],
+      "rank": 13
+    },
+    {
+      "name": "cards_per90",
+      "group": "events",
+      "keys": ["events.cards_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["lower"],
+      "rank": 14
+    },
+    {
+      "name": "fouls_per90",
+      "group": "events",
+      "keys": ["events.fouls_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["lower"],
+      "rank": 15
+    },
+    {
+      "name": "free_kicks_per90",
+      "group": "events",
+      "keys": ["events.free_kicks_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["lower"],
+      "rank": 16
+    },
+    {
+      "name": "pass_success_final_third",
+      "group": "passes",
+      "keys": ["passes.pass_success_final_third"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["higher"],
+      "rank": 17
+    },
+    {
+      "name": "throw_ins_per90",
+      "group": "events",
+      "keys": ["events.throw_ins_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["higher"],
+      "rank": 18
+    },
+    {
+      "name": "shot_xg",
+      "group": "shots",
+      "keys": ["shots.shot_xg"],
+      "role_groups": [],
+      "worst": "yellow",
+      "max_ks_d": 0.152,
+      "visibility": 3,
+      "directions": ["lower"],
+      "rank": 19
+    },
+    {
+      "name": "pass_success_middle_third",
+      "group": "passes",
+      "keys": ["passes.pass_success_middle_third"],
+      "role_groups": [],
+      "worst": "yellow",
+      "max_ks_d": null,
+      "visibility": 3,
+      "directions": ["lower"],
+      "rank": 20
+    },
+    {
+      "name": "zone_20_25_per90_m",
+      "group": "physical",
+      "keys": ["physical.zone_20_25_per90_m.GK", "physical.zone_20_25_per90_m.CB", "physical.zone_20_25_per90_m.FB", "physical.zone_20_25_per90_m.MF", "physical.zone_20_25_per90_m.W", "physical.zone_20_25_per90_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.9247,
+      "visibility": 2,
+      "directions": ["lower", "lower", "higher", "higher", "higher", "lower"],
+      "rank": 21
+    },
+    {
+      "name": "distance_above_20kmh_per90_m",
+      "group": "physical",
+      "keys": ["physical.distance_above_20kmh_per90_m.GK", "physical.distance_above_20kmh_per90_m.CB", "physical.distance_above_20kmh_per90_m.FB", "physical.distance_above_20kmh_per90_m.MF", "physical.distance_above_20kmh_per90_m.W", "physical.distance_above_20kmh_per90_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.9172,
+      "visibility": 2,
+      "directions": ["lower", "lower", "lower", "higher", "higher", "lower"],
+      "rank": 22
+    },
+    {
+      "name": "zone_7_15_per90_m",
+      "group": "physical",
+      "keys": ["physical.zone_7_15_per90_m.GK", "physical.zone_7_15_per90_m.CB", "physical.zone_7_15_per90_m.FB", "physical.zone_7_15_per90_m.MF", "physical.zone_7_15_per90_m.W", "physical.zone_7_15_per90_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.8669,
+      "visibility": 2,
+      "directions": ["lower", "higher", "higher", "higher", "higher", "higher"],
+      "rank": 23
+    },
+    {
+      "name": "zone_0_7_per90_m",
+      "group": "physical",
+      "keys": ["physical.zone_0_7_per90_m.GK", "physical.zone_0_7_per90_m.CB", "physical.zone_0_7_per90_m.FB", "physical.zone_0_7_per90_m.MF", "physical.zone_0_7_per90_m.W", "physical.zone_0_7_per90_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.689,
+      "visibility": 2,
+      "directions": ["higher", "higher", "lower", "lower", "lower", "lower"],
+      "rank": 24
+    },
+    {
+      "name": "distance_per90_m",
+      "group": "physical",
+      "keys": ["physical.distance_per90_m.GK", "physical.distance_per90_m.CB", "physical.distance_per90_m.FB", "physical.distance_per90_m.MF", "physical.distance_per90_m.W", "physical.distance_per90_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.6245,
+      "visibility": 2,
+      "directions": ["lower", "higher", "higher", "higher", "higher", "lower"],
+      "rank": 25
+    },
+    {
+      "name": "peak_5min_m",
+      "group": "physical",
+      "keys": ["physical.peak_5min_m.GK", "physical.peak_5min_m.CB", "physical.peak_5min_m.FB", "physical.peak_5min_m.MF", "physical.peak_5min_m.ST"],
+      "role_groups": ["GK", "CB", "FB", "MF", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.8378,
+      "visibility": 2,
+      "directions": ["lower", "lower", "lower", "lower", "lower"],
+      "rank": 26
+    },
+    {
+      "name": "zone_15_20_per90_m",
+      "group": "physical",
+      "keys": ["physical.zone_15_20_per90_m.GK", "physical.zone_15_20_per90_m.CB", "physical.zone_15_20_per90_m.MF", "physical.zone_15_20_per90_m.W", "physical.zone_15_20_per90_m.ST"],
+      "role_groups": ["GK", "CB", "MF", "W", "ST"],
+      "worst": "red",
+      "max_ks_d": 0.7146,
+      "visibility": 2,
+      "directions": ["lower", "lower", "higher", "higher", "lower"],
+      "rank": 27
+    },
+    {
+      "name": "goal_kicks_per90",
+      "group": "events",
+      "keys": ["events.goal_kicks_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 2,
+      "directions": ["lower"],
+      "rank": 28
+    },
+    {
+      "name": "tackles_per90",
+      "group": "events",
+      "keys": ["events.tackles_per90"],
+      "role_groups": [],
+      "worst": "red",
+      "max_ks_d": null,
+      "visibility": 2,
+      "directions": ["lower"],
+      "rank": 29
+    }
+  ]
+}

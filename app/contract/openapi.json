@@ -1,0 +1,7269 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "statseat API",
+    "description": "Contract between the statseat backend and the PWA (mock implementation with fake data). match_id and the ticket tier are derived from the ticket token server-side. Tiers: silver = Casual only; gold = Analyst with switch to Casual; demo = gold + Inspector + phase panel (also for the judges). One device per ticket except demo. Payloads built from the match carry as_of_s (no look-ahead). All names are fictional (universe MERIDIA-1.0).",
+    "version": "0.3.1"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Api Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/session": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Get Session",
+        "operationId": "get_session_api_session_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Session"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/session/preferences": {
+      "put": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Put Preferences",
+        "operationId": "put_preferences_api_session_preferences_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Preferences"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Preferences"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/ticket": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "My Ticket",
+        "operationId": "my_ticket_api_ticket_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TicketInfo"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/ticket/image": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "My Ticket Image",
+        "operationId": "my_ticket_image_api_ticket_image_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "svg",
+                "pdf",
+                "png"
+              ],
+              "type": "string",
+              "default": "svg",
+              "title": "Format"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              },
+              "image/svg+xml": {},
+              "image/png": {},
+              "application/pdf": {}
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/match": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "summary": "Match",
+        "operationId": "match_api_match_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchOverview"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/match/state": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "summary": "Match State",
+        "operationId": "match_state_api_match_state_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchState"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/match/events": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "summary": "Events",
+        "operationId": "events_api_match_events_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventFeed"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/stats/live": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Stats Live",
+        "operationId": "stats_live_api_stats_live_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveStats"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/stats": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Stats",
+        "operationId": "stats_api_stats_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Mode"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Defaults to the session mode",
+              "title": "Mode"
+            },
+            "description": "Defaults to the session mode"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchStats"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/recap": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Recap",
+        "operationId": "recap_api_recap_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Mode"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Mode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recap"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/recap/pdf": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "summary": "Recap Report",
+        "description": "The final report in PDF, built by the server (L-2g, v0.2.6): the Recap's summary (computed by the code),\nits key moments and the Data & Statistics of the same version, with the fan's favourite players. Open after the\nfinal whistle (423 before), English only.",
+        "operationId": "recap_report_api_recap_pdf_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Mode"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Mode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The final report (A4 PDF)",
+            "content": {
+              "application/pdf": {}
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/highlights": {
+      "get": {
+        "tags": [
+          "highlights"
+        ],
+        "summary": "Highlights",
+        "operationId": "highlights_api_highlights_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HighlightList"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/games": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Games",
+        "operationId": "games_api_games_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GameList"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/games/players": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Players",
+        "operationId": "players_api_games_players_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlayerPicker"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/crests/{club_id}": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Crest",
+        "description": "A club's crest (M-1, synthetic/crests/). Public, like any image of the app: no token needed.",
+        "operationId": "crest_api_crests__club_id__get",
+        "parameters": [
+          {
+            "name": "club_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Club Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The crest",
+            "content": {
+              "image/svg+xml": {}
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/games/tiki-taka-toe": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Ttt Start",
+        "description": "A new game against the fan-bot (M-3, app/games/ttt.py): the match's grid, 20 s per turn, 10 minutes.",
+        "operationId": "ttt_start_api_games_tiki_taka_toe_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TttGame"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/games/tiki-taka-toe/{game_session_id}": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Ttt Get",
+        "description": "The game now (v0.3.1): after the 20 s the fan has lost the turn and the bot has played.",
+        "operationId": "ttt_get_api_games_tiki_taka_toe__game_session_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "game_session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Game Session Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TttGame"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/games/tiki-taka-toe/{game_session_id}/moves": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Ttt Move",
+        "operationId": "ttt_move_api_games_tiki_taka_toe__game_session_id__moves_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "game_session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Game Session Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TttMoveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TttMoveResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/games/guess-the-player": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Guess Start",
+        "description": "The next of the session's 5 questions (M-3, app/games/guess.py): always the 'career' version.",
+        "operationId": "guess_start_api_games_guess_the_player_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "career",
+                "transfers"
+              ],
+              "type": "string",
+              "default": "career",
+              "title": "Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GuessRound"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/games/guess-the-player/{round_id}/answer": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Guess Answer",
+        "operationId": "guess_answer_api_games_guess_the_player__round_id__answer_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "round_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Round Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/games/quiz": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Quiz Start",
+        "operationId": "quiz_start_api_games_quiz_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuizRound"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/games/quiz/{round_id}/answer": {
+      "post": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Quiz Answer",
+        "operationId": "quiz_answer_api_games_quiz__round_id__answer_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "round_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Round Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnswerRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnswerResult"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "423": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Locked"
+          }
+        }
+      }
+    },
+    "/api/leaderboard": {
+      "get": {
+        "tags": [
+          "games"
+        ],
+        "summary": "Leaderboard",
+        "operationId": "leaderboard_api_leaderboard_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Leaderboard"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/archie/ask": {
+      "post": {
+        "tags": [
+          "archie"
+        ],
+        "summary": "Ask",
+        "operationId": "ask_api_archie_ask_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArchieRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArchieAnswer"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/demo/phase": {
+      "post": {
+        "tags": [
+          "demo"
+        ],
+        "summary": "Demo Phase",
+        "operationId": "demo_phase_api_demo_phase_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DemoPhaseRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchState"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "423": {
+            "description": "Locked",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccelerationLoad": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamLoad"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "series": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TeamSeries"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Series",
+            "description": "Analyst only: km/h per minute, 5-minute blocks (mirror chart)"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "acceleration_load"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams"
+        ],
+        "title": "AccelerationLoad",
+        "description": "Acceleration load (METRICS.md §22, v0.3.0): the sum of |dv/dt| dt, the total change of speed."
+      },
+      "AgentStep": {
+        "properties": {
+          "agent": {
+            "type": "string",
+            "enum": [
+              "Archie",
+              "Kit Man",
+              "The Analyst",
+              "VAR",
+              "The Ref"
+            ],
+            "title": "Agent"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "tokens_in": {
+            "type": "integer",
+            "title": "Tokens In"
+          },
+          "tokens_out": {
+            "type": "integer",
+            "title": "Tokens Out"
+          },
+          "latency_ms": {
+            "type": "integer",
+            "title": "Latency Ms"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "agent",
+          "model",
+          "role",
+          "tokens_in",
+          "tokens_out",
+          "latency_ms"
+        ],
+        "title": "AgentStep"
+      },
+      "AnswerRequest": {
+        "properties": {
+          "option_id": {
+            "type": "string",
+            "title": "Option Id",
+            "description": "player_id for Guess the player, option id for the quiz"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "option_id"
+        ],
+        "title": "AnswerRequest"
+      },
+      "AnswerResult": {
+        "properties": {
+          "correct": {
+            "type": "boolean",
+            "title": "Correct"
+          },
+          "correct_option_id": {
+            "type": "string",
+            "title": "Correct Option Id"
+          },
+          "elapsed_ms": {
+            "type": "integer",
+            "title": "Elapsed Ms",
+            "description": "Measured by the server from the round start"
+          },
+          "points_awarded": {
+            "type": "integer",
+            "title": "Points Awarded"
+          },
+          "speed_bonus": {
+            "type": "integer",
+            "title": "Speed Bonus"
+          },
+          "fact": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fact",
+            "description": "The verified fact behind the answer"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "correct",
+          "correct_option_id",
+          "elapsed_ms",
+          "points_awarded",
+          "speed_bonus"
+        ],
+        "title": "AnswerResult"
+      },
+      "ApiError": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "description": "Machine-readable code, e.g. section_locked, invalid_ticket, ticket_in_use"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          },
+          "unlocks_at_phase": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unlocks At Phase"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ApiError"
+      },
+      "ArchieAnswer": {
+        "properties": {
+          "answer_id": {
+            "type": "string",
+            "title": "Answer Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language"
+          },
+          "in_scope": {
+            "type": "boolean",
+            "title": "In Scope",
+            "description": "False when Archie politely declines (other matches, invented numbers)"
+          },
+          "grounding": {
+            "items": {
+              "$ref": "#/components/schemas/GroundedValue"
+            },
+            "type": "array",
+            "title": "Grounding"
+          },
+          "points_to": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChartPointer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Chart to open instead of drawing one"
+          },
+          "inspector": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InspectorTrace"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "answer_id",
+          "text",
+          "language",
+          "in_scope",
+          "grounding"
+        ],
+        "title": "ArchieAnswer"
+      },
+      "ArchieRequest": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Message"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language",
+            "description": "Override of the session language"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "title": "ArchieRequest"
+      },
+      "BallCirculation": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamMeasure"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "unit": {
+            "type": "string",
+            "const": "km/h",
+            "title": "Unit",
+            "default": "km/h"
+          },
+          "series": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TeamSeries"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Series",
+            "description": "Analyst only: 5-minute blocks (mirror chart)"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "ball_circulation"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams"
+        ],
+        "title": "BallCirculation",
+        "description": "Ball circulation speed in possession, in km/h since v0.3.0, per team, without the 2 s after shots and\nclearances (METRICS.md §6)."
+      },
+      "CareerClue": {
+        "properties": {
+          "club_name": {
+            "type": "string",
+            "title": "Club Name",
+            "description": "\"?\" for the hidden current club"
+          },
+          "from_season": {
+            "type": "string",
+            "title": "From Season"
+          },
+          "to_season": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "To Season"
+          },
+          "move": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Move",
+            "description": "transfer, loan, free_transfer, academy, loan_return (v0.3.1)"
+          },
+          "fee_eur": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Eur",
+            "description": "Only for paid transfers (v0.3.1)"
+          },
+          "hidden": {
+            "type": "boolean",
+            "title": "Hidden",
+            "description": "The current club, to be guessed (v0.3.1)",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "club_name",
+          "from_season",
+          "to_season"
+        ],
+        "title": "CareerClue"
+      },
+      "ChartPointer": {
+        "properties": {
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "description": "A chart id of MatchStats.charts, or a table id of DATA_STATS_TABLES (v0.3.0)"
+          },
+          "section": {
+            "$ref": "#/components/schemas/Section"
+          },
+          "locked": {
+            "type": "boolean",
+            "title": "Locked"
+          },
+          "unlocks_at_phase": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Phase"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "chart_id",
+          "section",
+          "locked"
+        ],
+        "title": "ChartPointer"
+      },
+      "ChartRef": {
+        "properties": {
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "section": {
+            "$ref": "#/components/schemas/Section",
+            "default": "data_stats"
+          },
+          "modes": {
+            "items": {
+              "$ref": "#/components/schemas/Mode"
+            },
+            "type": "array",
+            "title": "Modes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "chart_id",
+          "title",
+          "modes"
+        ],
+        "title": "ChartRef",
+        "description": "A chart in Data & Statistics; Archie points to it instead of drawing."
+      },
+      "CounterAttack": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "recovery_event_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recovery Event Id"
+          },
+          "shot_event_id": {
+            "type": "string",
+            "title": "Shot Event Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "minute",
+          "shot_event_id"
+        ],
+        "title": "CounterAttack"
+      },
+      "CounterAttacks": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamCount"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "items": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/CounterAttack"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Items",
+            "description": "Analyst only, linked to the timeline"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams"
+        ],
+        "title": "CounterAttacks",
+        "description": "Counter-attacks (METRICS.md §25, v0.3.0): ball won in the team's own half, then a shot within 15 s without\nlosing it."
+      },
+      "Criterion": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "club",
+              "nationality"
+            ],
+            "title": "Kind"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Club id (never one of the two match clubs) or country name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "id",
+          "label"
+        ],
+        "title": "Criterion"
+      },
+      "DataScope": {
+        "type": "string",
+        "enum": [
+          "live",
+          "first_half",
+          "full_match"
+        ],
+        "title": "DataScope"
+      },
+      "DefensiveShape": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "defensive_line_m": {
+            "items": {
+              "$ref": "#/components/schemas/TimePoint"
+            },
+            "type": "array",
+            "title": "Defensive Line M"
+          },
+          "team_length_m": {
+            "items": {
+              "$ref": "#/components/schemas/TimePoint"
+            },
+            "type": "array",
+            "title": "Team Length M"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "defensive_shape"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "defensive_line_m",
+          "team_length_m"
+        ],
+        "title": "DefensiveShape",
+        "description": "Defensive line height and team length (m), 5-minute blocks (mirror chart). Analyst only."
+      },
+      "DemoPhaseRequest": {
+        "properties": {
+          "phase": {
+            "$ref": "#/components/schemas/Phase"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "phase"
+        ],
+        "title": "DemoPhaseRequest"
+      },
+      "Distance": {
+        "properties": {
+          "km": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Km"
+          },
+          "approx": {
+            "type": "boolean",
+            "title": "Approx",
+            "description": "True when part of the time is not measured: show the value with '≈'"
+          },
+          "unmeasured_pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Unmeasured Pct"
+          },
+          "reliability": {
+            "$ref": "#/components/schemas/Reliability",
+            "description": "Symbol from the measured share, 100 - unmeasured_pct (v0.3.0)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "km",
+          "approx",
+          "unmeasured_pct",
+          "reliability"
+        ],
+        "title": "Distance"
+      },
+      "DistanceCovered": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamDistance"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "top_runner": {
+            "$ref": "#/components/schemas/PlayerDistance"
+          },
+          "players": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PlayerDistance"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Players",
+            "description": "Analyst only"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams",
+          "top_runner"
+        ],
+        "title": "DistanceCovered",
+        "description": "Distance covered (METRICS.md §1): a table since v0.3.0, not a chart."
+      },
+      "DistanceSplits": {
+        "properties": {
+          "ball_in_play_km": {
+            "type": "number",
+            "title": "Ball In Play Km"
+          },
+          "ball_stopped_km": {
+            "type": "number",
+            "title": "Ball Stopped Km"
+          },
+          "in_possession_km": {
+            "type": "number",
+            "title": "In Possession Km"
+          },
+          "out_of_possession_km": {
+            "type": "number",
+            "title": "Out Of Possession Km"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ball_in_play_km",
+          "ball_stopped_km",
+          "in_possession_km",
+          "out_of_possession_km"
+        ],
+        "title": "DistanceSplits"
+      },
+      "EffectivePlayingTime": {
+        "properties": {
+          "first_half_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Half Min"
+          },
+          "second_half_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Second Half Min"
+          },
+          "total_min": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Total Min"
+          },
+          "played_min": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Played Min",
+            "description": "Minutes played so far, added time included"
+          },
+          "in_play_pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "In Play Pct"
+          },
+          "reference_world_cup_2022_min": {
+            "type": "number",
+            "title": "Reference World Cup 2022 Min",
+            "description": "Average at the 2022 World Cup (Associated Press, 30/11/2022)",
+            "default": 59.0
+          },
+          "reference_bundesliga_pct": {
+            "type": "number",
+            "title": "Reference Bundesliga Pct",
+            "description": "Share of time in play in the Bundesliga (Siegle & Lames 2012)",
+            "default": 62.0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "total_min",
+          "played_min",
+          "in_play_pct"
+        ],
+        "title": "EffectivePlayingTime",
+        "description": "Minutes with the ball in play (METRICS.md §12, v0.3.0), with the two references shown to the fan."
+      },
+      "EventFeed": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "as_of_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "As Of S",
+            "description": "Playback time (seconds since kick-off, first-half added time included) up to which frames and events were used; nothing after this instant (no look-ahead, S-7)"
+          },
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/MatchEvent"
+            },
+            "type": "array",
+            "title": "Events",
+            "description": "Only events whose frames have already been processed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "as_of_s",
+          "events"
+        ],
+        "title": "EventFeed"
+      },
+      "EventType": {
+        "type": "string",
+        "enum": [
+          "KickOff",
+          "ShotAtGoal",
+          "Caution",
+          "Substitution",
+          "CornerKick",
+          "Foul",
+          "VideoAssistantAction",
+          "FinalWhistle"
+        ],
+        "title": "EventType",
+        "description": "DFL taxonomy in English, without `Delete` (a post-processing placeholder, never served)."
+      },
+      "ExpectedGoals": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamValue"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "cumulative": {
+            "items": {
+              "$ref": "#/components/schemas/TeamSeries"
+            },
+            "type": "array",
+            "title": "Cumulative"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "xg_cumulative"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams",
+          "cumulative",
+          "method"
+        ],
+        "title": "ExpectedGoals",
+        "description": "xG per team and cumulative xG (step line), METRICS.md §9; penalties count 0.79. Analyst only."
+      },
+      "GameId": {
+        "type": "string",
+        "enum": [
+          "tiki_taka_toe",
+          "guess_the_player",
+          "quiz"
+        ],
+        "title": "GameId"
+      },
+      "GameInfo": {
+        "properties": {
+          "game_id": {
+            "$ref": "#/components/schemas/GameId"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          },
+          "unlocks_at_phase": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Phase"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rules": {
+            "type": "string",
+            "title": "Rules"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "game_id",
+          "title",
+          "available",
+          "rules"
+        ],
+        "title": "GameInfo"
+      },
+      "GameList": {
+        "properties": {
+          "games": {
+            "items": {
+              "$ref": "#/components/schemas/GameInfo"
+            },
+            "type": "array",
+            "title": "Games"
+          },
+          "prize": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GamePrize"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The sponsor's prize for the half-time winner (v0.2.3)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "games"
+        ],
+        "title": "GameList"
+      },
+      "GamePrize": {
+        "properties": {
+          "sponsor_name": {
+            "type": "string",
+            "title": "Sponsor Name"
+          },
+          "sponsor_sector": {
+            "type": "string",
+            "title": "Sponsor Sector"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "value_eur": {
+            "type": "integer",
+            "title": "Value Eur"
+          },
+          "how_to_claim": {
+            "type": "string",
+            "title": "How To Claim"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sponsor_name",
+          "sponsor_sector",
+          "name",
+          "description",
+          "value_eur",
+          "how_to_claim"
+        ],
+        "title": "GamePrize",
+        "description": "The match sponsor's prize for the winner of the half-time games (invented sponsor, universe `match_preview.sponsor`)."
+      },
+      "GoalMark": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "minute"
+        ],
+        "title": "GoalMark",
+        "description": "A goal on the time axis of the charts over time (a vertical line, v0.3.0)."
+      },
+      "GoalsVsXg": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "goals": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Goals"
+          },
+          "xg": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Xg"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "goals",
+          "xg"
+        ],
+        "title": "GoalsVsXg",
+        "description": "Goals next to the xG of the team's chances (METRICS.md §10, v0.3.0): numbers only, no judgement words."
+      },
+      "GroundedValue": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "How the number appears in the answer, e.g. '6.3 km'"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Unit"
+          },
+          "tool": {
+            "type": "string",
+            "title": "Tool"
+          },
+          "arguments": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Arguments"
+          },
+          "source_field": {
+            "type": "string",
+            "title": "Source Field",
+            "description": "Path in the tool result, e.g. distance_covered.top_runner.distance.km"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "text",
+          "value",
+          "tool",
+          "source_field"
+        ],
+        "title": "GroundedValue",
+        "description": "One number of the answer and where it came from (checked by the grounding validator)."
+      },
+      "GroundingCheck": {
+        "properties": {
+          "passed": {
+            "type": "boolean",
+            "title": "Passed"
+          },
+          "numbers_checked": {
+            "type": "integer",
+            "title": "Numbers Checked"
+          },
+          "numbers_unmatched": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Numbers Unmatched"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "passed",
+          "numbers_checked"
+        ],
+        "title": "GroundingCheck"
+      },
+      "GuessRound": {
+        "properties": {
+          "round_id": {
+            "type": "string",
+            "title": "Round Id"
+          },
+          "version": {
+            "type": "string",
+            "enum": [
+              "career",
+              "transfers"
+            ],
+            "title": "Version"
+          },
+          "career": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/CareerClue"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Career"
+          },
+          "transfers": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TransferClue"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transfers"
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/PickerPlayer"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 4,
+            "title": "Options"
+          },
+          "answer_seconds": {
+            "type": "integer",
+            "title": "Answer Seconds"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Deadline"
+          },
+          "round_number": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Round Number",
+            "description": "1-5 within the session (v0.3.1)"
+          },
+          "rounds_total": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rounds Total",
+            "description": "Questions per session: 5 (v0.3.1)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "round_id",
+          "version",
+          "options",
+          "answer_seconds",
+          "deadline"
+        ],
+        "title": "GuessRound",
+        "description": "Guess the player: version 'career' (the full career with the fees, current club hidden; the game of M-3) or\n'transfers' (3 clubs with fees in EUR, kept for compatibility: the real game always answers 'career')."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Highlight": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "v0",
+            "title": "Schema Version",
+            "default": "v0"
+          },
+          "highlight_id": {
+            "type": "string",
+            "title": "Highlight Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/HighlightType"
+          },
+          "period": {
+            "type": "integer",
+            "enum": [
+              1,
+              2
+            ],
+            "title": "Period"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "team_id": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TeamId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "player_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Player Ids"
+          },
+          "event_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Event Ids",
+            "description": "Events of the feed this moment is built from"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "Timeline label, e.g. \"23' – Goal by Audun Ulvestad (Brackwater Athletic)\""
+          },
+          "why_it_mattered": {
+            "type": "string",
+            "title": "Why It Mattered",
+            "description": "Explanation written by VAR from deterministic facts"
+          },
+          "importance": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Importance",
+            "description": "Deterministic importance score"
+          },
+          "score_after": {
+            "$ref": "#/components/schemas/TeamScore"
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Xg"
+          },
+          "inspector": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HighlightInspector"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "highlight_id",
+          "type",
+          "period",
+          "minute",
+          "team_id",
+          "player_ids",
+          "event_ids",
+          "label",
+          "why_it_mattered",
+          "importance",
+          "score_after"
+        ],
+        "title": "Highlight",
+        "description": "Highlights v0: fields may change."
+      },
+      "HighlightInspector": {
+        "properties": {
+          "importance_factors": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Importance Factors",
+            "description": "Deterministic contributions: type, minute, game_state, xg"
+          },
+          "candidate_rank": {
+            "type": "integer",
+            "title": "Candidate Rank"
+          },
+          "labelled_by": {
+            "type": "string",
+            "title": "Labelled By",
+            "description": "Agent that wrote label and why_it_mattered"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "trace_id": {
+            "type": "string",
+            "title": "Trace Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "importance_factors",
+          "candidate_rank",
+          "labelled_by",
+          "model",
+          "trace_id"
+        ],
+        "title": "HighlightInspector"
+      },
+      "HighlightList": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "as_of_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "As Of S",
+            "description": "Playback time (seconds since kick-off, first-half added time included) up to which frames and events were used; nothing after this instant (no look-ahead, S-7)"
+          },
+          "highlights": {
+            "items": {
+              "$ref": "#/components/schemas/Highlight"
+            },
+            "type": "array",
+            "title": "Highlights"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "as_of_s",
+          "highlights"
+        ],
+        "title": "HighlightList"
+      },
+      "HighlightType": {
+        "type": "string",
+        "enum": [
+          "goal",
+          "woodwork",
+          "save",
+          "big_chance",
+          "var_review",
+          "card",
+          "spectacular_play",
+          "speed_peak",
+          "other"
+        ],
+        "title": "HighlightType"
+      },
+      "InspectorTrace": {
+        "properties": {
+          "trace_id": {
+            "type": "string",
+            "title": "Trace Id"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "agents": {
+            "items": {
+              "$ref": "#/components/schemas/AgentStep"
+            },
+            "type": "array",
+            "title": "Agents"
+          },
+          "tool_calls": {
+            "items": {
+              "$ref": "#/components/schemas/ToolCall"
+            },
+            "type": "array",
+            "title": "Tool Calls"
+          },
+          "evidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence",
+            "description": "Documents or data used (e.g. Kit Man files)"
+          },
+          "grounding": {
+            "$ref": "#/components/schemas/GroundingCheck"
+          },
+          "total_tokens": {
+            "type": "integer",
+            "title": "Total Tokens"
+          },
+          "latency_ms": {
+            "type": "integer",
+            "title": "Latency Ms"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "trace_id",
+          "method",
+          "agents",
+          "tool_calls",
+          "grounding",
+          "total_tokens",
+          "latency_ms",
+          "cost_usd"
+        ],
+        "title": "InspectorTrace"
+      },
+      "KitColours": {
+        "properties": {
+          "shirt": {
+            "type": "string",
+            "title": "Shirt"
+          },
+          "shorts": {
+            "type": "string",
+            "title": "Shorts"
+          },
+          "socks": {
+            "type": "string",
+            "title": "Socks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "shirt",
+          "shorts",
+          "socks"
+        ],
+        "title": "KitColours"
+      },
+      "Leaderboard": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "my_rank": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "My Rank"
+          },
+          "my_points": {
+            "type": "integer",
+            "title": "My Points"
+          },
+          "entries": {
+            "items": {
+              "$ref": "#/components/schemas/LeaderboardEntry"
+            },
+            "type": "array",
+            "title": "Entries"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "my_rank",
+          "my_points",
+          "entries"
+        ],
+        "title": "Leaderboard"
+      },
+      "LeaderboardEntry": {
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "title": "Rank"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "points": {
+            "type": "integer",
+            "title": "Points"
+          },
+          "is_me": {
+            "type": "boolean",
+            "title": "Is Me",
+            "default": false
+          },
+          "is_bot": {
+            "type": "boolean",
+            "title": "Is Bot",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "rank",
+          "display_name",
+          "points"
+        ],
+        "title": "LeaderboardEntry"
+      },
+      "LineupPlayer": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "short_name": {
+            "type": "string",
+            "title": "Short Name"
+          },
+          "shirt_number": {
+            "type": "integer",
+            "title": "Shirt Number"
+          },
+          "position": {
+            "type": "string",
+            "title": "Position",
+            "description": "English position code, e.g. GK, RB, LDM, RS"
+          },
+          "starting": {
+            "type": "boolean",
+            "title": "Starting"
+          },
+          "captain": {
+            "type": "boolean",
+            "title": "Captain"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "short_name",
+          "shirt_number",
+          "position",
+          "starting",
+          "captain"
+        ],
+        "title": "LineupPlayer"
+      },
+      "LiveStats": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "phase": {
+            "$ref": "#/components/schemas/Phase"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "as_of_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "As Of S",
+            "description": "Playback time (seconds since kick-off, first-half added time included) up to which frames and events were used; nothing after this instant (no look-ahead, S-7)"
+          },
+          "score": {
+            "$ref": "#/components/schemas/TeamScore"
+          },
+          "shots": {
+            "items": {
+              "$ref": "#/components/schemas/TeamShots"
+            },
+            "type": "array",
+            "title": "Shots"
+          },
+          "counts": {
+            "items": {
+              "$ref": "#/components/schemas/TeamCounts"
+            },
+            "type": "array",
+            "title": "Counts"
+          },
+          "unavailable": {
+            "items": {
+              "$ref": "#/components/schemas/MetricUnavailable"
+            },
+            "type": "array",
+            "title": "Unavailable",
+            "description": "Null metrics and why (v0.2.1)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "phase",
+          "minute",
+          "as_of_s",
+          "score",
+          "shots",
+          "counts"
+        ],
+        "title": "LiveStats",
+        "description": "Live section, only during play (v0.2.5): the key numbers per team next to the event timeline. Live shows\ngoals, shots, shots on target, penalties, yellow and red cards; every other statistic is in Data & Statistics."
+      },
+      "LoginRequest": {
+        "properties": {
+          "ticket_code": {
+            "type": "string",
+            "title": "Ticket Code",
+            "description": "GNT-<MATCH>-<S|G|D>-XXXX-XXXX; case and spaces are ignored",
+            "examples": [
+              "GNT-SYN001-G-XXXX-XXXX"
+            ]
+          },
+          "device_id": {
+            "type": "string",
+            "minLength": 8,
+            "title": "Device Id",
+            "description": "Random id generated once by the app and kept on the device"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ticket_code",
+          "device_id"
+        ],
+        "title": "LoginRequest"
+      },
+      "LoginResponse": {
+        "properties": {
+          "token": {
+            "type": "string",
+            "title": "Token",
+            "description": "Opaque bearer token; the server maps it to ticket, device and match_id"
+          },
+          "token_type": {
+            "type": "string",
+            "const": "bearer",
+            "title": "Token Type",
+            "default": "bearer"
+          },
+          "session": {
+            "$ref": "#/components/schemas/Session"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "token",
+          "session"
+        ],
+        "title": "LoginResponse"
+      },
+      "MatchEvent": {
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "title": "Event Id"
+          },
+          "type": {
+            "$ref": "#/components/schemas/EventType"
+          },
+          "period": {
+            "type": "integer",
+            "enum": [
+              1,
+              2
+            ],
+            "title": "Period"
+          },
+          "minute": {
+            "type": "integer",
+            "maximum": 130.0,
+            "minimum": 0.0,
+            "title": "Minute"
+          },
+          "match_time_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Match Time S",
+            "description": "Seconds since the start of the period"
+          },
+          "team_id": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TeamId"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Player Id"
+          },
+          "secondary_player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Player Id",
+            "description": "Assist, player coming on, fouled player"
+          },
+          "x": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "X"
+          },
+          "y": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Y"
+          },
+          "qualifiers": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Qualifiers",
+            "description": "e.g. outcome=goal|saved|wide|blocked, card=yellow, decision=penalty"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "event_id",
+          "type",
+          "period",
+          "minute",
+          "match_time_s"
+        ],
+        "title": "MatchEvent"
+      },
+      "MatchHeader": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "home_team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "away_team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "home_name": {
+            "type": "string",
+            "title": "Home Name"
+          },
+          "away_name": {
+            "type": "string",
+            "title": "Away Name"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "kickoff": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Kickoff"
+          },
+          "stadium_name": {
+            "type": "string",
+            "title": "Stadium Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "home_team_id",
+          "away_team_id",
+          "home_name",
+          "away_name",
+          "title",
+          "kickoff",
+          "stadium_name"
+        ],
+        "title": "MatchHeader",
+        "description": "What the app shows right after login. The match_id is informative only: the client never sends it back."
+      },
+      "MatchOverview": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "matchday": {
+            "type": "integer",
+            "title": "Matchday"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "kickoff": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Kickoff"
+          },
+          "stadium_name": {
+            "type": "string",
+            "title": "Stadium Name"
+          },
+          "stadium_capacity": {
+            "type": "integer",
+            "title": "Stadium Capacity"
+          },
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamSheet"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "officials": {
+            "items": {
+              "$ref": "#/components/schemas/OfficialEntry"
+            },
+            "type": "array",
+            "title": "Officials"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "competition",
+          "season",
+          "matchday",
+          "title",
+          "kickoff",
+          "stadium_name",
+          "stadium_capacity",
+          "teams",
+          "officials"
+        ],
+        "title": "MatchOverview"
+      },
+      "MatchState": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "phase": {
+            "$ref": "#/components/schemas/Phase"
+          },
+          "minute": {
+            "type": "integer",
+            "maximum": 130.0,
+            "minimum": 0.0,
+            "title": "Minute",
+            "description": "Match minute shown on the scoreboard (0 before kick-off)"
+          },
+          "added_time": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Added Time",
+            "description": "Added minutes being played, e.g. 2 for 45+2",
+            "default": 0
+          },
+          "clock_running": {
+            "type": "boolean",
+            "title": "Clock Running"
+          },
+          "score": {
+            "$ref": "#/components/schemas/TeamScore"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/SectionState"
+            },
+            "type": "array",
+            "title": "Sections"
+          },
+          "as_of_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "As Of S",
+            "description": "Playback time (seconds since kick-off, first-half added time included) up to which frames and events were used; nothing after this instant (no look-ahead, S-7)"
+          },
+          "server_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Server Time"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "phase",
+          "minute",
+          "clock_running",
+          "score",
+          "sections",
+          "as_of_s",
+          "server_time"
+        ],
+        "title": "MatchState"
+      },
+      "MatchStats": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/DataScope"
+          },
+          "up_to_minute": {
+            "type": "integer",
+            "title": "Up To Minute"
+          },
+          "as_of_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "As Of S",
+            "description": "Playback time (seconds since kick-off, first-half added time included) up to which frames and events were used; nothing after this instant (no look-ahead, S-7)"
+          },
+          "score": {
+            "$ref": "#/components/schemas/TeamScore"
+          },
+          "charts": {
+            "items": {
+              "$ref": "#/components/schemas/ChartRef"
+            },
+            "type": "array",
+            "title": "Charts"
+          },
+          "locked_charts": {
+            "items": {
+              "$ref": "#/components/schemas/ChartRef"
+            },
+            "type": "array",
+            "title": "Locked Charts",
+            "description": "Charts of the other (Analyst) version, shown blurred as a preview in Casual (v0.2.5); empty in Analyst"
+          },
+          "goal_marks": {
+            "items": {
+              "$ref": "#/components/schemas/GoalMark"
+            },
+            "type": "array",
+            "title": "Goal Marks",
+            "description": "Goals so far, for the charts over time"
+          },
+          "shots": {
+            "items": {
+              "$ref": "#/components/schemas/TeamShots"
+            },
+            "type": "array",
+            "title": "Shots"
+          },
+          "counts": {
+            "items": {
+              "$ref": "#/components/schemas/TeamCounts"
+            },
+            "type": "array",
+            "title": "Counts"
+          },
+          "possession": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Possession"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "goals_vs_xg": {
+            "items": {
+              "$ref": "#/components/schemas/GoalsVsXg"
+            },
+            "type": "array",
+            "title": "Goals Vs Xg",
+            "description": "Empty until xG is available"
+          },
+          "effective_playing_time": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EffectivePlayingTime"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "player_focus": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerFocus"
+            },
+            "type": "array",
+            "title": "Player Focus",
+            "description": "The session's favourite players"
+          },
+          "distance_covered": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DistanceCovered"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "top_speed": {
+            "items": {
+              "$ref": "#/components/schemas/TopSpeed"
+            },
+            "type": "array",
+            "title": "Top Speed"
+          },
+          "peak_intensity": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PeakIntensity"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "acceleration_load": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AccelerationLoad"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "speed_zones": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/SpeedZones"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Speed Zones"
+          },
+          "passes": {
+            "items": {
+              "$ref": "#/components/schemas/TeamPasses"
+            },
+            "type": "array",
+            "title": "Passes"
+          },
+          "ball_circulation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BallCirculation"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "shot_speed": {
+            "items": {
+              "$ref": "#/components/schemas/ShotSpeed"
+            },
+            "type": "array",
+            "title": "Shot Speed",
+            "description": "The hardest shot of each team"
+          },
+          "counter_attacks": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CounterAttacks"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ppda": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TeamValue"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ppda",
+            "description": "Analyst only: passes per defensive action"
+          },
+          "leaders": {
+            "items": {
+              "$ref": "#/components/schemas/TeamLeaders"
+            },
+            "type": "array",
+            "title": "Leaders"
+          },
+          "players": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PlayerRow"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Players",
+            "description": "Analyst only"
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExpectedGoals"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "momentum": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Momentum"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "shot_map": {
+            "$ref": "#/components/schemas/ShotMap"
+          },
+          "zone_map": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ZoneMap"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Zone Map"
+          },
+          "defensive_shape": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DefensiveShape"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Defensive Shape"
+          },
+          "inspector": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StatsInspector"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unavailable": {
+            "items": {
+              "$ref": "#/components/schemas/MetricUnavailable"
+            },
+            "type": "array",
+            "title": "Unavailable",
+            "description": "Null metrics and why (v0.2.1)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "mode",
+          "scope",
+          "up_to_minute",
+          "as_of_s",
+          "score",
+          "charts",
+          "shots",
+          "counts",
+          "top_speed",
+          "passes",
+          "shot_map"
+        ],
+        "title": "MatchStats",
+        "description": "Data & Statistics, from kick-off to the end (v0.2.5): `scope` is `live` during play (numbers up to `as_of_s`),\n`first_half` at half-time, `full_match` after the final whistle. Fields marked 'Analyst only' are null in Casual\nmode. v0.3.0 follows the metric decisions of Materials/METRICS.md; the app calls the two modes Fan (casual) and\nAnalyst (analyst). The tables come first, in the order of `DATA_STATS_TABLES`, then the charts."
+      },
+      "MetricMethod": {
+        "properties": {
+          "metric": {
+            "type": "string",
+            "title": "Metric"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "tool": {
+            "type": "string",
+            "title": "Tool",
+            "description": "Deterministic function that produced the value"
+          },
+          "parameters": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Parameters"
+          },
+          "data_excluded_pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Data Excluded Pct"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "metric",
+          "method",
+          "tool",
+          "data_excluded_pct"
+        ],
+        "title": "MetricMethod",
+        "description": "Inspector 'How it's computed' entry for one metric."
+      },
+      "MetricUnavailable": {
+        "properties": {
+          "metric": {
+            "type": "string",
+            "title": "Metric",
+            "description": "Field name in the payload, e.g. distance_covered, xg, momentum"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason",
+            "description": "Short English reason, e.g. 'needs tracking frames (source fake has events only)'"
+          },
+          "available_from_minute": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Available From Minute",
+            "description": "Match minute from which the metric appears, e.g. 5 (v0.3.0): the app shows 'Available from 5''. null = not for this source, or not computed yet: the app hides the card"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "metric",
+          "reason"
+        ],
+        "title": "MetricUnavailable",
+        "description": "A metric that is null (or an empty list) in this payload, and why. The app shows the reason, never a number."
+      },
+      "Mode": {
+        "type": "string",
+        "enum": [
+          "casual",
+          "analyst"
+        ],
+        "title": "Mode"
+      },
+      "Momentum": {
+        "properties": {
+          "current": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": -1.0,
+            "title": "Current"
+          },
+          "series": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TimePoint"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Series"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "momentum"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "current"
+        ],
+        "title": "Momentum",
+        "description": "Who is pushing (METRICS.md §13): value in [-1, 1] over the last 5 minutes, positive = home team. `series`: one\npoint per minute, a single signed value drawn as an area above or below the axis."
+      },
+      "OfficialEntry": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "description": "snake_case role, e.g. referee, video_assistant_referee"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "role",
+          "name"
+        ],
+        "title": "OfficialEntry"
+      },
+      "Opponent": {
+        "properties": {
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "is_bot": {
+            "type": "boolean",
+            "title": "Is Bot"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "display_name",
+          "is_bot"
+        ],
+        "title": "Opponent"
+      },
+      "PeakIntensity": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamPeak"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "series": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TeamSeries"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Series",
+            "description": "One point per minute and team (mirror chart)"
+          },
+          "players": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PlayerPeak"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Players",
+            "description": "Analyst only: each player's peak"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "peak_intensity"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams"
+        ],
+        "title": "PeakIntensity",
+        "description": "Peak intensity (METRICS.md §4, v0.3.0): rolling 5-minute window, step 1 s, metres per minute per player; a team\nis the mean of its outfield players on the pitch. `series` feeds the mirror chart, one point per minute."
+      },
+      "Phase": {
+        "type": "string",
+        "enum": [
+          "pre_match",
+          "first_half",
+          "half_time",
+          "second_half",
+          "full_time"
+        ],
+        "title": "Phase"
+      },
+      "PickerPlayer": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "shirt_number": {
+            "type": "integer",
+            "title": "Shirt Number"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "team_id",
+          "shirt_number"
+        ],
+        "title": "PickerPlayer",
+        "description": "Player picker entry: only name, team and shirt number (no careers, no nationality)."
+      },
+      "PlayerDistance": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "distance": {
+            "$ref": "#/components/schemas/Distance"
+          },
+          "splits": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DistanceSplits"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Analyst only"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "distance"
+        ],
+        "title": "PlayerDistance"
+      },
+      "PlayerFocus": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "minutes_played": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Minutes Played"
+          },
+          "distance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Distance"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "null when the source has no tracking"
+          },
+          "top_speed_kmh": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top Speed Kmh"
+          },
+          "top_speed_minute": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top Speed Minute"
+          },
+          "sprints": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sprints"
+          },
+          "acceleration_load_kmh": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Acceleration Load Kmh"
+          },
+          "passes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Passes",
+            "description": "null when the source has no pass events"
+          },
+          "pass_accuracy_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pass Accuracy Pct"
+          },
+          "shots": {
+            "type": "integer",
+            "title": "Shots",
+            "default": 0
+          },
+          "goals": {
+            "type": "integer",
+            "title": "Goals",
+            "default": 0
+          },
+          "touches": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Touches"
+          },
+          "tackles": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tackles"
+          },
+          "ball_recoveries": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ball Recoveries"
+          },
+          "fouls_committed": {
+            "type": "integer",
+            "title": "Fouls Committed",
+            "default": 0
+          },
+          "fouls_won": {
+            "type": "integer",
+            "title": "Fouls Won",
+            "default": 0
+          },
+          "yellow_cards": {
+            "type": "integer",
+            "title": "Yellow Cards",
+            "default": 0
+          },
+          "red_cards": {
+            "type": "integer",
+            "title": "Red Cards",
+            "default": 0
+          },
+          "highlight_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Highlight Ids"
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Xg",
+            "description": "Analyst only"
+          },
+          "speed_zones": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SpeedZones"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Analyst only"
+          },
+          "zone_map": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ZoneMap"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Analyst only"
+          },
+          "acceleration_load_series": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/TimePoint"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Acceleration Load Series",
+            "description": "Analyst only: km/h per minute, 5-minute blocks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "team_id",
+          "minutes_played"
+        ],
+        "title": "PlayerFocus",
+        "description": "Card of a favourite player (at most 3), the same in Data & Statistics, Recap and the PDF (v0.3.0). The fields\nmarked 'Analyst only' are null in Casual."
+      },
+      "PlayerPeak": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "start_minute": {
+            "type": "integer",
+            "title": "Start Minute"
+          },
+          "end_minute": {
+            "type": "integer",
+            "title": "End Minute"
+          },
+          "metres_per_minute": {
+            "type": "number",
+            "title": "Metres Per Minute"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "team_id",
+          "start_minute",
+          "end_minute",
+          "metres_per_minute"
+        ],
+        "title": "PlayerPeak"
+      },
+      "PlayerPicker": {
+        "properties": {
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/PickerPlayer"
+            },
+            "type": "array",
+            "title": "Players",
+            "description": "The 50 players of the two squads"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "players"
+        ],
+        "title": "PlayerPicker"
+      },
+      "PlayerRow": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "minutes_played": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Minutes Played"
+          },
+          "distance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Distance"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "top_speed_kmh": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top Speed Kmh"
+          },
+          "sprints": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sprints"
+          },
+          "peak_m_per_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Peak M Per Min"
+          },
+          "acceleration_load_kmh": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Acceleration Load Kmh"
+          },
+          "passes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Passes"
+          },
+          "pass_accuracy_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pass Accuracy Pct"
+          },
+          "long_balls": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Long Balls"
+          },
+          "touches": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Touches"
+          },
+          "shots": {
+            "type": "integer",
+            "title": "Shots",
+            "default": 0
+          },
+          "goals": {
+            "type": "integer",
+            "title": "Goals",
+            "default": 0
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Xg"
+          },
+          "tackles": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tackles"
+          },
+          "ball_recoveries": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ball Recoveries"
+          },
+          "fouls_committed": {
+            "type": "integer",
+            "title": "Fouls Committed",
+            "default": 0
+          },
+          "fouls_won": {
+            "type": "integer",
+            "title": "Fouls Won",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "team_id",
+          "minutes_played"
+        ],
+        "title": "PlayerRow",
+        "description": "One row of the Analyst table of all players (v0.3.0). null = not available for this source, or not computed\nyet (see `unavailable`)."
+      },
+      "PlayerValue": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "value"
+        ],
+        "title": "PlayerValue"
+      },
+      "Possession": {
+        "properties": {
+          "teams": {
+            "items": {
+              "$ref": "#/components/schemas/TeamValue"
+            },
+            "type": "array",
+            "title": "Teams",
+            "description": "Percent, sums to 100"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "teams"
+        ],
+        "title": "Possession",
+        "description": "Share of the live-ball time with the ball: one bar, the same in both versions (v0.3.0: no 5-minute series)."
+      },
+      "Preferences": {
+        "properties": {
+          "mode": {
+            "$ref": "#/components/schemas/Mode",
+            "default": "casual"
+          },
+          "favourite_player_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "title": "Favourite Player Ids",
+            "description": "Player ids of this match, at most 3, no repeats"
+          },
+          "favourites_locked": {
+            "type": "boolean",
+            "title": "Favourites Locked",
+            "description": "True once the fan has confirmed exactly 3 favourites; then they can no longer change (409 favourites_locked)",
+            "default": false
+          },
+          "language": {
+            "type": "string",
+            "title": "Language",
+            "description": "BCP 47 tag; Archie answers in any language, UI in en/it",
+            "default": "en"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Preferences",
+        "description": "Mode, favourite players and language of the session. The favourites are at most 3 (v0.2.6): the fan confirms\nexactly 3 with `favourites_locked = true`, and after that the server refuses any change to them (409)."
+      },
+      "QuizOption": {
+        "properties": {
+          "option_id": {
+            "type": "string",
+            "title": "Option Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Player Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "option_id",
+          "label"
+        ],
+        "title": "QuizOption"
+      },
+      "QuizRound": {
+        "properties": {
+          "round_id": {
+            "type": "string",
+            "title": "Round Id"
+          },
+          "question": {
+            "type": "string",
+            "title": "Question"
+          },
+          "metric": {
+            "type": "string",
+            "title": "Metric",
+            "description": "Metric of METRICHE.md the answer comes from"
+          },
+          "scope": {
+            "$ref": "#/components/schemas/DataScope"
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/QuizOption"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 4,
+            "title": "Options"
+          },
+          "answer_seconds": {
+            "type": "integer",
+            "title": "Answer Seconds"
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Deadline"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "round_id",
+          "question",
+          "metric",
+          "scope",
+          "options",
+          "answer_seconds",
+          "deadline"
+        ],
+        "title": "QuizRound"
+      },
+      "Recap": {
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "final_score": {
+            "$ref": "#/components/schemas/TeamScore"
+          },
+          "headline": {
+            "type": "string",
+            "title": "Headline"
+          },
+          "narrative": {
+            "type": "string",
+            "title": "Narrative",
+            "description": "Summary written by the code from the match numbers, no model (Casual: score and scorers; Analyst: also shots and possession)"
+          },
+          "highlight_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Highlight Ids"
+          },
+          "key_numbers": {
+            "items": {
+              "$ref": "#/components/schemas/GroundedValue"
+            },
+            "type": "array",
+            "title": "Key Numbers"
+          },
+          "shots": {
+            "items": {
+              "$ref": "#/components/schemas/TeamShots"
+            },
+            "type": "array",
+            "title": "Shots"
+          },
+          "possession": {
+            "items": {
+              "$ref": "#/components/schemas/TeamValue"
+            },
+            "type": "array",
+            "title": "Possession"
+          },
+          "favourite_players": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerFocus"
+            },
+            "type": "array",
+            "title": "Favourite Players",
+            "description": "The same Player Focus cards as Data & Statistics (v0.3.0)"
+          },
+          "inspector": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InspectorTrace"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "unavailable": {
+            "items": {
+              "$ref": "#/components/schemas/MetricUnavailable"
+            },
+            "type": "array",
+            "title": "Unavailable",
+            "description": "Null metrics and why (v0.2.1)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "match_id",
+          "mode",
+          "final_score",
+          "headline",
+          "narrative",
+          "highlight_ids",
+          "key_numbers",
+          "shots",
+          "possession",
+          "favourite_players"
+        ],
+        "title": "Recap"
+      },
+      "Reliability": {
+        "properties": {
+          "measured_pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Measured Pct"
+          },
+          "level": {
+            "$ref": "#/components/schemas/ReliabilityLevel"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "measured_pct",
+          "level"
+        ],
+        "title": "Reliability",
+        "description": "Share of the time actually measured by the tracking (gaps not counted) and its symbol (v0.3.0): high at least\n95 %, medium 85-95 %, low below 85 %. The app shows only the symbol; the Inspector explains it."
+      },
+      "ReliabilityLevel": {
+        "type": "string",
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "title": "ReliabilityLevel",
+        "description": "Symbol next to a tracking-based number (v0.3.0): high ●, medium ◐, low ○."
+      },
+      "Section": {
+        "type": "string",
+        "enum": [
+          "pre_match",
+          "live",
+          "data_stats",
+          "games",
+          "recap",
+          "ask_archie"
+        ],
+        "title": "Section"
+      },
+      "SectionState": {
+        "properties": {
+          "section": {
+            "$ref": "#/components/schemas/Section"
+          },
+          "unlocked": {
+            "type": "boolean",
+            "title": "Unlocked"
+          },
+          "unlocks_at_phase": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Phase"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Next phase in which it opens, if locked"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "section",
+          "unlocked"
+        ],
+        "title": "SectionState"
+      },
+      "Session": {
+        "properties": {
+          "tier": {
+            "$ref": "#/components/schemas/TicketTier",
+            "description": "From the ticket, server-side; the client cannot change it"
+          },
+          "allowed_modes": {
+            "items": {
+              "$ref": "#/components/schemas/Mode"
+            },
+            "type": "array",
+            "title": "Allowed Modes",
+            "description": "Modes this tier may use: silver [casual]; others [analyst, casual]"
+          },
+          "inspector_enabled": {
+            "type": "boolean",
+            "title": "Inspector Enabled",
+            "description": "True only for demo tickets"
+          },
+          "demo_panel_enabled": {
+            "type": "boolean",
+            "title": "Demo Panel Enabled",
+            "description": "True only for demo tickets (phase jumps)"
+          },
+          "multi_device": {
+            "type": "boolean",
+            "title": "Multi Device",
+            "description": "True for demo tickets; silver and gold work on one device"
+          },
+          "match": {
+            "$ref": "#/components/schemas/MatchHeader"
+          },
+          "preferences": {
+            "$ref": "#/components/schemas/Preferences",
+            "description": "preferences.mode is always one of allowed_modes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "tier",
+          "allowed_modes",
+          "inspector_enabled",
+          "demo_panel_enabled",
+          "multi_device",
+          "match",
+          "preferences"
+        ],
+        "title": "Session"
+      },
+      "Shot": {
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "title": "Event Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Xg",
+            "description": "Analyst only (dot size)"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "goal",
+              "saved",
+              "wide",
+              "blocked",
+              "woodwork"
+            ],
+            "title": "Outcome",
+            "description": "Map symbols (v0.3.0): goal filled, woodwork ×, every other shot hollow"
+          },
+          "is_penalty": {
+            "type": "boolean",
+            "title": "Is Penalty",
+            "default": false
+          },
+          "is_header": {
+            "type": "boolean",
+            "title": "Is Header",
+            "default": false
+          },
+          "speed_kmh": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 211.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Speed Kmh",
+            "description": "Ball speed of the strike; null for headers"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "event_id",
+          "team_id",
+          "player_id",
+          "minute",
+          "x",
+          "y",
+          "outcome"
+        ],
+        "title": "Shot"
+      },
+      "ShotMap": {
+        "properties": {
+          "shots": {
+            "items": {
+              "$ref": "#/components/schemas/Shot"
+            },
+            "type": "array",
+            "title": "Shots"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "shot_map"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "shots"
+        ],
+        "title": "ShotMap"
+      },
+      "ShotSpeed": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "kmh": {
+            "type": "number",
+            "maximum": 211.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Kmh"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "event_id": {
+            "type": "string",
+            "title": "Event Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "team_id",
+          "kmh",
+          "minute",
+          "event_id"
+        ],
+        "title": "ShotSpeed",
+        "description": "The hardest shot of a team (headers excluded, v0.3.0)."
+      },
+      "SpeedZones": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Player Id",
+            "description": "null = the team; set for a favourite player (v0.3.0)"
+          },
+          "km_0_7": {
+            "type": "number",
+            "title": "Km 0 7"
+          },
+          "km_7_15": {
+            "type": "number",
+            "title": "Km 7 15"
+          },
+          "km_15_20": {
+            "type": "number",
+            "title": "Km 15 20"
+          },
+          "km_20_25": {
+            "type": "number",
+            "title": "Km 20 25"
+          },
+          "km_over_25": {
+            "type": "number",
+            "title": "Km Over 25"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "km_0_7",
+          "km_7_15",
+          "km_15_20",
+          "km_20_25",
+          "km_over_25"
+        ],
+        "title": "SpeedZones",
+        "description": "Distance per FIFA speed zone (0-7, 7-15, 15-20, 20-25, 25+ km/h). Analyst only."
+      },
+      "StatsInspector": {
+        "properties": {
+          "methods": {
+            "items": {
+              "$ref": "#/components/schemas/MetricMethod"
+            },
+            "type": "array",
+            "title": "Methods"
+          },
+          "computed_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Computed At"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "description": "MATCH_SOURCE used by the engine, e.g. fake, synthetic:SYN-001"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "methods",
+          "computed_at",
+          "source"
+        ],
+        "title": "StatsInspector"
+      },
+      "TeamColours": {
+        "properties": {
+          "primary": {
+            "type": "string",
+            "title": "Primary"
+          },
+          "secondary": {
+            "type": "string",
+            "title": "Secondary"
+          },
+          "number": {
+            "type": "string",
+            "title": "Number"
+          },
+          "away_kit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/KitColours"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Second kit, from the universe (v0.2.4)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "primary",
+          "secondary",
+          "number"
+        ],
+        "title": "TeamColours",
+        "description": "Club colours (home kit). The app picks the team's mark from these and switches to `away_kit` when the two\nteams' colours are too similar (v0.2.4)."
+      },
+      "TeamCount": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Count"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "count"
+        ],
+        "title": "TeamCount"
+      },
+      "TeamCounts": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "corners": {
+            "type": "integer",
+            "title": "Corners",
+            "default": 0
+          },
+          "fouls": {
+            "type": "integer",
+            "title": "Fouls",
+            "default": 0
+          },
+          "yellow_cards": {
+            "type": "integer",
+            "title": "Yellow Cards",
+            "default": 0
+          },
+          "red_cards": {
+            "type": "integer",
+            "title": "Red Cards",
+            "default": 0
+          },
+          "penalties": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Penalties",
+            "description": "Penalty kicks taken (v0.2.5)",
+            "default": 0
+          },
+          "woodwork": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Woodwork",
+            "description": "Shots off the post or the bar, never on target (v0.3.0)",
+            "default": 0
+          },
+          "offsides": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Offsides",
+            "description": "Official offside decisions (v0.3.0)",
+            "default": 0
+          },
+          "sprints": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sprints",
+            "description": "Sprints of the team; null when the source has no tracking",
+            "default": 0
+          },
+          "tackles": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tackles",
+            "description": "Tackles won; null when the source has no duel events"
+          },
+          "ball_recoveries": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ball Recoveries",
+            "description": "null when the source has no recovery events"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id"
+        ],
+        "title": "TeamCounts"
+      },
+      "TeamDistance": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "distance": {
+            "$ref": "#/components/schemas/Distance",
+            "description": "Outfield players only (goalkeepers appear as players)"
+          },
+          "splits": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DistanceSplits"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Analyst only"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "distance"
+        ],
+        "title": "TeamDistance"
+      },
+      "TeamId": {
+        "type": "string",
+        "enum": [
+          "BRA",
+          "CAL"
+        ],
+        "title": "TeamId",
+        "description": "Team ids of the match, as in synthetic/<match_id>/match_info.json."
+      },
+      "TeamLeaders": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "top_runner": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlayerValue"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "km"
+          },
+          "top_sprinter": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlayerValue"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Sprints"
+          },
+          "top_passer": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PlayerValue"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Passes"
+          },
+          "most_touches": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerValue"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "title": "Most Touches",
+            "description": "The 3 players with the most touches (METRICS.md §24)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id"
+        ],
+        "title": "TeamLeaders",
+        "description": "Who leads each team, for the Fan tables (v0.3.0)."
+      },
+      "TeamLoad": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "total_kmh": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Total Kmh",
+            "description": "Sum over the outfield players of the absolute changes of speed, km/h"
+          },
+          "per_minute_kmh": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Per Minute Kmh",
+            "description": "Per minute played"
+          },
+          "reliability": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Reliability"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "total_kmh",
+          "per_minute_kmh"
+        ],
+        "title": "TeamLoad"
+      },
+      "TeamMeasure": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "reliability": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Reliability"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "value"
+        ],
+        "title": "TeamMeasure",
+        "description": "A per-team value with its reliability symbol (tracking-based metrics, v0.3.0)."
+      },
+      "TeamPasses": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "passes": {
+            "type": "integer",
+            "title": "Passes"
+          },
+          "accuracy_pct": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Accuracy Pct"
+          },
+          "avg_length_m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Length M",
+            "description": "Analyst only: successful passes"
+          },
+          "long_balls": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Long Balls",
+            "description": "Analyst only: successful passes of 32 m or more (v0.3.0)"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "passes",
+          "accuracy_pct"
+        ],
+        "title": "TeamPasses"
+      },
+      "TeamPeak": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "start_minute": {
+            "type": "integer",
+            "title": "Start Minute"
+          },
+          "end_minute": {
+            "type": "integer",
+            "title": "End Minute"
+          },
+          "metres_per_minute": {
+            "type": "number",
+            "title": "Metres Per Minute"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "start_minute",
+          "end_minute",
+          "metres_per_minute"
+        ],
+        "title": "TeamPeak",
+        "description": "A team's most intense 5 minutes: mean metres per minute of its outfield players on the pitch."
+      },
+      "TeamScore": {
+        "properties": {
+          "home": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Home"
+          },
+          "away": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Away"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "home",
+          "away"
+        ],
+        "title": "TeamScore"
+      },
+      "TeamSeries": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/TimePoint"
+            },
+            "type": "array",
+            "title": "Points"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "points"
+        ],
+        "title": "TeamSeries",
+        "description": "One team's series over time: the home team is drawn above the axis and the away team below (mirror chart)."
+      },
+      "TeamSheet": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "home",
+              "away"
+            ],
+            "title": "Role"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "short_name": {
+            "type": "string",
+            "title": "Short Name"
+          },
+          "nickname": {
+            "type": "string",
+            "title": "Nickname"
+          },
+          "colours": {
+            "$ref": "#/components/schemas/TeamColours"
+          },
+          "formation": {
+            "type": "string",
+            "title": "Formation"
+          },
+          "head_coach": {
+            "type": "string",
+            "title": "Head Coach"
+          },
+          "lineup": {
+            "items": {
+              "$ref": "#/components/schemas/LineupPlayer"
+            },
+            "type": "array",
+            "title": "Lineup"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "role",
+          "name",
+          "short_name",
+          "nickname",
+          "colours",
+          "formation",
+          "head_coach",
+          "lineup"
+        ],
+        "title": "TeamSheet"
+      },
+      "TeamShots": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "shots": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Shots"
+          },
+          "on_target": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "On Target"
+          },
+          "goals": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Goals"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "shots",
+          "on_target",
+          "goals"
+        ],
+        "title": "TeamShots",
+        "description": "Penalties count in shots, shots on target and goals; on target = goals + saves (METRICS.md §8)."
+      },
+      "TeamValue": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "value"
+        ],
+        "title": "TeamValue"
+      },
+      "TicketFeatures": {
+        "properties": {
+          "allowed_modes": {
+            "items": {
+              "$ref": "#/components/schemas/Mode"
+            },
+            "type": "array",
+            "title": "Allowed Modes"
+          },
+          "default_mode": {
+            "$ref": "#/components/schemas/Mode"
+          },
+          "inspector": {
+            "type": "boolean",
+            "title": "Inspector"
+          },
+          "demo_panel": {
+            "type": "boolean",
+            "title": "Demo Panel"
+          },
+          "multi_device": {
+            "type": "boolean",
+            "title": "Multi Device"
+          },
+          "perks": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Perks",
+            "description": "Short English lines for the My ticket page"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "allowed_modes",
+          "default_mode",
+          "inspector",
+          "demo_panel",
+          "multi_device",
+          "perks"
+        ],
+        "title": "TicketFeatures",
+        "description": "What the tier unlocks (the same rules the server enforces)."
+      },
+      "TicketImage": {
+        "properties": {
+          "format": {
+            "type": "string",
+            "enum": [
+              "svg",
+              "pdf",
+              "png"
+            ],
+            "title": "Format"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "API path that serves the image of this session's ticket"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path",
+            "description": "Source file in the repo, e.g. synthetic/SYN-001/tickets/<ticket_id>.svg"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available",
+            "description": "False until the ticket generator (S-4) has written the file"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "format",
+          "url",
+          "path",
+          "available"
+        ],
+        "title": "TicketImage"
+      },
+      "TicketInfo": {
+        "properties": {
+          "ticket_id": {
+            "type": "string",
+            "title": "Ticket Id",
+            "description": "Public id printed on the ticket, e.g. TKT-SYN001-G-0001 (not the code)"
+          },
+          "tier": {
+            "$ref": "#/components/schemas/TicketTier"
+          },
+          "match": {
+            "$ref": "#/components/schemas/MatchHeader"
+          },
+          "seat": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TicketSeat"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "null for passes without a seat (demo)"
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid From"
+          },
+          "valid_until": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Valid Until"
+          },
+          "valid_now": {
+            "type": "boolean",
+            "title": "Valid Now"
+          },
+          "features": {
+            "$ref": "#/components/schemas/TicketFeatures"
+          },
+          "images": {
+            "items": {
+              "$ref": "#/components/schemas/TicketImage"
+            },
+            "type": "array",
+            "title": "Images"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ticket_id",
+          "tier",
+          "match",
+          "seat",
+          "valid_from",
+          "valid_until",
+          "valid_now",
+          "features",
+          "images"
+        ],
+        "title": "TicketInfo",
+        "description": "The My ticket page. Holder-agnostic: no name, e-mail or other personal data; never the code itself."
+      },
+      "TicketSeat": {
+        "properties": {
+          "stand_id": {
+            "type": "string",
+            "title": "Stand Id"
+          },
+          "stand_name": {
+            "type": "string",
+            "title": "Stand Name"
+          },
+          "sector_id": {
+            "type": "string",
+            "title": "Sector Id"
+          },
+          "sector_type": {
+            "type": "string",
+            "title": "Sector Type",
+            "description": "home, away, family, accessible, club_level"
+          },
+          "gate_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gate Id"
+          },
+          "row": {
+            "type": "string",
+            "title": "Row"
+          },
+          "seat": {
+            "type": "string",
+            "title": "Seat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "stand_id",
+          "stand_name",
+          "sector_id",
+          "sector_type",
+          "row",
+          "seat"
+        ],
+        "title": "TicketSeat",
+        "description": "Seat from the stadium of synthetic/universe (stands, sectors, gates). No personal data."
+      },
+      "TicketTier": {
+        "type": "string",
+        "enum": [
+          "silver",
+          "gold",
+          "demo"
+        ],
+        "title": "TicketTier",
+        "description": "silver = Casual only; gold = Analyst + Casual; demo = gold + Inspector + phase panel (also for the judges)."
+      },
+      "TimePoint": {
+        "properties": {
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "minute",
+          "value"
+        ],
+        "title": "TimePoint"
+      },
+      "ToolCall": {
+        "properties": {
+          "agent": {
+            "type": "string",
+            "title": "Agent"
+          },
+          "tool": {
+            "type": "string",
+            "title": "Tool"
+          },
+          "arguments": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Arguments"
+          },
+          "result_summary": {
+            "type": "string",
+            "title": "Result Summary"
+          },
+          "latency_ms": {
+            "type": "integer",
+            "title": "Latency Ms"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "agent",
+          "tool",
+          "result_summary",
+          "latency_ms"
+        ],
+        "title": "ToolCall"
+      },
+      "TopSpeed": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "kmh": {
+            "type": "number",
+            "maximum": 38.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Kmh"
+          },
+          "minute": {
+            "type": "integer",
+            "title": "Minute"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "team_id",
+          "kmh",
+          "minute"
+        ],
+        "title": "TopSpeed",
+        "description": "Fan: the fastest player of each team; Analyst: up to 5 per team (v0.3.0)."
+      },
+      "TransferClue": {
+        "properties": {
+          "club_name": {
+            "type": "string",
+            "title": "Club Name"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "fee_eur": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Fee Eur"
+          },
+          "move": {
+            "type": "string",
+            "title": "Move",
+            "description": "transfer, loan, free_transfer, academy, loan_return"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "club_name",
+          "season",
+          "fee_eur",
+          "move"
+        ],
+        "title": "TransferClue"
+      },
+      "TttCell": {
+        "properties": {
+          "row": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Row"
+          },
+          "col": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Col"
+          },
+          "owner": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "me",
+                  "opponent"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner"
+          },
+          "player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Player Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "row",
+          "col"
+        ],
+        "title": "TttCell"
+      },
+      "TttGame": {
+        "properties": {
+          "game_session_id": {
+            "type": "string",
+            "title": "Game Session Id"
+          },
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/Criterion"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 3,
+            "title": "Rows"
+          },
+          "cols": {
+            "items": {
+              "$ref": "#/components/schemas/Criterion"
+            },
+            "type": "array",
+            "maxItems": 3,
+            "minItems": 3,
+            "title": "Cols"
+          },
+          "board": {
+            "items": {
+              "$ref": "#/components/schemas/TttCell"
+            },
+            "type": "array",
+            "maxItems": 9,
+            "minItems": 9,
+            "title": "Board"
+          },
+          "opponent": {
+            "$ref": "#/components/schemas/Opponent"
+          },
+          "my_symbol": {
+            "type": "string",
+            "enum": [
+              "X",
+              "O"
+            ],
+            "title": "My Symbol"
+          },
+          "turn": {
+            "type": "string",
+            "enum": [
+              "me",
+              "opponent"
+            ],
+            "title": "Turn"
+          },
+          "turn_seconds": {
+            "type": "integer",
+            "title": "Turn Seconds"
+          },
+          "turn_deadline": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Turn Deadline"
+          },
+          "ends_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ends At",
+            "description": "End of the 10 minutes: a draw without three in a row (v0.3.1)"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "playing",
+              "won",
+              "lost",
+              "draw"
+            ],
+            "title": "Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "game_session_id",
+          "rows",
+          "cols",
+          "board",
+          "opponent",
+          "my_symbol",
+          "turn",
+          "turn_seconds",
+          "turn_deadline",
+          "status"
+        ],
+        "title": "TttGame"
+      },
+      "TttMoveRequest": {
+        "properties": {
+          "row": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Row"
+          },
+          "col": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 0.0,
+            "title": "Col"
+          },
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "row",
+          "col",
+          "player_id"
+        ],
+        "title": "TttMoveRequest"
+      },
+      "TttMoveResult": {
+        "properties": {
+          "correct": {
+            "type": "boolean",
+            "title": "Correct"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason",
+            "description": "wrong_answer or too_late (the turn is lost), cell_taken (the turn is not lost), time_up (the 10 minutes are over)"
+          },
+          "elapsed_ms": {
+            "type": "integer",
+            "title": "Elapsed Ms",
+            "description": "Measured by the server"
+          },
+          "game": {
+            "$ref": "#/components/schemas/TttGame"
+          },
+          "points_awarded": {
+            "type": "integer",
+            "title": "Points Awarded",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "correct",
+          "elapsed_ms",
+          "game"
+        ],
+        "title": "TttMoveResult"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "ZoneMap": {
+        "properties": {
+          "team_id": {
+            "$ref": "#/components/schemas/TeamId"
+          },
+          "player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Player Id",
+            "description": "null = the team; set for a favourite player (v0.3.0)"
+          },
+          "rows": {
+            "type": "integer",
+            "title": "Rows"
+          },
+          "cols": {
+            "type": "integer",
+            "title": "Cols"
+          },
+          "cells_pct": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Cells Pct"
+          },
+          "chart_id": {
+            "type": "string",
+            "title": "Chart Id",
+            "default": "zone_map"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "team_id",
+          "rows",
+          "cols",
+          "cells_pct"
+        ],
+        "title": "ZoneMap",
+        "description": "Heatmap of play zones: rows x cols cells over the pitch, share of time (%), attacking left to right. Analyst\nonly."
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

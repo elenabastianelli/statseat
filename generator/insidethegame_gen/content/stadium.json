@@ -1,0 +1,87 @@
+{
+  "_note": "Hand-authored stadium for SYN-001 (home of Brackwater Athletic). Invented. Sector capacities must add up to the total capacity (checked by the validator).",
+  "id": "STA-LANTERN",
+  "name": "Lanternworks Stadium",
+  "club_id": "BRA",
+  "town": "Brackwater",
+  "address": "1 Lantern Quay, Brackwater",
+  "opened": 2004,
+  "capacity": 60400,
+  "record_attendance": {"value": 60388, "match": "Brackwater Athletic v Calderholm United", "season": "2019/20"},
+  "pitch": {"length_m": 105, "width_m": 68, "surface": "hybrid grass", "undersoil_heating": true},
+  "roof": "covers every seat; the pitch is open",
+  "floodlights": "LED, installed 2021",
+  "big_screens": ["north-west corner", "south-east corner"],
+  "history": "Built on the site of the Harrow Quay lamp factory where the club was founded. The four red-brick chimneys of the factory were kept and stand behind the North stand; at night they are lit amber.",
+  "notable_matches": [
+    "August 2004: the opening match, a 2-2 draw with Calderholm United in the Estuary Derby.",
+    "August 2018: Brackwater beat Ravensgate City 2-1 to win the Meridian Super Shield, the first trophy lifted at the Lanternworks.",
+    "2019/20: the record attendance of 60,388, for the derby against Calderholm United.",
+    "May 2022: the stadium hosted the Meridian Cup final, won by Hollin Vale United."
+  ],
+  "stands": [
+    {"id": "N", "name": "Foundry End", "side": "north", "description": "Behind the north goal. Home supporters' singing section; the amber light display starts here.", "sectors": [
+      {"id": "N1", "capacity": 2700, "type": "home"}, {"id": "N2", "capacity": 2700, "type": "home"}, {"id": "N3", "capacity": 2700, "type": "home"},
+      {"id": "N4", "capacity": 2700, "type": "home"}, {"id": "N5", "capacity": 2700, "type": "home"}, {"id": "N6", "capacity": 2700, "type": "home"}]},
+    {"id": "S", "name": "Harbour Stand", "side": "south", "description": "Behind the south goal, facing the harbour. Away supporters sit in S6 and S7, with their own entrance.", "sectors": [
+      {"id": "S1", "capacity": 2200, "type": "home"}, {"id": "S2", "capacity": 2200, "type": "home"}, {"id": "S3", "capacity": 2200, "type": "home"},
+      {"id": "S4", "capacity": 2200, "type": "home"}, {"id": "S5", "capacity": 2200, "type": "home"},
+      {"id": "S6", "capacity": 1650, "type": "away"}, {"id": "S7", "capacity": 1650, "type": "away"}]},
+    {"id": "E", "name": "Lamplighters Stand", "side": "east", "description": "Along the east touchline. Sectors E1 to E3 are the family zone.", "sectors": [
+      {"id": "E1", "capacity": 2000, "type": "family"}, {"id": "E2", "capacity": 2000, "type": "family"}, {"id": "E3", "capacity": 2000, "type": "family"},
+      {"id": "E4", "capacity": 2000, "type": "home"}, {"id": "E5", "capacity": 2000, "type": "home"}, {"id": "E6", "capacity": 2000, "type": "home"},
+      {"id": "E7", "capacity": 2000, "type": "home"}, {"id": "E8", "capacity": 2000, "type": "home"}]},
+    {"id": "W", "name": "Main Stand", "side": "west", "description": "Along the west touchline, with the players' tunnel, the dugouts, the press box and the Club Level.", "sectors": [
+      {"id": "W1", "capacity": 2000, "type": "home"}, {"id": "W2", "capacity": 2000, "type": "home"}, {"id": "W3", "capacity": 2000, "type": "home"},
+      {"id": "W4", "capacity": 2000, "type": "home"}, {"id": "W5", "capacity": 2000, "type": "home"}, {"id": "W6", "capacity": 2000, "type": "home"},
+      {"id": "W7", "capacity": 300, "type": "accessible"}, {"id": "W8", "capacity": 1600, "type": "club_level"}]}
+  ],
+  "gates": [
+    {"id": "A", "stand_id": "N", "serves": ["N1", "N2", "N3"]},
+    {"id": "B", "stand_id": "N", "serves": ["N4", "N5", "N6"]},
+    {"id": "C", "stand_id": "E", "serves": ["E1", "E2", "E3", "E4"]},
+    {"id": "D", "stand_id": "E", "serves": ["E5", "E6", "E7", "E8"]},
+    {"id": "E", "stand_id": "S", "serves": ["S1", "S2", "S3", "S4", "S5"]},
+    {"id": "F", "stand_id": "S", "serves": ["S6", "S7"], "note": "Away supporters only. Next to the ferry pier."},
+    {"id": "G", "stand_id": "W", "serves": ["W1", "W2", "W3", "W7"], "note": "Step-free entrance with lifts."},
+    {"id": "H", "stand_id": "W", "serves": ["W4", "W5", "W6", "W8"]}
+  ],
+  "services": [
+    {"type": "food", "name": "Foundry Grill", "near": ["N2", "N5"], "offer": "hot pies, sausage rolls, chips, veggie wraps"},
+    {"type": "food", "name": "Harbour Bites", "near": ["S2", "S4"], "offer": "fish finger sandwiches, chips, falafel bowls"},
+    {"type": "food", "name": "Away Kitchen", "near": ["S6"], "offer": "pies, chips, hot drinks"},
+    {"type": "food", "name": "Family Kitchen", "near": ["E2"], "offer": "kids' meal boxes, pasta pots, fruit cups, ice cream"},
+    {"type": "food", "name": "Lamplighters Café", "near": ["E6"], "offer": "coffee, tea, hot chocolate, cakes, vegan sandwiches"},
+    {"type": "food", "name": "Main Stand Deli", "near": ["W3", "W5"], "offer": "deli sandwiches, soups, salads, gluten-free options"},
+    {"type": "drinks", "name": "Soft drinks and water", "near": ["N3", "S3", "E4", "W2", "S7"], "offer": "water, juices, soft drinks, tea and coffee"},
+    {"type": "water_refill", "name": "Free water refill", "near": ["N1", "N6", "S1", "S6", "E1", "E8", "W1", "W6"]},
+    {"type": "toilets", "name": "Toilets", "near": ["N1", "N4", "S2", "S5", "S7", "E2", "E5", "E8", "W2", "W5"]},
+    {"type": "accessible_toilets", "name": "Accessible toilets", "near": ["N3", "S3", "E3", "W7"]},
+    {"type": "baby_changing", "name": "Baby changing", "near": ["E1", "E3", "W2"]},
+    {"type": "first_aid", "name": "First aid point", "near": ["N4", "S5", "E4", "W4"]},
+    {"type": "sensory_room", "name": "Sensory room", "near": ["E1"], "offer": "a quiet room with a view of the pitch, for fans who need a calmer space; book at the Family Desk"},
+    {"type": "audio_description", "name": "Audio-described commentary", "near": ["W7"], "offer": "free headsets for blind and partially sighted fans; collect at Gate G"},
+    {"type": "quiet_room", "name": "Quiet and prayer room", "near": ["W6"]},
+    {"type": "family_desk", "name": "Family Desk", "near": ["E2"], "offer": "lost children point, ear defenders for kids, sensory room booking"},
+    {"type": "lost_property", "name": "Lost property", "near": ["W4"]},
+    {"type": "phone_charging", "name": "Phone charging lockers", "near": ["N5", "E5", "W3"]},
+    {"type": "club_store", "name": "Lamplighters Store", "near": ["W1"], "offer": "shirts, scarves, souvenirs; open from 3 hours before kick-off"},
+    {"type": "museum", "name": "Club museum", "near": ["W8"], "offer": "open before the match for Club Level ticket holders"}
+  ],
+  "transport": [
+    {"mode": "tram", "detail": "Tram line 2 to the 'Lanternworks' stop, 300 m from Gate G. Extra trams run after the match."},
+    {"mode": "train", "detail": "Brackwater Harbour station, a 15-minute walk along the quay."},
+    {"mode": "bus", "detail": "Park-and-ride from the Brackwater Ring Road, every 10 minutes from 2 hours before kick-off."},
+    {"mode": "bike", "detail": "Free bike racks at Gates C and D."},
+    {"mode": "ferry", "detail": "The estuary ferry ('the derby boat') lands at Lantern Pier, next to Gate F, the away entrance."}
+  ],
+  "policies": [
+    "Gates open 90 minutes before kick-off.",
+    "Bags larger than an A4 sheet are not allowed; there is no left-luggage service.",
+    "The whole stadium, inside and outside the stands, is smoke-free.",
+    "Glass, cans, flares and fireworks are not allowed.",
+    "All kiosks are cashless: cards and phones only.",
+    "Re-entry is not allowed once you leave the stadium.",
+    "Children under 14 must be with an adult."
+  ]
+}

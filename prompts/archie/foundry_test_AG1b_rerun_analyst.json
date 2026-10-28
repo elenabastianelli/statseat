@@ -1,0 +1,144 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "first_half",
+  "minute": 31,
+  "added_time": 0,
+  "clock_running": true,
+  "score": {
+   "home": 0,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": "half_time"
+   },
+   {
+    "section": "recap",
+    "unlocked": false,
+    "unlocks_at_phase": "full_time"
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 1805.0,
+  "server_time": "2026-10-26T01:44:08.860267+01:00"
+ },
+ "turns": [
+  {
+   "question": "Who's been the fastest player today?",
+   "answer": {
+    "answer_id": "ANS-cfadac1bff6d",
+    "text": "Sullivan Yelholme, Calderholm’s number 39, has recorded the fastest speed so far: 32.3 km/h at 24'. You can see the speed breakdown in Data & Statistics.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "39",
+      "value": 39.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "CAL-39"
+      },
+      "source_field": "CAL-39.shirt_number"
+     },
+     {
+      "text": "32.3 km/h",
+      "value": 32.3,
+      "unit": "km/h",
+      "tool": "speeds",
+      "arguments": {},
+      "source_field": "top_speed.CAL[0].kmh"
+     },
+     {
+      "text": "24'",
+      "value": 24.0,
+      "unit": "'",
+      "tool": "speeds",
+      "arguments": {},
+      "source_field": "top_speed.CAL[0].minute"
+     }
+    ],
+    "points_to": {
+     "chart_id": "speed_zones",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-6d45daada29844fa",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Analyzer version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5794,
+       "tokens_out": 104,
+       "latency_ms": 8431
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2908,
+       "tokens_out": 48,
+       "latency_ms": 3752
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "speeds",
+       "arguments": {},
+       "result_summary": "BRA Clément Peyrol 31.3 km/h; CAL Sullivan Yelholme 32.3 km/h",
+       "latency_ms": 6
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Who has been the fastest player today, and what was their top speed?"
+       },
+       "result_summary": "Sullivan Yelholme (Calderholm United #39) has been fastest, reaching 32.3 km/h at 24'.",
+       "latency_ms": 3765
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:speeds"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 8854,
+     "latency_ms": 12261,
+     "cost_usd": 0.000946
+    }
+   }
+  }
+ ]
+}

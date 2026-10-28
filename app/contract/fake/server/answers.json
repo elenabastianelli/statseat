@@ -1,0 +1,66 @@
+{
+  "tiki_taka_toe": {
+    "TTT-0001": {
+      "0,0": [
+        "BRA-06",
+        "CAL-06",
+        "CAL-19"
+      ],
+      "0,1": [
+        "CAL-03",
+        "CAL-19",
+        "CAL-25"
+      ],
+      "0,2": [
+        "BRA-27",
+        "CAL-03"
+      ],
+      "1,0": [
+        "BRA-18",
+        "CAL-02",
+        "CAL-22"
+      ],
+      "1,1": [
+        "BRA-07",
+        "CAL-03",
+        "CAL-25"
+      ],
+      "1,2": [
+        "BRA-03",
+        "CAL-03",
+        "CAL-08"
+      ],
+      "2,0": [
+        "BRA-05",
+        "BRA-06"
+      ],
+      "2,1": [
+        "BRA-07",
+        "BRA-17",
+        "CAL-03",
+        "CAL-10"
+      ],
+      "2,2": [
+        "BRA-27",
+        "CAL-03"
+      ]
+    }
+  },
+  "guess_the_player": {
+    "GTP-0001": {
+      "correct": "BRA-05",
+      "fact": "Emeka Ibekwe-Nnadi played for Ostwick Albion, Quarrington Town, Hollin Vale United, Saltrigg Rangers."
+    },
+    "GTP-0002": {
+      "correct": "BRA-01",
+      "fact": "Rowan Kirkhurst: Embersley Borough 2016/17 for €800,000; Fennmoor Town 2017/18 for €4,400,000; Marrowdale Wanderers 2019/20 for €7,100,000."
+    }
+  },
+  "quiz": {
+    "QZ-0001": {
+      "correct": "C",
+      "fact": "Zennor Wilstead covered ≈5.88 km in the first half."
+    }
+  },
+  "contract_version": "0.3.1"
+}

@@ -1,0 +1,33 @@
+{
+  "token": "fake-token-demo-0001",
+  "token_type": "bearer",
+  "session": {
+    "tier": "demo",
+    "allowed_modes": [
+      "analyst",
+      "casual"
+    ],
+    "inspector_enabled": true,
+    "demo_panel_enabled": true,
+    "multi_device": true,
+    "match": {
+      "match_id": "SYN-001",
+      "home_team_id": "BRA",
+      "away_team_id": "CAL",
+      "home_name": "Brackwater Athletic",
+      "away_name": "Calderholm United",
+      "title": "The Estuary Derby",
+      "kickoff": "2026-10-24T15:00:00+01:00",
+      "stadium_name": "Lanternworks Stadium"
+    },
+    "preferences": {
+      "mode": "analyst",
+      "favourite_player_ids": [
+        "BRA-09",
+        "BRA-06"
+      ],
+      "favourites_locked": false,
+      "language": "en"
+    }
+  }
+}

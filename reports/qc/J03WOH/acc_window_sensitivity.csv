@@ -1,0 +1,4 @@
+window_samples,fraction_of_fs,noise_runs_acc,noise_runs_dec,noise_samples,approx_runs_acc,approx_runs_dec,approx_samples,acc_p0_1_ms2,acc_p99_9_ms2,acc_min_ms2,acc_max_ms2,diag_max_speed_change_kmh_median,diag_max_speed_change_kmh_max,diag_distance_change_pct_median,diag_distance_change_pct_max
+13,0.5,12,3,50,0,8,50,-5.65,4.75,-10.12,9.48,0.0,0.0,0.0,0.0
+19,0.75,7,7,49,0,0,0,-5.37,4.53,-9.51,8.99,0.112,0.28,0.342,0.614
+25,1.0,3,1,14,0,0,0,-5.04,4.3,-8.76,10.11,0.237,0.582,0.764,1.337

@@ -1,0 +1,55 @@
+{
+  "round_id": "GTP-0001",
+  "version": "career",
+  "career": [
+    {
+      "club_name": "Ostwick Albion",
+      "from_season": "2015/16",
+      "to_season": "2017/18"
+    },
+    {
+      "club_name": "Quarrington Town",
+      "from_season": "2018/19",
+      "to_season": "2020/21"
+    },
+    {
+      "club_name": "Hollin Vale United",
+      "from_season": "2021/22",
+      "to_season": "2023/24"
+    },
+    {
+      "club_name": "Saltrigg Rangers",
+      "from_season": "2024/25",
+      "to_season": "2024/25"
+    }
+  ],
+  "transfers": null,
+  "options": [
+    {
+      "player_id": "CAL-06",
+      "name": "Joaquín Arregui Villalba",
+      "team_id": "CAL",
+      "shirt_number": 6
+    },
+    {
+      "player_id": "BRA-04",
+      "name": "Oberon Cotterell",
+      "team_id": "BRA",
+      "shirt_number": 4
+    },
+    {
+      "player_id": "BRA-05",
+      "name": "Emeka Ibekwe-Nnadi",
+      "team_id": "BRA",
+      "shirt_number": 5
+    },
+    {
+      "player_id": "BRA-26",
+      "name": "Eamon Fothergill",
+      "team_id": "BRA",
+      "shirt_number": 26
+    }
+  ],
+  "answer_seconds": 30,
+  "deadline": "2026-10-24T15:53:30+01:00"
+}

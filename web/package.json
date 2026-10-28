@@ -1,0 +1,32 @@
+{
+  "name": "statseat-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "statseat PWA: the fan app of InsideTheGame (React + Vite + TypeScript)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc -b",
+    "gen:api": "openapi-typescript ../app/contract/openapi.json -o src/api/schema.d.ts",
+    "gen:icons": "node scripts/gen-icons.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@fluentui/svg-icons": "1.1.344",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "country-flag-icons": "1.6.20",
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vite-plugin-pwa": "2.0.0",
+    "vitest": "5.0.5"
+  }
+}

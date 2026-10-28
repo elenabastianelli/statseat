@@ -1,0 +1,440 @@
+{
+  "match_id": "SYN-001",
+  "competition": "Meridian League",
+  "season": "2026/27",
+  "matchday": 9,
+  "title": "The Estuary Derby",
+  "kickoff": "2026-10-24T15:00:00+01:00",
+  "stadium_name": "Lanternworks Stadium",
+  "stadium_capacity": 60400,
+  "teams": [
+    {
+      "team_id": "BRA",
+      "role": "home",
+      "name": "Brackwater Athletic",
+      "short_name": "Brackwater",
+      "nickname": "The Lamplighters",
+      "colours": {
+        "primary": "#1B2A4A",
+        "secondary": "#F2A900",
+        "number": "#FFFFFF",
+        "away_kit": {
+          "shirt": "#F2A900",
+          "shorts": "#1B2A4A",
+          "socks": "#F2A900"
+        }
+      },
+      "formation": "4-2-3-1",
+      "head_coach": "Mara Ellingham",
+      "lineup": [
+        {
+          "player_id": "BRA-01",
+          "name": "Rowan Kirkhurst",
+          "short_name": "Kirkhurst",
+          "shirt_number": 1,
+          "position": "GK",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-02",
+          "name": "Tobias Rudge",
+          "short_name": "Rudge",
+          "shirt_number": 2,
+          "position": "RB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-04",
+          "name": "Oberon Cotterell",
+          "short_name": "Cotterell",
+          "shirt_number": 4,
+          "position": "RCB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-05",
+          "name": "Emeka Ibekwe-Nnadi",
+          "short_name": "Ibekwe-Nnadi",
+          "shirt_number": 5,
+          "position": "LCB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-03",
+          "name": "Gaspard Lefèvre-Saunier",
+          "short_name": "Lefèvre-Saunier",
+          "shirt_number": 3,
+          "position": "LB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-08",
+          "name": "Oisín Hennebry",
+          "short_name": "Hennebry",
+          "shirt_number": 8,
+          "position": "RDM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-06",
+          "name": "Siebe Meulenkamp",
+          "short_name": "Meulenkamp",
+          "shirt_number": 6,
+          "position": "LDM",
+          "starting": true,
+          "captain": true
+        },
+        {
+          "player_id": "BRA-27",
+          "name": "Clément Peyrol",
+          "short_name": "Peyrol",
+          "shirt_number": 27,
+          "position": "RW",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-10",
+          "name": "Riku Shimazaki",
+          "short_name": "Shimazaki",
+          "shirt_number": 10,
+          "position": "CAM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-11",
+          "name": "Ruairí Kinsella-Ward",
+          "short_name": "Kinsella-Ward",
+          "shirt_number": 11,
+          "position": "LW",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-09",
+          "name": "Audun Ulvestad",
+          "short_name": "Ulvestad",
+          "shirt_number": 9,
+          "position": "ST",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-30",
+          "name": "Ulysses Woodbrook",
+          "short_name": "Woodbrook",
+          "shirt_number": 30,
+          "position": "GK",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-26",
+          "name": "Eamon Fothergill",
+          "short_name": "Fothergill",
+          "shirt_number": 26,
+          "position": "RCB",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-15",
+          "name": "Nnamdi Akinwale",
+          "short_name": "Akinwale",
+          "shirt_number": 15,
+          "position": "LB",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-29",
+          "name": "Wessel Dijkgraaf-Smit",
+          "short_name": "Dijkgraaf-Smit",
+          "shirt_number": 29,
+          "position": "CDM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-38",
+          "name": "Jude Eastridge",
+          "short_name": "Eastridge",
+          "shirt_number": 38,
+          "position": "LCM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-49",
+          "name": "Cyrus Harrowell",
+          "short_name": "Harrowell",
+          "shirt_number": 49,
+          "position": "LW",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-17",
+          "name": "Senan Fitzmaurice-Lynch",
+          "short_name": "Fitzmaurice-Lynch",
+          "shirt_number": 17,
+          "position": "CAM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-46",
+          "name": "Jasper Netherby",
+          "short_name": "Netherby",
+          "shirt_number": 46,
+          "position": "ST",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "BRA-18",
+          "name": "Elric Grimsdale",
+          "short_name": "Grimsdale",
+          "shirt_number": 18,
+          "position": "ST",
+          "starting": false,
+          "captain": false
+        }
+      ]
+    },
+    {
+      "team_id": "CAL",
+      "role": "away",
+      "name": "Calderholm United",
+      "short_name": "Calderholm",
+      "nickname": "The Kilnmen",
+      "colours": {
+        "primary": "#7A1F2B",
+        "secondary": "#8FC1E3",
+        "number": "#FFFFFF",
+        "away_kit": {
+          "shirt": "#8FC1E3",
+          "shorts": "#7A1F2B",
+          "socks": "#8FC1E3"
+        }
+      },
+      "formation": "4-4-2",
+      "head_coach": "Dario Castellane",
+      "lineup": [
+        {
+          "player_id": "CAL-01",
+          "name": "Pape Faye-Diouf",
+          "short_name": "Faye-Diouf",
+          "shirt_number": 1,
+          "position": "GK",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-02",
+          "name": "Fraser Drummond",
+          "short_name": "Drummond",
+          "shirt_number": 2,
+          "position": "RB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-05",
+          "name": "Abel Sowerby",
+          "short_name": "Sowerby",
+          "shirt_number": 5,
+          "position": "RCB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-06",
+          "name": "Joaquín Arregui Villalba",
+          "short_name": "Arregui Villalba",
+          "shirt_number": 6,
+          "position": "LCB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-24",
+          "name": "Fletcher Mossley",
+          "short_name": "Mossley",
+          "shirt_number": 24,
+          "position": "LB",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-07",
+          "name": "Rutger van Dalfsen",
+          "short_name": "van Dalfsen",
+          "shirt_number": 7,
+          "position": "RM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-04",
+          "name": "Zennor Wilstead",
+          "short_name": "Wilstead",
+          "shirt_number": 4,
+          "position": "RCM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-08",
+          "name": "Damien Fontanieu",
+          "short_name": "Fontanieu",
+          "shirt_number": 8,
+          "position": "LCM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-39",
+          "name": "Sullivan Yelholme",
+          "short_name": "Yelholme",
+          "shirt_number": 39,
+          "position": "LM",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-09",
+          "name": "Mortimer Brightwell",
+          "short_name": "Brightwell",
+          "shirt_number": 9,
+          "position": "RS",
+          "starting": true,
+          "captain": true
+        },
+        {
+          "player_id": "CAL-10",
+          "name": "Ronan Ó Fearghail",
+          "short_name": "Ó Fearghail",
+          "shirt_number": 10,
+          "position": "LS",
+          "starting": true,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-30",
+          "name": "Diarmuid Scanlon-Hayes",
+          "short_name": "Scanlon-Hayes",
+          "shirt_number": 30,
+          "position": "GK",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-21",
+          "name": "Ulric Lowther",
+          "short_name": "Lowther",
+          "shirt_number": 21,
+          "position": "LCB",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-03",
+          "name": "Maxence Marchetaux",
+          "short_name": "Marchetaux",
+          "shirt_number": 3,
+          "position": "LB",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-16",
+          "name": "Reuben Carrow",
+          "short_name": "Carrow",
+          "shirt_number": 16,
+          "position": "CDM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-37",
+          "name": "Jerome Graycombe",
+          "short_name": "Graycombe",
+          "shirt_number": 37,
+          "position": "LCM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-42",
+          "name": "Leif Swinridge",
+          "short_name": "Swinridge",
+          "shirt_number": 42,
+          "position": "RM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-47",
+          "name": "Nico Dunleavy",
+          "short_name": "Dunleavy",
+          "shirt_number": 47,
+          "position": "CAM",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-22",
+          "name": "Oluwaseun Olatunde",
+          "short_name": "Olatunde",
+          "shirt_number": 22,
+          "position": "ST",
+          "starting": false,
+          "captain": false
+        },
+        {
+          "player_id": "CAL-19",
+          "name": "Tobenna Okonkwo-Bassey",
+          "short_name": "Okonkwo-Bassey",
+          "shirt_number": 19,
+          "position": "ST",
+          "starting": false,
+          "captain": false
+        }
+      ]
+    }
+  ],
+  "officials": [
+    {
+      "role": "referee",
+      "name": "Treve Cranstead"
+    },
+    {
+      "role": "assistant_referee_1",
+      "name": "Solomon Lynmere"
+    },
+    {
+      "role": "assistant_referee_2",
+      "name": "Digby Birchlow"
+    },
+    {
+      "role": "fourth_official",
+      "name": "Felix Gallowby"
+    },
+    {
+      "role": "video_assistant_referee",
+      "name": "Norbert Westlake"
+    },
+    {
+      "role": "assistant_video_assistant_referee",
+      "name": "Gethin Whitlock"
+    }
+  ]
+}

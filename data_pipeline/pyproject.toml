@@ -1,0 +1,9 @@
+[project]
+name = "insidethegame-data"
+version = "0.4.2"
+description = "InsideTheGame data pipeline (guidelines v4.2): ingestion, match profile, preparation with validity mask and gaps, events located from trajectories, preparation report"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

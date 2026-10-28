@@ -1,0 +1,450 @@
+{
+  "match_id": "SYN-001",
+  "universe_id": "MERIDIA-1.0",
+  "competition_id": "MER-1",
+  "season": "2026/27",
+  "matchday": 9,
+  "planned_kickoff": "2026-10-24T15:00:00+01:00",
+  "home_team_id": "BRA",
+  "guest_team_id": "CAL",
+  "environment": {
+    "stadium_id": "STA-LANTERN",
+    "pitch_x_m": 105.0,
+    "pitch_y_m": 68.0,
+    "roof": "covers every seat; the pitch is open",
+    "floodlight": "on",
+    "weather": {
+      "temperature_c": 13,
+      "precipitation": "none",
+      "wind": "light breeze from the estuary",
+      "humidity_pct": 72
+    },
+    "forecast": [
+      {
+        "time": "15:00",
+        "phase": "kick-off",
+        "temperature_c": 13,
+        "precipitation": "none",
+        "chance_of_rain_pct": 10,
+        "wind": "light breeze from the estuary",
+        "sky": "bright, with high cloud"
+      },
+      {
+        "time": "15:45",
+        "phase": "half-time",
+        "temperature_c": 12,
+        "precipitation": "none",
+        "chance_of_rain_pct": 25,
+        "wind": "light breeze from the estuary",
+        "sky": "cloud thickening from the west"
+      },
+      {
+        "time": "16:20",
+        "phase": "second half",
+        "temperature_c": 12,
+        "precipitation": "light_rain",
+        "chance_of_rain_pct": 45,
+        "wind": "moderate breeze from the estuary",
+        "sky": "overcast"
+      },
+      {
+        "time": "16:50",
+        "phase": "full-time",
+        "temperature_c": 11,
+        "precipitation": "light_rain",
+        "chance_of_rain_pct": 55,
+        "wind": "moderate breeze from the estuary",
+        "sky": "overcast"
+      }
+    ],
+    "stadium_capacity": 60400,
+    "tickets_sold": 60212
+  },
+  "teams": [
+    {
+      "role": "home",
+      "team_id": "BRA",
+      "formation": "4-2-3-1",
+      "kit": "home",
+      "crest_file": "synthetic/crests/BRA.svg",
+      "kit_files": {
+        "home": "synthetic/kits/BRA_home.svg",
+        "away": "synthetic/kits/BRA_away.svg"
+      },
+      "lineup": [
+        {
+          "player_id": "BRA-01",
+          "shirt_number": 1,
+          "starting": true,
+          "playing_position": "GK",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-02",
+          "shirt_number": 2,
+          "starting": true,
+          "playing_position": "RB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-04",
+          "shirt_number": 4,
+          "starting": true,
+          "playing_position": "RCB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-05",
+          "shirt_number": 5,
+          "starting": true,
+          "playing_position": "LCB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-03",
+          "shirt_number": 3,
+          "starting": true,
+          "playing_position": "LB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-08",
+          "shirt_number": 8,
+          "starting": true,
+          "playing_position": "RDM",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-06",
+          "shirt_number": 6,
+          "starting": true,
+          "playing_position": "LDM",
+          "captain": true
+        },
+        {
+          "player_id": "BRA-27",
+          "shirt_number": 27,
+          "starting": true,
+          "playing_position": "RW",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-10",
+          "shirt_number": 10,
+          "starting": true,
+          "playing_position": "CAM",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-11",
+          "shirt_number": 11,
+          "starting": true,
+          "playing_position": "LW",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-09",
+          "shirt_number": 9,
+          "starting": true,
+          "playing_position": "ST",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-30",
+          "shirt_number": 30,
+          "starting": false,
+          "playing_position": "GK",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-26",
+          "shirt_number": 26,
+          "starting": false,
+          "playing_position": "RCB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-15",
+          "shirt_number": 15,
+          "starting": false,
+          "playing_position": "LB",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-29",
+          "shirt_number": 29,
+          "starting": false,
+          "playing_position": "CDM",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-38",
+          "shirt_number": 38,
+          "starting": false,
+          "playing_position": "LCM",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-49",
+          "shirt_number": 49,
+          "starting": false,
+          "playing_position": "LW",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-17",
+          "shirt_number": 17,
+          "starting": false,
+          "playing_position": "CAM",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-46",
+          "shirt_number": 46,
+          "starting": false,
+          "playing_position": "ST",
+          "captain": false
+        },
+        {
+          "player_id": "BRA-18",
+          "shirt_number": 18,
+          "starting": false,
+          "playing_position": "ST",
+          "captain": false
+        }
+      ],
+      "staff": [
+        {
+          "staff_id": "BRA-S1",
+          "role": "head_coach"
+        },
+        {
+          "staff_id": "BRA-S2",
+          "role": "assistant_coach"
+        },
+        {
+          "staff_id": "BRA-S3",
+          "role": "goalkeeper_coach"
+        },
+        {
+          "staff_id": "BRA-S4",
+          "role": "fitness_coach"
+        },
+        {
+          "staff_id": "BRA-S5",
+          "role": "head_physio"
+        },
+        {
+          "staff_id": "BRA-S6",
+          "role": "club_doctor"
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "team_id": "CAL",
+      "formation": "4-4-2",
+      "kit": "away",
+      "crest_file": "synthetic/crests/CAL.svg",
+      "kit_files": {
+        "home": "synthetic/kits/CAL_home.svg",
+        "away": "synthetic/kits/CAL_away.svg"
+      },
+      "lineup": [
+        {
+          "player_id": "CAL-01",
+          "shirt_number": 1,
+          "starting": true,
+          "playing_position": "GK",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-02",
+          "shirt_number": 2,
+          "starting": true,
+          "playing_position": "RB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-05",
+          "shirt_number": 5,
+          "starting": true,
+          "playing_position": "RCB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-06",
+          "shirt_number": 6,
+          "starting": true,
+          "playing_position": "LCB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-24",
+          "shirt_number": 24,
+          "starting": true,
+          "playing_position": "LB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-07",
+          "shirt_number": 7,
+          "starting": true,
+          "playing_position": "RM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-04",
+          "shirt_number": 4,
+          "starting": true,
+          "playing_position": "RCM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-08",
+          "shirt_number": 8,
+          "starting": true,
+          "playing_position": "LCM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-39",
+          "shirt_number": 39,
+          "starting": true,
+          "playing_position": "LM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-09",
+          "shirt_number": 9,
+          "starting": true,
+          "playing_position": "RS",
+          "captain": true
+        },
+        {
+          "player_id": "CAL-10",
+          "shirt_number": 10,
+          "starting": true,
+          "playing_position": "LS",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-30",
+          "shirt_number": 30,
+          "starting": false,
+          "playing_position": "GK",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-21",
+          "shirt_number": 21,
+          "starting": false,
+          "playing_position": "LCB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-03",
+          "shirt_number": 3,
+          "starting": false,
+          "playing_position": "LB",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-16",
+          "shirt_number": 16,
+          "starting": false,
+          "playing_position": "CDM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-37",
+          "shirt_number": 37,
+          "starting": false,
+          "playing_position": "LCM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-42",
+          "shirt_number": 42,
+          "starting": false,
+          "playing_position": "RM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-47",
+          "shirt_number": 47,
+          "starting": false,
+          "playing_position": "CAM",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-22",
+          "shirt_number": 22,
+          "starting": false,
+          "playing_position": "ST",
+          "captain": false
+        },
+        {
+          "player_id": "CAL-19",
+          "shirt_number": 19,
+          "starting": false,
+          "playing_position": "ST",
+          "captain": false
+        }
+      ],
+      "staff": [
+        {
+          "staff_id": "CAL-S1",
+          "role": "head_coach"
+        },
+        {
+          "staff_id": "CAL-S2",
+          "role": "assistant_coach"
+        },
+        {
+          "staff_id": "CAL-S3",
+          "role": "goalkeeper_coach"
+        },
+        {
+          "staff_id": "CAL-S4",
+          "role": "fitness_coach"
+        },
+        {
+          "staff_id": "CAL-S5",
+          "role": "head_physio"
+        },
+        {
+          "staff_id": "CAL-S6",
+          "role": "club_doctor"
+        }
+      ]
+    }
+  ],
+  "officials": [
+    {
+      "official_id": "REF-01",
+      "role": "referee"
+    },
+    {
+      "official_id": "REF-02",
+      "role": "assistant_referee_1"
+    },
+    {
+      "official_id": "REF-03",
+      "role": "assistant_referee_2"
+    },
+    {
+      "official_id": "REF-04",
+      "role": "fourth_official"
+    },
+    {
+      "official_id": "REF-05",
+      "role": "video_assistant_referee"
+    },
+    {
+      "official_id": "REF-06",
+      "role": "assistant_video_assistant_referee"
+    }
+  ],
+  "result": null
+}

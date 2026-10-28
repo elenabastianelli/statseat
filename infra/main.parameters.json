@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": { "value": "${AZURE_ENV_NAME}" },
+    "location": { "value": "${AZURE_LOCATION}" },
+    "foundryResourceId": { "value": "${FOUNDRY_RESOURCE_ID=}" },
+    "foundryProjectEndpoint": { "value": "${FOUNDRY_PROJECT_ENDPOINT=}" },
+    "foundryModel": { "value": "${FOUNDRY_MODEL=}" },
+    "archieAgentId": { "value": "${ARCHIE_AGENT_ID=}" },
+    "archieAgentVersion": { "value": "${ARCHIE_AGENT_VERSION=}" },
+    "analystAgentId": { "value": "${ANALYST_AGENT_ID=}" },
+    "analystAgentVersion": { "value": "${ANALYST_AGENT_VERSION=}" },
+    "statseatExists": { "value": "${SERVICE_STATSEAT_RESOURCE_EXISTS=false}" }
+  }
+}

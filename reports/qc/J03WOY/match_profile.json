@@ -1,0 +1,1471 @@
+{
+  "match_id": "DFL-MAT-J03WOY",
+  "competition_id": "DFL-COM-000002",
+  "season": "2022/2023",
+  "fs_hz": {
+    "1": 25.0,
+    "2": 25.0
+  },
+  "sampling": {
+    "1": {
+      "fs_hz": 25.0,
+      "dt_median_s": 0.04,
+      "dt_std_s": 0.0,
+      "dt_min_s": 0.04,
+      "dt_max_s": 0.04,
+      "pct_dt_outside_tol": 0.0,
+      "n_steps": 1589529,
+      "n_steps_dn_not_1": 0,
+      "pct_dn1_with_dt_in_tol": 100.0
+    },
+    "2": {
+      "fs_hz": 25.0,
+      "dt_median_s": 0.04,
+      "dt_std_s": 0.0,
+      "dt_min_s": 0.04,
+      "dt_max_s": 0.04,
+      "pct_dt_outside_tol": 0.0,
+      "n_steps": 1688744,
+      "n_steps_dn_not_1": 0,
+      "pct_dn1_with_dt_in_tol": 100.0
+    }
+  },
+  "frame_ranges": {
+    "per_half": {
+      "1": {
+        "n_first": 10000,
+        "n_last": 79110,
+        "n_frames_span": 69111,
+        "t_first_utc": "2022-09-10T18:31:32.360000+00:00",
+        "t_last_utc": "2022-09-10T19:17:36.760000+00:00",
+        "n_framesets": 24
+      },
+      "2": {
+        "n_first": 100000,
+        "n_last": 173424,
+        "n_frames_span": 73425,
+        "t_first_utc": "2022-09-10T19:33:46.880000+00:00",
+        "t_last_utc": "2022-09-10T20:22:43.840000+00:00",
+        "n_framesets": 31
+      }
+    },
+    "half_offsets": {
+      "1->2": {
+        "first_n_next_half": 100000,
+        "jump_from_last_n": 20890
+      }
+    }
+  },
+  "pitch_length_m": 105.0,
+  "pitch_width_m": 68.0,
+  "pitch_size_source": "match metadata",
+  "pitch_size_tracking_meta": [
+    105.0,
+    68.0
+  ],
+  "tracking_origin": "centre",
+  "centre_spot_in_tracking": [
+    0.0,
+    0.0
+  ],
+  "consistent_votes": true,
+  "votes": [
+    "centre",
+    "centre",
+    "centre",
+    "centre",
+    "centre",
+    "centre",
+    "centre"
+  ],
+  "player_x_range": [
+    -55.42,
+    55.5
+  ],
+  "player_y_range": [
+    -36.67,
+    37.36
+  ],
+  "player_x_p0_5_p99_5": [
+    -50.57,
+    51.06
+  ],
+  "player_y_p0_5_p99_5": [
+    -34.44,
+    32.96
+  ],
+  "long_axis": "x",
+  "axis_orientation": {
+    "long_axis": "x",
+    "x_positive_towards": "right goal (team_right defends +x)",
+    "y_sign_vs_events": "same"
+  },
+  "event_origin": "corner",
+  "kickoff_xy": [
+    52.5,
+    34.0
+  ],
+  "event_x_range": [
+    0.3,
+    105.0
+  ],
+  "event_y_range": [
+    0.0,
+    68.0
+  ],
+  "centre_spot_in_events": [
+    52.5,
+    34.0
+  ],
+  "event_to_tracking_transform": {
+    "x_tracking": "+1 * (x_event - 52.5) + 0.0",
+    "y_tracking": "+1 * (y_event - 34.0) + 0.0",
+    "by_half": {
+      "1": {
+        "n": 431,
+        "median_m": 4.352436
+      },
+      "2": {
+        "n": 458,
+        "median_m": 4.238115
+      }
+    },
+    "candidates": [
+      {
+        "sx": 1,
+        "sy": 1,
+        "median_dist_m": 4.254692,
+        "best_lag_s": 1.32
+      },
+      {
+        "sx": -1,
+        "sy": 1,
+        "median_dist_m": 37.260882,
+        "best_lag_s": -0.56
+      },
+      {
+        "sx": 1,
+        "sy": -1,
+        "median_dist_m": 38.475552,
+        "best_lag_s": 2.4
+      },
+      {
+        "sx": -1,
+        "sy": -1,
+        "median_dist_m": 56.755225,
+        "best_lag_s": -3.0
+      }
+    ],
+    "best": {
+      "sx": 1,
+      "sy": 1,
+      "median_dist_m": 4.254692,
+      "best_lag_s": 1.32
+    },
+    "n_events_used": 889,
+    "dist_mean_m": 6.936982,
+    "dist_std_m": 7.969149,
+    "dist_p90_m": 15.317815,
+    "by_type": [
+      {
+        "type": "CornerKick",
+        "count": 2,
+        "median": 13.68,
+        "mean": 13.68
+      },
+      {
+        "type": "FreeKick",
+        "count": 27,
+        "median": 7.74,
+        "mean": 11.41
+      },
+      {
+        "type": "GoalKick",
+        "count": 19,
+        "median": 16.59,
+        "mean": 18.05
+      },
+      {
+        "type": "KickOff",
+        "count": 6,
+        "median": 52.91,
+        "mean": 40.02
+      },
+      {
+        "type": "Play",
+        "count": 760,
+        "median": 4.04,
+        "mean": 6.07
+      },
+      {
+        "type": "ShotAtGoal",
+        "count": 21,
+        "median": 10.09,
+        "mean": 12.98
+      },
+      {
+        "type": "ThrowIn",
+        "count": 54,
+        "median": 5.23,
+        "mean": 6.68
+      }
+    ],
+    "y_sign_margin_m": 34.22086
+  },
+  "kickoff_frames": [
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 1,
+      "n": 10001,
+      "t_utc": "2022-09-10T18:31:32.400000095+00:00",
+      "ball_x": -6.13,
+      "ball_y": -0.06,
+      "ball_dist_first_live_m": 6.130294,
+      "backtrack_dist_m": 0.220368,
+      "frame_minus_event_s": 0.79,
+      "half": 1,
+      "game_section": "firstHalf",
+      "event_time_utc": "2022-09-10T18:31:31.610000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 16022,
+      "n": 26022,
+      "t_utc": "2022-09-10T18:42:13.240000010+00:00",
+      "ball_x": -0.06,
+      "ball_y": 0.05,
+      "ball_dist_first_live_m": 0.078102,
+      "backtrack_dist_m": 0.047485,
+      "frame_minus_event_s": 3.645,
+      "half": 1,
+      "game_section": null,
+      "event_time_utc": "2022-09-10T18:42:09.595000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 41537,
+      "n": 51537,
+      "t_utc": "2022-09-10T18:59:13.839999914+00:00",
+      "ball_x": -0.14,
+      "ball_y": 0.12,
+      "ball_dist_first_live_m": 0.184391,
+      "backtrack_dist_m": 0.113329,
+      "frame_minus_event_s": 3.791,
+      "half": 1,
+      "game_section": null,
+      "event_time_utc": "2022-09-10T18:59:10.049000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": false,
+      "frame_index": 0,
+      "n": 100000,
+      "t_utc": "2022-09-10T19:33:46.880000114+00:00",
+      "ball_x": -10.09,
+      "ball_y": 0.3,
+      "ball_dist_first_live_m": 10.094459,
+      "backtrack_dist_m": 0.3,
+      "frame_minus_event_s": 1.07,
+      "half": 2,
+      "game_section": "secondHalf",
+      "event_time_utc": "2022-09-10T19:33:45.810000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 23471,
+      "n": 123471,
+      "t_utc": "2022-09-10T19:49:25.720000029+00:00",
+      "ball_x": -0.27,
+      "ball_y": 0.22,
+      "ball_dist_first_live_m": 0.348281,
+      "backtrack_dist_m": 0.099872,
+      "frame_minus_event_s": 2.167,
+      "half": 2,
+      "game_section": null,
+      "event_time_utc": "2022-09-10T19:49:23.553000+00:00"
+    },
+    {
+      "found": true,
+      "dead_ball_before": true,
+      "frame_index": 49708,
+      "n": 149708,
+      "t_utc": "2022-09-10T20:06:55.200000048+00:00",
+      "ball_x": 0.09,
+      "ball_y": 0.0,
+      "ball_dist_first_live_m": 0.09,
+      "backtrack_dist_m": 0.012728,
+      "frame_minus_event_s": 2.975,
+      "half": 2,
+      "game_section": null,
+      "event_time_utc": "2022-09-10T20:06:52.225000+00:00"
+    }
+  ],
+  "direction_per_half": {
+    "1": {
+      "team_left": "away",
+      "team_right": "home",
+      "gk_mean_x_home": 34.961605,
+      "gk_mean_x_away": -38.907717,
+      "gk_left_team": "away",
+      "confirmed": true,
+      "home_attacks_positive_x": false
+    },
+    "2": {
+      "team_left": "home",
+      "team_right": "away",
+      "gk_mean_x_home": -36.890316,
+      "gk_mean_x_away": 37.304449,
+      "gk_left_team": "home",
+      "confirmed": true,
+      "home_attacks_positive_x": true
+    }
+  },
+  "timezones": {
+    "events": [
+      "+02:00"
+    ],
+    "tracking": [
+      "+00:00"
+    ]
+  },
+  "objects": {
+    "teams": {
+      "home": {
+        "lineup_size": 20,
+        "starters": 11,
+        "with_frameset": 16,
+        "framesets_per_half": {
+          "1": 11,
+          "2": 16
+        }
+      },
+      "away": {
+        "lineup_size": 20,
+        "starters": 11,
+        "with_frameset": 16,
+        "framesets_per_half": {
+          "1": 12,
+          "2": 14
+        }
+      }
+    },
+    "ball_present_per_half": {
+      "1": true,
+      "2": true
+    },
+    "lineup_without_frameset": 8,
+    "lineup_without_frameset_starters": 0,
+    "framesets_without_lineup": [],
+    "referees_tracked": false,
+    "non_player_objects_by_team_label": {}
+  },
+  "substitutions": [
+    {
+      "time_utc": "2022-09-10T19:09:03.653000+00:00",
+      "half": 1,
+      "team": "away",
+      "player_out": "away CM 3",
+      "player_in": "away CM 2",
+      "playing_position": "HL",
+      "in_frameset_start_minus_event_s": 5.267,
+      "out_frameset_end_minus_event_s": 5.227
+    },
+    {
+      "time_utc": "2022-09-10T19:33:02.225000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "away CM 1",
+      "player_in": "away W 1",
+      "playing_position": "OLM",
+      "in_frameset_start_minus_event_s": 44.655,
+      "out_frameset_end_minus_event_s": -925.465
+    },
+    {
+      "time_utc": "2022-09-10T19:59:28.901000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "home AM 1",
+      "player_in": "home DM 2",
+      "playing_position": "DML",
+      "in_frameset_start_minus_event_s": 6.019,
+      "out_frameset_end_minus_event_s": 5.979
+    },
+    {
+      "time_utc": "2022-09-10T19:59:47.600000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "home ST 2",
+      "player_in": "home ST 1",
+      "playing_position": "STZ",
+      "in_frameset_start_minus_event_s": 3.24,
+      "out_frameset_end_minus_event_s": 3.2
+    },
+    {
+      "time_utc": "2022-09-10T20:09:55.866000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "away CB 4",
+      "player_in": "away CB 1",
+      "playing_position": "IVR",
+      "in_frameset_start_minus_event_s": 5.534,
+      "out_frameset_end_minus_event_s": 5.494
+    },
+    {
+      "time_utc": "2022-09-10T20:10:00.522000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "away ST 3",
+      "player_in": "away W 2",
+      "playing_position": "ORM",
+      "in_frameset_start_minus_event_s": 10.518,
+      "out_frameset_end_minus_event_s": 10.478
+    },
+    {
+      "time_utc": "2022-09-10T20:10:07.258000+00:00",
+      "half": 2,
+      "team": "away",
+      "player_out": "away ST 1",
+      "player_in": "away ST 2",
+      "playing_position": "STZ",
+      "in_frameset_start_minus_event_s": 8.462,
+      "out_frameset_end_minus_event_s": 8.422
+    },
+    {
+      "time_utc": "2022-09-10T20:12:55.080000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "home W 2",
+      "player_in": "home W 4",
+      "playing_position": "OLM",
+      "in_frameset_start_minus_event_s": 2.16,
+      "out_frameset_end_minus_event_s": 2.12
+    },
+    {
+      "time_utc": "2022-09-10T20:18:20.310000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "home DM 3",
+      "player_in": "home AM 2",
+      "playing_position": "ZO",
+      "in_frameset_start_minus_event_s": 6.09,
+      "out_frameset_end_minus_event_s": 6.05
+    },
+    {
+      "time_utc": "2022-09-10T20:18:23.719000+00:00",
+      "half": 2,
+      "team": "home",
+      "player_out": "home W 1",
+      "player_in": "home W 3",
+      "playing_position": "ORM",
+      "in_frameset_start_minus_event_s": -2.759,
+      "out_frameset_end_minus_event_s": -2.799
+    }
+  ],
+  "cards": {
+    "yellow": 2
+  },
+  "delete_events": 75,
+  "events_raw": 1489,
+  "events_kept": 1414,
+  "events_out_of_order_in_file": 85,
+  "event_types_kept": {
+    "Play": 760,
+    "OtherBallAction": 248,
+    "TacklingGame": 195,
+    "ThrowIn": 54,
+    "FreeKick": 27,
+    "Foul": 24,
+    "BallClaiming": 24,
+    "ShotAtGoal": 21,
+    "GoalKick": 19,
+    "Substitution": 10,
+    "KickOff": 6,
+    "PenaltyNotAwarded": 4,
+    "Nutmeg": 4,
+    "Offside": 3,
+    "SpectacularPlay": 3,
+    "PossessionLossBeforeGoal": 2,
+    "CornerKick": 2,
+    "Caution": 2,
+    "FinalWhistle": 2,
+    "RefereeBall": 2,
+    "PlayerNotSentOff": 1,
+    "Run": 1
+  },
+  "playing_time": {
+    "1": {
+      "gross_s": 2764.4,
+      "net_s": 1510.0,
+      "tracking_duration_s": 2764.44,
+      "tracking_minus_gross_s": 0.04,
+      "ball_alive_s": 1510.0,
+      "ball_alive_minus_net_s": -0.0,
+      "ball_live_s": 1510.0
+    },
+    "2": {
+      "gross_s": 2936.96,
+      "net_s": 1541.4,
+      "tracking_duration_s": 2937.0,
+      "tracking_minus_gross_s": 0.04,
+      "ball_alive_s": 1541.44,
+      "ball_alive_minus_net_s": 0.04,
+      "ball_live_s": 1541.44
+    }
+  },
+  "guidelines_version": "v4.2 (2026-10-25)",
+  "provider": "DFL/Sportec",
+  "format": "xml (PutDataRequest)",
+  "units": {
+    "coordinates": {
+      "units": "m",
+      "scale_to_m": 1.0,
+      "span": 110.92
+    },
+    "provider_speed": {
+      "units": "km/h",
+      "scale_to_ms": 0.277778,
+      "peak": 33.26
+    },
+    "provider_step": "cm (D), converted to m",
+    "provider_acceleration": "m/s2 (A)"
+  },
+  "canonical_transform": {
+    "x_canonical": "-1 * (x_tracking - 0.0)",
+    "y_canonical": "-1 * (y_tracking - 0.0)",
+    "rotation_deg": 180,
+    "reason": "home attacks +x in period 1 after normalisation (raw: home attacks -x in period 1)"
+  },
+  "event_to_canonical_transform": {
+    "x_canonical": "-1 * (x_event - 52.5)",
+    "y_canonical": "-1 * (y_event - 34.0)"
+  },
+  "kickoff_per_period": {
+    "1": {
+      "kickoff_utc": "2022-09-10T18:31:31.609999895+00:00",
+      "source": "KickOff event",
+      "tracking_start_offset_s": 0.75,
+      "metadata_kickoff_minus_event_s": -0.01
+    },
+    "2": {
+      "kickoff_utc": "2022-09-10T19:33:45.809999943+00:00",
+      "source": "KickOff event",
+      "tracking_start_offset_s": 1.07
+    }
+  },
+  "tracking_area_edges": {
+    "edges": [],
+    "candidates_rejected": [
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.54,
+        "beyond_line_m": 2.54,
+        "samples": 2066,
+        "distinct_positions": 7,
+        "runs": 7,
+        "tracks": 7,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -52.9,
+        "beyond_line_m": 0.4,
+        "samples": 1377,
+        "distinct_positions": 16,
+        "runs": 13,
+        "tracks": 9,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.28,
+        "beyond_line_m": 2.28,
+        "samples": 939,
+        "distinct_positions": 12,
+        "runs": 14,
+        "tracks": 8,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -53.87,
+        "beyond_line_m": 1.37,
+        "samples": 909,
+        "distinct_positions": 7,
+        "runs": 7,
+        "tracks": 6,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.49,
+        "beyond_line_m": 2.49,
+        "samples": 861,
+        "distinct_positions": 7,
+        "runs": 7,
+        "tracks": 6,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 35.58,
+        "beyond_line_m": 1.58,
+        "samples": 784,
+        "distinct_positions": 18,
+        "runs": 19,
+        "tracks": 11,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -54.27,
+        "beyond_line_m": 1.77,
+        "samples": 647,
+        "distinct_positions": 3,
+        "runs": 3,
+        "tracks": 2,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.67,
+        "beyond_line_m": 2.67,
+        "samples": 645,
+        "distinct_positions": 1,
+        "runs": 1,
+        "tracks": 1,
+        "reason": "a single frozen position (one run)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 35.61,
+        "beyond_line_m": 1.61,
+        "samples": 615,
+        "distinct_positions": 19,
+        "runs": 18,
+        "tracks": 10,
+        "reason": "not the outermost value on that side"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.48,
+        "beyond_line_m": 2.48,
+        "samples": 519,
+        "distinct_positions": 15,
+        "runs": 13,
+        "tracks": 9,
+        "reason": "not the outermost value on that side"
+      }
+    ],
+    "n_candidates_rejected": 322
+  },
+  "parking_values": {
+    "parking_values": [
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.49,
+        "beyond_line_m": 2.49,
+        "samples": 857,
+        "runs": 3,
+        "players": 3
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.54,
+        "beyond_line_m": 2.54,
+        "samples": 2063,
+        "runs": 4,
+        "players": 4
+      }
+    ],
+    "candidates_rejected": [
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -52.9,
+        "beyond_line_m": 0.4,
+        "samples": 1361,
+        "runs": 2,
+        "players": 2,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.28,
+        "beyond_line_m": 2.28,
+        "samples": 927,
+        "runs": 3,
+        "players": 2,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -53.87,
+        "beyond_line_m": 1.37,
+        "samples": 903,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 35.58,
+        "beyond_line_m": 1.58,
+        "samples": 766,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -54.27,
+        "beyond_line_m": 1.77,
+        "samples": 645,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.67,
+        "beyond_line_m": 2.67,
+        "samples": 645,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 35.61,
+        "beyond_line_m": 1.61,
+        "samples": 595,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -54.18,
+        "beyond_line_m": 1.68,
+        "samples": 505,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "y",
+        "side": "+",
+        "value_m": 36.48,
+        "beyond_line_m": 2.48,
+        "samples": 505,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      },
+      {
+        "axis": "x",
+        "side": "-",
+        "value_m": -54.89,
+        "beyond_line_m": 2.39,
+        "samples": 469,
+        "runs": 1,
+        "players": 1,
+        "reason": "frozen runs from fewer than 3 players (only frozen)"
+      }
+    ],
+    "n_candidates_rejected": 30
+  },
+  "coordinate_resolution_m": 0.01,
+  "event_clock_offset": {
+    "1": {
+      "event_clock_offset_s": 1.772,
+      "event_offset_dispersion_s": 0.349,
+      "n_anchors": 52,
+      "search_window_s": 5.0,
+      "anchor_offset_p10_p90_s": [
+        0.759,
+        2.627
+      ],
+      "by_type": [
+        {
+          "type": "CornerKick",
+          "count": 1,
+          "median": 2.27
+        },
+        {
+          "type": "FreeKick",
+          "count": 16,
+          "median": 1.66
+        },
+        {
+          "type": "GoalKick",
+          "count": 6,
+          "median": 2.033
+        },
+        {
+          "type": "KickOff",
+          "count": 3,
+          "median": 3.645
+        },
+        {
+          "type": "ThrowIn",
+          "count": 26,
+          "median": 1.655
+        }
+      ],
+      "negligible": false
+    },
+    "2": {
+      "event_clock_offset_s": 1.569,
+      "event_offset_dispersion_s": 0.553,
+      "n_anchors": 56,
+      "search_window_s": 5.0,
+      "anchor_offset_p10_p90_s": [
+        0.123,
+        2.342
+      ],
+      "by_type": [
+        {
+          "type": "CornerKick",
+          "count": 1,
+          "median": 1.888
+        },
+        {
+          "type": "FreeKick",
+          "count": 11,
+          "median": 1.217
+        },
+        {
+          "type": "GoalKick",
+          "count": 13,
+          "median": 1.007
+        },
+        {
+          "type": "KickOff",
+          "count": 3,
+          "median": 2.167
+        },
+        {
+          "type": "ThrowIn",
+          "count": 28,
+          "median": 1.857
+        }
+      ],
+      "negligible": false
+    }
+  },
+  "provider_kinematics_supplied": {
+    "speed_S": true,
+    "acceleration_A": true,
+    "step_D": true,
+    "use": "tests only"
+  },
+  "ball_status_supplied": true,
+  "ball_possession_supplied": true,
+  "ball_height_supplied": true,
+  "ball_height": {
+    "supplied": true,
+    "finite_share_live": 1.0,
+    "range_m": 21.49,
+    "rule": "finite on >= 50 % of live ball samples and spanning more than 0.5 m (a constant height is not usable)"
+  },
+  "formations": {
+    "home": {
+      "source_formation": "4-2-3-1",
+      "formation": "4-2-3-1"
+    },
+    "away": {
+      "source_formation": "3-3-2-2",
+      "formation": "3-3-2-2"
+    }
+  },
+  "venue_country": "Germany",
+  "lineup_roles": [
+    {
+      "person_id": "home unassigned 1",
+      "team_role": "home",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "home FB 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "RV",
+      "role": "RB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "home W 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "ORM",
+      "role": "RW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "home DM 2",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "DML",
+      "role": "LDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "home DM 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "DMR",
+      "role": "RDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "home ST 2",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "STZ",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "home ST 1",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "STZ",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "home GK 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "TW",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "home AM 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "ZO",
+      "role": "CAM",
+      "role_group": "AM"
+    },
+    {
+      "person_id": "home unassigned 2",
+      "team_role": "home",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "home CB 2",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "IVR",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "home W 2",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "OLM",
+      "role": "LW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "home CB 1",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "IVL",
+      "role": "LCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "home DM 3",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "DML",
+      "role": "LDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "home AM 2",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "ZO",
+      "role": "CAM",
+      "role_group": "AM"
+    },
+    {
+      "person_id": "home unassigned 3",
+      "team_role": "home",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "home FB 2",
+      "team_role": "home",
+      "starting": true,
+      "source_code": "LV",
+      "role": "LB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "home W 3",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "ORM",
+      "role": "RW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "home W 4",
+      "team_role": "home",
+      "starting": false,
+      "source_code": "OLM",
+      "role": "LW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "home unassigned 4",
+      "team_role": "home",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "away ST 2",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "STZ",
+      "role": "ST",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "away GK 1",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "TW",
+      "role": "GK",
+      "role_group": "GK"
+    },
+    {
+      "person_id": "away unassigned 1",
+      "team_role": "away",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "away W 1",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "OLM",
+      "role": "LW",
+      "role_group": "W"
+    },
+    {
+      "person_id": "away ST 1",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "STL",
+      "role": "LS",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "away FB 1",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "DRM",
+      "role": "RWB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "away CB 1",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "IVR",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "away unassigned 2",
+      "team_role": "away",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "away ST 3",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "STR",
+      "role": "RS",
+      "role_group": "ST"
+    },
+    {
+      "person_id": "away unassigned 4",
+      "team_role": "away",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "away CB 2",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "IVZ",
+      "role": "CB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "away unassigned 3",
+      "team_role": "away",
+      "starting": false,
+      "source_code": null,
+      "role": "UNMAPPED_NONE",
+      "role_group": "UNMAPPED_NONE"
+    },
+    {
+      "person_id": "away FB 2",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "DLM",
+      "role": "LWB",
+      "role_group": "FB"
+    },
+    {
+      "person_id": "away DM 1",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "DMZ",
+      "role": "CDM",
+      "role_group": "DM"
+    },
+    {
+      "person_id": "away CB 3",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "IVL",
+      "role": "LCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "away CB 4",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "IVR",
+      "role": "RCB",
+      "role_group": "CB"
+    },
+    {
+      "person_id": "away CM 1",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "HL",
+      "role": "LCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "away CM 2",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "HL",
+      "role": "LCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "away CM 3",
+      "team_role": "away",
+      "starting": true,
+      "source_code": "HR",
+      "role": "RCM",
+      "role_group": "CM"
+    },
+    {
+      "person_id": "away W 2",
+      "team_role": "away",
+      "starting": false,
+      "source_code": "ORM",
+      "role": "RW",
+      "role_group": "W"
+    }
+  ],
+  "role_evidence_period1": [
+    {
+      "object_id": "home W 1",
+      "team_side": "home",
+      "source_code": "ORM",
+      "role": "RW",
+      "role_group": "W",
+      "mean_x_att": 7.474461,
+      "mean_y_att": -12.548244
+    },
+    {
+      "object_id": "home FB 1",
+      "team_side": "home",
+      "source_code": "RV",
+      "role": "RB",
+      "role_group": "FB",
+      "mean_x_att": -5.663246,
+      "mean_y_att": -18.688625
+    },
+    {
+      "object_id": "away ST 1",
+      "team_side": "away",
+      "source_code": "STL",
+      "role": "LS",
+      "role_group": "ST",
+      "mean_x_att": 10.339537,
+      "mean_y_att": 0.638556
+    },
+    {
+      "object_id": "away FB 1",
+      "team_side": "away",
+      "source_code": "DRM",
+      "role": "RWB",
+      "role_group": "FB",
+      "mean_x_att": -3.697902,
+      "mean_y_att": -21.18522
+    },
+    {
+      "object_id": "home DM 1",
+      "team_side": "home",
+      "source_code": "DMR",
+      "role": "RDM",
+      "role_group": "DM",
+      "mean_x_att": -3.341688,
+      "mean_y_att": -0.467448
+    },
+    {
+      "object_id": "away CB 2",
+      "team_side": "away",
+      "source_code": "IVZ",
+      "role": "CB",
+      "role_group": "CB",
+      "mean_x_att": -16.445354,
+      "mean_y_att": -1.981349
+    },
+    {
+      "object_id": "away FB 2",
+      "team_side": "away",
+      "source_code": "DLM",
+      "role": "LWB",
+      "role_group": "FB",
+      "mean_x_att": -6.831298,
+      "mean_y_att": 18.159543
+    },
+    {
+      "object_id": "away CB 3",
+      "team_side": "away",
+      "source_code": "IVL",
+      "role": "LCB",
+      "role_group": "CB",
+      "mean_x_att": -14.797606,
+      "mean_y_att": 9.498377
+    },
+    {
+      "object_id": "home GK 1",
+      "team_side": "home",
+      "source_code": "TW",
+      "role": "GK",
+      "role_group": "GK",
+      "mean_x_att": -34.827755,
+      "mean_y_att": 0.572307
+    },
+    {
+      "object_id": "away CB 4",
+      "team_side": "away",
+      "source_code": "IVR",
+      "role": "RCB",
+      "role_group": "CB",
+      "mean_x_att": -16.892994,
+      "mean_y_att": -13.262872
+    },
+    {
+      "object_id": "away ST 3",
+      "team_side": "away",
+      "source_code": "STR",
+      "role": "RS",
+      "role_group": "ST",
+      "mean_x_att": 10.782025,
+      "mean_y_att": -2.148201
+    },
+    {
+      "object_id": "home ST 2",
+      "team_side": "home",
+      "source_code": "STZ",
+      "role": "ST",
+      "role_group": "ST",
+      "mean_x_att": 14.225436,
+      "mean_y_att": 3.857051
+    },
+    {
+      "object_id": "away GK 1",
+      "team_side": "away",
+      "source_code": "TW",
+      "role": "GK",
+      "role_group": "GK",
+      "mean_x_att": -39.020008,
+      "mean_y_att": -0.257059
+    },
+    {
+      "object_id": "home AM 1",
+      "team_side": "home",
+      "source_code": "ZO",
+      "role": "CAM",
+      "role_group": "AM",
+      "mean_x_att": 6.891079,
+      "mean_y_att": -0.557151
+    },
+    {
+      "object_id": "away CM 1",
+      "team_side": "away",
+      "source_code": "HL",
+      "role": "LCM",
+      "role_group": "CM",
+      "mean_x_att": -1.354597,
+      "mean_y_att": 3.515059
+    },
+    {
+      "object_id": "home W 2",
+      "team_side": "home",
+      "source_code": "OLM",
+      "role": "LW",
+      "role_group": "W",
+      "mean_x_att": 6.694628,
+      "mean_y_att": 13.727215
+    },
+    {
+      "object_id": "home CB 1",
+      "team_side": "home",
+      "source_code": "IVL",
+      "role": "LCB",
+      "role_group": "CB",
+      "mean_x_att": -14.470181,
+      "mean_y_att": 6.4638
+    },
+    {
+      "object_id": "home CB 2",
+      "team_side": "home",
+      "source_code": "IVR",
+      "role": "RCB",
+      "role_group": "CB",
+      "mean_x_att": -13.783544,
+      "mean_y_att": -6.853109
+    },
+    {
+      "object_id": "away DM 1",
+      "team_side": "away",
+      "source_code": "DMZ",
+      "role": "CDM",
+      "role_group": "DM",
+      "mean_x_att": -7.427398,
+      "mean_y_att": -1.693388
+    },
+    {
+      "object_id": "away CM 2",
+      "team_side": "away",
+      "source_code": "HL",
+      "role": "LCM",
+      "role_group": "CM",
+      "mean_x_att": -3.249734,
+      "mean_y_att": 5.037602
+    },
+    {
+      "object_id": "home DM 3",
+      "team_side": "home",
+      "source_code": "DML",
+      "role": "LDM",
+      "role_group": "DM",
+      "mean_x_att": -1.091124,
+      "mean_y_att": 3.49266
+    },
+    {
+      "object_id": "away CM 3",
+      "team_side": "away",
+      "source_code": "HR",
+      "role": "RCM",
+      "role_group": "CM",
+      "mean_x_att": 0.269873,
+      "mean_y_att": -8.029332
+    },
+    {
+      "object_id": "home FB 2",
+      "team_side": "home",
+      "source_code": "LV",
+      "role": "LB",
+      "role_group": "FB",
+      "mean_x_att": -7.963014,
+      "mean_y_att": 16.010778
+    }
+  ],
+  "unmapped_codes": {
+    "NONE": 8
+  },
+  "event_types": {
+    "by_type": {
+      "ball_claiming": 24,
+      "caution": 2,
+      "corner_kick": 2,
+      "final_whistle": 2,
+      "foul": 24,
+      "free_kick": 27,
+      "goal_kick": 19,
+      "kick_off": 6,
+      "nutmeg": 4,
+      "offside": 3,
+      "other_ball_action": 248,
+      "penalty_not_awarded": 4,
+      "play": 760,
+      "player_not_sent_off": 1,
+      "possession_loss_before_goal": 2,
+      "referee_ball": 2,
+      "run": 1,
+      "shot_at_goal": 21,
+      "spectacular_play": 3,
+      "substitution": 10,
+      "tackling_game": 195,
+      "throw_in": 54
+    },
+    "outside_dfl_list": {
+      "player_not_sent_off": 1,
+      "possession_loss_before_goal": 2,
+      "run": 1
+    },
+    "unmapped": {}
+  }
+}

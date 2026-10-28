@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "description": "Ball speeds and air time (DFL, our kinematics)",
+    "source": "DFL/Sportec open data: Bassek, M., Rein, R., Weber, H., Memmert, D. (2025). An integrated dataset of spatiotemporal and event data in elite soccer. Scientific Data 12:195. https://doi.org/10.1038/s41597-025-04505-y. Licence: CC-BY 4.0. Aggregate statistics only; no raw, frame-level or person-level data.",
+    "doi": "10.1038/s41597-025-04505-y",
+    "licence": "CC-BY 4.0 (data); these aggregates are derived statistics with attribution",
+    "matches_used": ["J03WMX", "J03WOH", "J03WOY", "J03WPY", "J03WQQ", "J03WR9"],
+    "generated_by": "cd data_pipeline && .venv/bin/python -m insidethegame_data.calibration",
+    "guidelines_version": "v4.2 (2026-10-25)",
+    "pipeline_version": "0.4.2",
+    "config_hash": "249b8571dbc799bb",
+    "config": {
+      "min_valid_minutes": 60.0,
+      "speed_zone_edges_kmh": [7.0, 15.0, 20.0, 25.0],
+      "speed_zone_labels": ["0-7", "7-15", "15-20", "20-25", "25+"],
+      "sprint_speed_kmh": 25.0,
+      "sprint_min_s": 1.0,
+      "work_rate_speed_kmh": 20.0,
+      "bin_s": 300.0,
+      "bins_per_period": 9,
+      "bin_min_presence_frac": 0.95,
+      "bin_min_valid_frac": 0.9,
+      "std_pitch_length_m": 105.0,
+      "std_pitch_width_m": 68.0,
+      "pos_grid_nx": 12,
+      "pos_grid_ny": 8,
+      "pos_min_count": 50,
+      "zone_nx": 6,
+      "zone_ny": 4,
+      "direction_sectors": 8,
+      "long_pass_m": 30.0,
+      "kick_speed_window_s": 0.5,
+      "air_rise_m": 1.0,
+      "air_landing_m": 0.5,
+      "progression_min_s": 3.0,
+      "passing_min_passes": 20,
+      "percentile_min_n": 5,
+      "attribute_quantile_levels_pct": [2.5, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 97.5],
+      "xg_angle_slope": 2.84,
+      "xg_angle_slope_source": "Soccermatics angle-only logistic fit, logit(xG) = -3.52 + 2.84 * theta, on 8,451 shots of the 2017/18 Premier League in the open Wyscout data (Pappalardo et al. 2019, Scientific Data 6:236, doi:10.1038/s41597-019-0247-7, CC BY 4.0)",
+      "penalty_xg": 0.79,
+      "xg_l2": 1.0,
+      "xg_min_shots": 20,
+      "xg_max_iter": 100,
+      "xg_tol": 0.0,
+      "xg_bins": [0.0, 0.05, 0.1, 0.2, 0.35, 1.0],
+      "float_decimals": 4
+    },
+    "prep_config_hash": {
+      "J03WMX": "d51430005c524f6c",
+      "J03WOH": "d51430005c524f6c",
+      "J03WOY": "d51430005c524f6c",
+      "J03WPY": "d51430005c524f6c",
+      "J03WQQ": "d51430005c524f6c",
+      "J03WR9": "d51430005c524f6c"
+    },
+    "input_hashes": {
+      "J03WMX": {
+        "tracking_canonical.parquet": "c0261d2129e1707e7adf60a66a4a8703769b8955f729f7e9c77ebb01fd0b7fa0",
+        "events_canonical.csv": "3c72d71a899a6bcbaf2eabec82d457101a28bc83de4200f237ec03ea68675aa0",
+        "match_profile.json": "d8c3af3c9291d6300cf69b9c5335982da75f8f0977d4b88af986624f19caea12"
+      },
+      "J03WOH": {
+        "tracking_canonical.parquet": "2df4ed30fbfc2798e7954cd43eb84ff1d24888ca36ade139da351bbddac8e5b2",
+        "events_canonical.csv": "f6c800087c903e735c248d76c8c3c8857c571ddc5aa7824b0b123f18dee36473",
+        "match_profile.json": "57dd03674bd6c2edfa98c20807136aee0736416093d9e8e55e1644205985ce88"
+      },
+      "J03WOY": {
+        "tracking_canonical.parquet": "09b173e1c55dadd6fb087d2eb0a86dc8b09925043c91d86b16cc72c8baf01d54",
+        "events_canonical.csv": "95bac5882753126419571f416bd3d4897ddb12fcb2d3b91c05585bfea3c8539f",
+        "match_profile.json": "38e558d6425006cd090ccf91d0a7a351f62e620a5db70e25829dcb2fece07b62"
+      },
+      "J03WPY": {
+        "tracking_canonical.parquet": "c05be7e79c9d63a4a539ca746ec8de90ae2640ce781efad9170bbc02d7c419f2",
+        "events_canonical.csv": "fb6b7802d5f02561f0150bc7f99fe049eb6191423953ac1d2a7adc0a1be76ac5",
+        "match_profile.json": "a4fabec3b3c4c45e395f8a7e5b78280f4053e726085c53e3ff5d8a4cfe8cbd85"
+      },
+      "J03WQQ": {
+        "tracking_canonical.parquet": "7f502d52a84b12d2de9111915ddf6fbc12bcd22eb55bf093251d588fc9249fbc",
+        "events_canonical.csv": "a355cb27f4641d16bace21febece1f5d5c55b945ac67a4d899dee39468486a3f",
+        "match_profile.json": "392bcec88dc7fb2e66865e902eb7636021baee91d2ad172a51a8fe8da358cd61"
+      },
+      "J03WR9": {
+        "tracking_canonical.parquet": "7103c5e59615af0ae8816e1d94fc61cbbcc5cab8fb58349cfff73609270fabde",
+        "events_canonical.csv": "a14bfddd72fb739a6488fc28c7a79d812684cc5bd6314faf5c62aa8b4074127c",
+        "match_profile.json": "cea83f13786503126b1b93bae6721300f1094bc7472e66cd1f2c0c66f5c14161"
+      }
+    },
+    "library_versions": {
+      "python": "3.12.13",
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "lxml": "6.1.3.0",
+      "pyyaml": "6.0.2",
+      "insidethegame_data": "0.4.2",
+      "kloppy": "3.19.1",
+      "pyarrow": "26.0.0"
+    },
+    "conventions": {
+      "coordinates": "metres, centre origin, team-attacking direction: the team attacks +x, left is +y; pitch 105 x 68 m",
+      "validity": "valid samples only (valid_kinematics = true); estimated gap samples never count for speed, peaks or per-90 values",
+      "per90": "normalised on measured (valid) time of each player-match (team decision 2026-10-24); see coverage",
+      "ball": "ball status and possession are the provider's (never derived from a stationary ball)"
+    },
+    "notes": ["Our kinematics only (Savitzky-Golay ball speed on valid live samples). pass_speed_ms (with p99, read by R-SHOT-POWER): peak valid ball speed in the 0.5 s after the kick of a located open-play pass, stopped before the next touch. long_pass_speed_ms: the same for passes >= 30 m. shot_speed_ms: peak valid ball speed in the 0.5 s after the kick of a confirmed open-play shot (Materials/METRICS.md), headers excluded (v4.2: ball above 1.5 m at the kick, the header test of R-SHOT-POWER); soft shots included.", "circulation_speed_ms: every valid live ball sample with a team in possession (sample level); circulation_speed_median_per_team_match_ms: one median per team-match.", "progression_speed_ms: forward ball displacement (attacking direction) / duration of possession runs >= 3 s.", "air_time_high_pass_s: located passes annotated high; from the kick to the first landing (ball back below 0.5 m after rising above 1 m) or to the next touch, whichever comes first; passes whose ball never rises above the threshold, or with invalid ball samples in the flight, are left out.", "Realism range for maximal kicks: 18-35 m/s (Kellis & Katis 2007, Materials/PHYSICAL_LIMITS.md). Limit: 211 km/h in live play."]
+  },
+  "pass_speed_ms": {
+    "n": 4522,
+    "mean": 14.9904,
+    "sd": 5.0739,
+    "p10": 8.4844,
+    "p25": 11.2606,
+    "p50": 14.5833,
+    "p75": 18.635,
+    "p90": 22.0756,
+    "p99": 26.3697
+  },
+  "long_pass_speed_ms": {
+    "n": 558,
+    "mean": 21.3307,
+    "sd": 3.3912,
+    "p10": 16.7521,
+    "p25": 19.2441,
+    "p50": 21.5295,
+    "p75": 23.6446,
+    "p90": 25.6266
+  },
+  "shot_speed_ms": {
+    "n": 86,
+    "mean": 21.484,
+    "sd": 6.4074,
+    "p10": 11.1706,
+    "p25": 17.9323,
+    "p50": 22.9594,
+    "p75": 26.5611,
+    "p90": 28.383
+  },
+  "circulation_speed_ms": {
+    "n": 480533,
+    "mean": 7.306,
+    "sd": 5.2477,
+    "p10": 1.5624,
+    "p25": 3.2496,
+    "p50": 6.0019,
+    "p75": 10.4953,
+    "p90": 14.9618
+  },
+  "circulation_speed_median_per_team_match_ms": {
+    "n": 12,
+    "mean": 6.0351,
+    "sd": 0.2551,
+    "p10": 5.7098,
+    "p25": 5.932,
+    "p50": 6.0942,
+    "p75": 6.2067,
+    "p90": 6.2686
+  },
+  "progression_speed_ms": {
+    "n": 1481,
+    "mean": 3.4842,
+    "sd": 3.611,
+    "p10": -0.1939,
+    "p25": 1.1954,
+    "p50": 3.0079,
+    "p75": 5.3246,
+    "p90": 7.7425
+  },
+  "air_time_high_pass_s": {
+    "n": 1025,
+    "mean": 1.5879,
+    "sd": 0.9293,
+    "p10": 0.48,
+    "p25": 0.8,
+    "p50": 1.44,
+    "p75": 2.28,
+    "p90": 2.88
+  }
+}

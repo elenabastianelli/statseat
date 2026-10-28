@@ -1,0 +1,142 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5685.0,
+  "server_time": "2026-10-26T11:07:05.612137+01:00"
+ },
+ "turns": [
+  {
+   "question": "Was the goal in the 23rd minute offside? And how many xG did each team have?",
+   "answer": {
+    "answer_id": "ANS-a1fe06b1f4a7",
+    "text": "I can’t confirm whether Brightwell’s 23rd-minute goal was offside from the details I have. The xG came to 0.4 for Brackwater and 2.61 for Calderholm; the xG chart is in Data & Statistics.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "23rd",
+      "value": 23.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Goals"
+     },
+     {
+      "text": "0.4",
+      "value": 0.4,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.BRA"
+     },
+     {
+      "text": "2.61",
+      "value": 2.61,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.CAL"
+     }
+    ],
+    "points_to": {
+     "chart_id": "xg_cumulative",
+     "section": "data_stats",
+     "locked": true,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-1611dfac6e8242c7",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Fan version). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 5879,
+       "tokens_out": 187,
+       "latency_ms": 8594
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 2635,
+       "tokens_out": 42,
+       "latency_ms": 3584
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.4, CAL 2.61",
+       "latency_ms": 6
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What were the expected goals (xG) for Brackwater Athletic and Calderholm United in today's match?"
+       },
+       "result_summary": "Brackwater Athletic: 0.4 xG  \nCalderholm United: 2.61 xG",
+       "latency_ms": 3599
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 8743,
+     "latency_ms": 12280,
+     "cost_usd": 0.000966
+    }
+   }
+  }
+ ]
+}

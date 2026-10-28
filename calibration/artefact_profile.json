@@ -1,0 +1,730 @@
+{
+  "meta": {
+    "description": "Provider artefact profile (DFL/TRACAB, per match)",
+    "source": "DFL/Sportec open data: Bassek, M., Rein, R., Weber, H., Memmert, D. (2025). An integrated dataset of spatiotemporal and event data in elite soccer. Scientific Data 12:195. https://doi.org/10.1038/s41597-025-04505-y. Licence: CC-BY 4.0. Aggregate statistics only; no raw, frame-level or person-level data.",
+    "doi": "10.1038/s41597-025-04505-y",
+    "licence": "CC-BY 4.0 (data); these aggregates are derived statistics with attribution",
+    "matches_used": ["J03WMX", "J03WOH", "J03WOY", "J03WPY", "J03WQQ", "J03WR9"],
+    "generated_by": "cd data_pipeline && .venv/bin/python -m insidethegame_data.calibration",
+    "guidelines_version": "v4.2 (2026-10-25)",
+    "pipeline_version": "0.4.2",
+    "config_hash": "249b8571dbc799bb",
+    "config": {
+      "min_valid_minutes": 60.0,
+      "speed_zone_edges_kmh": [7.0, 15.0, 20.0, 25.0],
+      "speed_zone_labels": ["0-7", "7-15", "15-20", "20-25", "25+"],
+      "sprint_speed_kmh": 25.0,
+      "sprint_min_s": 1.0,
+      "work_rate_speed_kmh": 20.0,
+      "bin_s": 300.0,
+      "bins_per_period": 9,
+      "bin_min_presence_frac": 0.95,
+      "bin_min_valid_frac": 0.9,
+      "std_pitch_length_m": 105.0,
+      "std_pitch_width_m": 68.0,
+      "pos_grid_nx": 12,
+      "pos_grid_ny": 8,
+      "pos_min_count": 50,
+      "zone_nx": 6,
+      "zone_ny": 4,
+      "direction_sectors": 8,
+      "long_pass_m": 30.0,
+      "kick_speed_window_s": 0.5,
+      "air_rise_m": 1.0,
+      "air_landing_m": 0.5,
+      "progression_min_s": 3.0,
+      "passing_min_passes": 20,
+      "percentile_min_n": 5,
+      "attribute_quantile_levels_pct": [2.5, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0, 95.0, 97.5],
+      "xg_angle_slope": 2.84,
+      "xg_angle_slope_source": "Soccermatics angle-only logistic fit, logit(xG) = -3.52 + 2.84 * theta, on 8,451 shots of the 2017/18 Premier League in the open Wyscout data (Pappalardo et al. 2019, Scientific Data 6:236, doi:10.1038/s41597-019-0247-7, CC BY 4.0)",
+      "penalty_xg": 0.79,
+      "xg_l2": 1.0,
+      "xg_min_shots": 20,
+      "xg_max_iter": 100,
+      "xg_tol": 0.0,
+      "xg_bins": [0.0, 0.05, 0.1, 0.2, 0.35, 1.0],
+      "float_decimals": 4
+    },
+    "prep_config_hash": {
+      "J03WMX": "d51430005c524f6c",
+      "J03WOH": "d51430005c524f6c",
+      "J03WOY": "d51430005c524f6c",
+      "J03WPY": "d51430005c524f6c",
+      "J03WQQ": "d51430005c524f6c",
+      "J03WR9": "d51430005c524f6c"
+    },
+    "input_hashes": {
+      "J03WMX": {
+        "tracking_canonical.parquet": "c0261d2129e1707e7adf60a66a4a8703769b8955f729f7e9c77ebb01fd0b7fa0",
+        "events_canonical.csv": "3c72d71a899a6bcbaf2eabec82d457101a28bc83de4200f237ec03ea68675aa0",
+        "match_profile.json": "d8c3af3c9291d6300cf69b9c5335982da75f8f0977d4b88af986624f19caea12"
+      },
+      "J03WOH": {
+        "tracking_canonical.parquet": "2df4ed30fbfc2798e7954cd43eb84ff1d24888ca36ade139da351bbddac8e5b2",
+        "events_canonical.csv": "f6c800087c903e735c248d76c8c3c8857c571ddc5aa7824b0b123f18dee36473",
+        "match_profile.json": "57dd03674bd6c2edfa98c20807136aee0736416093d9e8e55e1644205985ce88"
+      },
+      "J03WOY": {
+        "tracking_canonical.parquet": "09b173e1c55dadd6fb087d2eb0a86dc8b09925043c91d86b16cc72c8baf01d54",
+        "events_canonical.csv": "95bac5882753126419571f416bd3d4897ddb12fcb2d3b91c05585bfea3c8539f",
+        "match_profile.json": "38e558d6425006cd090ccf91d0a7a351f62e620a5db70e25829dcb2fece07b62"
+      },
+      "J03WPY": {
+        "tracking_canonical.parquet": "c05be7e79c9d63a4a539ca746ec8de90ae2640ce781efad9170bbc02d7c419f2",
+        "events_canonical.csv": "fb6b7802d5f02561f0150bc7f99fe049eb6191423953ac1d2a7adc0a1be76ac5",
+        "match_profile.json": "a4fabec3b3c4c45e395f8a7e5b78280f4053e726085c53e3ff5d8a4cfe8cbd85"
+      },
+      "J03WQQ": {
+        "tracking_canonical.parquet": "7f502d52a84b12d2de9111915ddf6fbc12bcd22eb55bf093251d588fc9249fbc",
+        "events_canonical.csv": "a355cb27f4641d16bace21febece1f5d5c55b945ac67a4d899dee39468486a3f",
+        "match_profile.json": "392bcec88dc7fb2e66865e902eb7636021baee91d2ad172a51a8fe8da358cd61"
+      },
+      "J03WR9": {
+        "tracking_canonical.parquet": "7103c5e59615af0ae8816e1d94fc61cbbcc5cab8fb58349cfff73609270fabde",
+        "events_canonical.csv": "a14bfddd72fb739a6488fc28c7a79d812684cc5bd6314faf5c62aa8b4074127c",
+        "match_profile.json": "cea83f13786503126b1b93bae6721300f1094bc7472e66cd1f2c0c66f5c14161"
+      }
+    },
+    "library_versions": {
+      "python": "3.12.13",
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scipy": "1.18.1",
+      "lxml": "6.1.3.0",
+      "pyyaml": "6.0.2",
+      "insidethegame_data": "0.4.2",
+      "kloppy": "3.19.1",
+      "pyarrow": "26.0.0"
+    },
+    "conventions": {
+      "coordinates": "metres, centre origin, team-attacking direction: the team attacks +x, left is +y; pitch 105 x 68 m",
+      "validity": "valid samples only (valid_kinematics = true); estimated gap samples never count for speed, peaks or per-90 values",
+      "per90": "normalised on measured (valid) time of each player-match (team decision 2026-10-24); see coverage",
+      "ball": "ball status and possession are the provider's (never derived from a stationary ball)"
+    },
+    "notes": ["Aggregates of the committed preparation reports (reports/qc/<id>/qc_results.json, match_profile.json), STATS across matches. Rates are per player-hour of tracking.", "Optional input for the generator: realistic provider artefacts (jumps, swaps, frozen runs, tracking-area edges, identity inheritance at substitutions) and the event clock offset and dispersion of the annotations (event time minus physical time is about -offset, with the given MAD).", "limit_episodes_per_player_hour: true limit episodes only, player speed above 38 km/h (R-SPEED-LIMIT); ball_limit_episodes: live ball speed above 211 km/h (R-BALL-LIMIT), count per match. Since guidelines v4 neither includes accelerations outside the band.", "Acceleration spikes (R-ACC-BAND, v4): tangential acceleration outside -8.5..+7.5 m/s2 never excludes a sample; a run of at most 0.2 s (5 samples at 25 Hz) is 'noise' (value not used), a longer run is 'approx' (value kept with '≈'). acc_band.per_match and acc_band.pooled give runs, samples, runs per player-hour and mean run length (samples) by class and sign (acceleration > +7.5, deceleration < -8.5); per_match_stats.acc_band_<class>_<sign>_* give their STATS across matches. Pooled rate = total runs / total player-hours. The counts depend on the acceleration filter window (acc_window_samples: 19 samples, chosen by the team after the v4 sensitivity test, R-ACC-WINDOW-TEST). The pipeline derives acceleration from positions, so a generator reproduces these runs as abrupt velocity changes in the positions, never by writing acceleration values. A match without runs of a kind has mean_run_samples null (and is left out of its STATS)."]
+  },
+  "per_match_stats": {
+    "player_hours": {
+      "n": 6,
+      "mean": 34.983,
+      "sd": 0.957,
+      "p10": 33.8739,
+      "p25": 34.3655,
+      "p50": 35.2615,
+      "p75": 35.7256,
+      "p90": 35.8137
+    },
+    "valid_share": {
+      "n": 6,
+      "mean": 0.9862,
+      "sd": 0.0033,
+      "p10": 0.9828,
+      "p25": 0.985,
+      "p50": 0.9864,
+      "p75": 0.9882,
+      "p90": 0.9895
+    },
+    "estimated_share": {
+      "n": 6,
+      "mean": 0.0056,
+      "sd": 0.0015,
+      "p10": 0.0044,
+      "p25": 0.0047,
+      "p50": 0.0054,
+      "p75": 0.0056,
+      "p90": 0.0071
+    },
+    "discarded_share": {
+      "n": 6,
+      "mean": 0.0014,
+      "sd": 0.0007,
+      "p10": 0.0006,
+      "p25": 0.0013,
+      "p50": 0.0015,
+      "p75": 0.0017,
+      "p90": 0.0019
+    },
+    "jump_episodes_per_player_hour": {
+      "n": 6,
+      "mean": 4.0723,
+      "sd": 1.8429,
+      "p10": 2.1595,
+      "p25": 3.895,
+      "p50": 4.4935,
+      "p75": 5.1366,
+      "p90": 5.564
+    },
+    "jump_median_m": {
+      "n": 6,
+      "mean": 1.9317,
+      "sd": 0.7214,
+      "p10": 1.2493,
+      "p25": 1.9819,
+      "p50": 2.0786,
+      "p75": 2.3809,
+      "p90": 2.4671
+    },
+    "swap_incidents_per_player_hour": {
+      "n": 6,
+      "mean": 0.4987,
+      "sd": 0.2885,
+      "p10": 0.2296,
+      "p25": 0.4628,
+      "p50": 0.4853,
+      "p75": 0.6698,
+      "p90": 0.7811
+    },
+    "frozen_runs_per_player_hour": {
+      "n": 6,
+      "mean": 10.1299,
+      "sd": 2.9985,
+      "p10": 7.4661,
+      "p25": 9.13,
+      "p50": 9.9903,
+      "p75": 10.5966,
+      "p90": 12.9332
+    },
+    "frozen_run_mean_s": {
+      "n": 6,
+      "mean": 2.0853,
+      "sd": 0.425,
+      "p10": 1.831,
+      "p25": 1.8866,
+      "p50": 1.9619,
+      "p75": 1.9816,
+      "p90": 2.4629
+    },
+    "edge_runs": {
+      "n": 6,
+      "mean": 7.0,
+      "sd": 6.3875,
+      "p10": 0.0,
+      "p25": 2.0,
+      "p50": 8.0,
+      "p75": 8.75,
+      "p90": 13.0
+    },
+    "overlap_episodes_per_player_hour": {
+      "n": 6,
+      "mean": 1.6233,
+      "sd": 0.5608,
+      "p10": 1.0271,
+      "p25": 1.132,
+      "p50": 1.6548,
+      "p75": 1.9221,
+      "p90": 2.1881
+    },
+    "limit_episodes_per_player_hour": {
+      "n": 6,
+      "mean": 0.0,
+      "sd": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 0.0
+    },
+    "ball_limit_episodes": {
+      "n": 6,
+      "mean": 0.0,
+      "sd": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 0.0
+    },
+    "acc_band_noise_acceleration_runs_per_player_hour": {
+      "n": 6,
+      "mean": 0.2007,
+      "sd": 0.0704,
+      "p10": 0.141,
+      "p25": 0.1674,
+      "p50": 0.1884,
+      "p75": 0.2201,
+      "p90": 0.2727
+    },
+    "acc_band_noise_acceleration_mean_run_samples": {
+      "n": 6,
+      "mean": 3.1722,
+      "sd": 0.5027,
+      "p10": 2.6623,
+      "p25": 3.1905,
+      "p50": 3.3542,
+      "p75": 3.4688,
+      "p90": 3.5
+    },
+    "acc_band_noise_deceleration_runs_per_player_hour": {
+      "n": 6,
+      "mean": 0.1714,
+      "sd": 0.0851,
+      "p10": 0.085,
+      "p25": 0.1011,
+      "p50": 0.1706,
+      "p75": 0.2053,
+      "p90": 0.2585
+    },
+    "acc_band_noise_deceleration_mean_run_samples": {
+      "n": 6,
+      "mean": 3.3238,
+      "sd": 0.4581,
+      "p10": 2.8333,
+      "p25": 3.0714,
+      "p50": 3.3095,
+      "p75": 3.6833,
+      "p90": 3.8286
+    },
+    "acc_band_approx_acceleration_runs_per_player_hour": {
+      "n": 6,
+      "mean": 0.0047,
+      "sd": 0.0114,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 0.014
+    },
+    "acc_band_approx_acceleration_mean_run_samples": {
+      "n": 1,
+      "mean": 6.0,
+      "sd": null,
+      "p10": 6.0,
+      "p25": 6.0,
+      "p50": 6.0,
+      "p75": 6.0,
+      "p90": 6.0
+    },
+    "acc_band_approx_deceleration_runs_per_player_hour": {
+      "n": 6,
+      "mean": 0.0328,
+      "sd": 0.0327,
+      "p10": 0.0,
+      "p25": 0.007,
+      "p50": 0.0283,
+      "p75": 0.0491,
+      "p90": 0.07
+    },
+    "acc_band_approx_deceleration_mean_run_samples": {
+      "n": 4,
+      "mean": 6.7917,
+      "sd": 0.25,
+      "p10": 6.55,
+      "p25": 6.625,
+      "p50": 6.8333,
+      "p75": 7.0,
+      "p90": 7.0
+    },
+    "ball_live_jump_episodes": {
+      "n": 6,
+      "mean": 4.1667,
+      "sd": 4.8751,
+      "p10": 0.5,
+      "p25": 1.0,
+      "p50": 2.5,
+      "p75": 5.5,
+      "p90": 9.5
+    },
+    "substitutions": {
+      "n": 6,
+      "mean": 9.5,
+      "sd": 0.5477,
+      "p10": 9.0,
+      "p25": 9.0,
+      "p50": 9.5,
+      "p75": 10.0,
+      "p90": 10.0
+    },
+    "inheritance_share": {
+      "n": 6,
+      "mean": 0.5167,
+      "sd": 0.2587,
+      "p10": 0.3,
+      "p25": 0.3361,
+      "p50": 0.4722,
+      "p75": 0.5417,
+      "p90": 0.7778
+    },
+    "pass_sync_residual_mad_s": {
+      "n": 6,
+      "mean": 0.7443,
+      "sd": 0.0976,
+      "p10": 0.633,
+      "p25": 0.6698,
+      "p50": 0.764,
+      "p75": 0.8162,
+      "p90": 0.836
+    },
+    "edges_beyond_line_m": {
+      "n": 8,
+      "mean": 3.0,
+      "sd": 0.0,
+      "p10": 3.0,
+      "p25": 3.0,
+      "p50": 3.0,
+      "p75": 3.0,
+      "p90": 3.0
+    },
+    "reacquisition_after_s": {
+      "n": 16,
+      "mean": 8.5425,
+      "sd": 8.425,
+      "p10": 0.58,
+      "p25": 1.09,
+      "p50": 6.06,
+      "p75": 15.37,
+      "p90": 18.6
+    },
+    "tracking_start_offset_s": {
+      "n": 12,
+      "mean": 0.5867,
+      "sd": 0.5615,
+      "p10": 0.004,
+      "p25": 0.355,
+      "p50": 0.585,
+      "p75": 0.965,
+      "p90": 1.064
+    },
+    "event_clock_offset_s": {
+      "n": 12,
+      "mean": 1.0581,
+      "sd": 0.8433,
+      "p10": -0.3327,
+      "p25": 0.6997,
+      "p50": 1.332,
+      "p75": 1.6335,
+      "p90": 1.7652
+    },
+    "event_offset_dispersion_s": {
+      "n": 12,
+      "mean": 0.7398,
+      "sd": 0.2,
+      "p10": 0.5615,
+      "p25": 0.6462,
+      "p50": 0.735,
+      "p75": 0.823,
+      "p90": 1.0129
+    },
+    "n_matches": 6
+  },
+  "acc_band": {
+    "rule": "R-ACC-BAND (v4): player tangential acceleration outside band_ms2 never excludes a sample. noise = a run of at most noise_max_samples consecutive valid samples (its acceleration is not used); approx = a longer run (value kept, reported with '≈').",
+    "settings": {
+      "band_ms2": [-8.5, 7.5],
+      "noise_max_s": 0.2,
+      "noise_max_samples": 5,
+      "acc_window_samples": 19,
+      "fs_hz": 25.0
+    },
+    "per_match": {
+      "J03WMX": {
+        "player_hours": 35.6808,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 6,
+            "samples": 20,
+            "runs_per_player_hour": 0.1682,
+            "mean_run_samples": 3.3333
+          },
+          "deceleration": {
+            "runs": 11,
+            "samples": 33,
+            "runs_per_player_hour": 0.3083,
+            "mean_run_samples": 3.0
+          },
+          "all": {
+            "runs": 17,
+            "samples": 53,
+            "runs_per_player_hour": 0.4764,
+            "mean_run_samples": 3.1176
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "deceleration": {
+            "runs": 3,
+            "samples": 20,
+            "runs_per_player_hour": 0.0841,
+            "mean_run_samples": 6.6667
+          },
+          "all": {
+            "runs": 3,
+            "samples": 20,
+            "runs_per_player_hour": 0.0841,
+            "mean_run_samples": 6.6667
+          }
+        }
+      },
+      "J03WOH": {
+        "player_hours": 33.5412,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 7,
+            "samples": 22,
+            "runs_per_player_hour": 0.2087,
+            "mean_run_samples": 3.1429
+          },
+          "deceleration": {
+            "runs": 7,
+            "samples": 27,
+            "runs_per_player_hour": 0.2087,
+            "mean_run_samples": 3.8571
+          },
+          "all": {
+            "runs": 14,
+            "samples": 49,
+            "runs_per_player_hour": 0.4174,
+            "mean_run_samples": 3.5
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "deceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "all": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          }
+        }
+      },
+      "J03WOY": {
+        "player_hours": 34.8421,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 4,
+            "samples": 14,
+            "runs_per_player_hour": 0.1148,
+            "mean_run_samples": 3.5
+          },
+          "deceleration": {
+            "runs": 3,
+            "samples": 10,
+            "runs_per_player_hour": 0.0861,
+            "mean_run_samples": 3.3333
+          },
+          "all": {
+            "runs": 7,
+            "samples": 24,
+            "runs_per_player_hour": 0.2009,
+            "mean_run_samples": 3.4286
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "deceleration": {
+            "runs": 1,
+            "samples": 7,
+            "runs_per_player_hour": 0.0287,
+            "mean_run_samples": 7.0
+          },
+          "all": {
+            "runs": 1,
+            "samples": 7,
+            "runs_per_player_hour": 0.0287,
+            "mean_run_samples": 7.0
+          }
+        }
+      },
+      "J03WPY": {
+        "player_hours": 35.7405,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 8,
+            "samples": 27,
+            "runs_per_player_hour": 0.2238,
+            "mean_run_samples": 3.375
+          },
+          "deceleration": {
+            "runs": 3,
+            "samples": 8,
+            "runs_per_player_hour": 0.0839,
+            "mean_run_samples": 2.6667
+          },
+          "all": {
+            "runs": 11,
+            "samples": 35,
+            "runs_per_player_hour": 0.3078,
+            "mean_run_samples": 3.1818
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 1,
+            "samples": 6,
+            "runs_per_player_hour": 0.028,
+            "mean_run_samples": 6.0
+          },
+          "deceleration": {
+            "runs": 2,
+            "samples": 13,
+            "runs_per_player_hour": 0.056,
+            "mean_run_samples": 6.5
+          },
+          "all": {
+            "runs": 3,
+            "samples": 19,
+            "runs_per_player_hour": 0.0839,
+            "mean_run_samples": 6.3333
+          }
+        }
+      },
+      "J03WQQ": {
+        "player_hours": 34.2067,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 11,
+            "samples": 24,
+            "runs_per_player_hour": 0.3216,
+            "mean_run_samples": 2.1818
+          },
+          "deceleration": {
+            "runs": 5,
+            "samples": 19,
+            "runs_per_player_hour": 0.1462,
+            "mean_run_samples": 3.8
+          },
+          "all": {
+            "runs": 16,
+            "samples": 43,
+            "runs_per_player_hour": 0.4677,
+            "mean_run_samples": 2.6875
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "deceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "all": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          }
+        }
+      },
+      "J03WR9": {
+        "player_hours": 35.8869,
+        "acc_window_samples": 19,
+        "noise": {
+          "acceleration": {
+            "runs": 6,
+            "samples": 21,
+            "runs_per_player_hour": 0.1672,
+            "mean_run_samples": 3.5
+          },
+          "deceleration": {
+            "runs": 7,
+            "samples": 23,
+            "runs_per_player_hour": 0.1951,
+            "mean_run_samples": 3.2857
+          },
+          "all": {
+            "runs": 13,
+            "samples": 44,
+            "runs_per_player_hour": 0.3622,
+            "mean_run_samples": 3.3846
+          }
+        },
+        "approx": {
+          "acceleration": {
+            "runs": 0,
+            "samples": 0,
+            "runs_per_player_hour": 0.0,
+            "mean_run_samples": null
+          },
+          "deceleration": {
+            "runs": 1,
+            "samples": 7,
+            "runs_per_player_hour": 0.0279,
+            "mean_run_samples": 7.0
+          },
+          "all": {
+            "runs": 1,
+            "samples": 7,
+            "runs_per_player_hour": 0.0279,
+            "mean_run_samples": 7.0
+          }
+        }
+      }
+    },
+    "pooled": {
+      "player_hours": 209.8982,
+      "noise": {
+        "acceleration": {
+          "runs": 42,
+          "samples": 128,
+          "runs_per_player_hour": 0.2001,
+          "mean_run_samples": 3.0476
+        },
+        "deceleration": {
+          "runs": 36,
+          "samples": 120,
+          "runs_per_player_hour": 0.1715,
+          "mean_run_samples": 3.3333
+        },
+        "all": {
+          "runs": 78,
+          "samples": 248,
+          "runs_per_player_hour": 0.3716,
+          "mean_run_samples": 3.1795
+        }
+      },
+      "approx": {
+        "acceleration": {
+          "runs": 1,
+          "samples": 6,
+          "runs_per_player_hour": 0.0048,
+          "mean_run_samples": 6.0
+        },
+        "deceleration": {
+          "runs": 7,
+          "samples": 47,
+          "runs_per_player_hour": 0.0333,
+          "mean_run_samples": 6.7143
+        },
+        "all": {
+          "runs": 8,
+          "samples": 53,
+          "runs_per_player_hour": 0.0381,
+          "mean_run_samples": 6.625
+        }
+      }
+    }
+  }
+}

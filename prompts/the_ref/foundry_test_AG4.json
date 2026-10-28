@@ -1,0 +1,119 @@
+{
+ "agent": "the-ref",
+ "version": "1",
+ "date": "2026-10-26 23:18",
+ "runs": [
+  {
+   "language": "en",
+   "reply": "{\"language\":\"en\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Who ran the furthest in the first half?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"How much possession did Brackwater Athletic have?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"When did Calderholm United push hardest in the first half?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic scored 1 goal: how much xG had they created?\",\"options\":[{\"id\":\"B0\",\"label\":\"0.0–0.5 xG\"},{\"id\":\"B1\",\"label\":\"0.5–1.0 xG\"},{\"id\":\"B2\",\"label\":\"1.0–1.5 xG\"},{\"id\":\"B3\",\"label\":\"1.5–2.0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 363,
+   "latency_s": 4.2
+  },
+  {
+   "language": "it",
+   "reply": "{\"language\":\"it\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Chi ha corso di più nel primo tempo?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Quanta percentuale di possesso ha avuto il Brackwater Athletic?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"In quale momento il Calderholm United ha spinto di più nel primo tempo?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Il Brackwater Athletic ha segnato 1 gol: quanti xG aveva creato?\",\"options\":[{\"id\":\"B0\",\"label\":\"0,0–0,5 xG\"},{\"id\":\"B1\",\"label\":\"0,5–1,0 xG\"},{\"id\":\"B2\",\"label\":\"1,0–1,5 xG\"},{\"id\":\"B3\",\"label\":\"1,5–2,0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 374,
+   "latency_s": 2.7
+  },
+  {
+   "language": "es",
+   "reply": "{\"language\":\"es\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"¿Quién recorrió más distancia en la primera parte?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"¿Cuánta posesión tuvo el Brackwater Athletic?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"¿Cuándo apretó más el Calderholm United en la primera parte?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"El Brackwater Athletic marcó 1 gol: ¿cuántos xG había generado?\",\"options\":[{\"id\":\"B0\",\"label\":\"0,0–0,5 xG\"},{\"id\":\"B1\",\"label\":\"0,5–1,0 xG\"},{\"id\":\"B2\",\"label\":\"1,0–1,5 xG\"},{\"id\":\"B3\",\"label\":\"1,5–2,0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 374,
+   "latency_s": 2.6
+  },
+  {
+   "language": "fr",
+   "reply": "{\"language\":\"fr\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Qui a parcouru la plus grande distance en première mi-temps ?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Quel pourcentage de possession Brackwater Athletic a-t-il eu ?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"À quel moment Calderholm United a-t-il le plus poussé en première mi-temps ?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic a marqué 1 but : combien de xG avait-il créé ?\",\"options\":[{\"id\":\"B0\",\"label\":\"0,0–0,5 xG\"},{\"id\":\"B1\",\"label\":\"0,5–1,0 xG\"},{\"id\":\"B2\",\"label\":\"1,0–1,5 xG\"},{\"id\":\"B3\",\"label\":\"1,5–2,0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 379,
+   "latency_s": 2.8
+  },
+  {
+   "language": "de",
+   "reply": "{\"language\":\"de\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Wer ist in der ersten Halbzeit am weitesten gelaufen?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Wie viel Ballbesitz hatte Brackwater Athletic?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"Wann machte Calderholm United in der ersten Halbzeit am meisten Druck?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic erzielte 1 Tor: Wie viele xG hatten sie herausgespielt?\",\"options\":[{\"id\":\"B0\",\"label\":\"0,0–0,5 xG\"},{\"id\":\"B1\",\"label\":\"0,5–1,0 xG\"},{\"id\":\"B2\",\"label\":\"1,0–1,5 xG\"},{\"id\":\"B3\",\"label\":\"1,5–2,0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 458,
+   "latency_s": 3.2
+  },
+  {
+   "language": "nl",
+   "reply": "{\"language\":\"nl\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Wie liep in de eerste helft de grootste afstand?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Hoeveel balbezit had Brackwater Athletic?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"Wanneer zette Calderholm United in de eerste helft de meeste druk?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic scoorde 1 doelpunt: hoeveel xG hadden ze gecreëerd?\",\"options\":[{\"id\":\"B0\",\"label\":\"0.0–0.5 xG\"},{\"id\":\"B1\",\"label\":\"0.5–1.0 xG\"},{\"id\":\"B2\",\"label\":\"1.0–1.5 xG\"},{\"id\":\"B3\",\"label\":\"1.5–2.0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 369,
+   "latency_s": 2.7
+  },
+  {
+   "language": "zh",
+   "reply": "{\"language\":\"zh\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"上半场谁跑动距离最远？\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Brackwater Athletic的控球率是多少？\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"Calderholm United在上半场哪个时段攻势最强？\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic打进1球，他们创造了多少xG？\",\"options\":[{\"id\":\"B0\",\"label\":\"0.0–0.5 xG\"},{\"id\":\"B1\",\"label\":\"0.5–1.0 xG\"},{\"id\":\"B2\",\"label\":\"1.0–1.5 xG\"},{\"id\":\"B3\",\"label\":\"1.5–2.0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 421,
+   "latency_s": 3.1
+  },
+  {
+   "language": "ru",
+   "reply": "{\"language\":\"ru\",\"items\":[{\"id\":\"QZ-1\",\"question\":\"Кто пробежал больше всех в первом тайме?\",\"options\":[{\"id\":\"CAL-07\",\"label\":\"Rutger van Dalfsen (CAL)\"},{\"id\":\"BRA-11\",\"label\":\"Ruairí Kinsella-Ward (BRA)\"},{\"id\":\"CAL-01\",\"label\":\"Pape Faye-Diouf (CAL)\"},{\"id\":\"CAL-04\",\"label\":\"Zennor Wilstead (CAL)\"}]},{\"id\":\"QZ-2\",\"question\":\"Какой процент владения мячом был у Brackwater Athletic?\",\"options\":[{\"id\":\"B0\",\"label\":\"50–55%\"},{\"id\":\"B1\",\"label\":\"55–60%\"},{\"id\":\"B2\",\"label\":\"60–65%\"},{\"id\":\"B3\",\"label\":\"65–70%\"}]},{\"id\":\"QZ-3\",\"question\":\"В какой отрезок первого тайма Calderholm United атаковал активнее всего?\",\"options\":[{\"id\":\"W40\",\"label\":\"40'–45'\"},{\"id\":\"W25\",\"label\":\"25'–30'\"},{\"id\":\"W20\",\"label\":\"20'–25'\"},{\"id\":\"W30\",\"label\":\"30'–35'\"}]},{\"id\":\"QZ-4\",\"question\":\"Brackwater Athletic забил 1 гол: сколько xG команда создала?\",\"options\":[{\"id\":\"B0\",\"label\":\"0,0–0,5 xG\"},{\"id\":\"B1\",\"label\":\"0,5–1,0 xG\"},{\"id\":\"B2\",\"label\":\"1,0–1,5 xG\"},{\"id\":\"B3\",\"label\":\"1,5–2,0 xG\"}]}]}",
+   "parse_error": null,
+   "checks": {
+    "QZ-1": null,
+    "QZ-2": null,
+    "QZ-3": null,
+    "QZ-4": null
+   },
+   "input_tokens": 3184,
+   "output_tokens": 431,
+   "latency_s": 3.1
+  }
+ ]
+}

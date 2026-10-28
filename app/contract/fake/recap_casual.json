@@ -1,0 +1,993 @@
+{
+  "match_id": "SYN-001",
+  "mode": "casual",
+  "final_score": {
+    "home": 2,
+    "away": 1
+  },
+  "headline": "Brackwater Athletic 2-1 Calderholm United: the derby stays amber",
+  "narrative": "Ulvestad opened the scoring in the 23rd minute, Brightwell headed Calderholm level just before the hour, and Kinsella-Ward's penalty, confirmed by the VAR, won the Estuary Derby for Brackwater.",
+  "highlight_ids": [
+    "HL-01",
+    "HL-05",
+    "HL-06",
+    "HL-07",
+    "HL-08"
+  ],
+  "key_numbers": [
+    {
+      "text": "54.0 %",
+      "value": 54.0,
+      "unit": "%",
+      "tool": "get_possession",
+      "arguments": {
+        "scope": "full_match"
+      },
+      "source_field": "possession.teams[0].value"
+    },
+    {
+      "text": "108.4 km/h",
+      "value": 108.4,
+      "unit": "km/h",
+      "tool": "get_shot_speed",
+      "arguments": {
+        "scope": "full_match"
+      },
+      "source_field": "shot_speed[0].kmh"
+    }
+  ],
+  "shots": [
+    {
+      "team_id": "BRA",
+      "shots": 12,
+      "on_target": 5,
+      "goals": 2
+    },
+    {
+      "team_id": "CAL",
+      "shots": 9,
+      "on_target": 4,
+      "goals": 1
+    }
+  ],
+  "possession": [
+    {
+      "team_id": "BRA",
+      "value": 54.0
+    },
+    {
+      "team_id": "CAL",
+      "value": 46.0
+    }
+  ],
+  "favourite_players": [
+    {
+      "player_id": "BRA-01",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "top_speed_minute": 4,
+      "sprints": 0,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 22,
+      "pass_accuracy_pct": 85.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 29,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-08"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-02",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "top_speed_minute": 5,
+      "sprints": 10,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 44,
+      "pass_accuracy_pct": 86.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-03",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "top_speed_minute": 6,
+      "sprints": 10,
+      "acceleration_load_kmh": 12432.0,
+      "passes": 44,
+      "pass_accuracy_pct": 87.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-04",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.46,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.2,
+      "top_speed_minute": 7,
+      "sprints": 5,
+      "acceleration_load_kmh": 10656.0,
+      "passes": 48,
+      "pass_accuracy_pct": 88.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 68,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-05",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "top_speed_minute": 8,
+      "sprints": 5,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "shots": 0,
+      "goals": 0,
+      "touches": 68,
+      "tackles": 2,
+      "ball_recoveries": 6,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-06",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.42,
+        "approx": false,
+        "unmeasured_pct": 0.5,
+        "reliability": {
+          "measured_pct": 99.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.5,
+      "top_speed_minute": 9,
+      "sprints": 6,
+      "acceleration_load_kmh": 11664.0,
+      "passes": 61,
+      "pass_accuracy_pct": 85.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 87,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-04"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-08",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.62,
+        "approx": false,
+        "unmeasured_pct": 0.7,
+        "reliability": {
+          "measured_pct": 99.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.2,
+      "top_speed_minute": 11,
+      "sprints": 6,
+      "acceleration_load_kmh": 11952.0,
+      "passes": 61,
+      "pass_accuracy_pct": 87.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 87,
+      "tackles": 3,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-09",
+      "team_id": "BRA",
+      "minutes_played": 72,
+      "distance": {
+        "km": 7.92,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "top_speed_minute": 12,
+      "sprints": 7,
+      "acceleration_load_kmh": 9216.0,
+      "passes": 20,
+      "pass_accuracy_pct": 88.1,
+      "shots": 2,
+      "goals": 1,
+      "touches": 28,
+      "tackles": 0,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-01"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-10",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "top_speed_minute": 13,
+      "sprints": 8,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 48,
+      "pass_accuracy_pct": 84.1,
+      "shots": 2,
+      "goals": 0,
+      "touches": 66,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-01"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-11",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.85,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "top_speed_minute": 14,
+      "sprints": 12,
+      "acceleration_load_kmh": 12624.0,
+      "passes": 35,
+      "pass_accuracy_pct": 85.1,
+      "shots": 3,
+      "goals": 1,
+      "touches": 51,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-07"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-27",
+      "team_id": "BRA",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": false,
+        "unmeasured_pct": 0.8,
+        "reliability": {
+          "measured_pct": 99.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.6,
+      "top_speed_minute": 29,
+      "sprints": 12,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 35,
+      "pass_accuracy_pct": 86.1,
+      "shots": 2,
+      "goals": 0,
+      "touches": 50,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-02"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "BRA-46",
+      "team_id": "BRA",
+      "minutes_played": 24,
+      "distance": {
+        "km": 2.57,
+        "approx": false,
+        "unmeasured_pct": 0.9,
+        "reliability": {
+          "measured_pct": 99.1,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 35.1,
+      "top_speed_minute": 77,
+      "sprints": 2,
+      "acceleration_load_kmh": 2964.0,
+      "passes": 6,
+      "pass_accuracy_pct": 85.1,
+      "shots": 1,
+      "goals": 0,
+      "touches": 9,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-06"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-01",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 5.38,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 24.2,
+      "top_speed_minute": 4,
+      "sprints": 0,
+      "acceleration_load_kmh": 5904.0,
+      "passes": 18,
+      "pass_accuracy_pct": 77.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 24,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-02",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.04,
+        "approx": true,
+        "unmeasured_pct": 1.3,
+        "reliability": {
+          "measured_pct": 98.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.3,
+      "top_speed_minute": 5,
+      "sprints": 9,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 37,
+      "pass_accuracy_pct": 78.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 55,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-04",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 12.0,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.6,
+      "top_speed_minute": 7,
+      "sprints": 7,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 51,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 73,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-03"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-05",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.08,
+        "approx": true,
+        "unmeasured_pct": 1.6,
+        "reliability": {
+          "measured_pct": 98.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.4,
+      "top_speed_minute": 8,
+      "sprints": 4,
+      "acceleration_load_kmh": 10080.0,
+      "passes": 40,
+      "pass_accuracy_pct": 76.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 61,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-06"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-06",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.18,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.7,
+      "top_speed_minute": 9,
+      "sprints": 4,
+      "acceleration_load_kmh": 10224.0,
+      "passes": 40,
+      "pass_accuracy_pct": 77.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 62,
+      "tackles": 4,
+      "ball_recoveries": 7,
+      "fouls_committed": 2,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-07",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.94,
+        "approx": true,
+        "unmeasured_pct": 1.8,
+        "reliability": {
+          "measured_pct": 98.2,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.9,
+      "top_speed_minute": 18,
+      "sprints": 11,
+      "acceleration_load_kmh": 12768.0,
+      "passes": 29,
+      "pass_accuracy_pct": 78.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 41,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-05"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-08",
+      "team_id": "CAL",
+      "minutes_played": 81,
+      "distance": {
+        "km": 10.04,
+        "approx": false,
+        "unmeasured_pct": 0.2,
+        "reliability": {
+          "measured_pct": 99.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 30.9,
+      "top_speed_minute": 11,
+      "sprints": 6,
+      "acceleration_load_kmh": 10489.5,
+      "passes": 43,
+      "pass_accuracy_pct": 79.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 63,
+      "tackles": 3,
+      "ball_recoveries": 5,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-09",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 10.56,
+        "approx": false,
+        "unmeasured_pct": 0.3,
+        "reliability": {
+          "measured_pct": 99.7,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.1,
+      "top_speed_minute": 12,
+      "sprints": 9,
+      "acceleration_load_kmh": 12288.0,
+      "passes": 22,
+      "pass_accuracy_pct": 80.4,
+      "shots": 3,
+      "goals": 1,
+      "touches": 34,
+      "tackles": 1,
+      "ball_recoveries": 2,
+      "fouls_committed": 1,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-05"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-10",
+      "team_id": "CAL",
+      "minutes_played": 65,
+      "distance": {
+        "km": 6.89,
+        "approx": true,
+        "unmeasured_pct": 1.2,
+        "reliability": {
+          "measured_pct": 98.8,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.4,
+      "top_speed_minute": 13,
+      "sprints": 6,
+      "acceleration_load_kmh": 7930.0,
+      "passes": 15,
+      "pass_accuracy_pct": 76.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 22,
+      "tackles": 1,
+      "ball_recoveries": 1,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-19",
+      "team_id": "CAL",
+      "minutes_played": 31,
+      "distance": {
+        "km": 3.41,
+        "approx": false,
+        "unmeasured_pct": 0.4,
+        "reliability": {
+          "measured_pct": 99.6,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 34.9,
+      "top_speed_minute": 66,
+      "sprints": 3,
+      "acceleration_load_kmh": 3968.0,
+      "passes": 7,
+      "pass_accuracy_pct": 80.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 10,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-22",
+      "team_id": "CAL",
+      "minutes_played": 15,
+      "distance": {
+        "km": 1.62,
+        "approx": true,
+        "unmeasured_pct": 1.5,
+        "reliability": {
+          "measured_pct": 98.5,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 31.9,
+      "top_speed_minute": 84,
+      "sprints": 2,
+      "acceleration_load_kmh": 1875.0,
+      "passes": 3,
+      "pass_accuracy_pct": 78.4,
+      "shots": 1,
+      "goals": 0,
+      "touches": 5,
+      "tackles": 0,
+      "ball_recoveries": 0,
+      "fouls_committed": 0,
+      "fouls_won": 0,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [
+        "HL-08"
+      ],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-24",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.23,
+        "approx": true,
+        "unmeasured_pct": 1.7,
+        "reliability": {
+          "measured_pct": 98.3,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 32.5,
+      "top_speed_minute": 7,
+      "sprints": 9,
+      "acceleration_load_kmh": 12576.0,
+      "passes": 37,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 55,
+      "tackles": 3,
+      "ball_recoveries": 6,
+      "fouls_committed": 2,
+      "fouls_won": 1,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    },
+    {
+      "player_id": "CAL-39",
+      "team_id": "CAL",
+      "minutes_played": 96,
+      "distance": {
+        "km": 11.14,
+        "approx": false,
+        "unmeasured_pct": 0.6,
+        "reliability": {
+          "measured_pct": 99.4,
+          "level": "high"
+        }
+      },
+      "top_speed_kmh": 33.4,
+      "top_speed_minute": 22,
+      "sprints": 11,
+      "acceleration_load_kmh": 13056.0,
+      "passes": 29,
+      "pass_accuracy_pct": 80.4,
+      "shots": 0,
+      "goals": 0,
+      "touches": 40,
+      "tackles": 1,
+      "ball_recoveries": 3,
+      "fouls_committed": 1,
+      "fouls_won": 2,
+      "yellow_cards": 0,
+      "red_cards": 0,
+      "highlight_ids": [],
+      "xg": null,
+      "speed_zones": null,
+      "zone_map": null,
+      "acceleration_load_series": null
+    }
+  ],
+  "inspector": {
+    "trace_id": "trace-recap-casual",
+    "method": "Archie wrote the recap from deterministic tool results; every number was checked.",
+    "agents": [
+      {
+        "agent": "Archie",
+        "model": "gpt-6-luna",
+        "role": "orchestrator and voice",
+        "tokens_in": 3020,
+        "tokens_out": 210,
+        "latency_ms": 1650
+      },
+      {
+        "agent": "The Analyst",
+        "model": "gpt-6-sol",
+        "role": "statistics via tools",
+        "tokens_in": 1500,
+        "tokens_out": 90,
+        "latency_ms": 1240
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "The Analyst",
+        "tool": "get_possession",
+        "arguments": {
+          "scope": "full_match"
+        },
+        "result_summary": "54.0 %",
+        "latency_ms": 9
+      },
+      {
+        "agent": "The Analyst",
+        "tool": "get_shot_speed",
+        "arguments": {
+          "scope": "full_match"
+        },
+        "result_summary": "108.4 km/h",
+        "latency_ms": 9
+      }
+    ],
+    "evidence": [
+      "stats:full_match",
+      "highlights"
+    ],
+    "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+    },
+    "total_tokens": 4820,
+    "latency_ms": 2950,
+    "cost_usd": 0.0019
+  }
+}

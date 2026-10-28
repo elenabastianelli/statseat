@@ -1,0 +1,68 @@
+{
+  "answer_id": "ANS-0001",
+  "text": "What a shift from Zennor Wilstead! He covered ≈5.88 km in the first half, more than anyone on the pitch. You'll find every player's distance in Data & Statistics, in the Running table.",
+  "language": "en",
+  "in_scope": true,
+  "grounding": [
+    {
+      "text": "≈5.88 km",
+      "value": 5.88,
+      "unit": "km",
+      "tool": "get_distance_covered",
+      "arguments": {
+        "scope": "first_half"
+      },
+      "source_field": "distance_covered.top_runner.distance.km"
+    }
+  ],
+  "points_to": {
+    "chart_id": "running_table",
+    "section": "data_stats",
+    "locked": false,
+    "unlocks_at_phase": null
+  },
+  "inspector": {
+    "trace_id": "trace-archie-0001",
+    "method": "Archie routed the question to The Analyst, which called one deterministic tool; the grounding validator matched every number in the answer.",
+    "agents": [
+      {
+        "agent": "Archie",
+        "model": "gpt-6-luna",
+        "role": "orchestrator and voice",
+        "tokens_in": 1840,
+        "tokens_out": 96,
+        "latency_ms": 910
+      },
+      {
+        "agent": "The Analyst",
+        "model": "gpt-6-sol",
+        "role": "statistics via tools",
+        "tokens_in": 1210,
+        "tokens_out": 64,
+        "latency_ms": 1180
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "The Analyst",
+        "tool": "get_distance_covered",
+        "arguments": {
+          "scope": "first_half"
+        },
+        "result_summary": "top_runner=CAL-04 5.88 km (unmeasured 1.5 %)",
+        "latency_ms": 12
+      }
+    ],
+    "evidence": [
+      "stats:first_half"
+    ],
+    "grounding": {
+      "passed": true,
+      "numbers_checked": 1,
+      "numbers_unmatched": []
+    },
+    "total_tokens": 3210,
+    "latency_ms": 2140,
+    "cost_usd": 0.0012
+  }
+}

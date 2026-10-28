@@ -1,0 +1,91 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5684.0,
+  "server_time": "2026-10-27T19:08:58.762831+01:00"
+ },
+ "turns": [
+  {
+   "question": "How high was Calderholm's defensive line?",
+   "answer": {
+    "answer_id": "ANS-84fe683ae8f9",
+    "text": "That’s one for the “Defensive line and team length” chart in Data & Statistics. Sorry, friend, it’s only available with the Analyst plan.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [],
+    "points_to": {
+     "chart_id": "defensive_shape",
+     "section": "data_stats",
+     "locked": true,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-502b58787fcc497f",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. The Analyst had started in parallel with Archie to save time; this question did not need it (its 3051 tokens are in the total). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 4771,
+       "tokens_out": 58,
+       "latency_ms": 6362
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 0,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 7880,
+     "latency_ms": 6448,
+     "cost_usd": 0.000828
+    }
+   }
+  }
+ ]
+}

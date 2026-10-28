@@ -1,0 +1,304 @@
+{
+  "players": [
+    {
+      "player_id": "BRA-01",
+      "name": "Rowan Kirkhurst",
+      "team_id": "BRA",
+      "shirt_number": 1
+    },
+    {
+      "player_id": "BRA-02",
+      "name": "Tobias Rudge",
+      "team_id": "BRA",
+      "shirt_number": 2
+    },
+    {
+      "player_id": "BRA-03",
+      "name": "Gaspard Lefèvre-Saunier",
+      "team_id": "BRA",
+      "shirt_number": 3
+    },
+    {
+      "player_id": "BRA-04",
+      "name": "Oberon Cotterell",
+      "team_id": "BRA",
+      "shirt_number": 4
+    },
+    {
+      "player_id": "BRA-05",
+      "name": "Emeka Ibekwe-Nnadi",
+      "team_id": "BRA",
+      "shirt_number": 5
+    },
+    {
+      "player_id": "BRA-06",
+      "name": "Siebe Meulenkamp",
+      "team_id": "BRA",
+      "shirt_number": 6
+    },
+    {
+      "player_id": "BRA-07",
+      "name": "Jarvis Fairbrass",
+      "team_id": "BRA",
+      "shirt_number": 7
+    },
+    {
+      "player_id": "BRA-08",
+      "name": "Oisín Hennebry",
+      "team_id": "BRA",
+      "shirt_number": 8
+    },
+    {
+      "player_id": "BRA-09",
+      "name": "Audun Ulvestad",
+      "team_id": "BRA",
+      "shirt_number": 9
+    },
+    {
+      "player_id": "BRA-10",
+      "name": "Riku Shimazaki",
+      "team_id": "BRA",
+      "shirt_number": 10
+    },
+    {
+      "player_id": "BRA-11",
+      "name": "Ruairí Kinsella-Ward",
+      "team_id": "BRA",
+      "shirt_number": 11
+    },
+    {
+      "player_id": "BRA-13",
+      "name": "Kendrick Saltmarsh",
+      "team_id": "BRA",
+      "shirt_number": 13
+    },
+    {
+      "player_id": "BRA-15",
+      "name": "Nnamdi Akinwale",
+      "team_id": "BRA",
+      "shirt_number": 15
+    },
+    {
+      "player_id": "BRA-17",
+      "name": "Senan Fitzmaurice-Lynch",
+      "team_id": "BRA",
+      "shirt_number": 17
+    },
+    {
+      "player_id": "BRA-18",
+      "name": "Elric Grimsdale",
+      "team_id": "BRA",
+      "shirt_number": 18
+    },
+    {
+      "player_id": "BRA-26",
+      "name": "Eamon Fothergill",
+      "team_id": "BRA",
+      "shirt_number": 26
+    },
+    {
+      "player_id": "BRA-27",
+      "name": "Clément Peyrol",
+      "team_id": "BRA",
+      "shirt_number": 27
+    },
+    {
+      "player_id": "BRA-28",
+      "name": "Jago Elsworth",
+      "team_id": "BRA",
+      "shirt_number": 28
+    },
+    {
+      "player_id": "BRA-29",
+      "name": "Wessel Dijkgraaf-Smit",
+      "team_id": "BRA",
+      "shirt_number": 29
+    },
+    {
+      "player_id": "BRA-30",
+      "name": "Ulysses Woodbrook",
+      "team_id": "BRA",
+      "shirt_number": 30
+    },
+    {
+      "player_id": "BRA-31",
+      "name": "Warwick Copley",
+      "team_id": "BRA",
+      "shirt_number": 31
+    },
+    {
+      "player_id": "BRA-38",
+      "name": "Jude Eastridge",
+      "team_id": "BRA",
+      "shirt_number": 38
+    },
+    {
+      "player_id": "BRA-40",
+      "name": "Victor Sherworth",
+      "team_id": "BRA",
+      "shirt_number": 40
+    },
+    {
+      "player_id": "BRA-46",
+      "name": "Jasper Netherby",
+      "team_id": "BRA",
+      "shirt_number": 46
+    },
+    {
+      "player_id": "BRA-49",
+      "name": "Cyrus Harrowell",
+      "team_id": "BRA",
+      "shirt_number": 49
+    },
+    {
+      "player_id": "CAL-01",
+      "name": "Pape Faye-Diouf",
+      "team_id": "CAL",
+      "shirt_number": 1
+    },
+    {
+      "player_id": "CAL-02",
+      "name": "Fraser Drummond",
+      "team_id": "CAL",
+      "shirt_number": 2
+    },
+    {
+      "player_id": "CAL-03",
+      "name": "Maxence Marchetaux",
+      "team_id": "CAL",
+      "shirt_number": 3
+    },
+    {
+      "player_id": "CAL-04",
+      "name": "Zennor Wilstead",
+      "team_id": "CAL",
+      "shirt_number": 4
+    },
+    {
+      "player_id": "CAL-05",
+      "name": "Abel Sowerby",
+      "team_id": "CAL",
+      "shirt_number": 5
+    },
+    {
+      "player_id": "CAL-06",
+      "name": "Joaquín Arregui Villalba",
+      "team_id": "CAL",
+      "shirt_number": 6
+    },
+    {
+      "player_id": "CAL-07",
+      "name": "Rutger van Dalfsen",
+      "team_id": "CAL",
+      "shirt_number": 7
+    },
+    {
+      "player_id": "CAL-08",
+      "name": "Damien Fontanieu",
+      "team_id": "CAL",
+      "shirt_number": 8
+    },
+    {
+      "player_id": "CAL-09",
+      "name": "Mortimer Brightwell",
+      "team_id": "CAL",
+      "shirt_number": 9
+    },
+    {
+      "player_id": "CAL-10",
+      "name": "Ronan Ó Fearghail",
+      "team_id": "CAL",
+      "shirt_number": 10
+    },
+    {
+      "player_id": "CAL-11",
+      "name": "Gijs Veenstra-Bakker",
+      "team_id": "CAL",
+      "shirt_number": 11
+    },
+    {
+      "player_id": "CAL-13",
+      "name": "Lionel Winstanley",
+      "team_id": "CAL",
+      "shirt_number": 13
+    },
+    {
+      "player_id": "CAL-15",
+      "name": "Igor Damasceno",
+      "team_id": "CAL",
+      "shirt_number": 15
+    },
+    {
+      "player_id": "CAL-16",
+      "name": "Reuben Carrow",
+      "team_id": "CAL",
+      "shirt_number": 16
+    },
+    {
+      "player_id": "CAL-19",
+      "name": "Tobenna Okonkwo-Bassey",
+      "team_id": "CAL",
+      "shirt_number": 19
+    },
+    {
+      "player_id": "CAL-21",
+      "name": "Ulric Lowther",
+      "team_id": "CAL",
+      "shirt_number": 21
+    },
+    {
+      "player_id": "CAL-22",
+      "name": "Oluwaseun Olatunde",
+      "team_id": "CAL",
+      "shirt_number": 22
+    },
+    {
+      "player_id": "CAL-24",
+      "name": "Fletcher Mossley",
+      "team_id": "CAL",
+      "shirt_number": 24
+    },
+    {
+      "player_id": "CAL-25",
+      "name": "Gilbert Rushmore",
+      "team_id": "CAL",
+      "shirt_number": 25
+    },
+    {
+      "player_id": "CAL-30",
+      "name": "Diarmuid Scanlon-Hayes",
+      "team_id": "CAL",
+      "shirt_number": 30
+    },
+    {
+      "player_id": "CAL-31",
+      "name": "Wilbur Oakes",
+      "team_id": "CAL",
+      "shirt_number": 31
+    },
+    {
+      "player_id": "CAL-37",
+      "name": "Jerome Graycombe",
+      "team_id": "CAL",
+      "shirt_number": 37
+    },
+    {
+      "player_id": "CAL-39",
+      "name": "Sullivan Yelholme",
+      "team_id": "CAL",
+      "shirt_number": 39
+    },
+    {
+      "player_id": "CAL-42",
+      "name": "Leif Swinridge",
+      "team_id": "CAL",
+      "shirt_number": 42
+    },
+    {
+      "player_id": "CAL-47",
+      "name": "Nico Dunleavy",
+      "team_id": "CAL",
+      "shirt_number": 47
+    }
+  ]
+}

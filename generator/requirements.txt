@@ -1,0 +1,13 @@
+# InsideTheGame synthetic data generator - Python 3.12
+# Direct dependencies, pinned to the versions actually installed and tested.
+pydantic==2.14.1   # schema, validation and JSON Schema export
+pytest==9.1.1
+numpy==2.5.4       # match generator (events, ball, players)
+pandas==3.0.6      # match generator: tracking table
+pyarrow==26.0.0    # positions.parquet
+scipy==1.18.1      # smoothing and fitting in the match generator
+segno==1.6.6       # QR codes on the digital tickets
+svglib==2.3.2      # ticket SVG -> PDF
+reportlab==5.1.0   # PDF backend used by svglib
+pypdfium2==5.14.0  # ticket PDF -> PNG (Apache-2.0/BSD; no system libraries needed)
+pillow==13.0.0     # PNG output for pypdfium2

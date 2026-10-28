@@ -1,0 +1,299 @@
+{
+ "state": {
+  "match_id": "SYN-001",
+  "phase": "full_time",
+  "minute": 90,
+  "added_time": 0,
+  "clock_running": false,
+  "score": {
+   "home": 2,
+   "away": 1
+  },
+  "sections": [
+   {
+    "section": "pre_match",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "live",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "data_stats",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "games",
+    "unlocked": false,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "recap",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   },
+   {
+    "section": "ask_archie",
+    "unlocked": true,
+    "unlocks_at_phase": null
+   }
+  ],
+  "as_of_s": 5684.0,
+  "server_time": "2026-10-26T23:14:55.474983+01:00"
+ },
+ "turns": [
+  {
+   "question": "¿Cuál fue el xG de cada equipo?",
+   "answer": {
+    "answer_id": "ANS-028063cf2946",
+    "text": "Brackwater terminó con 0,66 de xG y Calderholm con 2,25: los visitantes generaron ocasiones de mayor valor, pero Brackwater se llevó el derbi por 2–1. Puedes ver la evolución en el gráfico de xG de Data & Statistics.",
+    "language": "es",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "0,66",
+      "value": 0.66,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.BRA"
+     },
+     {
+      "text": "2,25",
+      "value": 2.25,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "xg.CAL"
+     },
+     {
+      "text": "2",
+      "value": 2.0,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "goals.BRA"
+     },
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "expected_goals",
+      "arguments": {},
+      "source_field": "goals.CAL"
+     }
+    ],
+    "points_to": {
+     "chart_id": "xg_cumulative",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-c8415ed32a1c4008",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Analyst version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9025,
+       "tokens_out": 125,
+       "latency_ms": 6556
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 3878,
+       "tokens_out": 42,
+       "latency_ms": 3828
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "expected_goals",
+       "arguments": {},
+       "result_summary": "goals BRA 2, CAL 1; xG BRA 0.66, CAL 2.25",
+       "latency_ms": 5
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "What was the xG of each team in Brackwater Athletic v Calderholm United?"
+       },
+       "result_summary": "Brackwater Athletic: xG 0.66  \nCalderholm United: xG 2.25",
+       "latency_ms": 559
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:expected_goals"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 4,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 13070,
+     "latency_ms": 7132,
+     "cost_usd": 0.001374
+    }
+   }
+  },
+  {
+   "question": "¿Quién fue el jugador más rápido?",
+   "answer": {
+    "answer_id": "ANS-89501ac95d86",
+    "text": "El más rápido fue Clément Peyrol, el #27 del Brackwater, con 34,5 km/h. Puedes ver el dato en la tabla de velocidad de Data & Statistics.",
+    "language": "es",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "27",
+      "value": 27.0,
+      "unit": null,
+      "tool": "lineup",
+      "arguments": {
+       "player": "BRA-27"
+      },
+      "source_field": "BRA-27.shirt_number"
+     },
+     {
+      "text": "34,5 km/h",
+      "value": 34.5,
+      "unit": "km/h",
+      "tool": "speeds",
+      "arguments": {},
+      "source_field": "top_speed.BRA[0].kmh"
+     }
+    ],
+    "points_to": {
+     "chart_id": "running_table",
+     "section": "data_stats",
+     "locked": false,
+     "unlocks_at_phase": null
+    },
+    "inspector": {
+     "trace_id": "archie-6b82740e008444e3",
+     "method": "Archie routed the question to The Analyst, which called 1 deterministic tool with the fan's session (no future, Analyst version). The Analyst had started in parallel with Archie, so its data result was ready sooner. Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 9018,
+       "tokens_out": 120,
+       "latency_ms": 5933
+      },
+      {
+       "agent": "The Analyst",
+       "model": "gpt-6-luna",
+       "role": "statistics via tools",
+       "tokens_in": 3126,
+       "tokens_out": 48,
+       "latency_ms": 2469
+      }
+     ],
+     "tool_calls": [
+      {
+       "agent": "The Analyst",
+       "tool": "speeds",
+       "arguments": {},
+       "result_summary": "BRA Clément Peyrol 34.5 km/h; CAL Rutger van Dalfsen 31.7 km/h",
+       "latency_ms": 5
+      },
+      {
+       "agent": "Archie",
+       "tool": "ask_the_analyst",
+       "arguments": {
+        "question": "Who was the fastest player in today's match?"
+       },
+       "result_summary": "El más rápido fue Clément Peyrol (#27, Brackwater Athletic), con 34.5 km/h en el minuto 63.",
+       "latency_ms": 300
+      }
+     ],
+     "evidence": [
+      "match_context",
+      "tool:speeds"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 2,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 12312,
+     "latency_ms": 6242,
+     "cost_usd": 0.001298
+    }
+   }
+  },
+  {
+   "question": "What's the score?",
+   "answer": {
+    "answer_id": "ANS-7b93894f80a6",
+    "text": "Brackwater Athletic 2–1 Calderholm United. Oisín Hennebry’s 88th-minute goal settled the Estuary Derby.",
+    "language": "en",
+    "in_scope": true,
+    "grounding": [
+     {
+      "text": "2",
+      "value": 2.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     },
+     {
+      "text": "1",
+      "value": 1.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Score"
+     },
+     {
+      "text": "88th",
+      "value": 88.0,
+      "unit": null,
+      "tool": "match_context",
+      "arguments": {},
+      "source_field": "Goals"
+     }
+    ],
+    "points_to": null,
+    "inspector": {
+     "trace_id": "archie-dfb87d0496e54094",
+     "method": "Archie answered from the server's MATCH CONTEXT, without tools. The Analyst had started in parallel with Archie to save time; this question did not need it (its 1270 tokens are in the total). Grounding: every number matched a tool result or the MATCH CONTEXT.",
+     "agents": [
+      {
+       "agent": "Archie",
+       "model": "gpt-6-luna",
+       "role": "orchestrator and voice",
+       "tokens_in": 4469,
+       "tokens_out": 55,
+       "latency_ms": 2396
+      }
+     ],
+     "tool_calls": [],
+     "evidence": [
+      "match_context"
+     ],
+     "grounding": {
+      "passed": true,
+      "numbers_checked": 3,
+      "numbers_unmatched": []
+     },
+     "total_tokens": 5794,
+     "latency_ms": 2401,
+     "cost_usd": 0.000608
+    }
+   }
+  }
+ ]
+}
